@@ -19,6 +19,8 @@ Latent Thought Policy Optimization (LTPO) is a parameter-free framework that enh
 ### Install Dependencies
 
 ```bash
+conda create -n ltpo python=3.10 -y
+conda activate ltpo
 bash install.sh
 ```
 
