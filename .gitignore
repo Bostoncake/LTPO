@@ -209,3 +209,7 @@ __marimo__/
 # Exclude
 !Baseline-*.log
 !Eval-*.log
+
+.vscode
+output/
+dataset/

@@ -10,3 +10,5 @@ termcolor
 tqdm
 protobuf
 sentencepiece
+torchvision
+openai

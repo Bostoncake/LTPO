@@ -262,6 +262,10 @@ def main(args):
     print(f">>> Final State: correct={correct}, total={total}, accuracy={correct / total:.4f}")
     print(f">>> Data Idx with Correct Answer: {[entry['data_idx'] for entry in entries if entry['is_correct']]}")
 
+    with open(f"{output_dir}/results.log", "a") as f:
+        f.write(f"correct={correct}, total={total}, accuracy={correct / total:.4f}\n")
+        f.write(f"Data Idx with Correct Answer: {[entry['data_idx'] for entry in entries if entry['is_correct']]}")
+
 
 if __name__ == "__main__":
     args = parse_args()

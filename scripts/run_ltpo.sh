@@ -1,11 +1,14 @@
+export HUGGING_FACE_TOKEN=<YOUR_HF_TOKEN>
+
 dataset="Maxwell-Jia/AIME_2024"
-model="meta-llama/Llama-3.1-8B-Instruct"
+model=/WillDevExt/xiongyizhe/models/Llama-3.1-8B-Instruct
 max_new_tokens=4096
 max_num_steps=10
 num_thought_tokens=8
 sigma=4
 sigma_decay=0.9
 lr=0.04
+topk=10
 verbose=1
 
 python main.py \
@@ -19,4 +22,5 @@ python main.py \
     --sigma $sigma \
     --sigma_decay $sigma_decay \
     --lr $lr \
+    --top_k $topk \
     --verbose $verbose
