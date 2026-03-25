@@ -1,5 +1,8 @@
 """
 Data loader for MLLM (Vision-Language) datasets stored in mllm_data/.
+
+NOTE (mllm-dmlr-aligned): prompts are stripped of LTPO-specific prefixes
+to align with the raw prompts used in DMLR.
 """
 import json
 import os
@@ -7,6 +10,21 @@ import os
 from datasets import Dataset
 
 MLLM_DATASET_NAMES = ['hallusion', 'math_vision', 'math_vista', 'mm_math', 'mmstar', 'mmvp', 'scienceqa']
+
+# Prefixes that LTPO data files prepend but DMLR does not.
+# Stripping these ensures the raw question text matches DMLR exactly.
+_LTPO_PROMPT_PREFIXES = [
+    'Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. ',
+    'Put the FINAL CHOICE inside \\boxed{}. ',
+]
+
+
+def _strip_ltpo_prefix(prompt: str) -> str:
+    """Remove LTPO-specific instruction prefixes to align with DMLR raw prompts."""
+    for prefix in _LTPO_PROMPT_PREFIXES:
+        if prompt.startswith(prefix):
+            return prompt[len(prefix):]
+    return prompt
 
 
 def is_mllm_dataset(data_name: str) -> bool:
@@ -21,7 +39,7 @@ def get_mllm_dataset(data_name: str, data_root: str = 'mllm_data') -> Dataset:
     (mm_math and mmvp additionally have a 'completion' key, which is ignored).
 
     Returns a Dataset with columns:
-        question    (str)  – the text prompt / question
+        question    (str)  – the text prompt / question (DMLR-aligned, prefix-stripped)
         answer      (str)  – ground-truth solution string
         image_path  (str)  – path to the image file
     """
@@ -42,7 +60,7 @@ def get_mllm_dataset(data_name: str, data_root: str = 'mllm_data') -> Dataset:
 
     questions, answers, image_paths = [], [], []
     for item in data:
-        questions.append(item['prompt'])
+        questions.append(_strip_ltpo_prefix(item['prompt']))
         answers.append(item['solution'])
         image_paths.append(item['image_path'])
 

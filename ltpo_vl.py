@@ -7,6 +7,8 @@ Key differences from ltpo.py:
   that pixel_values need not be kept around during gradient / ES updates.
 - generate_vl: thin wrapper that calls build_inputs_vl and reuses
   get_confidence from ltpo.py unchanged (works on any inputs_embeds dict).
+
+NOTE (mllm-dmlr-aligned): prompt / system-prompt / sampling aligned with DMLR.
 """
 
 import torch
@@ -15,6 +17,41 @@ from PIL import Image
 from fastNLP import logger
 from reward import RewardModel
 from ltpo import get_confidence          # reuse unchanged helper
+
+
+# System prompt aligned with DMLR
+SYSTEM_PROMPT = """
+A conversation between User and Assistant. The user asks a question, and the Assistant solves it. The assistant first thinks about the reasoning process in the mind and then provides the user with the answer. The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think><answer> answer here </answer>
+"""
+
+
+def vl_cot_prompt(q, prompt_idx=0):
+    """
+    CoT prompts for Vision-Language models, aligned with DMLR.
+    """
+    prompts = [
+        # idx 0: Baseline CoT with step-by-step reasoning (DEFAULT)
+        (
+            "Please analyze the image carefully and solve this problem step by step.\n"
+            "Show your reasoning process clearly, then put your final answer within \\boxed{}.\n\n"
+            f"Question: {q}"
+        ),
+        # idx 1: Detailed CoT with explicit instructions
+        (
+            "Let's solve this visual math problem step by step:\n"
+            "1. First, carefully observe the image and identify all relevant information.\n"
+            "2. Break down the problem into smaller steps.\n"
+            "3. Show your calculations and reasoning for each step.\n"
+            "4. Finally, provide your answer within \\boxed{}.\n\n"
+            f"Question: {q}"
+        ),
+        # idx 2: No CoT (Direct Answer) - for comparison
+        (
+            "Please provide your final answer within \\boxed{}.\n\n"
+            f"Question: {q}"
+        ),
+    ]
+    return prompts[prompt_idx]
 
 
 # ---------------------------------------------------------------------------
@@ -165,42 +202,26 @@ def build_inputs_vl(
 
     latent_thought_tokens = _thought_token_str(model_name, num_thought_tokens)
 
-    # ---- Build text content (mirrors build_inputs logic from ltpo.py) ----
-    if 'strategyqa' in data_name.lower():
-        input_content = (
-            f'Solve the following reasoning problem step by step.\n'
-            f'You are required to answer the question with `Yes` or `No`.\n'
-            f'PROBLEM: {prompt}\n\n'
-            f'There are {num_thought_tokens} special tokens that contain compressed latent reasoning information '
-            f'that might be useful for your reasoning.\n'
-            f'If these tokens are useful for your case, you can use them as reference. If these tokens are not useful '
-            f'for your case, you can ignore them and focus back to solving the problem.\n\n'
-            f'Here are the {num_thought_tokens} special tokens: {latent_thought_tokens}'
-        )
-    else:
-        problem_type = 'visual reasoning'
-        input_content = (
-            f'Solve the following {problem_type} problem efficiently and clearly:\n'
-            f'- For simple problems (2 steps or fewer):\n'
-            f'Provide a concise solution with minimal description.\n'
-            f'- For complex problems (3 steps or more):\n'
-            f'Use this step-by-step format:\n\n'
-            f'## Step 1: [Brief calculations]\n'
-            f'## Step 2: [Brief calculations]\n'
-            f'...\n'
-            f'IMPORTANT: Regardless of the approach, you MUST always put your final answer within \\boxed{{}}.\n\n'
-            f'PROBLEM: {prompt}\n\n'
-            f'There are {num_thought_tokens} special tokens that contain compressed latent reasoning information '
-            f'that might be useful for your reasoning.\n'
-            f'If these tokens are useful for your case, you can use them as reference. If these tokens are not useful '
-            f'for your case, you can ignore them and focus back to solving the problem.\n\n'
-            f'Here are the {num_thought_tokens} special tokens: {latent_thought_tokens}'
-        )
+    # ---- Build text content (aligned with DMLR vl_cot_prompt idx=0) ----
+    q_with_prompt = vl_cot_prompt(prompt, prompt_idx=0)
+
+    input_content = (
+        f'{q_with_prompt}\n\n'
+        f'The following special tokens represent YOUR INTERNAL THINKING SPACE where your reasoning happens implicitly.\n'
+        f'You do NOT need to output explicit reasoning steps'
+        f'After these tokens, directly provide your final answer.'
+        f'Here are the {num_thought_tokens} special tokens: {latent_thought_tokens}'
+    )
 
     # ---- Build multimodal message & tokenise ----
+    # Add DMLR-aligned system prompt
+    sys_messages = []
+    if SYSTEM_PROMPT and SYSTEM_PROMPT.strip():
+        sys_messages = [{'role': 'system', 'content': SYSTEM_PROMPT.strip()}]
+
     if image is not None:
         if 'qwen' in model_name.lower():
-            messages = [{
+            messages = sys_messages + [{
                 'role': 'user',
                 'content': [
                     {'type': 'image', 'image': image},
@@ -215,7 +236,7 @@ def build_inputs_vl(
             ).to(device)
         else:
             # Generic: assume LLaVA-style <image> placeholder
-            messages = [{'role': 'user', 'content': f'<image>\n{input_content}'}]
+            messages = sys_messages + [{'role': 'user', 'content': f'<image>\n{input_content}'}]
             text = processor.apply_chat_template(
                 messages, tokenize=False, add_generation_prompt=True
             ) if hasattr(processor, 'apply_chat_template') else f'<image>\n{input_content}'
@@ -224,7 +245,7 @@ def build_inputs_vl(
             ).to(device)
     else:
         # Text-only fallback (no image provided)
-        messages = [{'role': 'user', 'content': input_content}]
+        messages = sys_messages + [{'role': 'user', 'content': input_content}]
         text = processor.apply_chat_template(
             messages, tokenize=False, add_generation_prompt=True
         )
@@ -372,8 +393,6 @@ def generate_vl(
     kwargs.update(dict(
         max_new_tokens=max_new_tokens,
         do_sample=False,
-        temperature=0.0,
-        top_p=None,
         num_beams=1,
     ))
     outputs = model.generate(**inputs, **kwargs)

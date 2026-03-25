@@ -31,7 +31,7 @@ from extract_judge_answer.utils_vl import (
     extract_true_answer_vl,
     judge_answer_vl,
 )
-from ltpo_vl import generate_vl
+from ltpo_vl import generate_vl, SYSTEM_PROMPT, vl_cot_prompt
 from reward import RewardModel
 
 
@@ -118,13 +118,14 @@ def main(args):
 
     device = args.device or ("cuda" if torch.cuda.is_available() else "cpu")
 
-    # ---- Load model & processor ----
+    # ---- Load model & processor (dtype=float32 aligned with DMLR) ----
     model = AutoModelForVision2Seq.from_pretrained(
         args.model_name_or_path,
-        torch_dtype=torch.bfloat16,
-        device_map=device,
+        torch_dtype=torch.float32,
         token=huggingface_token,
+        attn_implementation="eager",
     )
+    model.to(device)
     model.eval()
 
     processor = AutoProcessor.from_pretrained(
@@ -201,14 +202,19 @@ def main(args):
         best_reward, best_reward_step = None, None
 
         if args.eval_baseline:
-            # ---- Baseline: standard VL inference ----
+            # ---- Baseline: standard VL inference (aligned with DMLR) ----
+            q_with_prompt = vl_cot_prompt(question, prompt_idx=0)
+            sys_messages = []
+            if SYSTEM_PROMPT and SYSTEM_PROMPT.strip():
+                sys_messages = [{'role': 'system', 'content': SYSTEM_PROMPT.strip()}]
+
             if image is not None:
                 if 'qwen' in args.model_name_or_path.lower():
-                    messages = [{
+                    messages = sys_messages + [{
                         'role': 'user',
                         'content': [
                             {'type': 'image', 'image': image},
-                            {'type': 'text', 'text': question},
+                            {'type': 'text', 'text': q_with_prompt},
                         ],
                     }]
                     text = processor.apply_chat_template(
@@ -218,12 +224,12 @@ def main(args):
                         text=[text], images=[image], return_tensors='pt'
                     ).to(device)
                 else:
-                    text = f"<image>\n{question}"
+                    text = f"<image>\n{q_with_prompt}"
                     inputs = processor(
                         images=image, text=text, return_tensors='pt'
                     ).to(device)
             else:
-                messages = [{'role': 'user', 'content': question}]
+                messages = sys_messages + [{'role': 'user', 'content': q_with_prompt}]
                 text = processor.apply_chat_template(
                     messages, tokenize=False, add_generation_prompt=True
                 )
@@ -233,8 +239,6 @@ def main(args):
                 raw_outputs = model.generate(**inputs, **dict(
                     max_new_tokens=args.max_new_tokens,
                     do_sample=False,
-                    temperature=0.0,
-                    top_p=None,
                     num_beams=1,
                 ))
             tokenizer = processor.tokenizer if hasattr(processor, 'tokenizer') else processor
