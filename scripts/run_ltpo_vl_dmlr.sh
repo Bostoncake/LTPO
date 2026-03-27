@@ -9,17 +9,18 @@ export OPENAI_API_KEY=<YOUR_OPENAI_KEY>
 export OPENAI_API_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 export MODEL_TYPE=qwen-max
 
-export CUDA_VISIBLE_DEVICES=0
-
-for dataset in "scienceqa"; do
+output=./output/dmlr_vanilla
+mkdir -p ${output}
+gpu=0
+for dataset in "mmvp" "mmstar" "mm_math" "math_vista" "math_vision" "hallusion" "scienceqa"; do
     model=/WillDevExt/xiongyizhe/models/Qwen2.5-VL-7B-Instruct
 
-    python main_vl_dmlr.py \
+    CUDA_VISIBLE_DEVICES=$gpu python main_vl_dmlr.py \
         --dataset $dataset \
         --data_root mllm_data \
         --image_root . \
         --model_name_or_path $model \
-        --output_dir ./output \
+        --output_dir ${output} \
         --device cuda \
         --seed 42 \
         --max_new_tokens 2048 \
@@ -32,5 +33,8 @@ for dataset in "scienceqa"; do
         --max_num_steps 15 \
         --top_k 10 \
         --use_llm_verify \
-        --verbose 1
+        --eval_baseline \
+        --verbose 1 > ${output}/${dataset}.log &
+    gpu=$((gpu+1))
 done
+wait

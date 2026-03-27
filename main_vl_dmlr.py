@@ -157,8 +157,9 @@ def verify_solution_equivalence(solution: str, ground_truth: str) -> bool:
                 {
                     "role": "user",
                     "content": (
-                        "Compare the following two answers and decide if they express the same "
-                        "final result. Return True if they are the same, False otherwise.\n"
+                        f"Compare the following two answers and decide if they express the same final result."
+                        f"Return a json object with field 'equivalent' set to true if they are the same, false otherwise."
+                        f"Note that for multiple-choice questions, prividing the correct option is counted correct."
                         f"Candidate answer: {solution}\n\n"
                         f"Ground truth: {ground_truth}\n\n"
                     ),
