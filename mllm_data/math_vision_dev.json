@@ -1,0 +1,1802 @@
+[
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Three circles of radius $ 1$ are externally tangent to each other and internally tangent to a larger circle. What is the radius of the large circle?\n\n<image1>\\n Options: A. $\\frac{2 + \\sqrt{6}}{3}$, B. $2$, C. $\\frac{2 + 3\\sqrt{2}}{3}$, D. $\\frac{3 + 2\\sqrt{3}}{3}$, E. $\\frac{3 + \\sqrt{3}}{2}$",
+    "solution": "D. $\\frac{3 + 2\\sqrt{3}}{3}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2139.png",
+    "idx": 1728
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A rectangle has sides of length $a$ and $36$. A hinge is installed at each vertex of the rectangle and at the midpoint of each side of length $36$. The sides of length $a$ can be pressed toward each other keeping those two sides parallel so the rectangle becomes a convex hexagon as shown. When the figure is a hexagon with the sides of length $a$ parallel and separated by a distance of $24,$ the hexagon has the same area as the original rectangle. Find $a^2$.\n\n\n<image1>",
+    "solution": "\\boxed{720}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2084.png",
+    "idx": 751
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the picture $A B C D$ is a rectangle with $A B=16, B C=12$. Let $E$ be such a point that $A C \\perp C E, C E=15$. If $F$ is the point of intersection of segments $A E$ and $C D$, then the area of the triangle $A C F$ is equal to\n<image1>",
+    "solution": "\\boxed{75}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/168.png",
+    "idx": 1140
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In how many ways can the three kangaroos be placed in three different squares so that no kangaroo has an immediate neighbour?\n<image1>",
+    "solution": "\\boxed{10}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/852.png",
+    "idx": 1894
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Ria wants to write a number into each box. She has already written two numbers. The sum of all five numbers should be 35, the sum of the first three numbers should be 22, the sum of the last three numbers should be 25. What is the product Ria gets, if she multiplies the two numbers in the grey boxes?\n<image1>",
+    "solution": "\\boxed{63}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1151.png",
+    "idx": 1023
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Let there be a unit square initially tiled with four congruent shaded equilateral triangles, as seen below. The total area of all of the shaded regions can be expressed in the form $\\frac{a-b\\sqrt{c}}{d}$ , where $a, b, c$, and $d$ are positive integers and $c$ is not divisible by the square of any prime. Compute $a + b + c + d$.\\n<image1>",
+    "solution": "\\boxed{14}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2863.png",
+    "idx": 308
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: If I join the midpoints of the sides of the large triangle in the picture, a small triangle is formed. If I join the midpoints of the sides of this small triangle, a tiny triangle is formed. How many of these tiny triangles can fit into the largest triangle at the same time?\n<image1>",
+    "solution": "\\boxed{16}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/506.png",
+    "idx": 1815
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Harry folds a sheet of paper five times. Then he makes a hole in the folded paper, after which he unfolds it.\n<image1>\nHow many holes has the unfolded paper?",
+    "solution": "\\boxed{32}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/714.png",
+    "idx": 2254
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The triangle in the diagram contains a right angle. What is the sum of the other two marked angles on the diagram? <image1>\\n Options: A. $150^{\\circ}$, B. $180^{\\circ}$, C. $270^{\\circ}$, D. $320^{\\circ}$, E. $360^{\\circ}$",
+    "solution": "C. $270^{\\circ}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1627.png",
+    "idx": 401
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The rectangle $A B C D$ is made up of 12 congruent rectangles (see diagram). How big is the ratio $\\frac{A D}{D C}$?\n<image1>\\n Options: A. $\\frac{8}{9}$, B. $\\frac{5}{6}$, C. $\\frac{7}{8}$, D. $\\frac{2}{3}$, E. $\\frac{9}{8}$",
+    "solution": "A. $\\frac{8}{9}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1474.png",
+    "idx": 207
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Each face of the polyhedron shown is either a triangle or a square. Each square borders 4 triangles, and each triangle borders 3 squares. The polyhedron has 6 squares. How many triangles does it have?\n<image1>",
+    "solution": "\\boxed{8}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/301.png",
+    "idx": 2671
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the $ 6\\times4$ grid shown, $ 12$ of the $ 24$ squares are to be shaded so that there are two shaded squares in each row and three shaded squares in each column.  Let $ N$ be the number of shadings with this property.  Find the remainder when $ N$ is divided by $ 1000$.\n<image1>",
+    "solution": "\\boxed{860}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2069.png",
+    "idx": 2214
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Let $\\vartriangle ABC$ be equilateral. Two points $D$ and $E$ are on side $BC$ (with order $B, D, E, C$), and satisfy $\\angle DAE = 30^o$ . If $BD = 2$ and $CE = 3$, what is $BC$?\\n<image1>",
+    "solution": "\\boxed{$5+\\sqrt{19}$}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2865.png",
+    "idx": 60
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The square $F G H I$ has area 80 . Points $J, K, L, M$ are marked on the sides of the square so that $F K=G L=H M=I J$ and $F K=3 K G$. What is the area of the shaded region? <image1>",
+    "solution": "\\boxed{25}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1909.png",
+    "idx": 382
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A triangular array of numbers has a first row consisting of the odd integers $ 1,3,5,\\ldots,99$ in increasing order.  Each row below the first has one fewer entry than the row above it, and the bottom row has a single entry.  Each entry in any row after the top row equals the sum of the two entries diagonally above it in the row immediately above it.  How many entries in the array are multiples of $ 67$?\n<image1>",
+    "solution": "\\boxed{17}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2072.png",
+    "idx": 968
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The grid below is to be filled with integers in such a way that the sum of the numbers in each row and the sum of the numbers in each column are the same. Four numbers are missing. The number $x$ in the lower left corner is larger than the other three missing numbers. What is the smallest possible value of $x$?\n<image1>",
+    "solution": "\\boxed{8}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2778.png",
+    "idx": 681
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The regular octagon $ABCDEFGH$ has its center at $J$.  Each of the vertices and the center are to be associated with one of the digits $1$ through $9$, with each digit used once, in such a way that the sums of the numbers on the lines $AJE$, $BJF$, $CJG$, and $DJH$ are equal.  In how many ways can this be done? \n<image1>",
+    "solution": "\\boxed{1152}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2191.png",
+    "idx": 1664
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A dark disc with three holes is placed on top of a dial of a watch (see diagram). Then the disc is rotated around its centre. Which numbers can be seen at the same time? <image1>\\n Options: A. 4, B. 6 and 12, C. 1, D. 5 and 10, E. 2, F. 4 and 9, G. 3, H. 6 and 9, I. 5, J. 7 and 12",
+    "solution": "A. 4",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/984.png",
+    "idx": 1989
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A large square of side-length $10 \\mathrm{~cm}$ contains a smaller square of side-length $4 \\mathrm{~cm}$, as shown in the diagram. The corresponding sides of the two squares are parallel. What percentage of the area of the large square is shaded? <image1>\\n Options: A. $25 \\%$, B. $30 \\%$, C. $40 \\%$, D. $42 \\%$, E. $45 \\%$",
+    "solution": "D. $42 \\%$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1980.png",
+    "idx": 1971
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Consider the figure below, not drawn to scale.\\nIn this figure, assume that$AB \\perp BE$ and $AD  \\perp DE$. Also, let $AB = \\sqrt{6}$ and $\\angle BED =\\frac{\\pi}{6}$ . Find $AC$.\\n<image1>",
+    "solution": "\\boxed{$2\\sqrt{2}$}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2813.png",
+    "idx": 875
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Benjamin writes a number into the first circle. He then carries out the calculations as instructed and each time writes down the results in the respective circles. How many of the six numbers are divisible by 3?\n<image1>",
+    "solution": "\\boxed{2}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/913.png",
+    "idx": 1642
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: How big is the angle $\\alpha$ in the regular five-sided star shown?\n<image1>\\n Options: A. $24^{\\circ}$, B. $30^{\\circ}$, C. $36^{\\circ}$, D. $45^{\\circ}$, E. $72^{\\circ}$",
+    "solution": "C. $36^{\\circ}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/248.png",
+    "idx": 240
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Which of the diagrams below cannot be drawn without lifting your pencil off the page and without drawing along the same line twice?\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "D. D",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1663.png",
+    "idx": 674
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: $\\textbf{Juan's Old Stamping Grounds}$\nJuan organizes the stamps in his collection by country and by the decade in which they were issued.  The prices he paid for them at a stamp shop were: Brazil and France, 6 cents each, Peru 4 cents each, and Spain 5 cents each.  (Brazil and Peru are South American countries and France and Spain are in Europe.)\n<image1>\n\nThe average price of his '70s stamps is closest to\\n Options: A. $3.5 \\text{ cents}$, B. $4 \\text{ cents}$, C. $4.5 \\text{ cents}$, D. $5 \\text{ cents}$, E. $5.5 \\text{ cents}$",
+    "solution": "E. $5.5 \\text{ cents}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2637.png",
+    "idx": 1552
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A circle of radius $4 \\mathrm{~cm}$ is divided, as shown, by four semicircles with radius $2 \\mathrm{~cm}$ into four congruent parts. What is the perimeter of one of these parts?\n<image1>\\n Options: A. $2 \\pi$, B. $4 \\pi$, C. $6 \\pi$, D. $8 \\pi$, E. $12 \\pi$",
+    "solution": "C. $6 \\pi$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1336.png",
+    "idx": 8
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The diagram shows a semicircle with diameter $P Q$ inscribed in a rhombus $A B C D$. The rhombus is tangent to the arc of the semicircle in two places. Points $P$ and $Q$ lie on sides $B C$ and $C D$ of the rhombus respectively. The line of symmetry of the semicircle is coincident with the diagonal $A C$ of the rhombus. It is given that $\\angle C B A=60^{\\circ}$. The semicircle has radius 10 . The area of the rhombus can be written in the form $a \\sqrt{b}$ where $a$ and $b$ are integers and $b$ is prime. What is the value of\n<image1>\n$a b+a+b ?$",
+    "solution": "\\boxed{603}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2014.png",
+    "idx": 1599
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Point $O$ is the center of the regular octagon $ABCDEFGH$, and $X$ is the midpoint of the side $\\overline{AB}$. What fraction of the area of the octagon is shaded?\n<image1>\\n Options: A. $\\frac{11}{32}$, B. $\\frac{3}{8}$, C. $\\frac{13}{32}$, D. $\\frac{7}{16}$, E. $\\frac{15}{32}$",
+    "solution": "D. $\\frac{7}{16}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2732.png",
+    "idx": 1086
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Daniel wants to make a complete square using pieces only like those shown. What is the minimum number of pieces he must use?\n<image1>",
+    "solution": "\\boxed{20}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/801.png",
+    "idx": 1863
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: On the faces of a cube are written letters. First figure represents one possibility of its net. What letter should be written instead of the question mark in the other version of its net?\n<image1>\\n Options: A. A, B. B, C. C, D. E, E. Impossible to determine",
+    "solution": "D. E",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/742.png",
+    "idx": 1168
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Three circles with centres $A, B, C$ touch each other in pairs from the outside (see diagram). Their radii are 3,2 and 1. How big is the area of the triangle $A B C$?\n<image1>",
+    "solution": "\\boxed{6}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/300.png",
+    "idx": 1732
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Charles cuts a rope into 3 equally long pieces. Then he makes one knot in one of the pieces, 2 in the next and in the third piece 3 knots. Then he lays the three pieces down in a random order. Which picture does he see?\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "B. B",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/80.png",
+    "idx": 2853
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Jenny wants to write numbers into the cells of a $3 \\times 3$-table so that the sum of the numbers in each of the four $2 \\times 2$-squares are equally big. As it is shown in the diagram, she has already inserted three numbers. What number does she have to write into the cell in the fourth corner?\n<image1>",
+    "solution": "\\boxed{0}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1409.png",
+    "idx": 2992
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: How many dots do all ladybirds have together?\n<image1>",
+    "solution": "\\boxed{19}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/43.png",
+    "idx": 2276
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The picture on the right shows a tile pattern. The side length of the bigger tiles is a and of the smaller ones b. The dotted lines (horizontal and tilted) include an angle of $30^{\\circ}$. How big is the ratio a:b?\n<image1>\\n Options: A. $(2 \\cdot \\sqrt{3}): 1$, B. $(2+\\sqrt{3}): 1$, C. $(3+\\sqrt{2}): 1$, D. $(3 \\cdot \\sqrt{2}): 1$, E. 2:1",
+    "solution": "B. $(2+\\sqrt{3}): 1$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/233.png",
+    "idx": 2711
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A cube has edge length $2$. Suppose that we glue a cube of edge length $1$ on top of the big cube so that one of its faces rests entirely on the top face of the larger cube. The percent increase in the surface area (sides, top, and bottom) from the original cube to the new solid formed is closest to\n\n<image1>",
+    "solution": "\\boxed{17}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2622.png",
+    "idx": 2942
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The map shows three bus stations at points $A, B$ and $C$. A tour from station $A$ to the Zoo and the Port and back to $A$ is $10 \\mathrm{~km}$ long. $A$ tour from station $B$ to the Park and the Zoo and back to B is $12 \\mathrm{~km}$ long. A tour from station C to the Port and the Park and back to $C$ is $13 \\mathrm{~km}$ long. Also, A tour from the Zoo to the Park and the Port and back to the Zoo is $15 \\mathrm{~km}$ long. How long is the shortest tour from A to B to $C$ and back to $A$?\n<image1>\\n Options: A. $18 \\mathrm{~km}$, B. $20 \\mathrm{~km}$, C. $25 \\mathrm{~km}$, D. $35 \\mathrm{~km}$, E. $50 \\mathrm{~km}$",
+    "solution": "B. $20 \\mathrm{~km}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/947.png",
+    "idx": 1993
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: By joining alternate vertices of a regular hexagon with edges $4$ inches long, two equilateral triangles are formed, as shown. What is the area, in square inches, of the region that is common to the two triangles? Express your answer in simplest radical form. <image1>",
+    "solution": "\\boxed{8\\sqrt{3}{squareinches}}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/3007.png",
+    "idx": 634
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Four cars drive into a roundabout at the same point in time, each one coming from a different direction (see diagram). No car drives all the way around the roundabout, and no two cars leave at the same exit. In how many different ways can the cars exit the roundabout?\n<image1>",
+    "solution": "\\boxed{9}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1104.png",
+    "idx": 777
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Some of the digits in the following correct addition have been replaced by the letters $P, Q, R$ and  $S$ , as shown. What is the value of $P+Q+R+S$ ?\n<image1>",
+    "solution": "\\boxed{15}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1931.png",
+    "idx": 1215
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the diagram below, triangle $ABC$ is inscribed in the circle and $AC = AB$. The measure of angle $BAC$ is 42 degrees and segment $ED$ is tangent to the circle at point $C$. What is the measure of angle $ACD$? <image1>",
+    "solution": "\\boxed{69{degrees}}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2947.png",
+    "idx": 891
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Peter looks at the picture hanging on the wall in more detail through a magnifying glass. Which section can he not see?\n<image1>\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "E. E",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/844.png",
+    "idx": 239
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The following analog clock has two hands that can move independently of each other.\n<image1>\nInitially, both hands point to the number 12. The clock performs a sequence of hand movements so that on each movement, one of the two hands moves clockwise to the next number on the clock while the other hand does not move.\n\nLet $N$ be the number of sequences of 144 hand movements such that during the sequence, every possible positioning of the hands appears exactly once, and at the end of the 144 movements, the hands have returned to their initial position. Find the remainder when $N$ is divided by 1000.",
+    "solution": "\\boxed{608}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2104.png",
+    "idx": 2372
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Let $ ABC$ be a triangle with $ \\angle BAC = 90^\\circ$. A circle is tangent to the sides $ AB$ and $ AC$ at $ X$ and $ Y$ respectively, such that the points on the circle diametrically opposite $ X$ and $ Y$ both lie on the side $ BC$. Given that $ AB = 6$, find the area of the portion of the circle that lies outside the triangle.\\n<image1>",
+    "solution": "\\boxed{$\\pi-2$}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2873.png",
+    "idx": 3013
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Whenever the kangaroo goes up seven steps, the rabbit goes down three steps. When the kangaroo is on step number 56 , on which step will the rabbit be?\n<image1>",
+    "solution": "\\boxed{76}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/633.png",
+    "idx": 2220
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Twelve congruent rectangles are placed together to make a rectangle $P Q R S$ as shown. What is the ratio $P Q: Q R$ ? <image1>\\n Options: A. $2: 3$, B. $3: 4$, C. $5: 6$, D. $7: 8$, E. $8: 9$",
+    "solution": "E. $8: 9$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1974.png",
+    "idx": 249
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Dino walks from the entrance to the exit. He is only allowed to go through each room once. The rooms have numbers (see diagram). Dino adds up all the numbers of the rooms he walks through.\n<image1>\nWhat is the biggest result he can get this way?",
+    "solution": "\\boxed{34}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/150.png",
+    "idx": 1284
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Vania has a sheet of paper divided into nine equal squares. She wants to fold the sheet as shown in the picture, initially with horizontal folds and then with vertical folds, until she leaves the colored square on top of the layers. Vania wants to write the numbers from 1 to 9 , one in each square, so that these numbers are in ascending order, starting with the number 1 at the top, after the folds are made above. On the open sheet, indicated at the side, which numbers should she write in place of $a, b$ and $c$?\n<image1>\n<image2>\\n Options: A. $a=9, b=5, c=3$, B. $a=4, b=6, c=8$, C. $a=7, b=5, c=3$, D. $a=3, b=5, c=7$, E. $a=6, b=4, c=7$",
+    "solution": "\\boxed{C}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/936.png",
+    "idx": 234
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Triangles $ABC$ and $ABD$ are isosceles with $AB =AC = BD$, and $BD$ intersects $AC$ at $E$. If $BD$ is perpendicular to $AC$, then $\\angle C + \\angle D$ is\n<image1>\\n Options: A. $115^\\circ$, B. $120^\\circ$, C. $130^\\circ$, D. $135^\\circ$, E. $\\text{not uniquely determined}$",
+    "solution": "D. $135^\\circ$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2426.png",
+    "idx": 205
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Anna has <image1>.\nBarbara gave Eva <image2>.\nJosef has a <image3>.\nBob has <image4>.\nWho is Barbara?\n<image5>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "D. D",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/500.png",
+    "idx": 2392
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: An underground line has the six stations A, B, C, D, E and F. The train stops at every station. After reaching the end of the line $A$ or $F$ the train continues in the opposite direction. The train conductor starts his journey in station B. His first stop is in station C. In which station will be his $46^{\\text {th}}$ stop?\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "D. D",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/694.png",
+    "idx": 1952
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In an arcade game, the \"monster\" is the shaded sector of a circle of radius $ 1$ cm, as shown in the figure.  The missing piece (the mouth) has central angle $ 60^{\\circ}$.  What is the perimeter of the monster in cm?\n\n<image1>\\n Options: A. $\\pi + 2$, B. $2\\pi$, C. $\\frac{5}{3} \\pi$, D. $\\frac{5}{6} \\pi + 2$, E. $\\frac{5}{3} \\pi + 2$",
+    "solution": "E. $\\frac{5}{3} \\pi + 2$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2352.png",
+    "idx": 2059
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: How much does this Ferris wheel need to turn so that a white gondola is on top for\nthe first time?\n<image1>\\n Options: A. $\\frac{1}{2}$ turn, B. $\\frac{1}{3}$ turn, C. $\\frac{1}{6}$ turn, D. $\\frac{1}{12}$ turn, E. $\\frac{5}{6}$ turn",
+    "solution": "D. $\\frac{1}{12}$ turn",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/965.png",
+    "idx": 2175
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The diagram shows the triangle $P Q R$ in which $R H$ is a perpendicular height and $P S$ is the angle bisector at $P$. The obtuse angle between $R H$ and $P S$ is four times angle $S P Q$. What is angle $R P Q$ ? <image1>\\n Options: A. $30^{\\circ}$, B. $45^{\\circ}$, C. $60^{\\circ}$, D. $75^{\\circ}$, E. $90^{\\circ}$",
+    "solution": "C. $60^{\\circ}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1614.png",
+    "idx": 644
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Four straight lines that intersect in one single point form eight equal angles (see diagram). Which one of the black arcs has the same length as the circumference of the little (grey) circle?\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "D. D",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/369.png",
+    "idx": 232
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A circle of radius 2 is centered at $ O$. Square $ OABC$ has side length 1. Sides $ \\overline{AB}$ and $ \\overline{CB}$ are extended past $ b$ to meet the circle at $ D$ and $ E$, respectively. What is the area of the shaded region in the figure, which is bounded by $ \\overline{BD}$, $ \\overline{BE}$, and the minor arc connecting $ D$ and $ E$?\n\n<image1>\\n Options: A. $\\frac{\\pi}3 + 1 - \\sqrt{3}$, B. $\\frac{\\pi}2\\left( 2 - \\sqrt{3}\\right)$, C. $\\pi\\left(2 - \\sqrt{3}\\right)$, D. $\\frac{\\pi}{6} + \\frac{\\sqrt{3} - 1}{2} \\  \\indent$, E. $\\frac{\\pi}{3} - 1 + \\sqrt{3}$",
+    "solution": "A. $\\frac{\\pi}3 + 1 - \\sqrt{3}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2159.png",
+    "idx": 2080
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A digital clock shows the following time: <image1> What time is it when it uses the exactly same digits again for the first time after that?\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "C. C",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/901.png",
+    "idx": 328
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Maria made a block using white cubes and colored cubes in equal amounts. How many of the white cubes cannot be seen in the picture?\n<image1>",
+    "solution": "\\boxed{2}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/104.png",
+    "idx": 761
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: There are four cards on the table as in the picture. Every card has a letter on one side and a number on the other side. Peter said: \"For every card on the table it is true that if there is a vowel on one side, there is an even number on the other side.\" What is the smallest number of cards Alice must turn in order to check whether Peter said the truth?\n<image1>",
+    "solution": "\\boxed{2}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/185.png",
+    "idx": 280
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In figure 1, alongside, the area of the square equals $a$. The area of each circle in both figures equals $b$. Three circles are lined up as shown in figure 2. An elastic band is placed around these three circles without moving them. What is the area inside the elastic band?\n\n<image1>\\n Options: A. $3 b$, B. $2 a+b$, C. $a+2 b$, D. $3 a$, E. $a+b$",
+    "solution": "B. $2 a+b$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1802.png",
+    "idx": 2437
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Barbara wants to place draughts on a $4 \\times 4$ board in such a way that the number of draughts in each row is equal to the number shown at the end of the row, and the number of draughts in each column is equal to the number shown at the bottom of the column. No more than one draught is to be placed in any cell. In how many ways can this be done? <image1>",
+    "solution": "\\boxed{5}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1874.png",
+    "idx": 278
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the following figures you see five elastic bands, only one of which is tied in a knot. Which one?\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "D. D",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/785.png",
+    "idx": 2765
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Jim and Ben are sitting in a ferris wheel (see picture on the right). The ferris wheel is turning. Now Ben is in the position where Jim was beforehand. Where is Jim now?\n<image1>\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "C. C",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/65.png",
+    "idx": 963
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: There are two natural ways to inscribe a square in a given isosceles right triangle. If it is done as in Figure 1 below, then one finds that the area of the square is $441 \\text{cm}^2$. What is the area (in $\\text{cm}^2$) of the square inscribed in the same $\\triangle ABC$ as shown in Figure 2 below?\n<image1>",
+    "solution": "\\boxed{392}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2370.png",
+    "idx": 1653
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A cube has eight vertices (corners) and twelve edges.  A segment, such as $x$, which joins two vertices not joined by an edge is called a diagonal.  Segment $y$ is also a diagonal.  How many diagonals does a cube have?\n\n<image1>",
+    "solution": "\\boxed{16}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2594.png",
+    "idx": 491
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The diagram shows triangle $J K L$ of area $S$. The point $M$ is the midpoint of $K L$. The points $P, Q, R$ lie on the extended lines $L J, M J, K J$, respectively, such that $J P=2 \\times J L, J Q=3 \\times J M$ and $J R=4 \\times J K$.\nWhat is the area of triangle $P Q R$ ? <image1>\\n Options: A. $S$, B. $2 S$, C. $3 S$, D. $\\frac{1}{2} S$, E. $\\frac{1}{3} S$",
+    "solution": "A. $S$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1946.png",
+    "idx": 2333
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: On Misha's new phone, a passlock consists of six circles arranged in a $2\\times 3$ rectangle. The lock is opened by a continuous path connecting the six circles; the path cannot pass through a circle  on the way between two others (e.g. the top left and right circles cannot be adjacent).  For example, the left path shown below is allowed but the right path is not.  (Paths are considered to be oriented, so that a path starting at $A$ and ending at $B$ is different from a path starting at $B$ and ending at $A$.  However, in the diagrams below, the paths are valid/invalid regardless of orientation.)  How many passlocks are there consisting of all six circles?\\n<image1>",
+    "solution": "\\boxed{336}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2824.png",
+    "idx": 1008
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Squares $ABCD$, $EFGH$, and $GHIJ$ are equal in area. Points $C$ and $D$ are the midpoints of sides $IH$ ad $HE$, respectively. What is the ratio of the area of the shaded pentagon $AJICB$ to the sum of the areas of the three squares?\n\n<image1>\\n Options: A. $\\frac{1}{4}$, B. $\\frac{7}{24}$, C. $\\frac{1}{3}$, D. $\\frac{3}{8}$, E. $\\frac{5}{12}$",
+    "solution": "C. $\\frac{1}{3}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2725.png",
+    "idx": 2371
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Rita wants to write a number into every square of the diagram shown. Every number should be equal to the sum of the two numbers from the adjacent squares. Squares are adjacent if they share one edge. Two numbers are already given. Which number is she going to write into the square marked with $x$?\n<image1>",
+    "solution": "\\boxed{7}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1171.png",
+    "idx": 2435
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In this diagram $AB$ and $AC$ are the equal sides of an isosceles triangle $ABC$, in which is inscribed equilateral triangle $DEF$. Designate angle $BFD$ by $a$, angle $ADE$ by $b$, and angle $FEC$ by $c$. Then:\n<image1>\\n Options: A. $b=\\frac{a+c}{2}$, B. $b=\\frac{a-c}{2}$, C. $a=\\frac{b-c}{2}$, D. $a=\\frac{b+c}{2}$, E. $\\text{none of these}$",
+    "solution": "D. $a=\\frac{b+c}{2}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2276.png",
+    "idx": 162
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: How many bricks are missing in the wall?\n<image1>",
+    "solution": "\\boxed{6}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/7.png",
+    "idx": 2536
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: We have cut off one corner of a cube. Which of the developments below is the development of the remaining part?\n<image1>\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "E. E",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/717.png",
+    "idx": 335
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Which of the following sentences fits to the picture?\n<image1>\\n Options: A. There are equally many circles as squares., B. There are fewer circles than triangles., C. There are twice as many circles as triangles., D. There are more squares than triangles., E. There are two more triangles than circles.",
+    "solution": "C. There are twice as many circles as triangles.",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/552.png",
+    "idx": 1717
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Find $AX$ in the diagram if $CX$ bisects $\\angle ACB$. <image1>",
+    "solution": "\\boxed{14}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2912.png",
+    "idx": 2692
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the diagram, $P Q R S$ is a square of side $10 \\mathrm{~cm}$. The distance $M N$ is $6 \\mathrm{~cm}$. The square is divided into four congruent isosceles triangles, four congruent squares and the shaded region.\n<image1>\nWhat is the area of the shaded region?\\n Options: A. $42 \\mathrm{~cm}^{2}$, B. $46 \\mathrm{~cm}^{2}$, C. $48 \\mathrm{~cm}^{2}$, D. $52 \\mathrm{~cm}^{2}$, E. $58 \\mathrm{~cm}^{2}$",
+    "solution": "C. $48 \\mathrm{~cm}^{2}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1768.png",
+    "idx": 2390
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A garden is split into equally sized square-shaped lots. A fast and snail crawls $1 \\mathrm{~m}$ in one hour and the fast one crawls $2 \\mathrm{~m}$ in one hour. In which position will the two snails meet for the first time?\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "B. B",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/885.png",
+    "idx": 2315
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Maria wants there to be a knife to the right of every plate and a fork to the left of it. In order to get the right order she always swaps one fork with one knife. What is the minimum number of swaps necessary?\n<image1>",
+    "solution": "\\boxed{2}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/858.png",
+    "idx": 2141
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In $\\triangle ABC, \\angle A = 100^\\circ, \\angle B = 50^\\circ, \\angle C = 30^\\circ, \\overline{AH}$ is an altitude, and $\\overline{BM}$ is a median. Then $\\angle MHC =$\n\n<image1>\\n Options: A. $15^\\circ$, B. $22.5^\\circ$, C. $30^\\circ$, D. $40^\\circ$, E. $45^\\circ$",
+    "solution": "C. $30^\\circ$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2381.png",
+    "idx": 1295
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The picture shows the same cube from two different views. It is built from 27 smaller cubes, some of which are grey and some white.\nWhat is the largest number of grey cubes there could be?\n<image1>",
+    "solution": "\\boxed{9}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1902.png",
+    "idx": 1068
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In which of the five pictures is the white area bigger than the grey area?\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "D. D",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/488.png",
+    "idx": 836
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In how many different ways can the word BANANA be read from the following table by moving from one cell to another cell with which it shares an edge? Cells may be visited more than once. <image1>",
+    "solution": "\\boxed{84}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1990.png",
+    "idx": 2743
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A circle is divided into four arcs of length 2, 5, 6, $x$. Find the value of $x$, if the arc of length 2 subtends an angle of $30^{\\circ}$ at the centre.\n<image1>",
+    "solution": "\\boxed{11}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1293.png",
+    "idx": 2933
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Kengu jumps on the number line to the right (see diagram). He first makes one big jump and then two little jumps in a row and keeps repeating the same thing over and over again. He starts at 0 and ends at 16. How many jumps does Kengu make in total?\n<image1>",
+    "solution": "\\boxed{12}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/663.png",
+    "idx": 1286
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the diagram, what is the area of $\\triangle ABC$? <image1>",
+    "solution": "\\boxed{54}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/3020.png",
+    "idx": 977
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: What fraction of the large $12$ by $18$ rectangular region is shaded?\n\n<image1>\\n Options: A. $\\frac{1}{108}$, B. $\\frac{1}{18}$, C. $\\frac{1}{12}$, D. $\\frac{2}{9}$, E. $\\frac{1}{3}$",
+    "solution": "C. $\\frac{1}{12}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2518.png",
+    "idx": 1087
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The diagram shows a rectangle $A B C D$ in which $A B=1$ metre and $A D=4$ metres. The points $E$ and $G$ are the midpoints of $A D$ and $A B$ and the points $F$ and $H$ are the midpoints of $A E$ and $A G$.\n<image1>\nWhat is the area of the shaded rectangle?\\n Options: A. $\\frac{1}{16} \\mathrm{~m}^{2}$, B. $\\frac{1}{8} \\mathrm{~m}^{2}$, C. $\\frac{1}{4} \\mathrm{~m}^{2}$, D. $\\frac{1}{2} \\mathrm{~m}^{2}$, E. $1 \\mathrm{~m}^{2}$",
+    "solution": "C. $\\frac{1}{4} \\mathrm{~m}^{2}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1731.png",
+    "idx": 1621
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A figure is made up of three squares. The side length of the smallest square is $6 \\mathrm{~cm}$. How long is the side length of the biggest square?\n<image1>\\n Options: A. $8 \\mathrm{~cm}$, B. $10 \\mathrm{~cm}$, C. $12 \\mathrm{~cm}$, D. $14 \\mathrm{~cm}$, E. $16 \\mathrm{~cm}$",
+    "solution": "C. $12 \\mathrm{~cm}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/888.png",
+    "idx": 536
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The figure shows a circle with the diameter $A B$ and point $D$ on it. Find $d$.\n<image1>",
+    "solution": "\\boxed{4}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/208.png",
+    "idx": 2751
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The diagram shows Maria's square tablecloth to scale. All small light squares are equally big and their diagonals are parallel to the sides of the table cloth. Which part of the whole table cloth is black?\n<image1>\\n Options: A. $16 \\%$, B. $24 \\%$, C. $25 \\%$, D. $32 \\%$, E. $36 \\%$",
+    "solution": "D. $32 \\%$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1155.png",
+    "idx": 2643
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The parallel sides of a trapezoid are $ 3$ and $ 9$. The non-parallel sides are $ 4$ and $ 6$. A line parallel to the bases divides the trapezoid into two trapezoids of equal perimeters. The ratio in which each of the non-parallel sides is divided is:\n<image1>\\n Options: A. 4: 3, B. 3: 2, C. 4: 1, D. 3: 1, E. 6: 1",
+    "solution": "C. 4: 1",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2270.png",
+    "idx": 1228
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: How many cubes have been taken from the block?\n<image1>",
+    "solution": "\\boxed{7}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/427.png",
+    "idx": 1872
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Both the figures on the right were made out of the same 5 pieces. The rectangle has dimensions $5 \\mathrm{~cm} \\times 10 \\mathrm{~cm}$. The other pieces are quarter circles with 2 different sized radii. What is the difference between the perimeters of the two figures?\n<image1>\\n Options: A. $2.5 \\mathrm{~cm}$, B. $5 \\mathrm{~cm}$, C. $10 \\mathrm{~cm}$, D. $15 \\mathrm{~cm}$, E. $20 \\mathrm{~cm}$",
+    "solution": "E. $20 \\mathrm{~cm}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/814.png",
+    "idx": 297
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A square fits snugly between the horizontal line and two touching circles of radius 1000, as shown. The line is tangent to the circles.\nWhat is the side-length of the square?\n<image1>",
+    "solution": "\\boxed{400}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2023.png",
+    "idx": 38
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The shaded region below is called a shark's fin falcata, a figure studied by Leonardo da Vinci. It is bounded by the portion of the circle of radius $3$ and center $(0,0)$ that lies in the first quadrant, the portion of the circle with radius $\\frac{3}{2}$ and center $(0,\\frac{3}{2})$ that lies in the first quadrant, and the line segment from $(0,0)$ to $(3,0)$. What is the area of the shark's fin falcata?\n\n<image1>\\n Options: A. $\\frac{4\\pi}{5}$, B. $\\frac{9\\pi}{8}$, C. $\\frac{4\\pi}{3}$, D. $\\frac{7\\pi}{5}$, E. $\\frac{3\\pi}{2}$",
+    "solution": "B. $\\frac{9\\pi}{8}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2205.png",
+    "idx": 1877
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Octagon $ABCDEFGH$ with side lengths $AB = CD = EF = GH = 10$ and $BC=  DE = FG = HA = 11$ is formed by removing four $6-8-10$ triangles from the corners of a $23\\times 27$ rectangle with side $\\overline{AH}$ on a short side of the rectangle, as shown. Let $J$ be the midpoint of $\\overline{HA}$, and partition the octagon into $7$ triangles by drawing segments $\\overline{JB}$, $\\overline{JC}$, $\\overline{JD}$, $\\overline{JE}$, $\\overline{JF}$, and $\\overline{JG}$. Find the area of the convex polygon whose vertices are the centroids of these $7$ triangles.\n\n<image1>",
+    "solution": "\\boxed{184}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2095.png",
+    "idx": 2544
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: An annulus is the region between two concentric circles. The concentric circles in the figure have radii $ b$ and $ c$, with $ b > c$. Let $ \\overline{OX}$ be a radius of the larger circle, let $ \\overline{XZ}$ be tangent to the smaller circle at $ Z$, and let $ \\overline{OY}$ be the radius of the larger circle that contains $ Z$. Let $ a = XZ$, $ d = YZ$, and $ e = XY$. What is the area of the annulus?\n<image1>\\n Options: A. $\\pi a^2$, B. $\\pi b^2$, C. $\\pi c^2$, D. $\\pi d^2$, E. $\\pi e^2$",
+    "solution": "A. $\\pi a^2$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2138.png",
+    "idx": 2306
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The $8$ eyelets for the lace of a sneaker all lie on a rectangle, four equally spaced on each of the longer sides. The rectangle has a width of $50$ mm and a length of $80$ mm. There is one eyelet at each vertex of the rectangle. The lace itself must pass between the vertex eyelets along a width side of the rectangle and then crisscross between successive eyelets until it reaches the two eyelets at the other width side of the rectrangle as shown. After passing through these final eyelets, each of the ends of the lace must extend at least $200$ mm farther to allow a knot to be tied. Find the minimum length of the lace in millimeters.\n\n<image1>",
+    "solution": "\\boxed{790}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2082.png",
+    "idx": 409
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The adjoining figure shows two intersecting chords in a circle, with $B$ on minor arc $AD$.  Suppose that the radius of the circle is 5, that $BC = 6$, and that $AD$ is bisected by $BC$.  Suppose further that $AD$ is the only chord starting at $A$ which is bisected by $BC$.  It follows that the sine of the minor arc $AB$ is a rational number.  If this fraction is expressed as a fraction $m/n$ in lowest terms, what is the product $mn$?\n<image1>",
+    "solution": "\\boxed{175}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2038.png",
+    "idx": 300
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: <image1>\n\nIn the circle above, $M$ is the midpoint of arc $CAB$ and segment $MP$ is perpendicular to chord $AB$ at $P$. If the measure of chord $AC$ is $x$ and that of segment $AP$ is $(x+1)$, then segment $PB$ has measure equal to\\n Options: A. 3x+2, B. 3x+1, C. 2x+3, D. 2x+2, E. 2x+1",
+    "solution": "E. 2x+1",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2301.png",
+    "idx": 2202
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Every one of these six building blocks consists of 5 little cubes. The little cubes are either white or grey. Cubes of equal colour don't touch each other. How many little white cubes are there in total?\n<image1>",
+    "solution": "\\boxed{12}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/49.png",
+    "idx": 873
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A rectangular piece of paper $A B C D$ is $5 \\mathrm{~cm}$ wide and $50 \\mathrm{~cm}$ long. The paper is white on one side and grey on the other. Christina folds the strip as shown so that the vertex $B$ coincides with $M$ the midpoint of the edge $C D$. Then she folds it so that the vertex $D$ coincides with $N$ the midpoint of the edge $A B$. How big is the area of the visible white part in the diagram?\n<image1>\n<image2>\n<image3>\\n Options: A. $50 \\mathrm{~cm}^{2}$, B. $60 \\mathrm{~cm}^{2}$, C. $62.5 \\mathrm{~cm}^{2}$, D. $100 \\mathrm{~cm}^{2}$, E. $125 \\mathrm{~cm}^{2}$",
+    "solution": "B. $60 \\mathrm{~cm}^{2}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/292.png",
+    "idx": 2072
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the diagram shown here (which is not drawn to scale), suppose that $\\triangle ABC \\sim \\triangle PAQ$ and $\\triangle ABQ \\sim \\triangle QCP$.  If $m\\angle BAC = 70^\\circ$, then compute $m\\angle PQC$. <image1>",
+    "solution": "\\boxed{15}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/3022.png",
+    "idx": 542
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the diagram on the right the following can be seen: a straight line, which is the common tangent of two touching circles with radius 1, and a square with one edge on the straight line and the other vertices one on each of the two circles. How big is the side length of the square?\n<image1>\\n Options: A. $\\frac{2}{5}$, B. $\\frac{1}{4}$, C. $\\frac{1}{\\sqrt{2}}$, D. $\\frac{1}{\\sqrt{5}}$, E. $\\frac{1}{2}$",
+    "solution": "A. $\\frac{2}{5}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/269.png",
+    "idx": 1429
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The figure shown can be folded into the shape of a cube. In the resulting cube, which of the lettered faces is opposite the face marked $x$?\n\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "C. C",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2415.png",
+    "idx": 281
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Which of the five \"T-like shapes\" would be symmetric to the one shown with respect to the dashed line?\n\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "B. B",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2529.png",
+    "idx": 1000
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: 5 friends talk about their collected <image1>. Xenia says: \"I have an even number of pins\", Zach: \"Half of my pins are planets, Sue: \"I don't have any moons\", Paul: \"I have more moons than stars\" and Yvonne: \"I have more stars than planets\". Below are the collections of the 5 friends. Which set of pins belongs to Yvonne?\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "E. E",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1217.png",
+    "idx": 1513
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Simone has a cube with sides of length $10 \\mathrm{~cm}$, and a pack of identical square stickers. She places one sticker in the centre of each face of the cube, and one across each edge so that the stickers meet at their corners, as shown in the diagram. What is the total area in $\\mathrm{cm}^{2}$ of the stickers used by Simone? <image1>",
+    "solution": "\\boxed{225}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1877.png",
+    "idx": 1167
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: How many points are there in the three unseen sides of dice?\n<image1>",
+    "solution": "\\boxed{11}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/16.png",
+    "idx": 646
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The bases of the two touching squares shown lie on the same straight line. The lengths of the diagonals of the larger square and the smaller square are $10 \\mathrm{~cm}$ and $8 \\mathrm{~cm}$ respectively. $P$ is the centre of the smaller square. What is the area, in $\\mathrm{cm}^{2}$, of the shaded triangle $P Q R$ ? <image1>",
+    "solution": "\\boxed{20}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1978.png",
+    "idx": 1794
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A circle with a circumscribed and an inscribed square centered at the origin $ O$ of a rectangular coordinate system with positive $ x$ and $ y$ axes $ OX$ and $ OY$ is shown in each figure $ I$ to $ IV$ below.\n<image1>\n\nThe inequalities\n\\[ |x| + |y| \\leq \\sqrt{2(x^2 + y^2)} \\leq 2\\mbox{Max}(|x|, |y|)\\]\nare represented geometrically* by the figure numbered\\n Options: A. $I$, B. $II$, C. $III$, D. $IV$, E. $\\mbox{none of these}*An inequality of the form  f(x, y) \\leq g(x, y), for all  x and  y is represented geometrically by a figure showing the containment \\{\\mbox{The set of points }(x, y)\\mbox{ such that }g(x, y) \\leq a\\} \\subset\\ \\{\\mbox{The set of points }(x, y)\\mbox{ such that }f(x, y) \\leq a\\}for a typical real number  a$.",
+    "solution": "B. $II$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2305.png",
+    "idx": 2225
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: <image1>\n\nGenevieve puts bracing on her large kite in the form of a cross connecting opposite corners of the kite. How many inches of bracing material does she need?",
+    "solution": "\\boxed{39}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2626.png",
+    "idx": 2881
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Medians $ BD$ and $ CE$ of triangle $ ABC$ are perpendicular, $ BD = 8$, and $ CE = 12$. The area of triangle $ ABC$ is\n<image1>",
+    "solution": "\\boxed{64}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2430.png",
+    "idx": 1239
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In trapezoid $ABCD$ , the sides $AB$ and $CD$  are equal. The perimeter of $ABCD$ is\n\n<image1>",
+    "solution": "\\boxed{34}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2608.png",
+    "idx": 2505
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A shape is created by joining seven unit cubes, as shown. What is the ratio of the volume in cubic units to the surface area in square units?\n\n<image1>\\n Options: A. 1 : 6, B. 7 : 36, C. 1 : 5, D. 7 : 30, E. 6 : 25",
+    "solution": "D. 7 : 30",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2690.png",
+    "idx": 2678
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Simon has a cube with side length $1 \\mathrm{dm}$ made of glass. He sticks several equally big black squares on it, as shown on the right so that all faces look the same. How many $\\mathrm{cm}^{2}$ were covered over?\n<image1>",
+    "solution": "\\boxed{225}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1352.png",
+    "idx": 2166
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The big wheel of this penny-farthing bicycle has perimeter 4.2 metres. The small wheel has perimeter 0.9 metres. At a certain moment, the valves of both wheels are at their lowest points. The bicycle begins to roll.\nHow many metres will the bicycle have rolled forward when both valves are next at their lowest points at the same time?\n<image1>",
+    "solution": "\\boxed{12.6}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1898.png",
+    "idx": 32
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the diagram, $\\alpha=55^{\\circ}, \\beta=40^{\\circ}$ and $\\gamma=35^{\\circ}$. What is the value of $\\delta$ ? <image1>\\n Options: A. $100^{\\circ}$, B. $105^{\\circ}$, C. $120^{\\circ}$, D. $125^{\\circ}$, E. $130^{\\circ}$",
+    "solution": "E. $130^{\\circ}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1600.png",
+    "idx": 2735
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Each of the nine paths in a park is $100 \\mathrm{~m}$ long. Ann wants to go from $X$ to $Y$ without going along any path more than once. What is the length of the longest route she can choose? <image1>\\n Options: A. $900 \\mathrm{~m}$, B. $800 \\mathrm{~m}$, C. $700 \\mathrm{~m}$, D. $600 \\mathrm{~m}$, E. $500 \\mathrm{~m}$",
+    "solution": "C. $700 \\mathrm{~m}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1587.png",
+    "idx": 2271
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the box are seven blockss. You want to rearrange the blocks so that another block can placed. What is the minimum number of blocks that have to be moved?\n<image1>",
+    "solution": "\\boxed{3}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/225.png",
+    "idx": 1226
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A river starts at point $A$. As it flows the river splits into two. The first branch takes $\\frac{2}{3}$ of the water and the second takes the rest. Later the first branch splits into three, one taking $\\frac{1}{8}$ of the branch's water, the second $\\frac{5}{8}$ and the third one the rest. Further down this last branch meets again a branch of the river. The map below shows the situation. What part of the original water flows at point $B$?\n<image1>\\n Options: A. $\\frac{1}{3}$, B. $\\frac{5}{4}$, C. $\\frac{2}{9}$, D. $\\frac{1}{2}$, E. $\\frac{1}{4}$",
+    "solution": "D. $\\frac{1}{2}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/206.png",
+    "idx": 2717
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The diagram shows a five-pointed star. How big is the angle $A$?\n<image1>\\n Options: A. $35^{\\circ}$, B. $42^{\\circ}$, C. $51^{\\circ}$, D. $65^{\\circ}$, E. $109^{\\circ}$",
+    "solution": "C. $51^{\\circ}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1089.png",
+    "idx": 424
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A square floor is made up of triangular and square tiles in grey and white. What is the smallest number of grey tiles that have to be swapped with white tiles, so that the floor looks the same from all four given viewing directions?\n<image1>\\n Options: A. three triangles, B. one square, C. one triangle, D. three squares, E. one triangle, F. one square, G. three triangles, H. three squares, I. three triangles, J. two squares",
+    "solution": "C. one triangle",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/879.png",
+    "idx": 550
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The centres of the four illustrated circles are in the corners of the square. The two big circles touch each other and also the two little circles. With which factor do you have to multiply the radii of the little circles to obtain the radius of the big circles?\n<image1>\\n Options: A. $\\frac{2}{9}$, B. $\\sqrt{5}$, C. $0.8 \\cdot \\pi$, D. 2.5, E. $1+\\sqrt{2}$",
+    "solution": "E. $1+\\sqrt{2}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1327.png",
+    "idx": 1083
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In order to get to his bone, the dog has to follow the black line. In total he turns 3-times to the right and 2-times to the left.\nWhich path does he take?\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "E. E",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/78.png",
+    "idx": 472
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Some shapes are drawn on a piece of paper. The teacher folds the left-hand side of the paper over the central bold line. How many of the shapes on the left-hand side will fit exactly on top of a shape on the right-hand side? <image1>",
+    "solution": "\\boxed{3}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1967.png",
+    "idx": 438
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Three 12 cm $\\times$ 12 cm squares are each cut into two pieces $A$ and $B$, as shown in the first figure below, by joining the midpoints of two adjacent sides.  These six pieces are then attached to a regular hexagon, as shown in the second figure, so as to fold into a polyhedron.  What is the volume (in $\\text{cm}^3$) of this polyhedron?\n\n<image1>",
+    "solution": "\\boxed{864}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2042.png",
+    "idx": 2266
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the figure, $ \\overline{CD}, \\overline{AE}$ and $ \\overline{BF}$ are one-third of their respective sides. It follows that $ \\overline{AN_2}: \\overline{N_2N_1}: \\overline{N_1D} = 3: 3: 1$, and similarly for lines $ BE$ and $ CF$. Then the area of triangle $ N_1N_2N_3$ is:\n<image1>\\n Options: A. $\\frac{1}{10} \\triangle ABC$, B. $\\frac{1}{9} \\triangle ABC$, C. $\\frac{1}{7} \\triangle ABC$, D. $\\frac{1}{6} \\triangle ABC$, E. $\\text{none of these}$",
+    "solution": "C. $\\frac{1}{7} \\triangle ABC$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2258.png",
+    "idx": 636
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: What is the area enclosed by the geoboard quadrilateral below?\n\n<image1>\\n Options: A. $15$, B. $18\\frac{1}{2}$, C. $22\\frac{1}{2}$, D. $27$, E. $41$",
+    "solution": "C. $22\\frac{1}{2}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2656.png",
+    "idx": 1115
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Quadrilateral $ABCD$ is a trapezoid, $AD = 15$, $AB = 50$, $BC = 20$, and the altitude is $12$. What is the area of the trapezoid?\n\n<image1>",
+    "solution": "\\boxed{750}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2716.png",
+    "idx": 1154
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In $ \\triangle ABC$, we have $ \\angle C = 3 \\angle A$, $ a = 27$, and $ c = 48$.  What is $ b$?\n\n<image1>\\n Options: A. $33$, B. $35$, C. $37$, D. $39$, E. $\\text{not uniquely determined}$",
+    "solution": "B. $35$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2358.png",
+    "idx": 2477
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the sum on the right, each of the letters $X, Y$ and $Z$ represents a different $X X$ non-zero digit. What does $X$ represent? <image1>",
+    "solution": "\\boxed{8}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1804.png",
+    "idx": 862
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The Mayas used points and lines to write numbers. A point stands for 1, a line for 5. Which of the following Maya-numbers stands for 17?\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "D. D",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/900.png",
+    "idx": 2939
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The \"tower\" in the diagram on the left is made up of a sqaure, a rectangle and an equlateral triangle. Each of those three shapes has the same perimeter. The side length of the square is $9 \\mathrm{~cm}$. How long is the side of the rectangle indicated?\n<image1>\\n Options: A. $4 \\mathrm{~cm}$, B. $5 \\mathrm{~cm}$, C. $6 \\mathrm{~cm}$, D. $7 \\mathrm{~cm}$, E. $8 \\mathrm{~cm}$",
+    "solution": "C. $6 \\mathrm{~cm}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/775.png",
+    "idx": 1404
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: We consider the perimeter and the area of the region corresponding to the grey squares. How many more squares can we colour grey for the grey area to increase without increasing its perimeter?\n<image1>",
+    "solution": "\\boxed{16}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/184.png",
+    "idx": 833
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: If one removes some $1 \\times 1 \\times 1$ cubes from a $5 \\times 5 \\times 5$ cube, you obtain the solid shown. It consists of several equally high pillars that are built upon a common base. How many little cubes have been removed?\n<image1>",
+    "solution": "\\boxed{64}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/263.png",
+    "idx": 2815
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A large rectangular plot is divided into two lots that are separated from each other by an $A B C D$ fence, as shown in the picture beside. The $A B, B C$ and $C D$ parts of this fence are parallel to the sides of the rectangle and have lengths of $30 \\mathrm{~m}$, $24 \\mathrm{~m}$ and $10 \\mathrm{~m}$, respectively. The owners of these lands have combined to knock down the fence and make a new straight AE fence, without changing the area of each of the lands. How far from point $D$ should the $E$ end of the fence be?\n<image1>\\n Options: A. $8 \\mathrm{~m}$, B. $10 \\mathrm{~m}$, C. $12 \\mathrm{~m}$, D. $14 \\mathrm{~m}$, E. $16 \\mathrm{~m}$",
+    "solution": "C. $12 \\mathrm{~m}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1449.png",
+    "idx": 2597
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: One slice of a circular cake is $15 \\%$ of the whole cake. What is the size of the angle marked with the question mark? <image1>\\n Options: A. $30^{\\circ}$, B. $45^{\\circ}$, C. $54^{\\circ}$, D. $15^{\\circ}$, E. $20^{\\circ}$",
+    "solution": "C. $54^{\\circ}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1800.png",
+    "idx": 1081
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Which of the following symbols for signs of the Zodiac has an axis of symmetry?\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "A. A",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1206.png",
+    "idx": 2070
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A star consist of a square and four triangles. All sides of the triangles are equally long. The perimeter of the square is $36 \\mathrm{~cm}$. What is the perimeter of the star?\n<image1>\\n Options: A. $144 \\mathrm{~cm}$, B. $120 \\mathrm{~cm}$, C. $104 \\mathrm{~cm}$, D. $90 \\mathrm{~cm}$, E. $72 \\mathrm{~cm}$",
+    "solution": "E. $72 \\mathrm{~cm}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/886.png",
+    "idx": 2001
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Let $\\triangle ABC$ be an acute triangle with circumcenter $O$ and centroid $G$. Let $X$ be the intersection of the line tangent to the circumcircle of $\\triangle ABC$ at $A$ and the line perpendicular to $GO$ at $G$. Let $Y$ be the intersection of lines $XG$ and $BC$. Given that the measures of $\\angle ABC, \\angle BCA, $ and $\\angle XOY$ are in the ratio $13 : 2 : 17, $ the degree measure of $\\angle BAC$ can be written as $\\frac{m}{n},$ where $m$ and $n$ are relatively prime positive integers. Find $m+n$.\n<image1>",
+    "solution": "\\boxed{592}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2099.png",
+    "idx": 1028
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Let $\\ell_A$ and $\\ell_B$ be two distinct parallel lines. For positive integers $m$ and $n$, distinct points $A_1, A_2, \\allowbreak A_3, \\allowbreak \\ldots, \\allowbreak A_m$ lie on $\\ell_A$, and distinct points $B_1, B_2, B_3, \\ldots, B_n$ lie on $\\ell_B$. Additionally, when segments $\\overline{A_iB_j}$ are drawn for all $i=1,2,3,\\ldots, m$ and $j=1,\\allowbreak 2,\\allowbreak 3, \\ldots, \\allowbreak n$, no point strictly between $\\ell_A$ and $\\ell_B$ lies on more than two of the segments. Find the number of bounded regions into which this figure divides the plane when $m=7$ and $n=5$. The figure shows that there are 8 regions when $m=3$ and $n=2$.\n<image1>",
+    "solution": "\\boxed{244}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2101.png",
+    "idx": 208
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Two rectangles form the angles $40^{\\circ}$ and $30^{\\circ}$ respectively, with a straight line (see diagram). How big is angle $\\alpha$?\n<image1>\\n Options: A. $105^{\\circ}$, B. $120^{\\circ}$, C. $130^{\\circ}$, D. $135^{\\circ}$, E. another value",
+    "solution": "E. another value",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/317.png",
+    "idx": 378
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Two traffic signs mark the bridge in my village. These marks indicate the maximum width and the maximum possible weight. Which one of the following trucks is allowed to cross that bridge?\n<image1>\\n Options: A. The one $315 \\mathrm{~cm}$ wide and weighing $4307 \\mathrm{~kg}$, B. The one $330 \\mathrm{~cm}$ wide and weighing $4250 \\mathrm{~kg}$, C. The one $325 \\mathrm{~cm}$ wide and weighing $4400 \\mathrm{~kg}$, D. The one $322 \\mathrm{~cm}$ wide and weighing $4298 \\mathrm{~kg}$, E. No one of these",
+    "solution": "D. The one $322 \\mathrm{~cm}$ wide and weighing $4298 \\mathrm{~kg}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/422.png",
+    "idx": 2598
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The area of trapezoid $ ABCD$ is $ 164 \\text{cm}^2$.  The altitude is $ 8 \\text{cm}$, $ AB$ is $ 10 \\text{cm}$, and $ CD$ is $ 17 \\text{cm}$.  What is $ BC$, in centimeters?\n<image1>",
+    "solution": "\\boxed{10}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2651.png",
+    "idx": 1734
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In right $ \\triangle ABC$ with legs $ 5$ and $ 12$, arcs of circles are drawn, one with center $ A$ and radius $ 12$, the other with center $ B$ and radius $ 5$.  They intersect the hypotenuse at $ M$ and $ N$.  Then, $ MN$ has length:\n\n<image1>\\n Options: A. $2$, B. $\\frac{13}{5}$, C. $3$, D. $4$, E. $\\frac{24}{5}$",
+    "solution": "D. $4$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2353.png",
+    "idx": 1133
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The twelve-sided figure shown has been drawn on $1 \\text{ cm}\\times 1 \\text{ cm}$ graph paper. What is the area of the figure in $\\text{cm}^2$?\n\n<image1>",
+    "solution": "\\boxed{13}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2747.png",
+    "idx": 180
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In a game of Chomp, two players alternately take bites from a 5-by-7 grid of unit squares. To take a bite, a player chooses one of the remaining squares, then removes (\"eats'') all squares in the quadrant defined by the left edge (extended upward) and the lower edge (extended rightward) of the chosen square. For example, the bite determined by the shaded square in the diagram would remove the shaded square and the four squares marked by $\\times$. (The squares with two or more dotted edges have been removed form the original board in previous moves.)\n<image1>\n\nThe object of the game is to make one's opponent take the last bite. The diagram shows one of the many subsets of the set of 35 unit squares that can occur during the game of Chomp. How many different subsets are there in all? Include the full board and empty board in your count.",
+    "solution": "\\boxed{792}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2054.png",
+    "idx": 14
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Zilda will use six equal cubes and two different rectangular blocks to form the structure beside with eight faces. Before gluing the pieces, she will paint each one entirely and calculated that she will need 18 liters of paint (the color does not matter). How many liters of paint would she use if she painted the whole structure only after gluing the parts?\n<image1>",
+    "solution": "\\boxed{11.5}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/339.png",
+    "idx": 1366
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Six figures were drawn, one on each side of a cube, as shown beside, in different positions. On the side that does not appear beside is this drawing:\n<image1>\nWhat is the figure on the face opposite to it?\n<image2>\n<image3>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "B. B",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/110.png",
+    "idx": 535
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the figure $ \\overline{AB} = \\overline{AC}$, angle $ BAD = 30^{\\circ}$, and $ \\overline{AE} = \\overline{AD}$.\n<image1>Then angle $ CDE$ equals:\\n Options: A. $7\\frac{1}{2}^{\\circ}$, B. $10^{\\circ}$, C. $12\\frac{1}{2}^{\\circ}$, D. $15^{\\circ}$, E. $20^{\\circ}$",
+    "solution": "D. $15^{\\circ}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2264.png",
+    "idx": 2609
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Charlotte is playing the hit new web number game, Primle. In this game, the objective is to guess a two-digit positive prime integer between $10$ and $99$, called the Primle. For each guess, a digit is highlighted blue if it is in the Primle, but not in the correct place. A digit is highlighted orange if it is in the Primle and is in the correct place. Finally, a digit is left unhighlighted if it is not in the Primle. If Charlotte guesses $13$ and $47$ and is left with the following game board, what is the Primle?\\n<image1>",
+    "solution": "\\boxed{79}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2852.png",
+    "idx": 1072
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Tom, John and Lily each shot six arrows at a target. Arrows hitting anywhere within the same ring scored the same number of points. Tom scored 46 points and John scored 34 points, as shown. How many points did Lily score? <image1>",
+    "solution": "\\boxed{40}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1712.png",
+    "idx": 661
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A square with area 30 is split into two by its diagonal and then Split into triangles as shown in the diagram. Some of the areas of the triangles are given in the diagram. Which of the line segments $a, b, c, d, e$ of the diagonal is the longest?\n<image1>\\n Options: A. a, B. b, C. c, D. d, E. e",
+    "solution": "D. d",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1127.png",
+    "idx": 3036
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Six paper strips are used to weave a pattern (see diagram). What do you see when you look at the pattern from behind?\n<image1>\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "C. C",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/617.png",
+    "idx": 1809
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In acute triangle $ABC$, altitudes $AD$, $BE$, and $CF$ intersect at the orthocenter $H$.  If $BD = 5$, $CD = 9$, and $CE = 42/5$, then find the length of $HE$.\n\n<image1>",
+    "solution": "\\boxed{\\frac{99}{20}}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2904.png",
+    "idx": 2259
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Four congruent rectangles are placed as shown. The area of the outer square is $ 4$ times that of the inner square. What is the ratio of the length of the longer side of each rectangle to the length of its shorter side?\n<image1>\\n Options: A. $3$, B. $\\sqrt{10}$, C. $2 + \\sqrt{2}$, D. $2\\sqrt{3}$, E. $4$",
+    "solution": "A. $3$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2168.png",
+    "idx": 2890
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: An angle is drawn on a set of equally spaced parallel lines as shown.  The ratio of the area of shaded region $\\mathcal{C}$ to the area of shaded region $\\mathcal{B}$ is $11/5$.  Find the ratio of shaded region $\\mathcal{D}$ to the area of shaded region $\\mathcal{A}$.\n\n<image1>",
+    "solution": "\\boxed{408}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2066.png",
+    "idx": 1751
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The distance from the top of the can on the floor to the top of the bottle on the table is $150 \\mathrm{~cm}$. The distance from the top of the bottle on the floor to the top of the can on the table is $110 \\mathrm{~cm}$. What is the height of the table?\n<image1>\\n Options: A. $110 \\mathrm{~cm}$, B. $120 \\mathrm{~cm}$, C. $130 \\mathrm{~cm}$, D. $140 \\mathrm{~cm}$, E. $150 \\mathrm{~cm}$",
+    "solution": "C. $130 \\mathrm{~cm}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1929.png",
+    "idx": 2297
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Four ribbons $\\mathrm{M}, \\mathrm{N}, \\mathrm{P}$ and $\\mathrm{Q}$ are wrapped around a box. <image1> In which order were they wrapped around the box?\\n Options: A. M, B. N, C. Q, D. P, E. N, F. M, G. P, H. Q, I. N, J. Q, M, P, N, M, Q, P, $Q, N, M, P$",
+    "solution": "D. P",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/982.png",
+    "idx": 39
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the figure, equilateral hexagon $ABCDEF$ has three nonadjacent acute interior angles that each measure $30^\\circ$. The enclosed area of the hexagon is $6\\sqrt{3}$. What is the perimeter of the hexagon?\n<image1>\\n Options: A. 4, B. $4\\sqrt{3}$, C. 12, D. 18, E. $12\\sqrt{3}$",
+    "solution": "E. $12\\sqrt{3}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2493.png",
+    "idx": 458
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Anna has four identical building blocks that each look like this: <image1> Which shape can she not form with them?\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "E. E",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/868.png",
+    "idx": 2830
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Maria puts 4 liters of water in vase I, 3 liters of water in vase II and 4 liters of water in vase III, represented on the side. Seen from the front, these three vases seem to have the same size. Which of the following images can represent the three vases, when seen from above?\n<image1>\n<image2>\\n Options: A. (A), B. (B), C. (C), D. (D), E. (E)",
+    "solution": "A. (A)",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/929.png",
+    "idx": 610
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A tower consists of blocks that are labelled from bottom to top with the numbers from 1 to 90 . Bob uses these blocks to build a new tower. For each step he takes the top three blocks from the old tower and places them on the new tower without changing their order (see diagram). How many blocks are there in the new tower between the blocks with the numbers 39 and 40 ? <image1>",
+    "solution": "\\boxed{4}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1491.png",
+    "idx": 2234
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Anna starts in the direction of the arrow. At each crossing she turns either right or left. At the first crossing she turns right, at the next left, then left again, then right, then left and left again. What will she find at the next crossing that she comes to?\n<image1>\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "A. A",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/501.png",
+    "idx": 147
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: There are five houses on Color Street: a blue, a red, a yellow, a pink, and a green one. The houses are numbered from 1 to 5 (see picture). The red house is the neighbor of the blue house only. The blue house stands between the green and red houses.\n<image1>\nWhich color is the house with number 3?\\n Options: A. Blue, B. Red, C. Yellow, D. Pink, E. Green",
+    "solution": "E. Green",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/412.png",
+    "idx": 1512
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Bella took a square piece of paper and folded two of its sides to lie along the diagonal, as shown, to obtain a quadrilateral. What is the largest size of an angle in that quadrilateral? <image1>\\n Options: A. $112.5^{\\circ}$, B. $120^{\\circ}$, C. $125^{\\circ}$, D. $135^{\\circ}$, E. $150^{\\circ}$",
+    "solution": "A. $112.5^{\\circ}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1681.png",
+    "idx": 2385
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Amelia glues these six stickers on the faces of a cube: <image1>. The figure shows this cube in two different positions. Which adhesive is on the opposite side of the duck?\n<image2>\n<image3>\\n Options: A. (A), B. (B), C. (C), D. (D), E. (E)",
+    "solution": "E. (E)",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/927.png",
+    "idx": 2263
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Consider the L-shaped tromino below with 3 attached unit squares. It is cut into exactly two pieces of equal area by a line segment whose endpoints lie on the perimeter of the tromino. What is the longest possible length of the line segment?\\n<image1>",
+    "solution": "\\boxed{2.5}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2882.png",
+    "idx": 606
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: You can make only one rectangle with the perimeter consisting of 6 matches (see the picture). How many different rectangles with the perimeter consisting of 14 matches can you compose?\n<image1>",
+    "solution": "\\boxed{3}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/421.png",
+    "idx": 1760
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Belinda is building squares with matches adding small squares that it already has built according to the schema of the figure. How many matches does she have to add to the 30th square to build the 31st?\n<image1>",
+    "solution": "\\boxed{124}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/741.png",
+    "idx": 522
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Choose the picture where the angle between the hands of a watch is $150^{\\circ}$.\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "E. E",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/730.png",
+    "idx": 171
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: What is the ratio of the area of triangle $BDC$ to the area of triangle $ADC$?\n\n<image1>",
+    "solution": "\\boxed{\\frac{1}{3}}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/3023.png",
+    "idx": 1262
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Freda wants to write a number in each of the nine cells of this figure so that the sum of the three numbers on each diameter is 13 and the sum of the eight numbers on the circumference is 40. What number must be written in the central cell? <image1>",
+    "solution": "\\boxed{3}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1950.png",
+    "idx": 1493
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: From above, the corridor of a school looks like in the diagram. A cat walks along the dotted line drawn in the middle of the room. How many meters does the cat walk?\n<image1>\\n Options: A. $75 \\mathrm{~m}$, B. $77 \\mathrm{~m}$, C. $79 \\mathrm{~m}$, D. $81 \\mathrm{~m}$, E. $83 \\mathrm{~m}$",
+    "solution": "E. $83 \\mathrm{~m}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/619.png",
+    "idx": 163
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the addition problem, each digit has been replaced by a letter.  If different letters represent different digits then $C=$\n\n<image1>",
+    "solution": "\\boxed{1}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2550.png",
+    "idx": 1465
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The adjacent diagram illustrates the graphs of the two functions f and g. How can we describe the relationship between f and g?\n<image1>\\n Options: A. $g(x-2)=-f(x)$, B. $g(x)=f(x+2)$, C. $g(x)=-f(-x+2)$, D. $g(-x)=-f(-x-2)$, E. $g(2-x)=-f(x)$",
+    "solution": "A. $g(x-2)=-f(x)$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/221.png",
+    "idx": 860
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: There are eight kangaroos in a row, as seen in the picture.\n<image1>\nTwo kangaroos, that are standing next to each other and that are looking into each others eyes, are changing places by hopping past each other. This is carried out until no more jumps are possible. How often did a change of places occur?",
+    "solution": "\\boxed{13}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/878.png",
+    "idx": 2793
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The integers from 1 to $n$, inclusive, are equally spaced in order round a circle. The diameter through the position of the integer 7 also goes through the position of 23 , as shown. What is the value of $n$ ? <image1>",
+    "solution": "\\boxed{32}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1671.png",
+    "idx": 1022
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The diagram shows part of a river which has two islands in it. There are six bridges linking the islands and the two banks as shown. Leonhard goes for a walk every day in which he walks over each bridge exactly once. He always starts at point $A$, goes first over bridge 1 and always finishes at point $B$. What is the\n<image1>\nmaximum number of days that he can walk without repeating the order in which he crosses the bridges?",
+    "solution": "\\boxed{6}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1733.png",
+    "idx": 2731
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: We want to paint each square in the grid with the colours P, Q, R and S, so that neighbouring squares always have different colours. (Squares which share the same corner point also count as neighbouring.) Some of the squares are already painted. In which colour(s) could the grey square be painted?\n<image1>\\n Options: A. only Q, B. only R, C. only S, D. either R or S, E. it is not possible.",
+    "solution": "D. either R or S",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1054.png",
+    "idx": 421
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The carpenter's machine can perform two operations: $\\mathrm{P}$ and $\\mathrm{T}$. The operation $\\mathrm{P}$ is \"printing\" and $\\mathrm{T}$ is \"turning\" (see the figure). What is the right sequence of operations to obtain <image1> starting from <image2>?\n<image3>\\n Options: A. TTP, B. PTT, C. TPT, D. TPP, E. TPTTT",
+    "solution": "B. PTT",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/745.png",
+    "idx": 1448
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Points $ABCDEF$ are evenly spaced on a unit circle and line segments $AD$, $DF$, $FB$, $BE$, $EC$, $CA$ are drawn. The line segments intersect each other at seven points inside the circle. Denote these intersections $p_1$, $p_2$, $...$,$p_7$, where $p_7$ is the center of the circle. What is the area of the $12$-sided shape $A_{p_1}B_{p_2}C_{p_3}D_{p_4}E_{p_5}F_{p_6}$?\\n<image1>",
+    "solution": "\\boxed{$\\frac{5 \\sqrt{3}}{6}$}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2864.png",
+    "idx": 2293
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Mr Gagac goes to a barter market where the items are exchanged according to the table on the right. Mr Gagac wants to take away 1 goose, 1 turkey and 1 duck. What is the minimum number of hens that he needs to bring to the barter market?\n<image1>",
+    "solution": "\\boxed{16}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1578.png",
+    "idx": 2542
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Square $A B C D$ has sides of length $3 \\mathrm{~cm}$. The points $M$ and $N$ lie on $A D$ and $A B$ so that $C M$ and $C N$ split the square into three pieces of the same area. What is the length of $D M$ ? <image1>\\n Options: A. $0.5 \\mathrm{~cm}$, B. $1 \\mathrm{~cm}$, C. $1.5 \\mathrm{~cm}$, D. $2 \\mathrm{~cm}$, E. $2.5 \\mathrm{~cm}$",
+    "solution": "D. $2 \\mathrm{~cm}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1653.png",
+    "idx": 633
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Two pieces of land are separated by the borderline $A B C D$, as shown in the figure. The line segments $A B, B C$ and $C D$ are parallel to the sides of the rectangle and have lengths $30 \\mathrm{~m}, 24 \\mathrm{~m}$ and $10 \\mathrm{~m}$, respectively. We want to straighten the borderline by replacing it with a line $A E$, such that the areas of the two pieces of land do not change. How far from $D$ must be $E$?\n<image1>\\n Options: A. $8 \\mathrm{~m}$, B. $10 \\mathrm{~m}$, C. $12 \\mathrm{~m}$, D. $14 \\mathrm{~m}$, E. $16 \\mathrm{~m}$",
+    "solution": "C. $12 \\mathrm{~m}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1288.png",
+    "idx": 969
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the picture the large square has an area of 1. What is the area of the small black square?\n<image1>\\n Options: A. $\\frac{1}{100}$, B. $\\frac{1}{300}$, C. $\\frac{1}{600}$, D. $\\frac{1}{900}$, E. $\\frac{1}{1000}$",
+    "solution": "D. $\\frac{1}{900}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1048.png",
+    "idx": 665
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The figure below shows a ring made of six small sections which you are to paint on a wall. You have four paint colors available and will paint each of the six sections a solid color. Find the number of ways you can choose to paint each of the six sections if no two adjacent section can be painted with the same color.\n\n<image1>",
+    "solution": "\\boxed{732}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2091.png",
+    "idx": 725
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The fractions $\\frac{1}{3}$ and $\\frac{1}{5}$ have been placed on the\n<image1>\nnumber-line shown on the right. At which position should the fraction $\\frac{1}{4}$ be placed?\\n Options: A. $a$, B. $b$, C. $C$, D. $d$, E. $e$",
+    "solution": "A. $a$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1568.png",
+    "idx": 1688
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A rectangle is divided into 4 triangles as shown in the figure. Of the following possibilities for the areas of the triangles at most one can be true. Which one is it?\n<image1>\\n Options: A. $4,5,8,9$, B. $3,5,6,7$, C. $5,6,7,12$, D. $10,11,12,19$, E. $5,6,8,10$",
+    "solution": "\\boxed{A}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1282.png",
+    "idx": 101
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: An isosceles triangle $P Q R$, in which $P Q=P R$, is split into three separate isosceles triangles, as shown, so that $P S=S Q, R T=R S$ and $Q T=R T$.\nWhat is the size, in degrees, of angle $Q P R$ ? <image1>",
+    "solution": "\\boxed{36}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1705.png",
+    "idx": 734
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A few fields of a $4 \\times 4$ grid were painted red. The numbers in the bottom row and left column give the number of fields coloured red. The red was then rubbed away. Which of the following could grids could be a solution?\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "D. D",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/815.png",
+    "idx": 3016
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the figure below, $ABDC,$ $EFHG,$ and $ASHY$ are all squares; $AB=EF =1$ and $AY=5$.\n\nWhat is the area of quadrilateral $DYES$?\n\n<image1>",
+    "solution": "\\boxed{15}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2961.png",
+    "idx": 1360
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the final of a dancing competition, each of the three members of the jury gives each of the five competitors 0 points, 1 point, 2 points, 3 points or 4 points. No two competitors get the same mark from any individual judge. Adam knows all the sums of the marks and a few single marks, as shown. How many points does Adam get from judge III? <image1>",
+    "solution": "\\boxed{1}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1682.png",
+    "idx": 1686
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Which of the following geometrical figures does not appear in the big picture?\n<image1>\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "D. D",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/903.png",
+    "idx": 3010
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: This line graph represents the price of a trading card during the first $6$ months of $1993$.\n<image1>\n\nThe greatest monthly drop in price occurred during\\n Options: A. $\\text{January}$, B. $\\text{March}$, C. $\\text{April}$, D. $\\text{May}$, E. $\\text{June}$",
+    "solution": "B. $\\text{March}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2565.png",
+    "idx": 1016
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The diagram shows the net of a box consisting only of rectangles. How big is the volume of the box?\n<image1>\\n Options: A. $43 \\mathrm{~cm}^{3}$, B. $70 \\mathrm{~cm}^{3}$, C. $80 \\mathrm{~cm}^{3}$, D. $100 \\mathrm{~cm}^{3}$, E. $1820 \\mathrm{~cm}^{3}$",
+    "solution": "C. $80 \\mathrm{~cm}^{3}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1170.png",
+    "idx": 1092
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Rolly wishes to secure his dog with an 8-foot rope to a square shed that is 16 feet on each side. His preliminary drawings are shown. Which of these arrangements gives the dog the greater area to roam, and by how many square feet?\n\n<image1>\\n Options: A. $\\text{ I, by }8\\pi$, B. $\\text{ I, by }6\\pi$, C. $\\text{ II, by }4\\pi$, D. $\\text{II, by }8\\pi$, E. $\\text{ II, by }10\\pi$",
+    "solution": "\\boxed{C}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2151.png",
+    "idx": 652
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Point $P$ is inside $\\triangle ABC$. Line segments $APD$, $BPE$, and $CPF$ are drawn with $D$ on $BC$, $E$ on $AC$, and $F$ on $AB$ (see the figure at right). Given that $AP=6$, $BP=9$, $PD=6$, $PE=3$, and $CF=20$, find the area of $\\triangle ABC$.\n\n<image1>",
+    "solution": "\\boxed{108}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2051.png",
+    "idx": 2872
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A vertical stained glass square window of area $81 \\mathrm{~cm}^{2}$ is made out of six triangles of equal area (see figure). A fly is sitting on the exact spot where the six triangles meet. How far from the bottom of the window is the fly sitting? <image1>\\n Options: A. $3 \\mathrm{~cm}$, B. $5 \\mathrm{~cm}$, C. $5.5 \\mathrm{~cm}$, D. $6 \\mathrm{~cm}$, E. $7.5 \\mathrm{~cm}$",
+    "solution": "D. $6 \\mathrm{~cm}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1952.png",
+    "idx": 442
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The digits of the sequence $123451234512345 \\ldots$ fill the cells on a sheet of paper in a spiral-like manner beginning with the marked cell (see the figure). Which digit is written in the cell being 100 cells above the marked one?\n<image1>",
+    "solution": "\\boxed{1}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/204.png",
+    "idx": 1566
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A $101\\times 101$ square grid is given with rows and columns numbered in order from $1$ to $101$. Each square that is contained in both an even-numbered row and an even-numbered column is cut out. A small section of the grid is shown below, with the cut-out squares in black. Compute the maximum number of $L$-triominoes (pictured below) that can be placed in the grid so that each $L$-triomino lies entirely inside the grid and no two overlap. Each $L$-triomino may be placed in the orientation pictured below, or rotated by $90^\\circ$, $180^\\circ$, or $270^\\circ$.\\n<image1>",
+    "solution": "\\boxed{2550}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2812.png",
+    "idx": 158
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The figure shows a rectangular garden with dimensions $16 \\mathrm{~m}$ and $20 \\mathrm{~m}$. The gardener has planted six identical flowerbeds (they are gray in the diagram). What is the perimeter (in metres) of each of the flowerbeds?\n<image1>",
+    "solution": "\\boxed{24}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/423.png",
+    "idx": 1927
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Kengu likes to jump on the number line. He starts at 0 , then always starts with two big jumps and then three small jumps (see diagram). He keeps repeating this in the same way, over and over again. On which of the following numbers will he land in the course of his jumps?\n<image1>\\n Options: A. 82, B. 83, C. 84, D. 85, E. 86",
+    "solution": "C. 84",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1224.png",
+    "idx": 911
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In which figure can you find the largest number of small squares?\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "C. C",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/440.png",
+    "idx": 817
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: What is the perimeter of trapezoid $ ABCD$?\n\n<image1>",
+    "solution": "\\boxed{180}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2666.png",
+    "idx": 1885
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: There are several figures that can be formed by nine squares of $1 \\mathrm{~cm}$ side by side (see an example beside) and one of them has the biggest perimeter. What is this perimeter?\n<image1>\\n Options: A. $12 \\mathrm{~cm}$, B. $14 \\mathrm{~cm}$, C. $16 \\mathrm{~cm}$, D. $18 \\mathrm{~cm}$, E. $20 \\mathrm{~cm}$",
+    "solution": "E. $20 \\mathrm{~cm}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1438.png",
+    "idx": 1432
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Rectangle $DEFA$ below is a $3 \\times 4$ rectangle with $DC=CB=BA$.  The area of the \"bat wings\" is\n<image1>\\n Options: A. $2$, B. $2 \\frac{1}{2}$, C. $3$, D. $3 \\frac{1}{2}$, E. $5$",
+    "solution": "C. $3$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2739.png",
+    "idx": 1250
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Points $R, S$ and $T$ are vertices of an equilateral triangle, and points $X, Y$ and $Z$ are midpoints of its sides. How many noncongruent triangles can be drawn using any three of these six points as vertices?\n\n<image1>",
+    "solution": "\\boxed{4}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2631.png",
+    "idx": 932
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Stephen's calculator displays only one digit, as shown in the diagram. Unfortunately, the calculator is broken. Each time he switches it on, each of the seven bars will either illuminate (show up) or not, with probability 0.5 . The resultant display correctly shows one of the ten digits $0-9$ with probability $\\frac{a}{b}$.\n\nGiven that $\\frac{a}{b}$ is written in its lowest terms, what is the value of $9 a+2 b$ ?\n\n<image1>",
+    "solution": "\\boxed{173}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2033.png",
+    "idx": 913
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The graph relates the distance traveled [in miles] to the time elapsed [in hours] on a trip taken by an experimental airplane. During which hour was the average speed of this airplane the largest?\n\n<image1>\\n Options: A. $\\text{first (0-1)}$, B. $\\text{second (1-2)}$, C. $\\text{third (2-3)}$, D. $\\text{ninth (8-9)}$, E. $\\text{last (11-12)}$",
+    "solution": "B. $\\text{second (1-2)}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2542.png",
+    "idx": 96
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Martha multiplied two 2-digit numbers correctly on a piece of paper. Then she scribbled out three digits as shown.\nWhat is the sum of the three digits she scribbled out?\n<image1>",
+    "solution": "\\boxed{6}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1654.png",
+    "idx": 2703
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Which of the pictures below shows what you will see if you look from above the piece represented on the right?\n<image1>\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "C. C",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1198.png",
+    "idx": 791
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: On each horizontal line in the figure below, the five large dots indicate the populations of cities $A$, $B$, $C$, $D$ and $E$ in the year indicated.  Which city had the greatest percentage increase in population from 1970 to 1980?\n\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "C. C",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2374.png",
+    "idx": 1632
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Which one of the following bar graphs could represent the data from the circle graph?\n<image1>\n\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "C. C",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2564.png",
+    "idx": 1344
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Which three puzzle pieces do you need to complete the large puzzle?\n<image1>\\n Options: A. 1, B. 3, C. 4, D. 1, E. 3, F. 6, G. 2, H. 3, I. 5, J. 2, 3, 6, 2, 5, 6",
+    "solution": "D. 1",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/807.png",
+    "idx": 1141
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The figure below shows a polygon $ABCDEFGH$, consisting of rectangles and right triangles. When cut out and folded on the dotted lines, the polygon forms a triangular prism. Suppose that $AH = EF = 8$ and $GH = 14$. What is the volume of the prism?\n\n<image1>",
+    "solution": "\\boxed{192}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2781.png",
+    "idx": 284
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the rectangular parallelpiped shown, $AB = 3, BC= 1,$ and $CG = 2$. Point $M$ is the midpoint of $\\overline{FG}$. What is the volume of the rectangular pyramid with base $BCHE$ and apex $M$?\n\n<image1>\\n Options: A. $1$, B. $\\frac{4}{3}$, C. $\\frac{3}{2}$, D. $\\frac{5}{3}$, E. $2$",
+    "solution": "E. $2$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2220.png",
+    "idx": 1143
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A small square is constructed inside a square of area 1 by dividing each side of the unit square into $n$ equal parts, and then connecting the vertices to the division points closest to the opposite vertices.  Find the value of $n$ if the the area of the small square is exactly 1/1985.\n<image1>",
+    "solution": "\\boxed{32}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2040.png",
+    "idx": 1438
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Emily celebrated her birthday on Thursday, and her sister Liepa 8 days earlier. Which weekday was that?\n<image1>\\n Options: A. Wednesday, B. Thursday, C. Friday, D. Tuesday, E. Sunday",
+    "solution": "A. Wednesday",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/15.png",
+    "idx": 2627
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: After the storm last night, the flagpole on our school building is leaning over. Looking from northwest, its tip is to the right of its bottom point. Looking from the east, its tip is also to the right of its bottom point. In which direction could the flagpole be leaning over?\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "A. A",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/353.png",
+    "idx": 2086
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A mathematically skilled spider spins a cobweb and some of the strings have lengths as shown in the picture. If $x$ is an integer, determine the value of $x$.\n<image1>",
+    "solution": "\\boxed{13}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/200.png",
+    "idx": 1637
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In a three-sided pyramid all side lengths are integers. Four of the side lengths can be seen in the diagram. What is the sum of the two remaining side lengths? <image1>",
+    "solution": "\\boxed{11}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/387.png",
+    "idx": 2783
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The clock shown has a rectangular clock face, the hands however move as usual in a constant circular pattern. How big is the distance $x$ of the digits 1 and 2 (in $\\mathrm{cm}$ ), if the distance between the numbers 8 and 10 is given as $12 \\mathrm{~cm}$?\n<image1>\\n Options: A. $3 \\sqrt{3}$, B. $2 \\sqrt{3}$, C. $4 \\sqrt{3}$, D. $2+\\sqrt{3}$, E. $12-3 \\sqrt{3}$",
+    "solution": "C. $4 \\sqrt{3}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/251.png",
+    "idx": 2196
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: What is the maximum number of $T$-shaped polyominos (shown below) that we can put into a $6 \\times 6$ grid without any overlaps. The blocks can be rotated.\\n<image1>",
+    "solution": "\\boxed{8}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2845.png",
+    "idx": 1356
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: How many different patterns can be made by shading exactly two of the nine squares? Patterns that can be matched by flips and/or turns are not considered different. For example, the patterns shown below are not considered different.\n\n<image1>",
+    "solution": "\\boxed{8}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2544.png",
+    "idx": 113
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Marco's father took a picture of his son in front of the car shown beside. Which of the drawings below could represent this picture?\n<image1>\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "E. E",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/100.png",
+    "idx": 1069
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Which single digit should be placed in all three of the boxes shown to give a correct calculation? <image1>",
+    "solution": "\\boxed{4}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1790.png",
+    "idx": 731
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Five boxes contain cards as shown. Simon removes cards so that each box contains exactly one card, and the five cards remaining in the boxes can be used to spell his name. Which card remains in box 2 ?\n<image1>\\n Options: A. S, B. I, C. M, D. O, E. N",
+    "solution": "D. O",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1841.png",
+    "idx": 2378
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Werner wants to write a number at each vertex and on each edge of the rhombus shown. He wants the sum of the numbers at the two vertices at the ends of each edge to be equal to the number written on that edge. What number should he write on the edge marked with the question mark? <image1>",
+    "solution": "\\boxed{12}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1707.png",
+    "idx": 156
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Laura wants to colour in exactly one $2 \\times 2$ square <image1> in the figure given <image2>. How many ways are there for her to do that?",
+    "solution": "\\boxed{8}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/904.png",
+    "idx": 444
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: We link rings together as shown in the figure below; the length of the chain is $1.7 \\mathrm{~m}$. How many rings are there?\n<image1>",
+    "solution": "\\boxed{42}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1013.png",
+    "idx": 2443
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the diagram below, $A$ and $B$ trisect $DE$, $C$ and $A$ trisect $F G$, and $B$ and $C$ trisect $HI$. Given that $DI = 5$, $EF = 6$, $GH = 7$, find the area of $\\vartriangle ABC$.\\n<image1>",
+    "solution": "\\boxed{$\\frac{3 \\sqrt{6}}{2}$}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2815.png",
+    "idx": 1779
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Paul hangs rectangular pictures on a wall. For each picture he hammers a nail into the wall $2.5 \\mathrm{~m}$ above the floor. He ties a $2 \\mathrm{~m}$ long string to the upper corners of each picture (see diagram). which picture size (width in $\\mathrm{cm} \\times$ height in $\\mathrm{cm}$ ) has its lower edge nearest to the floor?\n<image1>\\n Options: A. $60 \\times 40$, B. $120 \\times 50$, C. $120 \\times 90$, D. $160 \\times 60$, E. $160 \\times 100$",
+    "solution": "C. $120 \\times 90$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1380.png",
+    "idx": 1415
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the diagram, a square with sides of length $4 \\mathrm{~cm}$ and a triangle with the same perimeter as the square are joined together to form a pentagon. What is the perimeter of the pentagon? <image1>\\n Options: A. $12 \\mathrm{~cm}$, B. $24 \\mathrm{~cm}$, C. $28 \\mathrm{~cm}$, D. $32 \\mathrm{~cm}$, E. It depends on the size of the triangle",
+    "solution": "B. $24 \\mathrm{~cm}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1551.png",
+    "idx": 2984
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Which of these figures differs from the rest four?\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "E. E",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/13.png",
+    "idx": 1787
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The cells of a $4 \\times 4$ table are coloured black and white as shown in the left figure. One move allows us to exchange any two cells positioned in the same row or in the same column. What is the least number of moves necessary to obtain in the right figure?\n<image1>",
+    "solution": "\\boxed{4}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/190.png",
+    "idx": 2483
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Rosa wants to start at the arrow, follow the line, and get out at the other arrow. Which piece is it NOT possible to put in the middle to obtain that?\n<image1>\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "D. D",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/948.png",
+    "idx": 2094
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A number is to be written into every vertex of the 18 -sided shape so that it is equal to the sum of the two numbers from the adjacent vertices. Two of these numbers are given. Which number is written in vertex $A$?\n<image1>",
+    "solution": "\\boxed{38}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1421.png",
+    "idx": 473
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Leonie has one stamp for each of the digits $0,1,2,3,4,5,6,7,8,9$. Using them, she stamps the date of the kangaroocompetition. How many of the stamps does Leonie use to do that?\n<image1>",
+    "solution": "\\boxed{6}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/581.png",
+    "idx": 1577
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The shown triangle $A B C$ is isosceles with $\\measuredangle A B C=40^{\\circ}$. The two angles indicated $\\measuredangle E A B$ and $\\measuredangle D C A$ are equally big. How big is the angle $\\measuredangle C F E$ ? <image1>\\n Options: A. $55^{\\circ}$, B. $60^{\\circ}$, C. $65^{\\circ}$, D. $70^{\\circ}$, E. $75^{\\circ}$",
+    "solution": "D. $70^{\\circ}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1254.png",
+    "idx": 2361
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: How many triangles can be drawn with vertices in the 18 points shown in the figure?\n<image1>",
+    "solution": "\\boxed{711}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/176.png",
+    "idx": 778
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A game is played on a board as shown in the picture. I move the counter from square to square according to the following rules. First, one square to the right, then one square up, then one square left, then one square down, and then once again one square right. Which picture shows where the counter can then be found?\n<image1>\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "B. B",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/476.png",
+    "idx": 1043
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Rory uses four identical standard dice to build the solid shown in the diagram.\nWhenever two dice touch, the numbers on the touching faces are the same. The numbers on some of the faces of the solid are shown. What number is written on the face marked with question mark?\n(On a standard die, the numbers on opposite faces add to 7.)\n<image1>",
+    "solution": "\\boxed{5}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1747.png",
+    "idx": 181
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Points $M$ and $N$ are given on the sides $A B$ and $B C$ of a rectangle $A B C D$. Then the rectangle is divided into several parts as shown in the picture. The areas of 3 parts are also given in the picture. Find the area of the quadrilateral marked with \"?\".\n<image1>",
+    "solution": "\\boxed{25}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/193.png",
+    "idx": 2903
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: $A B C D$ is a trapezium with parallel sides $A B$ and $C D$. Let $A B=50$ and $C D=20$. Point $E$ lies on side $A B$ in such a way that the straight line $D E$ divides the trapezium into two shapes of equal area. How long is the straight line $A E$?\n<image1>",
+    "solution": "\\boxed{35}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1406.png",
+    "idx": 1786
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Quadrilateral $QABO$ is constructed as shown. Determine the area of $QABO$. <image1>",
+    "solution": "\\boxed{84}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2958.png",
+    "idx": 6
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The diagram on the right shows a cube of side $18 \\mathrm{~cm}$. A giant ant walks across the cube's surface from $\\mathrm{X}$ to $\\mathrm{Y}$ along the route shown. How far does it walk? <image1>\\n Options: A. $54 \\mathrm{~cm}$, B. $72 \\mathrm{~cm}$, C. $80 \\mathrm{~cm}$, D. $88 \\mathrm{~cm}$, E. $90 \\mathrm{~cm}$",
+    "solution": "E. $90 \\mathrm{~cm}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1717.png",
+    "idx": 2129
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In right triangle $ABC$, $\\angle B = 90^\\circ$, and $D$ and $E$ lie on $AC$ such that $\\overline{BD}$ is a median and $\\overline{BE}$ is an altitude.  If $BD=2\\cdot DE$, compute $\\frac{AB}{EC}$. <image1>",
+    "solution": "\\boxed{2\\sqrt{3}}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2944.png",
+    "idx": 2205
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Mother kangaroo and her son Max together weigh $60 \\mathrm{~kg}$ (kilograms). The mother on her own weighs $52 \\mathrm{~kg}$. How heavy is Max? <image1>\\n Options: A. $4 \\mathrm{~kg}$, B. $8 \\mathrm{~kg}$, C. $30 \\mathrm{~kg}$, D. $56 \\mathrm{~kg}$, E. $112 \\mathrm{~kg}$",
+    "solution": "B. $8 \\mathrm{~kg}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/87.png",
+    "idx": 2813
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Johanna folds a piece of paper with the numbers 1 to 36 in half twice (see diagrams).\n<image1>\nThen she stabs a hole through all four layers at the same time (see diagram on the right). Which four numbers does she pierce in doing so?\\n Options: A. $8,11,26,29$, B. $14,16,21,23$, C. $14,17,20,23$, D. $15,16,21,22$, E. $15,17,20,22$",
+    "solution": "\\boxed{C}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/670.png",
+    "idx": 2946
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Consider these two geoboard quadrilaterals. Which of the following statements is true?\n\n<image1>\\n Options: A. $\\text{The area of quadrilateral I is more than the area of quadrilateral II.}$, B. $\\text{The area of quadrilateral I is less than the area of quadrilateral II.}$, C. $\\text{The quadrilaterals have the same area and the same perimeter.}$, D. $\\text{The quadrilaterals have the same area, but the perimeter of I is more than the perimeter of II.}$, E. $\\text{The quadrilaterals have the same area, but the perimeter of I is less than the perimeter of II.}$",
+    "solution": "\\boxed{E}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2620.png",
+    "idx": 3039
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Numbers were written on the petals of two flowers, with a number on each petal. One of the petals is hidden. The sum of the numbers written on the back flower is twice the sum of the numbers written on the front flower. What is the number written on the hidden petal?\n<image1>",
+    "solution": "\\boxed{30}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/109.png",
+    "idx": 3018
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In a box-shaped water tank with dimensions $4 \\mathrm{~m} \\times 2 \\mathrm{~m} \\times 1 \\mathrm{~m}$, the height of the water is $25 \\mathrm{~cm}$. The tank is then turned on its side (see picture on the right). How high is the water in the tank now?\n<image1>\\n Options: A. $25 \\mathrm{~cm}$, B. $50 \\mathrm{~cm}$, C. $75 \\mathrm{~cm}$, D. $1 \\mathrm{~m}$, E. $1.25 \\mathrm{~m}$",
+    "solution": "D. $1 \\mathrm{~m}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/969.png",
+    "idx": 2746
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Each square in the shape has an area of $4 \\mathrm{~cm}^{2}$. How long is the thick line?\n<image1>\\n Options: A. $16 \\mathrm{~cm}$, B. $18 \\mathrm{~cm}$, C. $20 \\mathrm{~cm}$, D. $21 \\mathrm{~cm}$, E. $23 \\mathrm{~cm}$",
+    "solution": "B. $18 \\mathrm{~cm}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/842.png",
+    "idx": 807
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A ship sails $ 10$ miles in a straight line from $ A$ to $ B$, turns through an angle between $ 45^{\\circ}$ and $ 60^{\\circ}$, and then sails another $ 20$ miles to $ C$. Let $ AC$ be measured in miles. Which of the following intervals contains $ AC^2$?\n<image1>\\n Options: A. [400, B. 500], C. [500, D. 600], E. [600, F. 700], G. [700, H. 800], I. [800, J. 900]",
+    "solution": "D. 600]",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2469.png",
+    "idx": 1491
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Max wants to complete the jigsaw shown. He has different pieces.\n<image1>\nWhich pieces does he have to use?\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "A. A",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/160.png",
+    "idx": 1766
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: <image1>\n\nEach of the three circles in the adjoining figure is externally tangent to the other two, and each side of the triangle is tangent to two of the circles. If each circle has radius three, then the perimeter of the triangle is\\n Options: A. $36+9\\sqrt{2}$, B. $36+6\\sqrt{3}$, C. $36+9\\sqrt{3}$, D. $18+18\\sqrt{3}$, E. $45$",
+    "solution": "D. $18+18\\sqrt{3}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2318.png",
+    "idx": 286
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A right-angled triangle with side lengths $a=8, b=15$ and $c=17$ is given. How big is the radius $r$ of the inscribed semicircle shown?\n<image1>",
+    "solution": "\\boxed{4.8}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/250.png",
+    "idx": 2720
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Mike leaves home and drives slowly east through city traffic.  When he reaches the highway he drives east more rapidly until he reaches the shopping mall where he stops.  He shops at the mall for an hour.  Mike returns home by the same route as he came, driving west rapidly along the highway and then slowly through city traffic.  Each graph shows the distance from home on the vertical axis versus the time elapsed since leaving home on the horizontal axis.  Which graph is the best representation of Mike's trip?\n\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "B. B",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2574.png",
+    "idx": 1352
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Susi folds a piece of paper in the middle. She stamps 2 holes.\n<image1>\nWhat does the piece of paper look like when she unfolds it again?\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "B. B",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/157.png",
+    "idx": 2552
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: What is the piece that fits completely to the given one to form a rectangle?\n<image1>\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "B. B",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/441.png",
+    "idx": 1285
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Each of the twenty dots on the graph below represents one of Sarah's classmates.  Classmates who are friends are connected with a line segment.  For her birthday party, Sarah is inviting only the following:  all of her friends and all of those classmates who are friends with at least one of her friends.  How many classmates will not be invited to Sarah's party?\n<image1>",
+    "solution": "\\boxed{6}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2650.png",
+    "idx": 510
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Square $ ABCD $ has side length $ 10 $. Point $ E $ is on $ \\overline{BC} $, and the area of $ \\bigtriangleup ABE $ is $ 40 $. What is $ BE $? \n<image1>",
+    "solution": "\\boxed{8}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2188.png",
+    "idx": 2948
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The diagram shows a shape made up of 36 identical small equilateral triangles. What is the smallest number of small triangles identical to these that could be added to the shape to turn it into a hexagon? <image1>",
+    "solution": "\\boxed{18}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1675.png",
+    "idx": 1230
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the diagram on the right, the triangle is equilateral.\n<image1>\nWhat is the area of the large circle divided by the area of the small circle?",
+    "solution": "\\boxed{16}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1522.png",
+    "idx": 2077
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Mike has 125 small, equally big cubes. He glues some of them together in such a way that one big cube with exactly nine tunnels is created (see diagram). The tunnels go all the way straight through the cube. How many of the 125 cubes is he not using?\n<image1>",
+    "solution": "\\boxed{39}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1156.png",
+    "idx": 1266
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Three equally sized equilateral triangles are cut from the vertices of a large equilateral triangle of side length $6 \\mathrm{~cm}$. The three little triangles together have the same perimeter as the remaining grey hexagon. What is the side-length of one side of one small triangle?\n<image1>\\n Options: A. $1 \\mathrm{~cm}$, B. $1.2 \\mathrm{~cm}$, C. $1.25 \\mathrm{~cm}$, D. $1.5 \\mathrm{~cm}$, E. $2 \\mathrm{~cm}$",
+    "solution": "D. $1.5 \\mathrm{~cm}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1090.png",
+    "idx": 1672
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Gaspar has these seven different pieces, formed by equal little squares.\n<image1>\nHe uses all these pieces to assemble rectangles with different perimeters, that is, with different shapes. How many different perimeters can he find?",
+    "solution": "\\boxed{3}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/626.png",
+    "idx": 1336
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Which of the following is made using more than one piece of string?\n<image1>\\n Options: A. I, B. III, C. IV and V, D. I, E. III and V, F. III, G. IV and V, H. all, I. None of these answers",
+    "solution": "B. III",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1050.png",
+    "idx": 1648
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: There are three great circles on a sphere that intersect each other in a right angle. Starting in point S a little bug moves along the great circles in the direction indicated. At crossings it turns alternately to the right or left. How many quarter circles does it crawl along until it is back in point S?\n<image1>",
+    "solution": "\\boxed{6}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1328.png",
+    "idx": 2855
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In $\\triangle ABC$, $AC=BC$, and $m\\angle BAC=40^\\circ$. What is the number of degrees in angle $x$? <image1>",
+    "solution": "\\boxed{140}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/3035.png",
+    "idx": 1211
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Circles with centers $ A$ and $ B$ have radii 3 and 8, respectively. A common internal tangent intersects the circles at $ C$ and $ D$, respectively. Lines $ AB$ and $ CD$ intersect at $ E$, and $ AE = 5$. What is $ CD$?\n<image1>\\n Options: A. $13$, B. $\\frac{44}{3}$, C. $\\sqrt{221}$, D. $\\sqrt{255}$, E. $\\frac{55}{3}$",
+    "solution": "B. $\\frac{44}{3}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2155.png",
+    "idx": 2270
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The picture on the right has been drawn on paper and cut out to make a house. Which of the houses does it make?\n<image1>\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "A. A",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/403.png",
+    "idx": 521
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Triangle $ABC$ is isosceles, with $AB=AC$ and altitude $AM=11$.  Suppose that there is a point $D$ on $\\overline{AM}$ with $AD=10$ and $\\angle BDC=3\\angle BAC$.  Then the perimeter of $\\triangle ABC$ may be written in the form $a+\\sqrt{b},$ where $a$ and $b$ are integers.  Find $a+b$.\n\n<image1>",
+    "solution": "\\boxed{616}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2058.png",
+    "idx": 785
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The numbers 1 to 9 are placed in the squares shown with a number in each square. The sums of all pairs of neighbouring numbers are shown. Which number is placed in the shaded square?\n<image1>",
+    "solution": "\\boxed{7}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/655.png",
+    "idx": 1722
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The rear window wiper of a car is made in a way so that the rod $r$ and the wiper blade $\\mathrm{w}$ are equally long and are connected at an angle $\\alpha$. The wiper rotates around the centre of rotation $\\mathrm{O}$ and wipes over the area shown on the right. Calculate the angle $\\beta$ between the right edge of the cleaned area and the tangent of the curved upper edge.\n<image1>\\n Options: A. $\\frac{3 \\pi-\\alpha}{2}$, B. $\\pi-\\frac{\\alpha}{2}$, C. $\\frac{3 \\pi}{2}-\\alpha$, D. $\\frac{\\pi}{2}+\\alpha$, E. $\\pi+\\frac{\\alpha}{2}$",
+    "solution": "B. $\\pi-\\frac{\\alpha}{2}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/240.png",
+    "idx": 2723
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The diagram shows the number of students at soccer practice each weekday during last week. After computing the mean and median values, Coach discovers that there were actually $21$ participants on Wednesday. Which of the following statements describes the change in the mean and median after the correction is made?\n\n<image1>\\n Options: A. $\\text{The mean increases by 1 and the median does not change.}$, B. $\\text{The mean increases by 1 and the median increases by 1.}$, C. $\\text{The mean increases by 1 and the median increases by 5.}$, D. $\\text{The mean increases by 5 and the median increases by 1.}$, E. $\\text{The mean increases by 5 and the median increases by 5.}$",
+    "solution": "B. $\\text{The mean increases by 1 and the median increases by 1.}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2759.png",
+    "idx": 2774
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Jeffrey fires three arrows at each of four archery targets. He scores 29 points on the first target, 43 on the second and 47 on the third. How many points does Jeffrey score on the fourth target? <image1>",
+    "solution": "\\boxed{36}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1505.png",
+    "idx": 712
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The diagram shows a parallelogram $W X Y Z$ with area $S$. The diagonals of the parallelogram meet at the point $O$. The point $M$ is on the edge $Z Y$. The lines $W M$ and $Z X$ meet at $N$. The lines $M X$ and $W Y$ meet at $P$. The sum of the areas of triangles $W N Z$ and $X Y P$ is $\\frac{1}{3} S$. What is the area of quadrilateral MNOP ?\n<image1>\\n Options: A. $\\frac{1}{6} S$, B. $\\frac{1}{8} S$, C. $\\frac{1}{10} S$, D. $\\frac{1}{12} S$, E. $\\frac{1}{14} S$",
+    "solution": "D. $\\frac{1}{12} S$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1649.png",
+    "idx": 2521
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The following table is the multiplication table of the numbers 1 to 10. What is the sum of all 100 products in the complete table?\n<image1>",
+    "solution": "\\boxed{3025}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/280.png",
+    "idx": 2331
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: What is the length of line $A B$ if the side of each of the four squares shown is 1?\n<image1>\\n Options: A. 5, B. $\\sqrt{13}$, C. $\\sqrt{5}+\\sqrt{2}$, D. $\\sqrt{5}$, E. None of the previous",
+    "solution": "B. $\\sqrt{13}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1311.png",
+    "idx": 1232
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The kangaroo wants to visit the koala. On its way it is not allowed to jump through a square with water. Each arrow shows one jump on to a neighbouring field.\n<image1>\nWhich path is the kangaroo allowed to take?\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "C. C",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/145.png",
+    "idx": 1663
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Three cuts are made through a large cube to make eight smaller cuboids, as shown in the diagram on the right. What is the ratio of the total surface area of these eight cuboids to the total surface area of the original cube?\n<image1>\\n Options: A. $1: 1$, B. $4: 3$, C. $3: 2$, D. $2: 1$, E. $4: 1$",
+    "solution": "D. $2: 1$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1569.png",
+    "idx": 2244
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The diagram shows two squares: one has a side with a length of 2 and the other (abut on the first square) has a side with a length of 1. What is the area of the shaded zone?\n<image1>",
+    "solution": "\\boxed{1}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/166.png",
+    "idx": 1
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the diagram, lines $Q T$ and $R S$ are parallel and $P Q$ and $Q T$ are equal. Angle $S T Q$ is $154^{\\circ}$. What is the size of angle $S R Q$ ? <image1>\\n Options: A. $120^{\\circ}$, B. $122^{\\circ}$, C. $124^{\\circ}$, D. $126^{\\circ}$, E. $128^{\\circ}$",
+    "solution": "E. $128^{\\circ}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1783.png",
+    "idx": 1244
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: The results of a cross-country team's training run are graphed below. Which student has the greatest average speed?\n<image1>\\n Options: A. $\\text{Angela}$, B. $\\text{Briana}$, C. $\\text{Carla}$, D. $\\text{Debra}$, E. $\\text{Evelyn}$",
+    "solution": "E. $\\text{Evelyn}$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2665.png",
+    "idx": 1175
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the diagram, the four points have coordinates $A(0,1)$, $B(1,3)$, $C(5,2)$, and $D(4,0)$.  What is the area of quadrilateral $ABCD$? <image1>",
+    "solution": "\\boxed{9}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2923.png",
+    "idx": 2375
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Every night the wizard Tilim makes the weather forecast for the king. When Tilim gets it right he gets 3 gold coins, but when he makes a mistake, he pays a fine of 2 gold coins. After making the prediction for 5 days, Tilim did the math and discovered that he neither won nor lost coins. How many times did he get the weather forecast right in those 5 days?\n<image1>",
+    "solution": "\\boxed{2}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/101.png",
+    "idx": 2484
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Given the areas of the three squares in the figure, what is the area of the interior triangle?\n\n<image1>",
+    "solution": "\\boxed{30}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2644.png",
+    "idx": 2681
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Five identical measuring jugs are filled with water. Four of them contain exactly the same amount of water. Which measuring jug contains a different amount?\n<image1>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "B. B",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1426.png",
+    "idx": 1319
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Barbara wants to complete the diagram below by inserting three numbers, one into each empty cell. She wants the sum of the first three numbers to be 100 , the sum of the middle three numbers to be 200 and the sum of the last three numbers to be 300 . What number should Barbara insert into the middle cell of the diagram? <image1>",
+    "solution": "\\boxed{60}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/1591.png",
+    "idx": 1904
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A barcode of the type shown in the two examples is composed of alternate strips of black and white, where the leftmost and rightmost strips are always black. Each strip (of either colour) has a width of 1 or 2 . The total width of the barcode is 12 . The barcodes are always read from left to right. How many distinct barcodes are possible?\n<image1>",
+    "solution": "\\boxed{116}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2005.png",
+    "idx": 1811
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: How many stars are inside the figure?\n<image1>",
+    "solution": "\\boxed{95}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/448.png",
+    "idx": 2767
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: In the diagram, the centre of the circle is $O.$ The area of the shaded region is $20\\%$ of the area of the circle. What is the value of $x?$ <image1>",
+    "solution": "\\boxed{72}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2967.png",
+    "idx": 2093
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Three hexagons of increasing size are shown below. Suppose the dot pattern continues so that each successive hexagon contains one more band of dots. How many dots are in the next hexagon?\n\n<image1>",
+    "solution": "\\boxed{37}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2762.png",
+    "idx": 1938
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: What is the minimum number of small squares that must be colored black so that a line of symmetry lies on the diagonal $ \\overline{BD}$ of square $ ABCD$?\n<image1>",
+    "solution": "\\boxed{4}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2662.png",
+    "idx": 3014
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Martin's smartphone displays the diagram on the right. It shows how long he has worked with four different apps in the previous week. The apps are sorted from top to bottom according to the amount of time they have been used. This week he has spent only half the amount of time using two of the apps and the same amount of time as last week using the other two apps. Which of the following pictures cannot be the diagram for the current week?\n<image1>\n<image2>\\n Options: A. A, B. B, C. C, D. D, E. E",
+    "solution": "E. E",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/366.png",
+    "idx": 695
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: A large square is divided into a small square surrounded by four congruent rectangles as shown. The perimeter of each of the congruent rectangles is 14. What is the area of the large square?\n<image1>",
+    "solution": "\\boxed{49}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2436.png",
+    "idx": 2698
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: If $\\angle A = 20^\\circ$ and $\\angle AFG = \\angle AGF$, then $\\angle B + \\angle D = $\n\n<image1>\\n Options: A. $48^\\circ$, B. $60^\\circ$, C. $72^\\circ$, D. $80^\\circ$, E. $90^\\circ$",
+    "solution": "D. $80^\\circ$",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2623.png",
+    "idx": 347
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: Five cards have the numbers $101,102,103,104$ and 105 on their fronts. <image1>\nOn the reverse, each card has a statement printed as follows:\n101: The statement on card 102 is false\n102: Exactly two of these cards have true statements\n103: Four of these cards have false statements\n104: The statement on card 101 is false\n105: The statements on cards 102 and 104 are both false\nWhat is the total of the numbers shown on the front of the cards with TRUE statements?",
+    "solution": "\\boxed{206}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2031.png",
+    "idx": 1162
+  },
+  {
+    "prompt": "Solve the problem and output the answer in the format of \\boxed{your answer}.\\n Question: An arithmetic sequence is a sequence in which each term after the first is obtained by adding a constant to the previous term. For example, $2,5,8,11,14$ is an arithmetic sequence with five terms, in which the first term is $2$ and the constant added is $3$. Each row and each column in this $5\\times5$ array is an arithmetic sequence with five terms. What is the value of $X$?\n<image1>",
+    "solution": "\\boxed{31}",
+    "image_path": "dataset/math_vision/dataset/math_vision/images/2734.png",
+    "idx": 2111
+  }
+]

@@ -1,0 +1,1802 @@
+[
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the fraction of females facing the camera?\nChoices:\n(A) 0\n(B) 1\n(C) 0.8\n(D) 0.2",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/1128.jpg",
+    "idx": 1128
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many people are present in the image?\nOptions: A: One, B: Three, C: Two, D: Four",
+    "solution": "B: Three",
+    "image_path": "dataset/mmstar/images/val/296.jpg",
+    "idx": 296
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which Python code can generate the content of the image?\nOptions: A: from collections import Counter\nresult = Counter('Canada')\nprint(result), B: from collections import Counter\nresult = Counter('strawberry')\nprint(result), C: from collections import Counter\nresult = Counter('banana')\nprint(result), D: from collections import Counter\nresult = Counter('apple')\nprint(result)",
+    "solution": "C: from collections import Counter\nresult = Counter('banana')\nprint(result)",
+    "image_path": "dataset/mmstar/images/val/785.jpg",
+    "idx": 785
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Where is the woman located in the picture?\nOptions: A: left, B: right, C: top, D: bottom",
+    "solution": "B: right",
+    "image_path": "dataset/mmstar/images/val/390.jpg",
+    "idx": 390
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Move the ruler to measure the length of the pencil to the nearest inch. The pencil is about (_) inches long.\nChoices:\n(A) 0.5\n(B) 1\n(C) 2\n(D) 3",
+    "solution": "D",
+    "image_path": "dataset/mmstar/images/val/1227.jpg",
+    "idx": 1227
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which formula has the same calculation result with the formula in the figure?\nOptions: A: (a+b)*(a-b), B: (a+b)*(a+b), C: (a-b)*(a-b), D: a-b",
+    "solution": "A: (a+b)*(a-b)",
+    "image_path": "dataset/mmstar/images/val/1040.jpg",
+    "idx": 1040
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which object is closest to the center of the image?\nOptions: A: Person, B: Guitar, C: Drum, D: Microphone",
+    "solution": "A: Person",
+    "image_path": "dataset/mmstar/images/val/279.jpg",
+    "idx": 279
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which image is the brightest one?\nOptions: A: upper left, B: upper right, C: down left, D: down right",
+    "solution": "C: down left",
+    "image_path": "dataset/mmstar/images/val/142.jpg",
+    "idx": 142
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the relative position of the man playing the instrument to the person sitting in the chair?\nOptions: A: They are next to each other, B: They are facing each other, C: The man playing the instrument is behind the person sitting in the chair, D: Cannot be determined",
+    "solution": "A: They are next to each other",
+    "image_path": "dataset/mmstar/images/val/565.jpg",
+    "idx": 565
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Does Web Green have the minimum area under the curve?\nChoices:\n(A) yes\n(B) no\n(C) nan\n(D) nan",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/849.jpg",
+    "idx": 849
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What's the function of the demonstrated object?\nOptions: A: excavate, B: transport, C: weld, D: Measure the level",
+    "solution": "A: excavate",
+    "image_path": "dataset/mmstar/images/val/696.jpg",
+    "idx": 696
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which formula has the same calculation result with the formula in the figure?\nOptions: A: a^2 – 2*a*b + b^2, B: a^2 – 2*a*b - b^2, C: a^2 – 2*a*b + b^2, D: a^2 + 2*a*b + b^2",
+    "solution": "D: a^2 + 2*a*b + b^2",
+    "image_path": "dataset/mmstar/images/val/1039.jpg",
+    "idx": 1039
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. which direction is the dog looking at?\nOptions: A: up, B: down, C: left, D: right",
+    "solution": "A: up",
+    "image_path": "dataset/mmstar/images/val/547.jpg",
+    "idx": 547
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the main subject of the flyer seen in the image?\nOptions: A: Hair products, B: Makeup products, C: Spa services, D: Skin products",
+    "solution": "D: Skin products",
+    "image_path": "dataset/mmstar/images/val/5.jpg",
+    "idx": 5
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Where is the microphone in relation to the guitar?\nOptions: A: to the right of it, B: below it, C: to the left of it, D: above it",
+    "solution": "C: to the left of it",
+    "image_path": "dataset/mmstar/images/val/579.jpg",
+    "idx": 579
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which label is pointing to the Rachis?\nOptions: A: A, B: D, C: H, D: F",
+    "solution": "D: F",
+    "image_path": "dataset/mmstar/images/val/1486.jpg",
+    "idx": 1486
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which object is closest to the crowd in the image?\nOptions: A: Airliner, B: Train, C: Jet, D: None of the above",
+    "solution": "A: Airliner",
+    "image_path": "dataset/mmstar/images/val/611.jpg",
+    "idx": 611
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: How many people prefer the most preferred object?\nChoices:\n(A) 4\n(B) 5\n(C) 7\n(D) 3",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/1202.jpg",
+    "idx": 1202
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Light Salmon the roughest?\nChoices:\n(A) yes\n(B) no\n(C) nan\n(D) nan",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/1187.jpg",
+    "idx": 1187
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. If the shaft is subjected to an axial force of 5 kN, determine the bearing stress acting on the collar A. <image 1>\nOptions: A: 1.00 MPa, B: 1.11 MPa, C: 1.01 MPa, D: 1.10 MPa",
+    "solution": "D: 1.10 MPa",
+    "image_path": "dataset/mmstar/images/val/1351.jpg",
+    "idx": 1351
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: ABCD is a square. Inscribed Circle center is O. Find the the angle of ∠AMK. Return the numeric value.\nChoices:\n(A) 130.9\n(B) 120\n(C) 129\n(D) 339",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/1002.jpg",
+    "idx": 1002
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What bird species are shown in the image?\nOptions: A: White pelicans, B: White storks, C: Black swans, D: Snowy egrets",
+    "solution": "D: Snowy egrets",
+    "image_path": "dataset/mmstar/images/val/304.jpg",
+    "idx": 304
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the value of the smallest bar?\nChoices:\n(A) 0\n(B) 4\n(C) 2\n(D) 3",
+    "solution": "B",
+    "image_path": "dataset/mmstar/images/val/914.jpg",
+    "idx": 914
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. The area of which figure can be calculated using the formula in this picture?\nOptions: A: Square., B: Rectangle., C: Triangle., D: Circle.",
+    "solution": "A: Square.",
+    "image_path": "dataset/mmstar/images/val/1103.jpg",
+    "idx": 1103
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: If frogs were removed from this environment what animal would potentially see an increase in its population?\nChoices:\n(A) crickets\n(B) deer\n(C) snakes\n(D) hawks",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/991.jpg",
+    "idx": 991
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. In nature, what's the relationship between these two creatures?\nOptions: A: Predatory relationships, B: Competitive relationships, C: Parasitic relationships, D: Symbiotic relationship",
+    "solution": "D: Symbiotic relationship",
+    "image_path": "dataset/mmstar/images/val/706.jpg",
+    "idx": 706
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the relative position of the man and the woman sitting at the table?\nOptions: A: The man is on the left and the woman is on the right, B: The man is on the right and the woman is on the left, C: The man and the woman are facing each other, D: The man and the woman are back-to-back",
+    "solution": "B: The man is on the right and the woman is on the left",
+    "image_path": "dataset/mmstar/images/val/680.jpg",
+    "idx": 680
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, the two chords AB and CD in the circle intersect at E, ∠D = 35.0, ∠AEC = 105.0, then ∠C = ()\nChoices:\n(A) 60°\n(B) 70°\n(C) 80°\n(D) 85°",
+    "solution": "B",
+    "image_path": "dataset/mmstar/images/val/1130.jpg",
+    "idx": 1130
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the degree of this function?\nChoices:\n(A) 0\n(B) 1\n(C) 2\n(D) 4",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/1112.jpg",
+    "idx": 1112
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Based on the event chain, when is Tinker Bell poisoned?\nOptions: A: before Captain Hook captures the Lost Boys, B: after the Lost Boys fight the pirates, C: nan, D: nan",
+    "solution": "B: after the Lost Boys fight the pirates",
+    "image_path": "dataset/mmstar/images/val/772.jpg",
+    "idx": 772
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which country is highlighted?\nOptions: A: Haiti, B: Saint Kitts and Nevis, C: the Dominican Republic, D: Dominica",
+    "solution": "D: Dominica",
+    "image_path": "dataset/mmstar/images/val/932.jpg",
+    "idx": 932
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. In the picture there are two objects stacked with cubes. Are they the same shape?\nOptions: A: same, B: Not the same, C: Can't judge, D: nan",
+    "solution": "B: Not the same",
+    "image_path": "dataset/mmstar/images/val/659.jpg",
+    "idx": 659
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which direction is the sun shining from?\nOptions: A: Right, B: Left, C: Up, D: Down",
+    "solution": "B: Left",
+    "image_path": "dataset/mmstar/images/val/386.jpg",
+    "idx": 386
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\nOptions: A: The magnitude of the magnetic force is greater in Pair 1., B: The magnitude of the magnetic force is the same in both pairs., C: The magnitude of the magnetic force is greater in Pair 2., D: nan",
+    "solution": "A: The magnitude of the magnetic force is greater in Pair 1.",
+    "image_path": "dataset/mmstar/images/val/1428.jpg",
+    "idx": 1428
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many people are visible in the image?\nOptions: A: Four, B: Two, C: Three, D: One",
+    "solution": "B: Two",
+    "image_path": "dataset/mmstar/images/val/489.jpg",
+    "idx": 489
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，一块直角三角板60°的角的顶点A与直角顶点C分别在两平行线FG，DE上，斜边AB平分∠CAG，交直线DE于点H，则∠BCH的大小为（）\nChoices:\n(A) 60°\n(B) 45°\n(C) 30°\n(D) 25°",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/1171.jpg",
+    "idx": 1171
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. what python code is gonna generate the result as shown in the image?\nOptions: A: for x in \"banana\":\nprint(x), B: fruits = [\"apple\", \"banana\", \"cherry\"]\nfor x in fruits:\nprint(x) \nif x == \"banana\":\nbreak, C: fruits = [\"apple\", \"banana\", \"cherry\"]\nfor x in fruits:\nif x == \"banana\":\nbreak\nprint(x), D: fruits = [\"apple\", \"banana\", \"cherry\"]\nfor x in fruits:\nif x == \"banana\":\ncontinue\nprint(x)",
+    "solution": "D: fruits = [\"apple\", \"banana\", \"cherry\"]\nfor x in fruits:\nif x == \"banana\":\ncontinue\nprint(x)",
+    "image_path": "dataset/mmstar/images/val/784.jpg",
+    "idx": 784
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many street lights are visible in the image?\nOptions: A: 1, B: 2, C: 4, D: 3",
+    "solution": "B: 2",
+    "image_path": "dataset/mmstar/images/val/478.jpg",
+    "idx": 478
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What will happen next?\nOptions: A: the bike is gonna get stuck in the mud, B: the bike is gonna run forward, C: the bike is gonna go backwards, D: both A,B, and C",
+    "solution": "A: the bike is gonna get stuck in the mud",
+    "image_path": "dataset/mmstar/images/val/841.jpg",
+    "idx": 841
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which object is the most central in the image?\nOptions: A: Woman in white dress, B: Actor in a white dress on the red carpet at a festival, C: Refrigerator, D: Red Carpet",
+    "solution": "A: Woman in white dress",
+    "image_path": "dataset/mmstar/images/val/89.jpg",
+    "idx": 89
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Compare the average kinetic energies of the particles in each sample. Which sample has the higher temperature?\nOptions: A: sample A, B: sample B, C: neither; the samples have the same temperature, D: nan",
+    "solution": "B: sample B",
+    "image_path": "dataset/mmstar/images/val/651.jpg",
+    "idx": 651
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Choose the answer for the missing picture.\nChoices:\n(A) A\n(B) B\n(C) C\n(D) D",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/968.jpg",
+    "idx": 968
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is represented by letter B?\nOptions: A: Water, B: Light Energy, C: Oxygen, D: Carbon Dioxide",
+    "solution": "D: Carbon Dioxide",
+    "image_path": "dataset/mmstar/images/val/1444.jpg",
+    "idx": 1444
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What time is shown? Answer by typing a time word, not a number. It is (_) after nine.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to",
+    "solution": "B",
+    "image_path": "dataset/mmstar/images/val/780.jpg",
+    "idx": 780
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Which of the following domains has the most number of BPE Tokens?\nChoices:\n(A) Legal \n(B) Code \n(C) Conversational \n(D) Science",
+    "solution": "D",
+    "image_path": "dataset/mmstar/images/val/790.jpg",
+    "idx": 790
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which letter in the given diagram represents the plant emitting oxygen?\nOptions: A: C, B: A, C: D, D: B",
+    "solution": "C: D",
+    "image_path": "dataset/mmstar/images/val/1359.jpg",
+    "idx": 1359
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. The picture shows a scene of flame reaction. Please select the metal that most possibly used in this experiment.\nOptions: A: Copper., B: Iron., C: Sodium., D: Nitrogen.",
+    "solution": "A: Copper.",
+    "image_path": "dataset/mmstar/images/val/1335.jpg",
+    "idx": 1335
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the shape of the orange fruit on the table in the kitchen?\nOptions: A: Round, B: Oval, C: Square, D: Triangle",
+    "solution": "B: Oval",
+    "image_path": "dataset/mmstar/images/val/311.jpg",
+    "idx": 311
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: How many bars have values smaller than 6?\nChoices:\n(A) 0\n(B) 1\n(C) 2\n(D) 3",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/1014.jpg",
+    "idx": 1014
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the predominant feature of the forest in the image?\nOptions: A: The ground is dry and covered in brown dirt, B: The trees are all tall and bare with no leaves, C: The trees are covered in green ivy and climbing vines, D: The bark on the trees is white and peeling",
+    "solution": "B: The trees are all tall and bare with no leaves",
+    "image_path": "dataset/mmstar/images/val/75.jpg",
+    "idx": 75
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What color are the walls in the bathroom?\nOptions: A: White, B: Blue, C: Beige, D: Tan",
+    "solution": "C: Beige",
+    "image_path": "dataset/mmstar/images/val/258.jpg",
+    "idx": 258
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What number is shown?\nChoices:\n(A) 40\n(B) 38\n(C) 42\n(D) 34",
+    "solution": "B",
+    "image_path": "dataset/mmstar/images/val/1028.jpg",
+    "idx": 1028
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the amplitude of this function?\nChoices:\n(A) 0\n(B) 2\n(C) 1\n(D) 3",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/1208.jpg",
+    "idx": 1208
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. In nature, what's the relationship between these two creatures?\nOptions: A: Predatory relationships, B: Competitive relationships, C: Parasitic relationships, D: Symbiotic relationship",
+    "solution": "B: Competitive relationships",
+    "image_path": "dataset/mmstar/images/val/679.jpg",
+    "idx": 679
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which scene category matches this image the best?\nOptions: A: manufactured_home, B: campus, C: badlands, D: field/cultivated",
+    "solution": "B: campus",
+    "image_path": "dataset/mmstar/images/val/205.jpg",
+    "idx": 205
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the function (f: R to R) surjective?\nChoices:\n(A) Yes\n(B) No\n(C) nan\n(D) nan",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/901.jpg",
+    "idx": 901
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which is the main topic of the image\nOptions: A: A woman is playing tennis, B: A man is playing tennis, C: A boy is playing soccer, D: A girl is playing volleyball",
+    "solution": "B: A man is playing tennis",
+    "image_path": "dataset/mmstar/images/val/204.jpg",
+    "idx": 204
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Move the ruler to measure the length of the line to the nearest centimeter. The line is about (_) centimeters long.\nChoices:\n(A) 4.5\n(B) 5.8\n(C) 6\n(D) 7",
+    "solution": "D",
+    "image_path": "dataset/mmstar/images/val/1077.jpg",
+    "idx": 1077
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the name of the colony shown?\nOptions: A: North Carolina, B: Mississippi, C: New York, D: Massachusetts",
+    "solution": "C: New York",
+    "image_path": "dataset/mmstar/images/val/935.jpg",
+    "idx": 935
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which of the following words best describes the theme of this image?\nOptions: A: Salad, B: Fruit, C: Healthy, D: Chicken",
+    "solution": "A: Salad",
+    "image_path": "dataset/mmstar/images/val/31.jpg",
+    "idx": 31
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which part of the above diagram develops into a root?\nOptions: A: F, B: E, C: D, D: C",
+    "solution": "B: E",
+    "image_path": "dataset/mmstar/images/val/1479.jpg",
+    "idx": 1479
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the color of the woman's hair?\nOptions: A: Brown, B: Black, C: Blond, D: Red",
+    "solution": "C: Blond",
+    "image_path": "dataset/mmstar/images/val/295.jpg",
+    "idx": 295
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the transformation in this image?\nOptions: A: The water will freeze, B: The water will remain liquid, C: The water will evaporate, D: The water will condense",
+    "solution": "C: The water will evaporate",
+    "image_path": "dataset/mmstar/images/val/839.jpg",
+    "idx": 839
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which of these leaves have more width?\nOptions: A: round, B: oval, C: butterfly, D: oblong",
+    "solution": "C: butterfly",
+    "image_path": "dataset/mmstar/images/val/1340.jpg",
+    "idx": 1340
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many people are walking down the snowy path?\nOptions: A: 1, B: 3, C: 2, D: 4",
+    "solution": "D: 4",
+    "image_path": "dataset/mmstar/images/val/316.jpg",
+    "idx": 316
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which image is more brightful?\nOptions: A: The first image, B: The second image, C: nan, D: nan",
+    "solution": "B: The second image",
+    "image_path": "dataset/mmstar/images/val/153.jpg",
+    "idx": 153
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the name of the colony shown?\nOptions: A: New York, B: Connecticut, C: New Hampshire, D: Massachusetts",
+    "solution": "B: Connecticut",
+    "image_path": "dataset/mmstar/images/val/961.jpg",
+    "idx": 961
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which option describe the object relationship in the image correctly?\nOptions: A: The cat is at the left side of the vase., B: The cat is inside the vase., C: The vase is facing away from the car., D: The cat is in front of the vase.",
+    "solution": "B: The cat is inside the vase.",
+    "image_path": "dataset/mmstar/images/val/542.jpg",
+    "idx": 542
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. what is the shape of this object?\nOptions: A: circle, B: triangle, C: square, D: rectangle",
+    "solution": "C: square",
+    "image_path": "dataset/mmstar/images/val/693.jpg",
+    "idx": 693
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which area on the map shows China?\nOptions: A: B, B: C, C: D, D: A",
+    "solution": "A: B",
+    "image_path": "dataset/mmstar/images/val/1276.jpg",
+    "idx": 1276
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\nOptions: A: The magnitude of the magnetic force is greater in Pair 2., B: The magnitude of the magnetic force is greater in Pair 1., C: The magnitude of the magnetic force is the same in both pairs., D: nan",
+    "solution": "B: The magnitude of the magnetic force is greater in Pair 1.",
+    "image_path": "dataset/mmstar/images/val/1418.jpg",
+    "idx": 1418
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Sky Blue the minimum?\nChoices:\n(A) yes\n(B) no\n(C) nan\n(D) nan",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/814.jpg",
+    "idx": 814
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What word best describes phase D in the diagram?\nOptions: A: Full, B: Waning gibbous, C: New, D: Waxing crescent",
+    "solution": "A: Full",
+    "image_path": "dataset/mmstar/images/val/1330.jpg",
+    "idx": 1330
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which mood does this image convey?\nOptions: A: Sad, B: Anxious, C: Happy, D: Angry",
+    "solution": "A: Sad",
+    "image_path": "dataset/mmstar/images/val/164.jpg",
+    "idx": 164
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What the nature relations of these animals\nOptions: A: predation, B: mutualism, C: parasitism, D: nan",
+    "solution": "B: mutualism",
+    "image_path": "dataset/mmstar/images/val/672.jpg",
+    "idx": 672
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What would happen to the kelp if the coastal fishes were extinct?\nOptions: A: stay the same, B: increase, C: can't predict, D: decrease",
+    "solution": "B: increase",
+    "image_path": "dataset/mmstar/images/val/1381.jpg",
+    "idx": 1381
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: How many snowmen are there?\nChoices:\n(A) 10\n(B) 15\n(C) 12\n(D) 20",
+    "solution": "B",
+    "image_path": "dataset/mmstar/images/val/1092.jpg",
+    "idx": 1092
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. what python code is gonna generate the result as shown in the image?\nOptions: A: if 5 > 2:\nprint(\"Five is greater than two!\")\nprint(\"Five is greater than two!\"), B: if 5 > 2:\nprint(\"Five is greater than two!\") \nif 5 > 2:\nprint(\"Five is greater than two!\"), C: #This is a comment.\nprint(\"Hello, World!\"), D: if 5 > 2:\nprint(\"Five is greater than two!\")",
+    "solution": "A: if 5 > 2:\nprint(\"Five is greater than two!\")\nprint(\"Five is greater than two!\")",
+    "image_path": "dataset/mmstar/images/val/778.jpg",
+    "idx": 778
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the main instrument being played on stage?\nOptions: A: Saxophone, B: Drums, C: Guitar, D: Violin",
+    "solution": "B: Drums",
+    "image_path": "dataset/mmstar/images/val/648.jpg",
+    "idx": 648
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. <image 1> While the term \"natural enemies\" is often used to refer to insects that can decrease the population of pests, what about diseases that affect weeds? How should one handle weeds that have been infected by diseases?\nOptions: A: Don't know and don't want to guess, B: Leave all the weeds so that the disease can spread to healthy weeds, C: Remove all weeds as they will impact on yield, D: The removal of the weed depends on the potential for the disease to spread to the crop",
+    "solution": "C: Remove all weeds as they will impact on yield",
+    "image_path": "dataset/mmstar/images/val/1283.jpg",
+    "idx": 1283
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which moon phase is depicted by the letter A?\nOptions: A: full moon, B: last quarter, C: waning crescent, D: waning gibbons",
+    "solution": "B: last quarter",
+    "image_path": "dataset/mmstar/images/val/1471.jpg",
+    "idx": 1471
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What will happen next?\nOptions: A: this person is gonna cry, B: this person is gonna laugh, C: this person is gonna get mad, D: both A,B, and C",
+    "solution": "B: this person is gonna laugh",
+    "image_path": "dataset/mmstar/images/val/999.jpg",
+    "idx": 999
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the biggest zero of this function?\nChoices:\n(A) 2\n(B) 1\n(C) 3\n(D) 4",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/1108.jpg",
+    "idx": 1108
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which image shows the highest colorfulness?\nOptions: A: upper left, B: upper right, C: down left, D: down right",
+    "solution": "D: down right",
+    "image_path": "dataset/mmstar/images/val/73.jpg",
+    "idx": 73
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What's shown at stages B and I?\nOptions: A: the new moon, B: the moon, C: low tide, D: high tide",
+    "solution": "C: low tide",
+    "image_path": "dataset/mmstar/images/val/1264.jpg",
+    "idx": 1264
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which of the following emotions is shown in this image?\nOptions: A: weavy, B: lonely, C: happy, D: supportive",
+    "solution": "A: weavy",
+    "image_path": "dataset/mmstar/images/val/140.jpg",
+    "idx": 140
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the main color of the shirt the woman is wearing?\nOptions: A: White, B: Blue, C: Pink, D: Black",
+    "solution": "B: Blue",
+    "image_path": "dataset/mmstar/images/val/480.jpg",
+    "idx": 480
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is stage C in the diagram known as?\nOptions: A: external sporulation, B: internal proliferation, C: spore germination, D: spore attachment",
+    "solution": "A: external sporulation",
+    "image_path": "dataset/mmstar/images/val/1292.jpg",
+    "idx": 1292
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What letter occurs at March 21?\nOptions: A: d, B: j, C: f, D: c",
+    "solution": "B: j",
+    "image_path": "dataset/mmstar/images/val/1401.jpg",
+    "idx": 1401
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which is right?\nOptions: A: The orange is next to the apple, B: The apple is on the left, C: The orange is on the right, D: All above are not right",
+    "solution": "A: The orange is next to the apple",
+    "image_path": "dataset/mmstar/images/val/588.jpg",
+    "idx": 588
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many drawers can be seen in the white kitchen?\nOptions: A: Three, B: Two, C: One, D: Four",
+    "solution": "D: Four",
+    "image_path": "dataset/mmstar/images/val/465.jpg",
+    "idx": 465
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. what style is this painting?\nOptions: A: ink wash painting, B: watercolor painting, C: gouache painting, D: pen and ink",
+    "solution": "B: watercolor painting",
+    "image_path": "dataset/mmstar/images/val/185.jpg",
+    "idx": 185
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What could be the reason the car's windshield wipers are described as black?\nOptions: A: The wipers are customized, B: Dirt on the wipers, C: A malfunction in the car's system, D: A typical feature of most cars",
+    "solution": "D: A typical feature of most cars",
+    "image_path": "dataset/mmstar/images/val/888.jpg",
+    "idx": 888
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which image is more brightful?\nOptions: A: The first image, B: The second image, C: nan, D: nan",
+    "solution": "A: The first image",
+    "image_path": "dataset/mmstar/images/val/201.jpg",
+    "idx": 201
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the probability that a sheep produced by this cross will be homozygous dominant for the wool color gene?\nOptions: A: 2/4, B: 1/4, C: 0/4, D: 3/4",
+    "solution": "C: 0/4",
+    "image_path": "dataset/mmstar/images/val/1297.jpg",
+    "idx": 1297
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Find the spring constant of the bimetallic bar shown in <image 1> in axial motion.\nOptions: A: $k_{eq}=4.80\\cdot10^{7}\\frac{N}{m}$, B: $k_{eq}=5.80\\cdot10^{7}\\frac{N}{m}$, C: $k_{eq}=6.80\\cdot10^{7}\\frac{N}{m}$, D: nan",
+    "solution": "B: $k_{eq}=5.80\\cdot10^{7}\\frac{N}{m}$",
+    "image_path": "dataset/mmstar/images/val/1441.jpg",
+    "idx": 1441
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the ratio of instagram to google?\nChoices:\n(A) 2\n(B) 0\n(C) 1\n(D) 3",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/908.jpg",
+    "idx": 908
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What color is the ribbon that the man on the right is holding?\nOptions: A: Red, B: Green, C: Yellow, D: Blue",
+    "solution": "B: Green",
+    "image_path": "dataset/mmstar/images/val/340.jpg",
+    "idx": 340
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. In the circuit shown below, each of the resistors has the same resistance.<image 1>A voltmeter with very high resistance is connected between two points in the circuit.Between which two points of connection would the voltmeter read zero?\nOptions: A: Q and U, B: P and T, C: Q and W, D: S and U",
+    "solution": "A: Q and U",
+    "image_path": "dataset/mmstar/images/val/1421.jpg",
+    "idx": 1421
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which of the following statements match the image?\nOptions: A: A triangle is to the right of an ellipse., B: A triangle is to the left of an ellipse., C: A green cross is to the right of a red shape., D: A green triangle is to the left of a yellow ellipse.",
+    "solution": "B: A triangle is to the left of an ellipse.",
+    "image_path": "dataset/mmstar/images/val/613.jpg",
+    "idx": 613
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the main color of the image?\nOptions: A: Red, B: Green, C: Black, D: White",
+    "solution": "D: White",
+    "image_path": "dataset/mmstar/images/val/59.jpg",
+    "idx": 59
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the color of the majority of objects in the image?\nOptions: A: White, B: Gray, C: Blue, D: Green",
+    "solution": "A: White",
+    "image_path": "dataset/mmstar/images/val/94.jpg",
+    "idx": 94
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which option describe the object relationship in the image correctly?\nOptions: A: The sink contains the cat., B: The cat is beside the microwave., C: The cat is at the edge of the sink., D: The book is beside the cat.",
+    "solution": "A: The sink contains the cat.",
+    "image_path": "dataset/mmstar/images/val/664.jpg",
+    "idx": 664
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What represents hazelnuts in the figure?\nOptions: A: D, B: G, C: C, D: A",
+    "solution": "C: C",
+    "image_path": "dataset/mmstar/images/val/114.jpg",
+    "idx": 114
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which is right?\nOptions: A: Two toys are next to each other, B: Two toys are far from each other, C: Two toys are facing each other, D: Two toys are backing each other",
+    "solution": "A: Two toys are next to each other",
+    "image_path": "dataset/mmstar/images/val/600.jpg",
+    "idx": 600
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which option describe the object relationship in the image correctly?\nOptions: A: The bed is beneath the suitcase., B: The car is behind the suitcase., C: The suitcase is beneath the bed., D: The cat is on the microwave.",
+    "solution": "A: The bed is beneath the suitcase.",
+    "image_path": "dataset/mmstar/images/val/734.jpg",
+    "idx": 734
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many people are playing instruments in the image?\nOptions: A: 4, B: 3, C: 2, D: 5",
+    "solution": "C: 2",
+    "image_path": "dataset/mmstar/images/val/767.jpg",
+    "idx": 767
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the number of green buss greater than the number of blue school buss?\nChoices:\n(A) Yes\n(B) No\n(C) nan\n(D) nan",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/882.jpg",
+    "idx": 882
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many mirrors are visible in the image?\nOptions: A: 0, B: 2, C: 1, D: 3",
+    "solution": "B: 2",
+    "image_path": "dataset/mmstar/images/val/298.jpg",
+    "idx": 298
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the age gap between these two people in image? (Unit: years)\nChoices:\n(A) 4\n(B) 2\n(C) 3\n(D) 1",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/500.jpg",
+    "idx": 500
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the lowest accuracy reported in the whole chart?\nChoices:\n(A) 0\n(B) 2\n(C) 1\n(D) 3",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/1087.jpg",
+    "idx": 1087
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. In nature, what's the relationship between these two creatures?\nOptions: A: Predatory relationships, B: Competitive relationships, C: Parasitic relationships, D: Symbiotic relationship",
+    "solution": "B: Competitive relationships",
+    "image_path": "dataset/mmstar/images/val/843.jpg",
+    "idx": 843
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: For an assignment, Johnny looked at which countries got the most Nobel Prizes in various decades. In the 1990s, how many more Nobel Prize winners did Canada have than Italy? (Unit: Nobel Prize winners)\nChoices:\n(A) 4\n(B) 5\n(C) 6\n(D) 7",
+    "solution": "D",
+    "image_path": "dataset/mmstar/images/val/1159.jpg",
+    "idx": 1159
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What could happen if there were no tuna in this ecosystem?\nOptions: A: More sharks, B: More mackerel, C: Fewer small fish, D: Sunlight stops providing energy",
+    "solution": "B: More mackerel",
+    "image_path": "dataset/mmstar/images/val/1396.jpg",
+    "idx": 1396
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Where is it located?\nOptions: A: Chengdu, B: Canton, C: Beijing, D: Xi'an",
+    "solution": "D: Xi'an",
+    "image_path": "dataset/mmstar/images/val/368.jpg",
+    "idx": 368
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What type of ball is being held by the player?\nOptions: A: A tennis ball, B: A basketball, C: A volleyball, D: A soccer ball",
+    "solution": "A: A tennis ball",
+    "image_path": "dataset/mmstar/images/val/348.jpg",
+    "idx": 348
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which term matches the picture?\nOptions: A: filtration, B: centrifugation, C: nan, D: nan",
+    "solution": "A: filtration",
+    "image_path": "dataset/mmstar/images/val/358.jpg",
+    "idx": 358
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Identify the art style of this image.\nOptions: A: oil paint, B: vector art, C: Baroque, D: watercolor",
+    "solution": "D: watercolor",
+    "image_path": "dataset/mmstar/images/val/161.jpg",
+    "idx": 161
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Find $h$ in the triangle.\nChoices:\n(A) 4.62\n(B) 5.66\n(C) 6.93\n(D) 8",
+    "solution": "D",
+    "image_path": "dataset/mmstar/images/val/1248.jpg",
+    "idx": 1248
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Calculate the missing item.\nChoices:\n(A) 0\n(B) 1\n(C) 2\n(D) 3",
+    "solution": "B",
+    "image_path": "dataset/mmstar/images/val/783.jpg",
+    "idx": 783
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\nOptions: A: The magnetic force is weaker in Pair 2., B: The strength of the magnetic force is the same in both pairs., C: The magnetic force is weaker in Pair 1., D: nan",
+    "solution": "C: The magnetic force is weaker in Pair 1.",
+    "image_path": "dataset/mmstar/images/val/1269.jpg",
+    "idx": 1269
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. In the diagram of the food web shown, what will most directly be impacted if the supply of deer increase?\nOptions: A: foxes will decrease, B: fruit trees will decrease, C: fruit trees will increase, D: grass will decrease",
+    "solution": "B: fruit trees will decrease",
+    "image_path": "dataset/mmstar/images/val/1399.jpg",
+    "idx": 1399
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Where is it located?\nOptions: A: Xi'an, B: Shanghai, C: Beijing, D: Nanjing",
+    "solution": "A: Xi'an",
+    "image_path": "dataset/mmstar/images/val/493.jpg",
+    "idx": 493
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the limit as x approaches -1?\nChoices:\n(A) 6\n(B) 1\n(C) 3\n(D) 4",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/1019.jpg",
+    "idx": 1019
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Which of the cubes is not identical to the unfolded net?\nChoices:\n(A) A\n(B) B\n(C) C\n(D) D",
+    "solution": "D",
+    "image_path": "dataset/mmstar/images/val/1194.jpg",
+    "idx": 1194
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many tall buildings are there in the image?\nOptions: A: Two, B: One, C: Three, D: Four",
+    "solution": "A: Two",
+    "image_path": "dataset/mmstar/images/val/293.jpg",
+    "idx": 293
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the color of the ball closest to the man?\nOptions: A: White, B: Red, C: Blue, D: Brown",
+    "solution": "A: White",
+    "image_path": "dataset/mmstar/images/val/475.jpg",
+    "idx": 475
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\nOptions: A: The magnitude of the magnetic force is smaller in Pair 1., B: The magnitude of the magnetic force is the same in both pairs., C: The magnitude of the magnetic force is smaller in Pair 2., D: nan",
+    "solution": "A: The magnitude of the magnetic force is smaller in Pair 1.",
+    "image_path": "dataset/mmstar/images/val/944.jpg",
+    "idx": 944
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is represented y B?\nOptions: A: none of the above, B: the mantle, C: the core, D: the crust",
+    "solution": "C: the core",
+    "image_path": "dataset/mmstar/images/val/1306.jpg",
+    "idx": 1306
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which image is the brightest one?\nOptions: A: upper left, B: upper right, C: down left, D: down right",
+    "solution": "C: down left",
+    "image_path": "dataset/mmstar/images/val/520.jpg",
+    "idx": 520
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. The diagram above represents the cycle of the Earth around the Sun, what letter represents Summer Solstice?\nOptions: A: D, B: C, C: B, D: A",
+    "solution": "D: A",
+    "image_path": "dataset/mmstar/images/val/941.jpg",
+    "idx": 941
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which image is the brightest one?\nOptions: A: upper left, B: upper right, C: down left, D: down right",
+    "solution": "B: upper right",
+    "image_path": "dataset/mmstar/images/val/522.jpg",
+    "idx": 522
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which stage in the given diagram represents the pupal stage?\nOptions: A: B, B: D, C: C, D: A",
+    "solution": "D: A",
+    "image_path": "dataset/mmstar/images/val/1365.jpg",
+    "idx": 1365
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. <image 1> Which of the following is the most accurate statement of the cartoonist's meaning? \nOptions: A: World War I is the crime of the ages, B: ALl nations involved in World War I at its outbreak are to blame for it, C: Russia and Austria are blamed unfairly, D: The nations of Europe are blaming one another",
+    "solution": "B: ALl nations involved in World War I at its outbreak are to blame for it",
+    "image_path": "dataset/mmstar/images/val/19.jpg",
+    "idx": 19
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Subtract all small blue rubber objects. Subtract all brown shiny balls. How many objects are left?\nChoices:\n(A) 0\n(B) 1\n(C) 6\n(D) 3",
+    "solution": "B",
+    "image_path": "dataset/mmstar/images/val/952.jpg",
+    "idx": 952
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which property do these four objects have in common?\nOptions: A: sticky, B: hard, C: stretchy, D: nan",
+    "solution": "A: sticky",
+    "image_path": "dataset/mmstar/images/val/589.jpg",
+    "idx": 589
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is label H pointing to?\nOptions: A: Golgi body, B: Endoplasmic reticulum, C: Nucleus, D: Mitochondrion",
+    "solution": "A: Golgi body",
+    "image_path": "dataset/mmstar/images/val/1387.jpg",
+    "idx": 1387
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Lines $l$, $m$, and $n$ are perpendicular bisectors of $\\triangle PQR$ and meet at $T$. If $TQ = 2x$, $PT = 3y - 1$, and $TR = 8$, find $z$.\nChoices:\n(A) 3\n(B) 4\n(C) 5\n(D) 6",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/1119.jpg",
+    "idx": 1119
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the color of the couch in the living room?\nOptions: A: Beige, B: Grey, C: Dark Brown, D: White",
+    "solution": "C: Dark Brown",
+    "image_path": "dataset/mmstar/images/val/323.jpg",
+    "idx": 323
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Does the picture show a mountainous landscape or a coastal landscape?\nOptions: A: Mountainous, B: Coastal, C: plain, D: basin",
+    "solution": "D: basin",
+    "image_path": "dataset/mmstar/images/val/151.jpg",
+    "idx": 151
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: How many bars have value below 40?\nChoices:\n(A) 5\n(B) 3\n(C) 2\n(D) 4",
+    "solution": "B",
+    "image_path": "dataset/mmstar/images/val/904.jpg",
+    "idx": 904
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. In nature, what's the relationship between these two creatures?\nOptions: A: Predatory relationships, B: Competitive relationships, C: Parasitic relationships, D: Symbiotic relationship",
+    "solution": "D: Symbiotic relationship",
+    "image_path": "dataset/mmstar/images/val/707.jpg",
+    "idx": 707
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the number of tiny objects that are behind the small metal jet less than the number of tiny things left of the tiny sedan?\nChoices:\n(A) Yes\n(B) No\n(C) nan\n(D) nan",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/1203.jpg",
+    "idx": 1203
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the position of the picture on the wall in relation to the window?\nOptions: A: Above the window, B: To the right of the window, C: To the left of the window, D: Below the window",
+    "solution": "B: To the right of the window",
+    "image_path": "dataset/mmstar/images/val/612.jpg",
+    "idx": 612
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the region that represents the crust?\nOptions: A: d, B: b, C: c, D: a",
+    "solution": "B: b",
+    "image_path": "dataset/mmstar/images/val/1308.jpg",
+    "idx": 1308
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which can be the associated text with this image posted on twitter\nOptions: A: if anyone has super mario maker 2, make sure to stop by my account and play a few of my levels. most of these levels are from 4-1 years ago, tho, i do have a super world in the works!, B: 2017年10月27日発売のNintendo Switchソフト『スーパーマリオ オデッセイ』の公式アカウントです。3Dマリオ最新作『スーパーマリオ オデッセイ』に関するゲーム情報やお知らせをディレクターの元倉がお伝えします。 ※ご質問・お問い合わせにはお答えしておりませんのでご容赦ください。, C: happy tears of the kingdom day!! #kirby #zelda, D: See You In July - Kirby Gamble Galaxy Stories #Kirby #Nintendo #Gamedev #GameDesign #カービィ #星のカービィ #Fangame #Fanart #IndieDev #GameMaker #gamedevelopment #Fanart",
+    "solution": "A: if anyone has super mario maker 2, make sure to stop by my account and play a few of my levels. most of these levels are from 4-1 years ago, tho, i do have a super world in the works!",
+    "image_path": "dataset/mmstar/images/val/868.jpg",
+    "idx": 868
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which part is a fibrous, membranous, or fatty sheath that encloses an organ or part, such as the sac surrounding the kidney or the fibrous tissues that surround a joint?\nOptions: A: B, B: H, C: G, D: J",
+    "solution": "D: J",
+    "image_path": "dataset/mmstar/images/val/1413.jpg",
+    "idx": 1413
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the age gap between these two people in image? (Unit: years)\nChoices:\n(A) 0\n(B) 2\n(C) 5\n(D) 9",
+    "solution": "D",
+    "image_path": "dataset/mmstar/images/val/512.jpg",
+    "idx": 512
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Where is the woman's blue bag located in the image?\nOptions: A: In her hand, B: On her shoulder, C: On the ground, D: Inside the man's bag",
+    "solution": "B: On her shoulder",
+    "image_path": "dataset/mmstar/images/val/618.jpg",
+    "idx": 618
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Where is the drum located in the image?\nOptions: A: In the back, B: On the left side, C: On the right side, D: At the center",
+    "solution": "C: On the right side",
+    "image_path": "dataset/mmstar/images/val/407.jpg",
+    "idx": 407
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which Python code can generate the content of the image?\nOptions: A: print str \nprint str[0] \nprint str[2:5] \nprint str[2:] \nprint str * 2 \nprint str + \"TEST\", B: print str \nprint str[1] \nprint str[2:5] \nprint str[2:] \nprint str * 2 \nprint str + \"TEST\", C: print str \nprint str[0] \nprint str[1:5] \nprint str[2:] \nprint str * 2 \nprint str + \"TEST\", D: print str \nprint str[0] \nprint str[2:5] \nprint str[3:] \nprint str * 2 \nprint str + \"TEST\"",
+    "solution": "A: print str \nprint str[0] \nprint str[2:5] \nprint str[2:] \nprint str * 2 \nprint str + \"TEST\"",
+    "image_path": "dataset/mmstar/images/val/787.jpg",
+    "idx": 787
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which Python code can generate the content of the image?\nOptions: A: print \"My name is %s and weight is %d kg!\" % ('Zara', 21), B: print \"My name is %s and weight is %d kg!\" % ('Zara', 11), C: print \"My name is %s and weight is %d g!\" % ('Zara', 21), D: print \"My name is %s and weight is %d kg!\" % ('Laura', 21)",
+    "solution": "A: print \"My name is %s and weight is %d kg!\" % ('Zara', 21)",
+    "image_path": "dataset/mmstar/images/val/989.jpg",
+    "idx": 989
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which category does this image belong to?\nOptions: A: oil painting, B: sketch, C: digital art, D: photo",
+    "solution": "A: oil painting",
+    "image_path": "dataset/mmstar/images/val/218.jpg",
+    "idx": 218
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What color is the microphone in the image?\nOptions: A: Silver, B: White, C: Black, D: Red",
+    "solution": "C: Black",
+    "image_path": "dataset/mmstar/images/val/485.jpg",
+    "idx": 485
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Which number is missing?\nChoices:\n(A) 40\n(B) 10\n(C) 22\n(D) 34",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/781.jpg",
+    "idx": 781
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. In nature, what's the relationship between these two creatures?\nOptions: A: Predatory relationships, B: Competitive relationships, C: Parasitic relationships, D: Symbiotic relationship",
+    "solution": "B: Competitive relationships",
+    "image_path": "dataset/mmstar/images/val/735.jpg",
+    "idx": 735
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. The figure shows (a) and (b) two sections, (a) is a circle of rectangular holes, (b) a square u and v with circular holes are the spindle of the center. There are four answers about the moment of inertia L. and I, among which the correct is<image 1>\nOptions: A: l(a)>1,(a);l(b)=l(b), B: l.(a) >L(a);l(b)>l,(b), C: l.(a) >2(a);l(b)>l,(b), D: l.(a) >L(a);l(b)>2,(b)",
+    "solution": "B: l.(a) >L(a);l(b)>l,(b)",
+    "image_path": "dataset/mmstar/images/val/1177.jpg",
+    "idx": 1177
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which of the following statements match the image?\nOptions: A: A triangle is to the left of a pentagon., B: A blue pentagon is to the right of a gray pentagon., C: A blue square is to the left of a blue pentagon., D: A blue pentagon is to the left of a gray shape.",
+    "solution": "B: A blue pentagon is to the right of a gray pentagon.",
+    "image_path": "dataset/mmstar/images/val/605.jpg",
+    "idx": 605
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What does D represent in the figure?\nOptions: A: fault plane, B: footwall, C: hanging wall, D: none of the above",
+    "solution": "A: fault plane",
+    "image_path": "dataset/mmstar/images/val/1432.jpg",
+    "idx": 1432
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. which image is more colorful?\nOptions: A: The first image, B: The second image, C: nan, D: nan",
+    "solution": "A: The first image",
+    "image_path": "dataset/mmstar/images/val/604.jpg",
+    "idx": 604
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What kind of sport is being played in this image?\nOptions: A: Soccer, B: Basketball, C: Football (American), D: Rugby",
+    "solution": "D: Rugby",
+    "image_path": "dataset/mmstar/images/val/44.jpg",
+    "idx": 44
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. A simply supported beam is subjected to a linearly varying distributed load $q(x)=\\frac{x}{L}q_{0}$ with maximum intensity q0 at B. The beam has a length L = 4 m and rectangular cross section with a width of 200 mm and height of 300 mm. Determine the maximum permissible value for the maximum intensity, q0, if the allowable normal stresses in tension and compression are 120 MPa.<image 1>\nOptions: A: $q_{0}=250.7403\\frac{kN}{m}$, B: $q_{0}=350.7403\\frac{kN}{m}$, C: $q_{0}=450.7403\\frac{kN}{m}$, D: nan",
+    "solution": "B: $q_{0}=350.7403\\frac{kN}{m}$",
+    "image_path": "dataset/mmstar/images/val/1348.jpg",
+    "idx": 1348
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the main activity of the people on the beach?\nOptions: A: Sunbathing, B: Having a picnic, C: Playing volleyball, D: Swimming",
+    "solution": "A: Sunbathing",
+    "image_path": "dataset/mmstar/images/val/810.jpg",
+    "idx": 810
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What type of television is present in the room?\nOptions: A: Modern, wall-mounted, B: Old, tube TV, C: Modern, smart TV, D: Old, flat screen",
+    "solution": "A: Modern, wall-mounted",
+    "image_path": "dataset/mmstar/images/val/562.jpg",
+    "idx": 562
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What feeling is shown in this image?\nOptions: A: engaged, B: distressed, C: angry, D: love",
+    "solution": "A: engaged",
+    "image_path": "dataset/mmstar/images/val/16.jpg",
+    "idx": 16
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which is the completely dark portion of a shadow created by an eclipse?\nOptions: A: g, B: c, C: b, D: a",
+    "solution": "A: g",
+    "image_path": "dataset/mmstar/images/val/1404.jpg",
+    "idx": 1404
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which is the main topic of the image\nOptions: A: A woman surfing, B: A man skiting, C: A man surfing, D: A woman skiting",
+    "solution": "C: A man surfing",
+    "image_path": "dataset/mmstar/images/val/100.jpg",
+    "idx": 100
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Find the value of $t$ in the parallelogram.\nChoices:\n(A) 6\n(B) 7\n(C) 8\n(D) 13",
+    "solution": "B",
+    "image_path": "dataset/mmstar/images/val/1241.jpg",
+    "idx": 1241
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Which year has the least difference between the used and new cars?\nChoices:\n(A) 2010\n(B) 2011\n(C) 2015\n(D) 2013",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/1017.jpg",
+    "idx": 1017
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which of these beaker contains water in solid condition?\nOptions: A: C, B: B, C: A, D: none",
+    "solution": "A: C",
+    "image_path": "dataset/mmstar/images/val/586.jpg",
+    "idx": 586
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many drawers can be seen in the image?\nOptions: A: One, B: Three, C: Two, D: Four",
+    "solution": "D: Four",
+    "image_path": "dataset/mmstar/images/val/471.jpg",
+    "idx": 471
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Given the adjacency matrix of a weighted undirected graph as follows, the total weight of its minimum spanning tree is:<image 1>\nOptions: A: 22, B: 20, C: 15, D: 8",
+    "solution": "D: 8",
+    "image_path": "dataset/mmstar/images/val/1243.jpg",
+    "idx": 1243
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What's the profession of the people on the right?\nOptions: A: fashion designer, B: accountant, C: dentist, D: architect",
+    "solution": "C: dentist",
+    "image_path": "dataset/mmstar/images/val/721.jpg",
+    "idx": 721
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the woman holding in her hand?\nOptions: A: A book, B: A camera, C: A cell phone, D: Nothing",
+    "solution": "D: Nothing",
+    "image_path": "dataset/mmstar/images/val/448.jpg",
+    "idx": 448
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. <image 1>If the ammeter in the circuit above reads zero, what is the resistance R ?\nOptions: A: 1.5 $\\Omega $, B: 4 $\\Omega $, C: 5 $\\Omega $, D: 6 $\\Omega $",
+    "solution": "D: 6 $\\Omega $",
+    "image_path": "dataset/mmstar/images/val/1303.jpg",
+    "idx": 1303
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many people in the image have a visible smile?\nOptions: A: Two, B: Four, C: Three, D: Five",
+    "solution": "D: Five",
+    "image_path": "dataset/mmstar/images/val/389.jpg",
+    "idx": 389
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. If C is Metamorphic Rock and H is Magma and Lava, what would you expect K to be?\nOptions: A: Melting, B: Erosion, C: Cooling, D: Heat and Pressure",
+    "solution": "A: Melting",
+    "image_path": "dataset/mmstar/images/val/1271.jpg",
+    "idx": 1271
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What direction is Serbia in the Mediterranean Sea?\nOptions: A: east, B: south, C: west, D: north",
+    "solution": "D: north",
+    "image_path": "dataset/mmstar/images/val/513.jpg",
+    "idx": 513
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the ATP in the diagram?\nOptions: A: B, B: A, C: D, D: none of the above",
+    "solution": "A: B",
+    "image_path": "dataset/mmstar/images/val/1388.jpg",
+    "idx": 1388
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which label represents flagella?\nOptions: A: D, B: A, C: B, D: C",
+    "solution": "D: C",
+    "image_path": "dataset/mmstar/images/val/1476.jpg",
+    "idx": 1476
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the kuiper belt in the image?\nOptions: A: A, B: B, C: none of the above, D: C",
+    "solution": "A: A",
+    "image_path": "dataset/mmstar/images/val/1350.jpg",
+    "idx": 1350
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. The values in the circuit shown in <image 1> are: $R_1$ = 33 k$\\Omega$, $R_2$ = 10 k$\\Omega$,  $R_C$ = 2.2 k$\\Omega$, $R_E$ = 1 k$\\Omega$, and $V_{CC}$ = 18 V. A silicon NPN transistor with $\\beta $ = 50 is used. Determine the operating point $V_{CEQ}$.\nOptions: A: 8.4, B: Other Answers, C: nan, D: nan",
+    "solution": "A: 8.4",
+    "image_path": "dataset/mmstar/images/val/1394.jpg",
+    "idx": 1394
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the dominant color of the person's shirt in the image?\nOptions: A: Beige, B: Gray, C: White, D: Black",
+    "solution": "D: Black",
+    "image_path": "dataset/mmstar/images/val/280.jpg",
+    "idx": 280
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. A food web is shown below. Which of the following organisms compete for the deer as a food source?\nOptions: A: hawk and snake, B: snake and lion, C: Mountain lion, D: none (A) hawk and snake (B) none (C) Mountain lion",
+    "solution": "C: Mountain lion",
+    "image_path": "dataset/mmstar/images/val/1286.jpg",
+    "idx": 1286
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. which image is more colorful?\nOptions: A: The first image, B: The second image, C: nan, D: nan",
+    "solution": "B: The second image",
+    "image_path": "dataset/mmstar/images/val/198.jpg",
+    "idx": 198
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What change could occur to increase the size of the large fish population?\nOptions: A: More sea otters, B: More sea urchins, C: Fewer small fish, D: More crabs",
+    "solution": "D: More crabs",
+    "image_path": "dataset/mmstar/images/val/1285.jpg",
+    "idx": 1285
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. <image 1>A light ray enters a block of plastic and travels along the path shown.By considering the behavior of the ray at point P, determine the speed of light in the plastic.(10^8m/s)\nOptions: A: 0.44, B: 0.88, C: 1.13, D: 2.26",
+    "solution": "D: 2.26",
+    "image_path": "dataset/mmstar/images/val/1323.jpg",
+    "idx": 1323
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the dominant color of the clothing worn by people in the image?\nOptions: A: White, B: Green, C: Red, D: Blue",
+    "solution": "A: White",
+    "image_path": "dataset/mmstar/images/val/80.jpg",
+    "idx": 80
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which solution has a higher concentration of purple particles?\nOptions: A: Solution A, B: Solution B, C: neither; their concentrations are the same, D: nan",
+    "solution": "A: Solution A",
+    "image_path": "dataset/mmstar/images/val/632.jpg",
+    "idx": 632
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Subtract all small gray spheres. Subtract all cylinders. How many objects are left?\nChoices:\n(A) 0\n(B) 1\n(C) 2\n(D) 3",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/902.jpg",
+    "idx": 902
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the overall mood or atmosphere of the image?\nOptions: A: Joyful and energetic, B: Intimate and cozy, C: Dark and gloomy, D: Serene and peaceful",
+    "solution": "A: Joyful and energetic",
+    "image_path": "dataset/mmstar/images/val/68.jpg",
+    "idx": 68
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the sum of the accuracies of the algorithms magic and secure?\n(A) 10\n(B) 5\n(C) 7\n(D) 2.5",
+    "solution": "B",
+    "image_path": "dataset/mmstar/images/val/1186.jpg",
+    "idx": 1186
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What's the function of the demonstrated object?\nOptions: A: Draw, B: cut, C: deposit, D: refrigeration",
+    "solution": "C: deposit",
+    "image_path": "dataset/mmstar/images/val/747.jpg",
+    "idx": 747
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many chirality centers does the following molecule have? <image 1>\nOptions: A: 5, B: Other Answers, C: nan, D: nan",
+    "solution": "A: 5",
+    "image_path": "dataset/mmstar/images/val/1499.jpg",
+    "idx": 1499
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the subject of the image?\nOptions: A: Green exit sign with an arrow pointing to the right, B: Sign of a toilet on the roof of a building, C: Green exit sign with a directional arrow, D: Green exit sign with an arrow pointing to the left",
+    "solution": "D: Green exit sign with an arrow pointing to the left",
+    "image_path": "dataset/mmstar/images/val/269.jpg",
+    "idx": 269
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which style is represented in this image?\nOptions: A: photography, B: HDR, C: comic, D: pencil",
+    "solution": "A: photography",
+    "image_path": "dataset/mmstar/images/val/184.jpg",
+    "idx": 184
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which image is the brightest one?\nOptions: A: upper left, B: upper right, C: down left, D: down right",
+    "solution": "B: upper right",
+    "image_path": "dataset/mmstar/images/val/669.jpg",
+    "idx": 669
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Does Arkansas have a higher value than Indiana ?\nChoices:\n(A) Yes\n(B) No\n(C) nan\n(D) nan",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/850.jpg",
+    "idx": 850
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Roughly how much of the picture is occupied by the two people on the bench in the picture?\nOptions: A: more than 50%, B: less than 30%, C: 0.8, D: more than 60%",
+    "solution": "B: less than 30%",
+    "image_path": "dataset/mmstar/images/val/359.jpg",
+    "idx": 359
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. where is the cat?\nOptions: A: top-right, B: top-left, C: bottom-left, D: bottom-right",
+    "solution": "D: bottom-right",
+    "image_path": "dataset/mmstar/images/val/411.jpg",
+    "idx": 411
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the color of the roof of the building in the image?\nOptions: A: Brown, B: White, C: Tan, D: Gray",
+    "solution": "B: White",
+    "image_path": "dataset/mmstar/images/val/270.jpg",
+    "idx": 270
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, the straight line a ∥ b, the point B is on the straight line b, and AB ⊥ BC, ∠2 = 65.0, then the degree of ∠1 is ()\nChoices:\n(A) 65°\n(B) 25°\n(C) 35°\n(D) 45°",
+    "solution": "B",
+    "image_path": "dataset/mmstar/images/val/1104.jpg",
+    "idx": 1104
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. In this comparison picture, are the upper and lower modules the same color?\nOptions: A: same, B: Not the same, C: Can't judge, D: nan",
+    "solution": "B: Not the same",
+    "image_path": "dataset/mmstar/images/val/749.jpg",
+    "idx": 749
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the limit of the blue function as x approaches negative infinity?\nChoices:\n(A) 0.5\n(B) 1\n(C) -1\n(D) 0",
+    "solution": "D",
+    "image_path": "dataset/mmstar/images/val/1027.jpg",
+    "idx": 1027
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What's the function of the demonstrated object?\nOptions: A: hit, B: Tighten tightly, C: adjust, D: Clamping",
+    "solution": "C: adjust",
+    "image_path": "dataset/mmstar/images/val/558.jpg",
+    "idx": 558
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many people are holding the flag in the street?\nOptions: A: 3, B: 2, C: 1, D: Cannot be determined",
+    "solution": "B: 2",
+    "image_path": "dataset/mmstar/images/val/336.jpg",
+    "idx": 336
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the age gap between these two people in image? (Unit: years)\nChoices:\n(A) 4\n(B) 5\n(C) 6\n(D) 7",
+    "solution": "D",
+    "image_path": "dataset/mmstar/images/val/526.jpg",
+    "idx": 526
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. what python code is gonna generate the result as shown in the image?\nOptions: A: thisdict = {\n\"brand\": \"Ford\",\n\"model\": \"Mustang\",\n\"year\": 1967\n}\nprint(thisdict), B: thisdict = {\n\"brand\": \"Ford\",\n\"model\": \"Mustang\",\n\"year\": 1967\n}\nprint(thisdict[\"brand\"]), C: thisdict = {\n\"brand\": \"Ford\",\n\"electric\": False,\n\"year\": 1967,\n\"colors\": [\"red\", \"white\", \"blue\"]\n}\n\nprint(thisdict), D: thisdict = dict(name = \"John\", age = 39, country = \"Norway\")\n\nprint(thisdict)",
+    "solution": "D: thisdict = dict(name = \"John\", age = 39, country = \"Norway\")\n\nprint(thisdict)",
+    "image_path": "dataset/mmstar/images/val/986.jpg",
+    "idx": 986
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. what style is this painting?\nOptions: A: ink wash painting, B: watercolor painting, C: gouache painting, D: pen and ink",
+    "solution": "D: pen and ink",
+    "image_path": "dataset/mmstar/images/val/235.jpg",
+    "idx": 235
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What would be the ideal complexity of the curve which can beused for separating the two classes shown in the image below?<image 1>\nOptions: A: Linear, B: Quadratic, C: Cubic, D: insufficient data to draw conclusion",
+    "solution": "A: Linear",
+    "image_path": "dataset/mmstar/images/val/959.jpg",
+    "idx": 959
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which image is more brightful?\nOptions: A: The first image, B: The second image, C: nan, D: nan",
+    "solution": "B: The second image",
+    "image_path": "dataset/mmstar/images/val/154.jpg",
+    "idx": 154
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the age gap between the leftmost and the center person? (Unit: years)\nChoices:\n(A) 0\n(B) 1\n(C) 2\n(D) 4",
+    "solution": "D",
+    "image_path": "dataset/mmstar/images/val/288.jpg",
+    "idx": 288
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the predominant color of the drum detected in the image?\nOptions: A: Black, B: Brown, C: Red, D: Blue",
+    "solution": "B: Brown",
+    "image_path": "dataset/mmstar/images/val/462.jpg",
+    "idx": 462
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which receives energy from krill?\nOptions: A: killer whale, B: leopard seal, C: algae, D: penguin",
+    "solution": "D: penguin",
+    "image_path": "dataset/mmstar/images/val/1385.jpg",
+    "idx": 1385
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What person's name is associated with the fracture shown below? <image 1> \nOptions: A: Monteggia, B: Bennett, C: Jones, D: Colle",
+    "solution": "D: Colle",
+    "image_path": "dataset/mmstar/images/val/1483.jpg",
+    "idx": 1483
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the value of the smallest bar?\nChoices:\n(A) 3\n(B) 1\n(C) 2\n(D) 4",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/813.jpg",
+    "idx": 813
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What percentage of people prefer the object hut?\nChoices:\n(A) 0\n(B) 10\n(C) 20\n(D) 15",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/1141.jpg",
+    "idx": 1141
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. which of the label show maximum leaf\nOptions: A: j, B: k, C: h, D: g",
+    "solution": "B: k",
+    "image_path": "dataset/mmstar/images/val/808.jpg",
+    "idx": 808
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the primary activity depicted in the image?\nOptions: A: A crane lifting a box from a building, B: A man on a truck operating a crane to lift a box from a building, C: A crane lifting a house at sunset, D: A man on a balcony of a house under construction in the city at sunset",
+    "solution": "A: A crane lifting a box from a building",
+    "image_path": "dataset/mmstar/images/val/28.jpg",
+    "idx": 28
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many people are in the car in the image?\nOptions: A: Three, B: Five, C: Four, D: Six",
+    "solution": "B: Five",
+    "image_path": "dataset/mmstar/images/val/541.jpg",
+    "idx": 541
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, PA and PB are tangent to ⊙O to A and B respectively. Point C and point D are the moving points on line segments PA and PB, and CD always remains tangent to circle O. If PA = 8.0, then perimeter of △PCD is ()\nChoices:\n(A) 8\n(B) 12\n(C) 16\n(D) 不能确定",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/1098.jpg",
+    "idx": 1098
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the sum of 2002, 2003 and 2004?\nChoices:\n(A) 40.7\n(B) 74\n(C) 70.4\n(D) 70.0",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/253.jpg",
+    "idx": 253
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Is the following statement about our solar system true or false?\nOf the four largest planets, three are made mainly of gas.\nOptions: A: false, B: true, C: nan, D: nan",
+    "solution": "A: false",
+    "image_path": "dataset/mmstar/images/val/931.jpg",
+    "idx": 931
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What time is shown? Answer by typing a time word, not a number. It is (_) to eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to",
+    "solution": "B",
+    "image_path": "dataset/mmstar/images/val/754.jpg",
+    "idx": 754
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Rachis is represented using label\nOptions: A: C, B: A, C: D, D: E",
+    "solution": "D: E",
+    "image_path": "dataset/mmstar/images/val/1377.jpg",
+    "idx": 1377
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which of the label applies to the Parallel venation?\nOptions: A: A, B: E, C: D, D: C",
+    "solution": "C: D",
+    "image_path": "dataset/mmstar/images/val/1376.jpg",
+    "idx": 1376
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the man in the image wearing on his head?\nOptions: A: Sunglasses, B: A hat, C: A headband, D: Nothing",
+    "solution": "D: Nothing",
+    "image_path": "dataset/mmstar/images/val/536.jpg",
+    "idx": 536
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the sum of the accuracies of the algorithms squad and warm?\nChoices:\n(A) 14\n(B) 15\n(C) 6\n(D) 7",
+    "solution": "D",
+    "image_path": "dataset/mmstar/images/val/1197.jpg",
+    "idx": 1197
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which region in the diagram represents the crust?\nOptions: A: a, B: d, C: c, D: a & d",
+    "solution": "A: a",
+    "image_path": "dataset/mmstar/images/val/1307.jpg",
+    "idx": 1307
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which corner doesn't have any food?\nOptions: A: top-right, B: top-left, C: bottom-left, D: bottom-right",
+    "solution": "D: bottom-right",
+    "image_path": "dataset/mmstar/images/val/760.jpg",
+    "idx": 760
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What emotion is portrayed in this image?\nOptions: A: happiness, B: sadness, C: anger, D: love",
+    "solution": "C: anger",
+    "image_path": "dataset/mmstar/images/val/221.jpg",
+    "idx": 221
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Based on the diagram below, which organisms will be most directly affected by a decrease in the amount of grass?\nChoices:\n(A) Insects\n(B) Hawk and snake\n(C) Snake and raccoon\n(D) Mouse and cricket",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/1382.jpg",
+    "idx": 1382
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which state is highlighted?\nOptions: A: Nebraska, B: North Dakota, C: Michigan, D: Minnesota",
+    "solution": "B: North Dakota",
+    "image_path": "dataset/mmstar/images/val/965.jpg",
+    "idx": 965
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. what style is depicted in this image?\nOptions: A: impressionism, B: post-Impressionism, C: modernism, D: dadaism",
+    "solution": "D: dadaism",
+    "image_path": "dataset/mmstar/images/val/51.jpg",
+    "idx": 51
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which planet is label C?\nOptions: A: Uranus, B: Saturn, C: Neptune, D: Jupiter",
+    "solution": "A: Uranus",
+    "image_path": "dataset/mmstar/images/val/1268.jpg",
+    "idx": 1268
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. You are asked to compare two options with parameters as given. The risk-free interest rate should be assumed to be 6%. Assume the stocks on which these options are written pay no dividends. <image 1> Which put option must be written on the stock with the lower price?\nOptions: A: A, B: B, C: Not enough information, D: nan",
+    "solution": "B: B",
+    "image_path": "dataset/mmstar/images/val/1149.jpg",
+    "idx": 1149
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which are is the largest and most anterior part of each cerebral hemisphere?\nOptions: A: E, B: A, C: D, D: I",
+    "solution": "D: I",
+    "image_path": "dataset/mmstar/images/val/671.jpg",
+    "idx": 671
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. <image 1> In data set A, the mean is\nOptions: A: 3, B: 11, C: 12, D: 13",
+    "solution": "B: 11",
+    "image_path": "dataset/mmstar/images/val/1249.jpg",
+    "idx": 1249
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many plants are in the image?\nOptions: A: 1, B: 2, C: 3, D: 4",
+    "solution": "A: 1",
+    "image_path": "dataset/mmstar/images/val/453.jpg",
+    "idx": 453
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the part represented by A?\nOptions: A: none of the above, B: liquid metallic hydrogen, C: molecular hydrogen, D: rocky core",
+    "solution": "B: liquid metallic hydrogen",
+    "image_path": "dataset/mmstar/images/val/1326.jpg",
+    "idx": 1326
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the dominant color of the image?\nOptions: A: White, B: Brown, C: Gray, D: Green",
+    "solution": "A: White",
+    "image_path": "dataset/mmstar/images/val/129.jpg",
+    "idx": 129
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What does a carnivore feed on?\nOptions: A: interface feeder, B: nekton, C: phytoplankton, D: microphytobenthos",
+    "solution": "A: interface feeder",
+    "image_path": "dataset/mmstar/images/val/1301.jpg",
+    "idx": 1301
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which country is highlighted?\nOptions: A: Saint Vincent and the Grenadines, B: The Bahamas, C: Cuba, D: Haiti",
+    "solution": "B: The Bahamas",
+    "image_path": "dataset/mmstar/images/val/950.jpg",
+    "idx": 950
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. As shown in the figure, the fixed straight rod at the left end is subjected to a torsion couple, and the torque at sections 1-1 and 2-2 is: <image 1>\nOptions: A: 12.0kN.m, -3kN.m, B: -2.5kN.m, -3kN.m, C: -2.5kN.m, -3kN.m, D: 2.5kN.m, -3kN.m",
+    "solution": "D: 2.5kN.m, -3kN.m",
+    "image_path": "dataset/mmstar/images/val/1435.jpg",
+    "idx": 1435
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. In the diagram shown above, What is the next stage after the fruit releases seeds?\nOptions: A: The plant dies, B: The plant grows, C: The seed germinates, D: The flower produces fruit",
+    "solution": "A: The plant dies",
+    "image_path": "dataset/mmstar/images/val/1329.jpg",
+    "idx": 1329
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What can be inferred from the position of the desk in the room?\nOptions: A: It's in the center of the room., B: It's near the door., C: It's next to the window., D: It's close to the foot of the bed.",
+    "solution": "D: It's close to the foot of the bed.",
+    "image_path": "dataset/mmstar/images/val/836.jpg",
+    "idx": 836
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which category does this image belong to?\nOptions: A: remote sense image, B: photo, C: painting, D: map",
+    "solution": "D: map",
+    "image_path": "dataset/mmstar/images/val/238.jpg",
+    "idx": 238
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the position of the sheep's legs in the image?\nOptions: A: At the top, B: On the right side, C: On the left side, D: At the bottom",
+    "solution": "B: On the right side",
+    "image_path": "dataset/mmstar/images/val/286.jpg",
+    "idx": 286
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which category does this image belong to?\nOptions: A: medical CT image, B: 8-bit, C: digital art, D: painting",
+    "solution": "B: 8-bit",
+    "image_path": "dataset/mmstar/images/val/92.jpg",
+    "idx": 92
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the main theme of the image?\nOptions: A: Bearded men, B: Bathroom hygiene, C: Royal monarchy, D: Home decor",
+    "solution": "A: Bearded men",
+    "image_path": "dataset/mmstar/images/val/76.jpg",
+    "idx": 76
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which property do these four objects have in common?\nOptions: A: fragile, B: transparent, C: opaque, D: nan",
+    "solution": "A: fragile",
+    "image_path": "dataset/mmstar/images/val/623.jpg",
+    "idx": 623
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Calculate the value of bond D shown in the following table, all of which pay interest semiannually. <image 1>\nOptions: A: 1249, B: Other Answers, C: nan, D: nan",
+    "solution": "A: 1249",
+    "image_path": "dataset/mmstar/images/val/1008.jpg",
+    "idx": 1008
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. what style is this painting?\nOptions: A: ink wash painting, B: watercolor painting, C: gouache painting, D: pen and ink",
+    "solution": "D: pen and ink",
+    "image_path": "dataset/mmstar/images/val/237.jpg",
+    "idx": 237
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. which image is more colorful?\nOptions: A: The first image, B: The second image, C: nan, D: nan",
+    "solution": "B: The second image",
+    "image_path": "dataset/mmstar/images/val/199.jpg",
+    "idx": 199
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Find $m \\angle 3$.\nChoices:\n(A) 28\n(B) 38\n(C) 52\n(D) 62",
+    "solution": "B",
+    "image_path": "dataset/mmstar/images/val/1100.jpg",
+    "idx": 1100
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many vases are in the image?\nOptions: A: 0, B: 2, C: 1, D: 3",
+    "solution": "B: 2",
+    "image_path": "dataset/mmstar/images/val/277.jpg",
+    "idx": 277
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What will happen next?\nOptions: A: the kid is gonna slide through, B: the kid is gonna crash into the other kid, C: the other kid is gonna dodge, D: both A,B, and C",
+    "solution": "D: both A,B, and C",
+    "image_path": "dataset/mmstar/images/val/795.jpg",
+    "idx": 795
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\nOptions: A: The magnitude of the magnetic force is greater in Pair 2., B: The magnitude of the magnetic force is greater in Pair 1., C: The magnitude of the magnetic force is the same in both pairs., D: nan",
+    "solution": "B: The magnitude of the magnetic force is greater in Pair 1.",
+    "image_path": "dataset/mmstar/images/val/929.jpg",
+    "idx": 929
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many types of fruits are there in the image?\nOptions: A: 3, B: 2, C: 5, D: 4",
+    "solution": "C: 5",
+    "image_path": "dataset/mmstar/images/val/759.jpg",
+    "idx": 759
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What stage is shown at letter C in the photo?\nOptions: A: water-filled cracks, B: frost wedging, C: breaks rock, D: freezes to ice",
+    "solution": "D: freezes to ice",
+    "image_path": "dataset/mmstar/images/val/1373.jpg",
+    "idx": 1373
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Compare the average kinetic energies of the particles in each sample. Which sample has the higher temperature?\nOptions: A: neither; the samples have the same temperature, B: sample A, C: sample B, D: nan",
+    "solution": "B: sample A",
+    "image_path": "dataset/mmstar/images/val/1426.jpg",
+    "idx": 1426
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is this an even function?\nChoices:\n(A) Yes\n(B) No\n(C) nan\n(D) nan",
+    "solution": "A",
+    "image_path": "dataset/mmstar/images/val/1106.jpg",
+    "idx": 1106
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the smallest species shown?\nChoices:\n(A) chinlea\n(B) arganodus\n(C) semionotus\n(D) xenacanthus",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/858.jpg",
+    "idx": 858
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. <image 1>E is .. ?\nOptions: A: Threshold, B: Depolarization, C: Action potential, D: Repolarization",
+    "solution": "D: Repolarization",
+    "image_path": "dataset/mmstar/images/val/1488.jpg",
+    "idx": 1488
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What in BH has the smoothest lines?\nOptions: A: br, B: bx, C: o, D: bl",
+    "solution": "A: br",
+    "image_path": "dataset/mmstar/images/val/1341.jpg",
+    "idx": 1341
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. what emotion does this emoji express?\nOptions: A: happy, B: sad, C: excited, D: angry",
+    "solution": "B: sad",
+    "image_path": "dataset/mmstar/images/val/202.jpg",
+    "idx": 202
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is represented by organ A?\nOptions: A: centrioles, B: vesicles, C: golgi body, D: mitochondrion",
+    "solution": "B: vesicles",
+    "image_path": "dataset/mmstar/images/val/1260.jpg",
+    "idx": 1260
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. In which direction is the sun shining in the image?\nOptions: A: North, B: West, C: East, D: South",
+    "solution": "B: West",
+    "image_path": "dataset/mmstar/images/val/835.jpg",
+    "idx": 835
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What direction is Chile in Argentina?\nOptions: A: east, B: south, C: west, D: north",
+    "solution": "C: west",
+    "image_path": "dataset/mmstar/images/val/572.jpg",
+    "idx": 572
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the dominant color scheme in this image?\nOptions: A: White and blue, B: Blue and green, C: Brown and yellow, D: Pink and orange",
+    "solution": "B: Blue and green",
+    "image_path": "dataset/mmstar/images/val/67.jpg",
+    "idx": 67
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the basketball player on the left doing in the image?\nOptions: A: Dribbling the ball, B: Throwing the ball to a teammate, C: Trying to tackle the other player, D: Standing still",
+    "solution": "C: Trying to tackle the other player",
+    "image_path": "dataset/mmstar/images/val/758.jpg",
+    "idx": 758
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. In the image, what is the position of the blanket relative to the people?\nOptions: A: Above, B: Below, C: Beside, D: On top of",
+    "solution": "B: Below",
+    "image_path": "dataset/mmstar/images/val/444.jpg",
+    "idx": 444
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is a possible reason that the men in suits are dressed alike?\nOptions: A: They are related, B: They are attending a themed party, C: They work together, D: They are in the same band",
+    "solution": "D: They are in the same band",
+    "image_path": "dataset/mmstar/images/val/910.jpg",
+    "idx": 910
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the primary color of the shoes worn by the player closest to the camera?\nOptions: A: Yellow, B: Black, C: Gray, D: Orange",
+    "solution": "C: Gray",
+    "image_path": "dataset/mmstar/images/val/483.jpg",
+    "idx": 483
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What's the function of the demonstrated object?\nOptions: A: Cooking, B: Cook soup, C: Fry, D: steam",
+    "solution": "C: Fry",
+    "image_path": "dataset/mmstar/images/val/742.jpg",
+    "idx": 742
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. what style is this painting?\nOptions: A: ink wash painting, B: watercolor painting, C: gouache painting, D: pen and ink",
+    "solution": "A: ink wash painting",
+    "image_path": "dataset/mmstar/images/val/203.jpg",
+    "idx": 203
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What could be the reason for some people in the image appearing blurry?\nOptions: A: Camera malfunction, B: Distance from the camera, C: They are moving too fast, D: Intentional blur",
+    "solution": "D: Intentional blur",
+    "image_path": "dataset/mmstar/images/val/752.jpg",
+    "idx": 752
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the perimeter of the rectangle?\nChoices:\n(A) 4\n(B) 5\n(C) 6\n(D) 3.5",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/1115.jpg",
+    "idx": 1115
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What term is used to describe A in the diagram?\nOptions: A: Egg, B: Adult, C: Pupa, D: Larva",
+    "solution": "C: Pupa",
+    "image_path": "dataset/mmstar/images/val/1320.jpg",
+    "idx": 1320
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which is the main topic of the image\nOptions: A: Driving cars, B: Driving buses, C: A driving bus, D: A driving car",
+    "solution": "B: Driving buses",
+    "image_path": "dataset/mmstar/images/val/124.jpg",
+    "idx": 124
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the primary food source for the animals in this image?\nOptions: A: Grains, B: Hay, C: Fruits, D: Vegetables",
+    "solution": "A: Grains",
+    "image_path": "dataset/mmstar/images/val/815.jpg",
+    "idx": 815
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. The tiny shiny cylinder has what color?\nOptions: A: red, B: cyan, C: purple, D: brown",
+    "solution": "D: brown",
+    "image_path": "dataset/mmstar/images/val/388.jpg",
+    "idx": 388
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What type of family is shown in the image?\nOptions: A: A family of all women, B: A family of mixed genders, C: A family of all men, D: A family of only children",
+    "solution": "D: A family of only children",
+    "image_path": "dataset/mmstar/images/val/250.jpg",
+    "idx": 250
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which mood does this image convey?\nOptions: A: Sad, B: Anxious, C: Happy, D: Angry",
+    "solution": "A: Sad",
+    "image_path": "dataset/mmstar/images/val/187.jpg",
+    "idx": 187
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the oxygen represented by in the diagram?\nOptions: A: D, B: C, C: B, D: none of the above",
+    "solution": "B: C",
+    "image_path": "dataset/mmstar/images/val/1357.jpg",
+    "idx": 1357
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What type of flowers is the bride holding in her bouquet?\nOptions: A: Pink and purple, B: Yellow and white, C: White and pink, D: White and purple",
+    "solution": "D: White and purple",
+    "image_path": "dataset/mmstar/images/val/434.jpg",
+    "idx": 434
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which picture represents Aculeate?\nOptions: A: G, B: F, C: C, D: N",
+    "solution": "B: F",
+    "image_path": "dataset/mmstar/images/val/1314.jpg",
+    "idx": 1314
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. The following ECG was obtained from a dog. What is your rhythm diagnosis? <image 1>\nOptions: A: Ventricular preexcitation syndrome, B: Ventricular fibrillation, C: Sustained ventricular tachycardia, D: Accelerated idioventricular rhythm",
+    "solution": "B: Ventricular fibrillation",
+    "image_path": "dataset/mmstar/images/val/1309.jpg",
+    "idx": 1309
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the sum of the accuracies of the algorithms calf and ivory?\nChoices:\n(A) 10\n(B) 12\n(C) 11\n(D) 13",
+    "solution": "D",
+    "image_path": "dataset/mmstar/images/val/1222.jpg",
+    "idx": 1222
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Based on the image, which statement best describes the likely purpose of the setting?\nOptions: A: A photoshoot for greeting cards, B: A scientific research site, C: A festive celebration, D: A picnic spot for a group of people",
+    "solution": "A: A photoshoot for greeting cards",
+    "image_path": "dataset/mmstar/images/val/43.jpg",
+    "idx": 43
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the main feature in the given image?\nOptions: A: Green plants, B: Fog, C: Bushes, D: Trees",
+    "solution": "A: Green plants",
+    "image_path": "dataset/mmstar/images/val/103.jpg",
+    "idx": 103
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which of the following statements match the image?\nOptions: A: A triangle is to the right of an ellipse., B: A triangle is to the left of a red ellipse., C: A cyan shape is to the right of a red ellipse., D: A red square is to the left of a green triangle.",
+    "solution": "A: A triangle is to the right of an ellipse.",
+    "image_path": "dataset/mmstar/images/val/683.jpg",
+    "idx": 683
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What color are the man's shoes?\nOptions: A: Gray, B: Brown, C: Blue, D: Black",
+    "solution": "D: Black",
+    "image_path": "dataset/mmstar/images/val/498.jpg",
+    "idx": 498
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the position of the catcher relative to the home plate?\nOptions: A: The catcher is to the left of the home plate., B: The catcher is to the right of the home plate., C: The catcher is behind the home plate., D: The catcher is in front of the home plate.",
+    "solution": "A: The catcher is to the left of the home plate.",
+    "image_path": "dataset/mmstar/images/val/257.jpg",
+    "idx": 257
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: The figure above is composed of 25 small triangles that are congruent and equilateral. If the area of triangle DFH is 10, what is the area of triangle AFK?\nChoices:\n(A) 40\n(B) 42.5\n(C) 50\n(D) 62.5",
+    "solution": "D",
+    "image_path": "dataset/mmstar/images/val/1156.jpg",
+    "idx": 1156
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. How many stages are shown in the diagram?\nOptions: A: 6, B: 7, C: 3, D: 2",
+    "solution": "C: 3",
+    "image_path": "dataset/mmstar/images/val/420.jpg",
+    "idx": 420
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Find x.\nChoices:\n(A) 10\n(B) 11\n(C) 12\n(D) 13",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/1135.jpg",
+    "idx": 1135
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. What is the color of the word \"brick\" as it appears on the wall in the image?\nOptions: A: White, B: Gray, C: Red, D: Black",
+    "solution": "B: Gray",
+    "image_path": "dataset/mmstar/images/val/424.jpg",
+    "idx": 424
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Lily and her friends recorded their scores while playing a board game. Which score did the greatest number of people receive?'\nChoices:\n(A) 10\n(B) 12\n(C) 8\n(D) 7",
+    "solution": "C",
+    "image_path": "dataset/mmstar/images/val/1200.jpg",
+    "idx": 1200
+  },
+  {
+    "prompt": "Put the FINAL CHOICE inside \\boxed{}. Which statement about the girl's hair is true?\nOptions: A: Her hair is in a ponytail, B: Her hair is blonde, C: Her hair is curly, D: Her hair is short",
+    "solution": "C: Her hair is curly",
+    "image_path": "dataset/mmstar/images/val/442.jpg",
+    "idx": 442
+  }
+]

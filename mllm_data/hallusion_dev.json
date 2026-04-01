@@ -1,0 +1,1802 @@
+[
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text given in the image, is this a Washington style cheesecake?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/9_0.png",
+    "idx": 654
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, in 2017, was Tencent the company with the highest revenue from video games, with Sony as the second-highest earner?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/18_1.png",
+    "idx": 114
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the chart, does India have the second largest population in the world?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/3_2.png",
+    "idx": 25
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are all the characters in this figure from the manga series One Piece?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/14_1.png",
+    "idx": 759
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, is New York the only U.S. state that shares a border with Lake Ontario?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/5_2.png",
+    "idx": 281
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the map provided, among Arizona, Oklahoma, North Carolina, and Delaware on the map, is Delaware the farthest north?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/1_1.png",
+    "idx": 250
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, does the SABMiller India have the second highest portion of the market share for beer across India in 2020?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/9_1.png",
+    "idx": 228
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, which country in Europe has the higher GDP in 2021?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/2_1.png",
+    "idx": 142
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is Bunny Bug in this figure?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/13_0.png",
+    "idx": 754
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, does DJI hold more than 50% of the commercial drone brand market share in 2021?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/16_1.png",
+    "idx": 104
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text in this image, is this poster for the TV series Tokyo Single Girls?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/18_1.png",
+    "idx": 692
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are there any characters in this figure from the manga series Detective Conan?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/14_0.png",
+    "idx": 758
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, is the man running to right? Answer in one sentence.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/15_1.png",
+    "idx": 913
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: As shown in the figure, ∠AOB = 100.0, is the degree of ∠ACB to equal 50.0? Please answer yes or no\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/9_0.png",
+    "idx": 558
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, in 2013, was Japn the largest recipient of exports from China in terms of US dollars, followed by the United States and Hong Kong?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/12_2.png",
+    "idx": 89
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: If angle B is equal to 45 degree, is AB larger than sqrt(2)AC? Please answer yes or no.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/16_1.png",
+    "idx": 604
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are two triangles in the image the same color? Yes or No\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/15_1.png",
+    "idx": 432
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the chart, is China the third largest country by land area in the world?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/4_2.png",
+    "idx": 32
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the chart, is US the largest country by land area in the world?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/4_1.png",
+    "idx": 30
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, did the United States suffer the greatest number of total deaths in World War II, with China having the second-highest?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/14_1.png",
+    "idx": 95
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Accroding to the information provided in the table, does the album \"Midnights\" have a sale of 422,000 in 2022?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/8_3.png",
+    "idx": 223
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to this table, does China have the highest carbon dioxide emissions worldwide in 2010?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/10_2.png",
+    "idx": 238
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is angleA + angleB +angleC < 180?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/2_0.png",
+    "idx": 517
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Does the image show \"Beijing Roast Duck\"?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/1_0.png",
+    "idx": 616
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the chart, does China have the second largest population in the world?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/3_2.png",
+    "idx": 27
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: If AM=BM=CM, then is M the circumcenter of triangle ABC? Please answer yes or no.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/11_1.png",
+    "idx": 574
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, is the number of gold medals of Norway 9 in winter Olympics in 2022?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/7_3.png",
+    "idx": 203
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are all the items in this figure cookies?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/8_0.png",
+    "idx": 733
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the lower text given in the image, is this poster for Viktor Tsoi and the Kino band?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/12_0.png",
+    "idx": 665
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are there any ducks in this figure?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/4_1.png",
+    "idx": 718
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: They are hugging. According to the positive sequence of the images, are they in the correct order? Answer in one sentence.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/18_2.png",
+    "idx": 937
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: This image shows the orbison illusion. Whether the red shape in the image is a rhombus? Yes or No\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/14_1.png",
+    "idx": 429
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Accroding to the information provided in the table, does the album \"Proof\" have a sale of 1,818,000 in 2022?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/8_3.png",
+    "idx": 225
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: The image shows a color illusion. Are two circles in the image different color? Yes or No\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/21_0.png",
+    "idx": 459
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: If angle B is equal to 45 degree, is AB = sqrt(2)AC? Please answer yes or no.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/16_1.png",
+    "idx": 603
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the map, can I take the Yellow Line towards the Pentagon on the DC Metro system?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/6_1.png",
+    "idx": 284
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: The baby attempts to take off the clothes. According to the positive sequence of the images, are they in the correct order?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/5_0.png",
+    "idx": 828
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, Is the circle moving towards to right? Answer in one word.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/12_1.png",
+    "idx": 890
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: From 2001 to 2010, Is 2010 exported the most value of bread, biscuits, wafers, cakes and pastries from the UK?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/1_1.png",
+    "idx": 6
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Does this figure only contain SpongeBob?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/19_0.png",
+    "idx": 777
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, does the baby attempt to put on the clothes?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/5_0.png",
+    "idx": 825
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, Which state in the United States has the average maximum temperature in 2021 ?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/4_3.png",
+    "idx": 163
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is there a Snoopy in this figure?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/3_1.png",
+    "idx": 714
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: They are growing apart. According to the positive sequence of the images, are they in the correct order? Answer in one sentence.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/18_1.png",
+    "idx": 934
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the text in this figure made by Ronald Reagan?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/ocr/10_1.png",
+    "idx": 348
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, is the baby crawling to right? Answer in one sentence.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/16_0.png",
+    "idx": 915
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, According to the table, did Florida have a higher average maximum temperature than Louisana?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/4_1.png",
+    "idx": 159
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Accroding to the information provided in the table, does Taylor Swift release the album \"Midnights\"?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/8_3.png",
+    "idx": 220
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the sequence of the image moving?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/0_0.png",
+    "idx": 781
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the text in this figure made by Abraham Lincoln?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/ocr/9_1.png",
+    "idx": 344
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: He is running counterclockwise. According to the positive sequence of the images, are they in the correct order? Answer in one sentence.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/19_0.png",
+    "idx": 941
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, did the Soviet Union suffer the greatest number of total deaths in World War II, with China having the second-highest?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/14_1.png",
+    "idx": 94
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: The image shows the famous Chubb illusion. Are the center areas of two rectangular fields identical?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/5_1.png",
+    "idx": 389
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, did United Kingdom experience the highest percentage of total deaths relative to its 1939 population during World War II, followed by Poland?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/14_2.png",
+    "idx": 99
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the right grey box smaller than the left grey box?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/1_0.png",
+    "idx": 367
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, Is this monkey removing the wheel? Answer in one word.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/10_1.png",
+    "idx": 867
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the text in this figure made by John F. Kennedy?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/ocr/11_1.png",
+    "idx": 352
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Does the image show \"Beijing Roast Duck\"?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/1_1.png",
+    "idx": 618
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Based on the map, are the Rocky Mountains located in North America?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/4_2.png",
+    "idx": 270
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, does the baby attempt to take off the clothes?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/5_0.png",
+    "idx": 826
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: From 2012 to 2022, did Apple derive the majority of its revenue from the Americas?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/6_1.png",
+    "idx": 44
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are all the items in this figure ice cream bars?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/11_1.png",
+    "idx": 747
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are two circles in the image the same color? Yes or No\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/24_0.png",
+    "idx": 470
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: The area of B is 16 and the of area of C is 9. Is the area of square A equal to 25? Please answer yes or no.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/7_1.png",
+    "idx": 549
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, in 2018, did \"Avengers: Infinity War\" achieve the highest box office revenue in North America?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/21_1.png",
+    "idx": 127
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: The image shows the famous Chubb illusion. Is the center area on the left larger than the center area on the right?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/5_0.png",
+    "idx": 387
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, were Latinos the largest population group in the United States in 2020, with Whites and African Americans as the second and third largest groups, respectively?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/10_2.png",
+    "idx": 80
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: In triangle ABC, if AF, BE, CD, are the three midlines, is M the incenter of triangle ABC? Please answer yes or no.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/10_0.png",
+    "idx": 565
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, does Bolivia cover part of the Amazon Basin?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/9_2.png",
+    "idx": 300
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, is the blue car moving forward?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/8_0.png",
+    "idx": 849
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the cake in the image, is this a red velvet cake?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/6_1.png",
+    "idx": 643
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text in this image, is this a Parma ham?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/4_0.png",
+    "idx": 633
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the right grey box smaller than the left grey box?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/1_1.png",
+    "idx": 370
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: If angle BAF equals to angle CAF, is CF equal to BF? Please answer yes or no.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/14_1.png",
+    "idx": 591
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, is the number of gold medals of Norway 16 in winter Olympics in 2022?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/7_2.png",
+    "idx": 196
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are all the items here engineering tools?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/5_1.png",
+    "idx": 721
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: In 2020, did China have the largest GDP around the world, followed by the United States, and Japan, according to the image?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/9_2.png",
+    "idx": 71
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: From 2012 to 2022, did Apple derive the majority of its revenue from Greater China?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/6_1.png",
+    "idx": 46
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text given in the image, is this ice-cream a strawberry flavor ice cream?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/15_0.png",
+    "idx": 677
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, does the UB Group have the second highest portion of the market share for beer across India in 2020?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/9_2.png",
+    "idx": 233
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence images, does Homer Simpson disappear into the bushes?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/1_2.png",
+    "idx": 791
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Based on the map, is Calvert County located to the east of Cecil County?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/8_2.png",
+    "idx": 296
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, were Asians the largest population group in the United States in 2020, with Whites and African Americans as the second and third largest groups, respectively?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/10_2.png",
+    "idx": 81
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: They are hugging. According to the positive sequence of the images, are they in the correct order? Answer in one sentence.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/18_0.png",
+    "idx": 929
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, did the year 2004 witness a higher global death toll due to earthquakes than 2005?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/15_2.png",
+    "idx": 103
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, is there a cat in this video? Answer in one word.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/13_0.png",
+    "idx": 898
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: They are skating to left. According to the positive sequence of the images, are they in the correct order? Answer in one sentence.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/14_1.png",
+    "idx": 905
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Does the black line align with the blue line? Yes or No\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/22_0.png",
+    "idx": 464
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text given in the image, is this a Boston strip steak?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/8_0.png",
+    "idx": 650
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, is the blue car moving backward?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/8_1.png",
+    "idx": 854
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the top line shorter than the bottom line?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/2_0.png",
+    "idx": 373
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, which month has the lowest percentage change in personal income in the United States from September 2022 to September 2023\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/5_1.png",
+    "idx": 166
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the top yellow line longer than the bottom yellow line?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/3_0.png",
+    "idx": 379
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the right orange circle the same size as the left orange circle?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/0_1.png",
+    "idx": 363
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Accroding to the information provided in the table, does Taylor Swift release the album \"Midnights\"?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/8_2.png",
+    "idx": 214
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text given in the image, does this poster depict the movie BARBENHEIMER?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/17_0.png",
+    "idx": 686
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Based on the map, are the Himalayas Mountains located in Asia?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/4_2.png",
+    "idx": 273
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: This cartoon character getting closer. According to the positive sequence of the images, are they in the correct order? Answer in one sentence.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/17_0.png",
+    "idx": 921
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text in this image, is this \"Youcheng Cake Seasoned with Chicken Meat Floss\"?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/20_1.png",
+    "idx": 699
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text given in the image, is this sign located in Las Vegas?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/11_1.png",
+    "idx": 663
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: In 2020, did India have the largest GDP around the world, followed by China and Japan, according to the image?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/9_2.png",
+    "idx": 73
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text in this image, is this a poster for \"Forrest Gump\"?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/2_1.png",
+    "idx": 623
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: The circle inside is autobiographical anticlockwise. According to the positive sequence of the images, are they in the correct order? Answer in one word.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/9_1.png",
+    "idx": 862
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, which month has the highest percentage change in personal income in the United States from September 2022 to September 2023\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/5_3.png",
+    "idx": 175
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: The area of B is 16 and the of area of C is 9. Is the area of square A equal to 25? Please answer yes or no.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/7_0.png",
+    "idx": 546
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is there any yogurt in this figure?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/11_0.png",
+    "idx": 746
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: He is running counterclockwise. According to the positive sequence of the images, are they in the correct order? Answer in one sentence.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/19_1.png",
+    "idx": 945
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, which month has the highest percentage change in personal income in the United States from September 2022 to September 2023\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/5_1.png",
+    "idx": 167
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are two circles in the image different color? Yes or No\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/24_1.png",
+    "idx": 473
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: The image shows the famous Chubb illusion. Is the center area on the left smaller than the center area on the right?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/5_0.png",
+    "idx": 388
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, is New York the only U.S. state that shares a border with Lake Huron?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/5_1.png",
+    "idx": 276
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text given in the image, is this a New York style cheesecake?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/9_1.png",
+    "idx": 655
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is it the logo for Qiaodan Sports?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/1_0.png",
+    "idx": 704
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: If DM=EM=FM, then is M the incenter of triangle ABC? Please answer yes or no.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/11_0.png",
+    "idx": 570
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Accroding to the information provided in the table, does the album \"Proof\" have a sale of 422,000 in 2022?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/8_3.png",
+    "idx": 224
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: In the image, is Xuanzang accompanied by his three disciples?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/0_0.png",
+    "idx": 701
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, does the value of Gravity constant 'G' range from 6.66 * 10^-11 to 6.68 * 10^-11?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/ocr/6_1.png",
+    "idx": 332
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Homer Simpson comes out of the bushes. According to the positive sequence of the images, are they in the correct order?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/1_0.png",
+    "idx": 786
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Homer Simpson comes out of the bushes. According to the positive sequence of the images, are they in the correct order?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/1_2.png",
+    "idx": 794
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: In 2019, were the main policy interest rates of the Central Banks in the UK higher than those of the U.S. Central Bank , Eurozone, and Japan, according to the image?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/7_2.png",
+    "idx": 57
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to this table, does China have the highest carbon dioxide emissions worldwide in 2010?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/10_1.png",
+    "idx": 234
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: They are hugging. According to the positive sequence of the images, are they in the correct order? Answer in one sentence.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/18_1.png",
+    "idx": 933
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: The blue car attempts to leave the parking space. According to the positive sequence of the images, are they in the correct order?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/4_2.png",
+    "idx": 824
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, does the value of the square root of 2 range from 1.42 to 1.43?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/ocr/3_2.png",
+    "idx": 323
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: For the given image, are the colors on tiles A and B the same?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/10_1.png",
+    "idx": 410
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, is Michigan the only U.S. state that shares a border with Lake Huron?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/5_1.png",
+    "idx": 274
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: In 2020, did China have the largest GDP around the world, followed by the United States, and Japan, according to the image?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/9_1.png",
+    "idx": 67
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Accroding to the information provided in the table, does the album \"Midnights\" have a sale of 1,818,000 in 2022?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/8_2.png",
+    "idx": 216
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: If BE ⊥ AC, CD ⊥ AB, AF ⊥ BC, then is M the incenter of triangle ABC? Please answer yes or no.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/12_1.png",
+    "idx": 580
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are all the items in this figure cookies?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/8_1.png",
+    "idx": 735
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, does the value of the square root of 2 range from 1.41 to 1.42?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/ocr/3_2.png",
+    "idx": 322
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Accroding to the information provided in the table, does the album \"Midnights\" have a sale of 422,000 in 2022?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/8_2.png",
+    "idx": 217
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text given in the image, is this logo for Red Bull?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/13_1.png",
+    "idx": 671
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the value of x in the image larger than 5?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/1_0.png",
+    "idx": 511
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are the two red vertical lines parallel with each other?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/9_0.png",
+    "idx": 405
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text given in the image, is this restaurant named Maryland Roadhouse?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/10_0.png",
+    "idx": 658
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are two circles in the image different color? Yes or No\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/23_1.png",
+    "idx": 469
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, in 2021, did Germany have the highest GDP?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/2_2.png",
+    "idx": 146
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Based on the map, are the Rocky Mountains located in Asia?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/4_2.png",
+    "idx": 271
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, Is he running counterclockwise? Answer in one sentence.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/19_1.png",
+    "idx": 943
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the map provided, among Arizona, Oklahoma, North Carolina, and Delaware on the map, is Oklahoma the farthest north?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/1_1.png",
+    "idx": 252
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are there any characters in this figure from Digimon?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/15_0.png",
+    "idx": 762
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: This cartoon character getting closer. According to the positive sequence of the images, are they in the correct order? Answer in one sentence.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/17_1.png",
+    "idx": 925
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: The area of B is 16 and the of area of C is 9. Is the area of square A smaller than 25? Please answer yes or no.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/7_1.png",
+    "idx": 551
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Based on the map, are the Himalayas Mountains located in Asia?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/4_1.png",
+    "idx": 269
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are there any characters in this figure from Digimon?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/15_1.png",
+    "idx": 764
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: If angle A is equal to 60 degree, is AB larger than 2AC? Please answer yes or no.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/15_1.png",
+    "idx": 598
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are these two men in the images the same height? Yes or No\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/17_0.png",
+    "idx": 438
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: If angle A is equal to 60 degree, is AB = 2AC? Please answer yes or no.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/15_1.png",
+    "idx": 597
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: For the given image, are the colors on tiles A and B the same?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/10_0.png",
+    "idx": 408
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: This woman is jumping out from a toilet. According to the positive sequence of the images, are they in the correct order? Answer in one word.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/11_0.png",
+    "idx": 878
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: The temperature decreases. According to the positive sequence of the images, are they in the correct order?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/6_0.png",
+    "idx": 836
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, In 2023, did Syria have higher population growth than United Kingdom?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/1_2.png",
+    "idx": 141
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is angleA + angleB +angleC > 180?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/2_1.png",
+    "idx": 521
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to parallel lines theorem, is angle 1 + angle 2 > 180 ?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/0_0.png",
+    "idx": 505
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, had the total number of coronavirus deaths in the United States reached 937,000 by February 2021?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/13_2.png",
+    "idx": 93
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Does this figure mainly depict a hen and eggs, no potatoes?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/18_0.png",
+    "idx": 773
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: From 2012 to 2022, did Apple derive the majority of its revenue from the Americas?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/6_2.png",
+    "idx": 48
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, was Elon Musk richer than Mark Zuckerberg on March 13th, 2020?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/17_2.png",
+    "idx": 112
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, did Xiaomi have the largest smartphone market share in Q2 2020, followed by Samsung and Huawei?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/3_2.png",
+    "idx": 156
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the cake in the image, is this a red forest cake?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/6_0.png",
+    "idx": 642
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: They are skating to left. According to the positive sequence of the images, are they in the correct order? Answer in one sentence.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/14_2.png",
+    "idx": 909
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text in this image, is this poster for the TV series Please Send 1988?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/19_1.png",
+    "idx": 696
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, are they skating to left? Answer in one sentence.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/14_2.png",
+    "idx": 907
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: If AE = CE and AB=BC, is AF perpendicular to BC? Please answer yes or no.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/17_1.png",
+    "idx": 610
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, was Antoine Griezmann the top goalscorer at the 2018 FIFA World Cup?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/8_2.png",
+    "idx": 65
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the Torsion dystonia illusion, are the diameters of the three circles the same?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/7_0.png",
+    "idx": 394
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: The image shows the famous Chubb illusion. Is the center area on the left larger than the center area on the right?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/5_1.png",
+    "idx": 390
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, does the temperature increase?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/6_0.png",
+    "idx": 833
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the green circle on left smaller than the green circle on the right? Yes or No\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/25_1.png",
+    "idx": 479
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the figure, are the two orange lines both vertical? Please answer yes or no.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/6_0.png",
+    "idx": 541
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the map provided, among Arizona, Oklahoma, North Carolina, and Delaware on the map, is North Carolina the farthest north?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/1_2.png",
+    "idx": 257
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: In triangle ABC, if AF, BE, CD, are the three midlines, is M the othocenter of triangle ABC? Please answer yes or no.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/10_0.png",
+    "idx": 566
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: From 2010 to 2019, Is 2015 exported the least value of bread, biscuits, wafers, cakes and pastries from the UK?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/1_1.png",
+    "idx": 11
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence images, does Homer Simpson come out of the bushes?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/1_1.png",
+    "idx": 788
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are there any hens in this figure?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/9_0.png",
+    "idx": 738
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, in 2017, did Apple generate higher revenue from video games compared to Google?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/18_2.png",
+    "idx": 117
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text in this image, is this \"Boli Cake Seasoned with Chicken Meat Floss\"?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/20_0.png",
+    "idx": 698
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, Is the circle moving towards to right? Answer in one word.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/12_0.png",
+    "idx": 887
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is Jerry the Mouse in this figure?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/16_1.png",
+    "idx": 768
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, is the circle inside autobiographical clockwise? Answer in one word.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/9_1.png",
+    "idx": 861
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text given in the image, is this a Washington style cheesecake?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/9_1.png",
+    "idx": 656
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: They are skating to right. According to the positive sequence of the images, are they in the correct order? Answer in one sentence.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/14_1.png",
+    "idx": 906
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: He is running counterclockwise. According to the positive sequence of the images, are they in the correct order? Answer in one sentence.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/19_2.png",
+    "idx": 949
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: This woman is jumping out from a toilet. According to the positive sequence of the images, are they in the correct order? Answer in one word.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/11_1.png",
+    "idx": 882
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are these two men in the images different height? Yes or No\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/18_1.png",
+    "idx": 445
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, did Florida have the highest average maximum temperature ?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/4_2.png",
+    "idx": 161
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, Is this monkey removing the wheel? Answer in one word.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/10_0.png",
+    "idx": 863
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the United States, the leading importing country of gold, silverware, and jewelry with the highest import value in 2018?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/0_1.png",
+    "idx": 3
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are all the animals in this figure prehistoric?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/9_1.png",
+    "idx": 739
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are there any dog faces in this figure?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/8_1.png",
+    "idx": 736
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, does the man close the door?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/3_1.png",
+    "idx": 806
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the value of x in the image smaller than 5?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/1_0.png",
+    "idx": 512
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, does Shanghai have the most dense population in China in 2020?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/6_2.png",
+    "idx": 182
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is angleA + angleB +angleC = 180?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/2_1.png",
+    "idx": 519
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, is Mark Zuckerberg'swealth greater than Larry Ellison's on 13th March 2020?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/17_1.png",
+    "idx": 108
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the cake in the image, is this a red forest cake?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/5_1.png",
+    "idx": 640
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, does the Kuroshio Current flow through Russia?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/10_2.png",
+    "idx": 305
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: He is running clockwise. According to the positive sequence of the images, are they in the correct order? Answer in one sentence.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/19_2.png",
+    "idx": 950
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is Bunny Bug in this figure?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/13_1.png",
+    "idx": 756
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: This man is throwing a woman into the toilet. According to the positive sequence of the images, are they in the correct order? Answer in one word.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/11_1.png",
+    "idx": 881
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, is this cartoon character getting far away? Answer in one sentence.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/17_1.png",
+    "idx": 924
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: This monkey is installing the wheel. According to the positive sequence of the images, are they in the correct order? Answer in one word.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/10_1.png",
+    "idx": 870
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the top yellow line longer than the bottom yellow line?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/3_1.png",
+    "idx": 382
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, did Florida have a higher average maximum temperature than South Carolina?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/4_3.png",
+    "idx": 165
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the area of the rectangle equal to 12? Please answer yes or no.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/8_0.png",
+    "idx": 552
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the figure, are the two orange lines both straight? Please answer yes or no.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/6_1.png",
+    "idx": 543
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is China, Hongkong SAR, the leading importing country of gold, silverware, and jewelry with the highest import value in 2018?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/0_1.png",
+    "idx": 0
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Does the image show \"Hot dry noodles from Shandong\"?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/0_0.png",
+    "idx": 613
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the formula e^ix = cos x + i x representative of the equation in this figure?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/ocr/5_2.png",
+    "idx": 331
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the red line on the left the same length as the red line on the right? Yes or No\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/30_0.png",
+    "idx": 500
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: From 2000-2050, is the population aged between 15 and 29 years in China the least in 2050?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/2_1.png",
+    "idx": 19
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are all the characters in this figure from The Story of the Little Mole?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/16_1.png",
+    "idx": 767
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the right grey box the same size as the left grey box?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/1_1.png",
+    "idx": 371
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, does the Euler's Number 'e' range from 2.72 to 2.73?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/ocr/2_1.png",
+    "idx": 314
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the map provided, is Montana state larger than New Mexico state?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/0_1.png",
+    "idx": 245
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: In 2019, were the main policy interest rates of the Japan Central Bank higher than those of the Central Banks in the UK, Eurozone, and U.S., according to the image?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/7_2.png",
+    "idx": 59
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the map provided, is New Mexico state larger than Texas state?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/0_2.png",
+    "idx": 246
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, does the blue car attempt to leave the parking space?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/4_2.png",
+    "idx": 822
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, Is this woman jumping out from the toilet? Answer in one word.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/11_2.png",
+    "idx": 884
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, in 2013, was the United States the largest recipient of exports from China in terms of US dollars, followed by Hong Kong and Japan?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/12_2.png",
+    "idx": 87
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are the lengths of the vertical line and the horizontal line the same?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/29_1.png",
+    "idx": 497
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: In 2020, did the United States have the largest GDP around the world, followed by China, and Japan, according to the image?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/9_2.png",
+    "idx": 70
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the figure, are the two orange lines both curved? Please answer yes or no.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/6_1.png",
+    "idx": 545
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, in 2018, did \"Black Panther\" achieve the highest box office revenue in North America?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/21_2.png",
+    "idx": 128
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the metal number chart of 2008 beijng olympic, does USA have the most gold metals, followed by China and Russia?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/0_1.png",
+    "idx": 131
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text given in the image, does this poster depict the movie Zootopia?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/14_1.png",
+    "idx": 675
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the green line longer than the red line in the image? Yes or No\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/27_1.png",
+    "idx": 486
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: As shown in the figure, ∠AOB = 100.0, is the degree of ∠ACB larger than 50.0? Please answer yes or no\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/9_1.png",
+    "idx": 562
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, Did January 2023 have a lower income percentage change than August 2023?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/5_1.png",
+    "idx": 169
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: The man closes the door. According to the positive sequence of the images, are they in the correct order?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/3_2.png",
+    "idx": 812
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the figure, are the two orange lines both straight? Please answer yes or no.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/6_0.png",
+    "idx": 540
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text in this image, is this a poster for \"Forrest Gump\"?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/2_0.png",
+    "idx": 621
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are two triangles in the image different color? Yes or No\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/15_1.png",
+    "idx": 433
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: The blue car attempts to park. According to the positive sequence of the images, are they in the correct order?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/4_2.png",
+    "idx": 823
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are all the items in this figure ice cream bars?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/11_0.png",
+    "idx": 745
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is it the logo for Qiaodan Sports?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/1_1.png",
+    "idx": 706
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, is the number of gold medals of Germany 8 in winter Olympics in 2022?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/7_3.png",
+    "idx": 205
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, does the value of the square root of 2 range from 1.41 to 1.42?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/ocr/3_1.png",
+    "idx": 319
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, does the man open the door?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/3_0.png",
+    "idx": 801
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text given in the image, does this poster depict the movie Oppenheimer?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/17_1.png",
+    "idx": 687
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: This cartoon character getting further away. According to the positive sequence of the images, are they in the correct order? Answer in one sentence.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/17_0.png",
+    "idx": 922
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, Is the circle moving towards to right? Answer in one word.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/12_0.png",
+    "idx": 889
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are two circles in the image different color? yes or no\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/19_0.png",
+    "idx": 448
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the value of x larger than 6? Please answer yes or no.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/4_0.png",
+    "idx": 529
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are two circles in the image different color? Yes or No\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/21_1.png",
+    "idx": 462
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, in 2020, did China have a larger population aged between 50 and 54 years than those aged between 0 and 4 years?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/20_1.png",
+    "idx": 123
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the map provided, among Arizona, Oklahoma, North Carolina, and Delaware on the map, is North Carolina the farthest north?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/1_1.png",
+    "idx": 253
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, does the UB group have the highest portion of the market share for beer across India in 2020?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/9_2.png",
+    "idx": 230
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Homer Simpson disappears into the bushes. According to the positive sequence of the images, are they in the correct order?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/1_0.png",
+    "idx": 785
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the text in this figure made by Abraham Lincoln?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/ocr/9_2.png",
+    "idx": 346
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the chart, does India have the second largest population in the world?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/3_1.png",
+    "idx": 21
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: If angle B is equal to 45 degree, is AB smaller than sqrt(2)AC? Please answer yes or no.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/16_0.png",
+    "idx": 602
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: In triangle ABC, if AF, BE, CD, are the three midlines, is M the centroid of triangle ABC? Please answer yes or no.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/10_1.png",
+    "idx": 567
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to this table, does US have the highest carbon dioxide emissions worldwide in 2010?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/10_1.png",
+    "idx": 235
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: The baby attempts to take off the clothes. According to the positive sequence of the images, are they in the correct order?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/5_1.png",
+    "idx": 832
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, is the baby crawling to left? Answer in one sentence.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/16_1.png",
+    "idx": 918
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: From 2001 to 2010, Is 2005 exported the most value of bread, biscuits, wafers, cakes and pastries from the UK?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/1_1.png",
+    "idx": 7
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: In 2020, did Japan have the largest GDP around the world, followed by the United States, and China, according to the image?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/9_2.png",
+    "idx": 72
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text below the logo, is this image for Al-Jazari?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/7_0.png",
+    "idx": 646
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, was Harry Kane the top goalscorer at the 2018 FIFA World Cup?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/8_1.png",
+    "idx": 60
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, does the baby attempt to take off the clothes?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/5_1.png",
+    "idx": 830
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: In 2020, did India have the largest GDP around the world, followed by China and Japan, according to the image?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/9_1.png",
+    "idx": 69
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, does the baby attempt to put on the clothes?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/5_1.png",
+    "idx": 829
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, is the text in this figure the four freedoms proposed by Franklin D. Roosevelt?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/ocr/7_2.png",
+    "idx": 338
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, Is he running clockwise? Answer in one sentence.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/19_0.png",
+    "idx": 940
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the parallel theorem, is angle A larger than angle B? Please answer yes or no.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/3_1.png",
+    "idx": 526
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the map provided, is Texas state larger than California state?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/0_1.png",
+    "idx": 243
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the map, can I take the Blue Line towards the Pentagon on the DC Metro system?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/6_2.png",
+    "idx": 285
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is this the official NBA logo?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/7_0.png",
+    "idx": 729
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Accroding to the information provided in the table, does the album \"Proof\" have a sale of 1,818,000 in 2022?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/8_2.png",
+    "idx": 219
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are all the animals in this figure swans?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/4_0.png",
+    "idx": 715
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the metal number chart of 2008 beijng olympic, does Russia have the most gold metals, followed by China and USA?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/0_2.png",
+    "idx": 135
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: If D is the midpoint of line segment AB, then is D the orthocenter of triangle ABC? Please answer yes or no\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/13_0.png",
+    "idx": 584
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: If angle BAF equals to angle CAF, is CF smaller than BF? Please answer yes or no.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/math/14_0.png",
+    "idx": 590
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the green line shorter than the red line in the image? Yes or No\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/27_0.png",
+    "idx": 484
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the map provided, is New Mexico state larger than California state?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/0_2.png",
+    "idx": 248
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are there any carrots in this figure?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/5_2.png",
+    "idx": 724
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the black solid circle on the left smaller than the black solid circle on the right?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/11_1.png",
+    "idx": 416
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, is the number of all medals of China 15 in winter Olympics in 2022?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/7_1.png",
+    "idx": 194
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, did United Kingdom experience the highest percentage of total deaths relative to its 1939 population during World War II, followed by Poland?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/14_1.png",
+    "idx": 96
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, is there a sloth in this video? Answer in one word.\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/13_0.png",
+    "idx": 897
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are these two men in the images different height? Yes or No\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/17_1.png",
+    "idx": 441
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the right orange circle smaller than the left orange circle?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/0_0.png",
+    "idx": 362
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Are all the animals in this figure swans?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/4_1.png",
+    "idx": 717
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Whether lines of blocks are parallel? Yes or No\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/13_0.png",
+    "idx": 420
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the green circle on left larger than the green circle on the right? Yes or No\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/25_1.png",
+    "idx": 478
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: In 2019, were the main policy interest rates of the Japan Central Bank higher than those of the Central Banks in the UK, Eurozone, and U.S.?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/7_1.png",
+    "idx": 55
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the text given in the image, is this sign located in Las Vegas?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/ocr/11_0.png",
+    "idx": 661
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, did the global death toll from earthquakes surpass 200,000 in any year between 2000 and 2015?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/15_1.png",
+    "idx": 100
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, was Antoine Griezmann the top goalscorer at the 2018 FIFA World Cup?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/8_1.png",
+    "idx": 62
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the black solid circle on the left the same size as the black solid circle on the right?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/illusion/11_0.png",
+    "idx": 412
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is the text in this figure made at Gettysburg?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/ocr/9_2.png",
+    "idx": 347
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the image, is Mark Zuckerberg'swealth greater than Larry Ellison's on 13th March 2020?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/chart/17_2.png",
+    "idx": 111
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the map provided, among Arizona, Oklahoma, North Carolina, and Delaware on the map, is Delaware the farthest north?\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/map/1_2.png",
+    "idx": 254
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, Is this woman jumping out from the toilet? Answer in one word.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/11_0.png",
+    "idx": 876
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, does the blue car attempt to leave the parking space?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/4_1.png",
+    "idx": 818
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: Is there an orange cat in this figure?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/figure/17_1.png",
+    "idx": 772
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the positive sequence of the images, is the baby crawling to right? Answer in one sentence.\n",
+    "solution": "\\boxed{No}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VD/video/16_1.png",
+    "idx": 917
+  },
+  {
+    "prompt": "Answer the question based on the image. Provide a clear Yes or No answer with proper reasoning, and make sure to put the FINAL ANSWER (Yes or No) inside \\boxed{}. \\n Question: According to the table, in 2021, did Germany have the highest GDP?\n",
+    "solution": "\\boxed{Yes}",
+    "image_path": "dataset/hallusion_bench/hallusion_bench/VS/table/2_1.png",
+    "idx": 143
+  }
+]

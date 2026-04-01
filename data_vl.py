@@ -36,7 +36,7 @@ def get_mllm_dataset(data_name: str, data_root: str = 'mllm_data') -> Dataset:
             f"Supported: {MLLM_DATASET_NAMES}"
         )
 
-    json_path = os.path.join(data_root, f"{dataset_key}.json")
+    json_path = os.path.join(data_root, f"{data_name}.json")
     with open(json_path, 'r') as f:
         data = json.load(f)
 

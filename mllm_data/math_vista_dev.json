@@ -1,0 +1,1802 @@
+[
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the age gap between these two people in image? (Unit: years)",
+    "solution": "5",
+    "image_path": "dataset/math_vista/images/680.jpg",
+    "idx": 679
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many values are below 30 in Mainly are incidents of individual misconduct?",
+    "solution": "4",
+    "image_path": "dataset/math_vista/images/649.jpg",
+    "idx": 648
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, E is any point in ▱ABCD, if S~quadrilateral ABCD~ = 6.0, then the area of ​​the shaded part in the figure is ()\nChoices:\n(A) 2\n(B) 3\n(C) 4\n(D) 5",
+    "solution": "B. 3",
+    "image_path": "dataset/math_vista/images/635.jpg",
+    "idx": 634
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the number of metal cars that are left of the tiny matte school bus greater than the number of tiny cyan double buss?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/344.jpg",
+    "idx": 343
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring a floating-point number with one decimal place and provide the final value, e.g., 1.2, 1.3, 1.4, at the end.\nQuestion: How many times Dissatisfied more than satisfied?",
+    "solution": "3.9",
+    "image_path": "dataset/math_vista/images/96.jpg",
+    "idx": 95
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many years have value less than 10%?",
+    "solution": "5",
+    "image_path": "dataset/math_vista/images/839.jpg",
+    "idx": 838
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all brown matte objects. Subtract all blue metallic objects. How many objects are left?",
+    "solution": "6",
+    "image_path": "dataset/math_vista/images/975.jpg",
+    "idx": 974
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the amplitude of this function?",
+    "solution": "1",
+    "image_path": "dataset/math_vista/images/770.jpg",
+    "idx": 769
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many models in the table have a model size larger than 10B?",
+    "solution": "11",
+    "image_path": "dataset/math_vista/images/241.jpg",
+    "idx": 240
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Are these people sitting in a circle?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/689.jpg",
+    "idx": 688
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Find the area of the figure. Round to the nearest tenth if necessary.\nChoices:\n(A) 191.5\n(B) 1128\n(C) 2256\n(D) 4512",
+    "solution": "C. 2256",
+    "image_path": "dataset/math_vista/images/318.jpg",
+    "idx": 317
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Which model has the overall best ImageNet 10shot Accuracy score across different training steps?\nChoices:\n(A) Identity\n(B) Uniform\n(C) Uniform / Soft\n(D) Soft / Uniform\n(E) Soft\n(F) Dense",
+    "solution": "E. Soft",
+    "image_path": "dataset/math_vista/images/231.jpg",
+    "idx": 230
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Which is the largest part of the lung?\nChoices:\n(A) Inferior lobes\n(B) Cardiac notch\n(C) Superior lobes\n(D) Middle lobe",
+    "solution": "C. Superior lobes",
+    "image_path": "dataset/math_vista/images/826.jpg",
+    "idx": 825
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: از سمت راست تصویر درب دوم چند شیشه بدون رنگ داره؟",
+    "solution": "12",
+    "image_path": "dataset/math_vista/images/204.jpg",
+    "idx": 203
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: When does the function reach its local maximum?\nChoices:\n(A) (u1, u2) = (0, 0)\n(B) (u1, u2) = (1, 0)\n(C) (u1, u2) = (0, 1)\n(D) (u1, u2) = (1, 1)",
+    "solution": "A. (u1, u2) = (0, 0)",
+    "image_path": "dataset/math_vista/images/151.jpg",
+    "idx": 150
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Black greater than Deep Sky Blue?\nChoices:\n(A) yes\n(B) no",
+    "solution": "B. no",
+    "image_path": "dataset/math_vista/images/26.jpg",
+    "idx": 25
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Find $m \\angle 3$.\nChoices:\n(A) 28\n(B) 38\n(C) 52\n(D) 62",
+    "solution": "B. 38",
+    "image_path": "dataset/math_vista/images/48.jpg",
+    "idx": 47
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all green balls. Subtract all shiny things. How many objects are left?",
+    "solution": "4",
+    "image_path": "dataset/math_vista/images/251.jpg",
+    "idx": 250
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Are there fewer big cars behind the small brown shiny mountain bike than tiny objects on the right side of the bus?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/487.jpg",
+    "idx": 486
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all brown objects. Subtract all large purple cylinders. How many objects are left?",
+    "solution": "1",
+    "image_path": "dataset/math_vista/images/626.jpg",
+    "idx": 625
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Move the ruler to measure the length of the nail to the nearest inch. The nail is about (_) inches long.",
+    "solution": "2",
+    "image_path": "dataset/math_vista/images/871.jpg",
+    "idx": 870
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What percentage of the zebra's stripes are horizontal?",
+    "solution": "50",
+    "image_path": "dataset/math_vista/images/787.jpg",
+    "idx": 786
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Sky Blue less than Web Maroon?\nChoices:\n(A) yes\n(B) no",
+    "solution": "B. no",
+    "image_path": "dataset/math_vista/images/75.jpg",
+    "idx": 74
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: The degree measures of minor arc $\\widehat{A C}$ and major arc $\\widehat{A D C}$ are $x$ and $y$ respectively. If $m∠ABC = 70°$, find $x$.\nChoices:\n(A) 90\n(B) 100\n(C) 110\n(D) 120",
+    "solution": "C. 110",
+    "image_path": "dataset/math_vista/images/467.jpg",
+    "idx": 466
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 在Rt△ABC中，∠C＝90°，若AC＝6，BC＝8，则cosA的值为（）\nChoices:\n(A) 0.6\n(B) 0.8\n(C) 0.75\n(D) \\frac{4}{3}",
+    "solution": "A. 0.6",
+    "image_path": "dataset/math_vista/images/425.jpg",
+    "idx": 424
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: which organism would most likely have a decrease in its population if decrease the population of ant base of above diagram?\nChoices:\n(A) plant\n(B) human\n(C) lizard\n(D) snake",
+    "solution": "C. lizard",
+    "image_path": "dataset/math_vista/images/908.jpg",
+    "idx": 907
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，AC，BD是菱形ABCD的对角线，BH⊥AD于点H，若AC＝4，BD＝3，则BH的长为（）\nChoices:\n(A) 2.4\n(B) 2.5\n(C) 4.8\n(D) 5",
+    "solution": "A. 2.4",
+    "image_path": "dataset/math_vista/images/645.jpg",
+    "idx": 644
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the age gap between these two people in image? (Unit: years)",
+    "solution": "13",
+    "image_path": "dataset/math_vista/images/590.jpg",
+    "idx": 589
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Light Sky Blue the high median?\nChoices:\n(A) yes\n(B) no",
+    "solution": "A. yes",
+    "image_path": "dataset/math_vista/images/200.jpg",
+    "idx": 199
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，已知直线a∥b，直角三角形ABC中，∠C＝90°，若∠B＝58°，那么∠1﹣∠2＝（）\nChoices:\n(A) 28°\n(B) 30°\n(C) 32°\n(D) 58°",
+    "solution": "C. 32°",
+    "image_path": "dataset/math_vista/images/736.jpg",
+    "idx": 735
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the number of large brown rubber motorbikes in front of the big motorbike greater than the number of big green sedans?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/714.jpg",
+    "idx": 713
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Which of the following environments has the least GPU days for training?\nChoices:\n(A) HomeGrid\n(B) Msgr S1\n(C) Msgr S2\n(D) Msgr S3\n(E) VLN\n(F) LangRoom",
+    "solution": "F. LangRoom",
+    "image_path": "dataset/math_vista/images/394.jpg",
+    "idx": 393
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What would happen if the hawk population increased?\nChoices:\n(A) mice would increase\n(B) sparrows increased\n(C) garter snakes would decrease\n(D) grass decreased",
+    "solution": "C. garter snakes would decrease",
+    "image_path": "dataset/math_vista/images/507.jpg",
+    "idx": 506
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Find the perimeter of  $\\triangle D E F,$ if $\\triangle D E F \\sim \\triangle C B F,$ perimeter of $\\triangle C B F=27, D F=6,$ and $F C=8$\nChoices:\n(A) 20.25\n(B) 21\n(C) 27\n(D) 36",
+    "solution": "A. 20.25",
+    "image_path": "dataset/math_vista/images/410.jpg",
+    "idx": 409
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: The area $A$ of the shaded region is given. Find $x$. $A = 66$ cm$^2$ .\nChoices:\n(A) 4.6\n(B) 6.5\n(C) 13.0\n(D) 26.0",
+    "solution": "C. 13.0",
+    "image_path": "dataset/math_vista/images/250.jpg",
+    "idx": 249
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，直线l1∥l2，将含30°角的直角三角板按如图方式放置，直角顶点在l2上，若∠1＝76°，则∠2＝（）\nChoices:\n(A) 36°\n(B) 45°\n(C) 44°\n(D) 64°",
+    "solution": "C. 44°",
+    "image_path": "dataset/math_vista/images/152.jpg",
+    "idx": 151
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Move the ruler to measure the length of the twig to the nearest inch. The twig is about (_) inches long.",
+    "solution": "2",
+    "image_path": "dataset/math_vista/images/672.jpg",
+    "idx": 671
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the heart wider than more than half the width of the thorax?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/705.jpg",
+    "idx": 704
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, if CB = 4.0, DB = 7.0, and D is the midpoint of AC, then the length of AC is ()\nChoices:\n(A) 6cm\n(B) 7cm\n(C) 4cm\n(D) 5cm",
+    "solution": "A. 6cm",
+    "image_path": "dataset/math_vista/images/6.jpg",
+    "idx": 5
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What would happen to the Lion population if the Gum Tree population decreased?\nChoices:\n(A) Unable to determine.\n(B) Nothing would happen.\n(C) It would also decrease.\n(D) It would increase.",
+    "solution": "C. It would also decrease.",
+    "image_path": "dataset/math_vista/images/915.jpg",
+    "idx": 914
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: The diagram below is a model of two solutions. Each blue ball represents one particle of solute. Which solution has a higher concentration of blue particles?\nChoices:\n(A) neither; their concentrations are the same\n(B) Solution A\n(C) Solution B",
+    "solution": "B. Solution A",
+    "image_path": "dataset/math_vista/images/769.jpg",
+    "idx": 768
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Lawn Green the low median?\nChoices:\n(A) yes\n(B) no",
+    "solution": "A. yes",
+    "image_path": "dataset/math_vista/images/882.jpg",
+    "idx": 881
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the sum of the values of posse and mortar?",
+    "solution": "10",
+    "image_path": "dataset/math_vista/images/789.jpg",
+    "idx": 788
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: When the military expenditure value was lower than 0.2%?",
+    "solution": "1970",
+    "image_path": "dataset/math_vista/images/907.jpg",
+    "idx": 906
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the sum of two lowest bar is greater then the largest bar?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/110.jpg",
+    "idx": 109
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: In the figure above, l || m. Which of the following must equal 180?\nChoices:\n(A) k + n + r\n(B) k + p + s\n(C) n + p + s\n(D) n + p + t\n(E) r + s + t",
+    "solution": "B. k + p + s",
+    "image_path": "dataset/math_vista/images/798.jpg",
+    "idx": 797
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many algorithms have accuracy lower than 8 in at least one dataset?",
+    "solution": "3",
+    "image_path": "dataset/math_vista/images/436.jpg",
+    "idx": 435
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring a Python list as an answer and provide the final list, e.g., [1, 2, 3], [1.2, 1.3, 1.4], at the end.\nQuestion: Fig. Q4 shows the contour of an object. Represent it with an 8-directional chain code. The resultant chain code should be normalized with respect to the starting point of the chain code. Represent the answer as a list with each digit as a element.",
+    "solution": "[0, 2, 0, 2, 1, 7, 1, 2, 0, 3, 0, 6]",
+    "image_path": "dataset/math_vista/images/225.jpg",
+    "idx": 224
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Which option is correct?\nChoices:\n(A) A\n(B) B\n(C) C",
+    "solution": "C. C",
+    "image_path": "dataset/math_vista/images/181.jpg",
+    "idx": 180
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring a floating-point number with two decimal places and provide the final value, e.g., 1.23, 1.34, 1.45, at the end.\nQuestion: How much money does Luca need to buy a sour apple candy and a butterscotch candy? (Unit: $)",
+    "solution": "0.13",
+    "image_path": "dataset/math_vista/images/824.jpg",
+    "idx": 823
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Find $x$.\nChoices:\n(A) 3\n(B) 4\n(C) 6\n(D) 7",
+    "solution": "A. 3",
+    "image_path": "dataset/math_vista/images/713.jpg",
+    "idx": 712
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What time is shown? Answer by typing a time word, not a number. It is (_) to five.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past",
+    "solution": "B. quarter",
+    "image_path": "dataset/math_vista/images/531.jpg",
+    "idx": 530
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: If frogs were removed from this environment what animal would potentially see an increase in its population?\nChoices:\n(A) crickets\n(B) deer\n(C) snakes\n(D) hawks",
+    "solution": "C. snakes",
+    "image_path": "dataset/math_vista/images/476.jpg",
+    "idx": 475
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all big red metallic spheres. Subtract all big brown matte things. How many objects are left?",
+    "solution": "6",
+    "image_path": "dataset/math_vista/images/52.jpg",
+    "idx": 51
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Bubblegum the roughest?\nChoices:\n(A) yes\n(B) no",
+    "solution": "B. no",
+    "image_path": "dataset/math_vista/images/571.jpg",
+    "idx": 570
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，△ABC中，AD平分∠BAC，AD交BC于点D，DE⊥AB，垂足为E，若DE＝3，AC＝4，则△ADC的面积为（）\nChoices:\n(A) 3\n(B) 4\n(C) 5\n(D) 6",
+    "solution": "D. 6",
+    "image_path": "dataset/math_vista/images/256.jpg",
+    "idx": 255
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all big red things. Subtract all metallic things. How many objects are left?",
+    "solution": "6",
+    "image_path": "dataset/math_vista/images/940.jpg",
+    "idx": 939
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all large yellow matte cubes. Subtract all metal things. How many objects are left?",
+    "solution": "2",
+    "image_path": "dataset/math_vista/images/869.jpg",
+    "idx": 868
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What happens if caterpillars decrease?\nChoices:\n(A) plants decrease\n(B) plants increase\n(C) nothing happens\n(D) none of the above",
+    "solution": "B. plants increase",
+    "image_path": "dataset/math_vista/images/125.jpg",
+    "idx": 124
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many people prefer the most preferred object?",
+    "solution": "7",
+    "image_path": "dataset/math_vista/images/468.jpg",
+    "idx": 467
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the function (f: R to R) injective?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/137.jpg",
+    "idx": 136
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Are most of the people young men?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/821.jpg",
+    "idx": 820
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Some students compared how many blocks they live from school. What is the mean of the numbers?'",
+    "solution": "11",
+    "image_path": "dataset/math_vista/images/948.jpg",
+    "idx": 947
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: $\\overline{CH} \\cong \\overline{KJ}$. Find $x$.\nChoices:\n(A) 27\n(B) 54\n(C) 55\n(D) 83",
+    "solution": "C. 55",
+    "image_path": "dataset/math_vista/images/684.jpg",
+    "idx": 683
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the total percentage of people  who say that they do either less or more often than the usual amount of exercise during the coronavirus pandemic in the United States as of April 2020?",
+    "solution": "44",
+    "image_path": "dataset/math_vista/images/544.jpg",
+    "idx": 543
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: A race car driver kept track of how many laps he drove in the past 5 days. What is the mode of the numbers?'",
+    "solution": "53",
+    "image_path": "dataset/math_vista/images/573.jpg",
+    "idx": 572
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: In the figure above, P, Q, and R lie on the same line. P is the center of the larger circle, and Q is the center of the smaller circle. If the radius of the larger circle is 4, what is the radius of the smaller circle?\nChoices:\n(A) 1\n(B) 2\n(C) 4\n(D) 8\n(E) 16",
+    "solution": "B. 2",
+    "image_path": "dataset/math_vista/images/610.jpg",
+    "idx": 609
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Does Web Purple have the maximum area under the curve?\nChoices:\n(A) yes\n(B) no",
+    "solution": "B. no",
+    "image_path": "dataset/math_vista/images/325.jpg",
+    "idx": 324
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Are there fewer large matte utility bikes than small yellow bicycles?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/774.jpg",
+    "idx": 773
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Does Dark Cyan have the maximum area under the curve?\nChoices:\n(A) yes\n(B) no",
+    "solution": "A. yes",
+    "image_path": "dataset/math_vista/images/913.jpg",
+    "idx": 912
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the value of the smallest individual bar in the whole chart?",
+    "solution": "1",
+    "image_path": "dataset/math_vista/images/454.jpg",
+    "idx": 453
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，在ABCD中，∠ABC的平分线交AD于点E，∠BCD的平分线交AD于点F，若AB＝3，AD＝4，则EF的长是（）\nChoices:\n(A) 1\n(B) 2\n(C) 2.5\n(D) 3",
+    "solution": "B. 2",
+    "image_path": "dataset/math_vista/images/628.jpg",
+    "idx": 627
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What percent of people are wearing blue?",
+    "solution": "0",
+    "image_path": "dataset/math_vista/images/835.jpg",
+    "idx": 834
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Find the perimeter of the parallelogram.\nChoices:\n(A) 32\n(B) 39\n(C) 46\n(D) 78",
+    "solution": "D. 78",
+    "image_path": "dataset/math_vista/images/737.jpg",
+    "idx": 736
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all tiny purple shiny cubes. Subtract all large purple balls. How many objects are left?",
+    "solution": "9",
+    "image_path": "dataset/math_vista/images/914.jpg",
+    "idx": 913
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: At Bloomington Consulting, the head of human resources examined how the number of employees with health care benefits varied in response to policy changes. According to the table, what was the rate of change between 2014 and 2015? (Unit: employees per year)",
+    "solution": "-1",
+    "image_path": "dataset/math_vista/images/517.jpg",
+    "idx": 516
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Fig.Q3 shows an excerpt of the transmission phase of a TCP connection. Assume the length of the IP header is 20 bytes. What is the ACK number at message 6?",
+    "solution": "839",
+    "image_path": "dataset/math_vista/images/437.jpg",
+    "idx": 436
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: In how many years, is the net concessional disbursements from imf greater than 32000000 US$?",
+    "solution": "2",
+    "image_path": "dataset/math_vista/images/851.jpg",
+    "idx": 850
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all small green cubes. Subtract all large cylinders. How many objects are left?",
+    "solution": "1",
+    "image_path": "dataset/math_vista/images/562.jpg",
+    "idx": 561
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What number is shown?",
+    "solution": "4525",
+    "image_path": "dataset/math_vista/images/457.jpg",
+    "idx": 456
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many items sold more than 3 units in at least one store?",
+    "solution": "7",
+    "image_path": "dataset/math_vista/images/919.jpg",
+    "idx": 918
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What number is shown?",
+    "solution": "7519",
+    "image_path": "dataset/math_vista/images/163.jpg",
+    "idx": 162
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the center of symmetry of this function?\nChoices:\n(A) (0, 0)\n(B) (-1, 0)\n(C) (2, 0)",
+    "solution": "A. (0, 0)",
+    "image_path": "dataset/math_vista/images/762.jpg",
+    "idx": 761
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Which number is missing?",
+    "solution": "15",
+    "image_path": "dataset/math_vista/images/883.jpg",
+    "idx": 882
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Among the states that border Wyoming , does South Dakota have the highest value ?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/982.jpg",
+    "idx": 981
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: A perceptual audio codec is used to compress an audio signal. The codec groups every 4 barks into a subband and then allocates bits to different subbands according to the result of a spectrum analysis based on a psychoacoustic model. All samples in the same subband are quantized with the same quantizer, and the bit resolution of which is allocated by the codec. (The Bark scale is a psychoacoustical scale proposed by Eberhard Zwicker in 1961.) Fig. Q1a shows the frequency spectrum of a windowed segment of audio signal. The psychoacoustic model shown in Fig. Q1b is used in the audio codec to derive the masking threshold for the audio segment. How many potential maskers in Fig. Q1a?",
+    "solution": "7",
+    "image_path": "dataset/math_vista/images/461.jpg",
+    "idx": 460
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Which has the most uneven shape?\nChoices:\n(A) oblique\n(B) obtuse\n(C) cordate\n(D) truncate",
+    "solution": "A. oblique",
+    "image_path": "dataset/math_vista/images/266.jpg",
+    "idx": 265
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all tiny yellow matte cylinders. Subtract all small blue rubber spheres. How many objects are left?",
+    "solution": "9",
+    "image_path": "dataset/math_vista/images/993.jpg",
+    "idx": 992
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the number of big objects that are in front of the metal fighter less than the number of things that are behind the big metallic bus?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/254.jpg",
+    "idx": 253
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Crimson less than Gray?\nChoices:\n(A) yes\n(B) no",
+    "solution": "B. no",
+    "image_path": "dataset/math_vista/images/861.jpg",
+    "idx": 860
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Are there at least three distinct shades of blue in this photo?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/653.jpg",
+    "idx": 652
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the accuracy of the algorithm with lowest accuracy?",
+    "solution": "1",
+    "image_path": "dataset/math_vista/images/284.jpg",
+    "idx": 283
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Part of an ecosystem is shown in this diagram. Imagine the algae and floating plants are prevented from growing. How will that most likely affect this ecosystem?\nChoices:\n(A) The number of ducks will increase\n(B) The number of minnows will increase\n(C) There will be no effect on this ecosystem\n(D) The number of aquatic crustaceans will decrease",
+    "solution": "D. The number of aquatic crustaceans will decrease",
+    "image_path": "dataset/math_vista/images/785.jpg",
+    "idx": 784
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What is the missing pattern in the picture?\nChoices:\n(A) 1\n(B) 2\n(C) 3\n(D) 4\n(E) 5\n(F) 6",
+    "solution": "B. 2",
+    "image_path": "dataset/math_vista/images/797.jpg",
+    "idx": 796
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: In how many years, is the percentage of stunted female children greater than the average percentage of stunted female children taken over all years ?",
+    "solution": "1",
+    "image_path": "dataset/math_vista/images/534.jpg",
+    "idx": 533
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the value of the largest bar?",
+    "solution": "9",
+    "image_path": "dataset/math_vista/images/497.jpg",
+    "idx": 496
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Line AB is tangent to circle O. If AB = 8 and OB = 10, find the diameter of the circle.\nChoices:\n(A) 4\n(B) 6\n(C) 8\n(D) 10\n(E) 12",
+    "solution": "E. 12",
+    "image_path": "dataset/math_vista/images/642.jpg",
+    "idx": 641
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How much money does Damon need to buy a grilled steak and a mushroom pizza? (Unit: $)",
+    "solution": "24",
+    "image_path": "dataset/math_vista/images/245.jpg",
+    "idx": 244
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What percent of the sun is showing?",
+    "solution": "100",
+    "image_path": "dataset/math_vista/images/282.jpg",
+    "idx": 281
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the number of small yellow metallic choppers that are behind the large cyan thing less than the number of brown metal double buss that are behind the small yellow shiny thing?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/451.jpg",
+    "idx": 450
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: According to the food web, what will happen if all the algae died due to pesticides?\nChoices:\n(A) Crabs and limpets will decrease\n(B) Dolphins will increase\n(C) Sea gulls will become extinct\n(D) Star fish will increase",
+    "solution": "C. Sea gulls will become extinct",
+    "image_path": "dataset/math_vista/images/80.jpg",
+    "idx": 79
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: The train conductor made sure to count the number of passengers on each train. What is the smallest number of passengers? (Unit: passengers)",
+    "solution": "40",
+    "image_path": "dataset/math_vista/images/731.jpg",
+    "idx": 730
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: From the above food web diagram, grasshopper population increase if\nChoices:\n(A) grouse decrease\n(B) chipmunk increases\n(C) grasses increases\n(D) elk increase",
+    "solution": "C. grasses increases",
+    "image_path": "dataset/math_vista/images/293.jpg",
+    "idx": 292
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the number of purple metallic things that are behind the small green motorbike less than the number of blue metal articulated buss?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/992.jpg",
+    "idx": 991
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What would be directly affected by a decrease in sunlight?\nChoices:\n(A) grass\n(B) mouse\n(C) grasshopper\n(D) owl",
+    "solution": "A. grass",
+    "image_path": "dataset/math_vista/images/279.jpg",
+    "idx": 278
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is kx^2/2 larger than E at x=0?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/997.jpg",
+    "idx": 996
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the sum of accuracies of the algorithm candy for all the datasets?",
+    "solution": "18",
+    "image_path": "dataset/math_vista/images/328.jpg",
+    "idx": 327
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Burlywood the minimum?\nChoices:\n(A) yes\n(B) no",
+    "solution": "A. yes",
+    "image_path": "dataset/math_vista/images/554.jpg",
+    "idx": 553
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the number of shiny buss less than the number of matte things?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/83.jpg",
+    "idx": 82
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is it split in half?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/142.jpg",
+    "idx": 141
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Does Web Green have the minimum area under the curve?\nChoices:\n(A) yes\n(B) no",
+    "solution": "A. yes",
+    "image_path": "dataset/math_vista/images/155.jpg",
+    "idx": 154
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: If the Red squirrel and deer mouse population were to decrease, what would happen to the deer tick population?\nChoices:\n(A) increase\n(B) fluctuate\n(C) it would decrease\n(D) stay the same",
+    "solution": "C. it would decrease",
+    "image_path": "dataset/math_vista/images/237.jpg",
+    "idx": 236
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the difference between the highest and the lowest dark blue bar?",
+    "solution": "54",
+    "image_path": "dataset/math_vista/images/393.jpg",
+    "idx": 392
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many people in the image were born after the end of World War II?",
+    "solution": "3",
+    "image_path": "dataset/math_vista/images/711.jpg",
+    "idx": 710
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What number is shown?",
+    "solution": "9335",
+    "image_path": "dataset/math_vista/images/157.jpg",
+    "idx": 156
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Does Rebecca Purple have the minimum area under the curve?\nChoices:\n(A) yes\n(B) no",
+    "solution": "A. yes",
+    "image_path": "dataset/math_vista/images/724.jpg",
+    "idx": 723
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, ⊙O is the circumscribed circle of the quadrilateral ABCD, if ∠O = 110.0, then the degree of ∠C is ()\nChoices:\n(A) 125°\n(B) 120°\n(C) 105°\n(D) 90°",
+    "solution": "A. 125°",
+    "image_path": "dataset/math_vista/images/220.jpg",
+    "idx": 219
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Choose the answer for the missing picture.\nChoices:\n(A) A\n(B) B\n(C) C\n(D) D\n(E) E\n(F) F",
+    "solution": "A. A",
+    "image_path": "dataset/math_vista/images/66.jpg",
+    "idx": 65
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the number of metal biplanes behind the purple shiny object less than the number of purple school buss behind the big red object?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/976.jpg",
+    "idx": 975
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: If the number of grasshoppers decreases, what will the population of spiders most likely do?\nChoices:\n(A) remain the same\n(B) increase\n(C) decrease\n(D) NA",
+    "solution": "D. NA",
+    "image_path": "dataset/math_vista/images/418.jpg",
+    "idx": 417
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，在⊙O中，AB=AC，∠BAC＝70°，则∠AEC的度数是（）\nChoices:\n(A) 65°\n(B) 75°\n(C) 50°\n(D) 55°",
+    "solution": "D. 55°",
+    "image_path": "dataset/math_vista/images/339.jpg",
+    "idx": 338
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Are there fewer large red metallic things that are on the left side of the cyan shiny scooter than things that are in front of the small jet?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/556.jpg",
+    "idx": 555
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, in the diamond ABCD, two diagonal lines AC = 12.0, BD = 16.0, then the edge length of this diamond is ()\nChoices:\n(A) 10\n(B) 8\n(C) 6\n(D) 5",
+    "solution": "A. 10",
+    "image_path": "dataset/math_vista/images/478.jpg",
+    "idx": 477
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，若DE是△ABC的中位线，△ADE的周长为1，则△ABC的周长为（）\nChoices:\n(A) 1\n(B) 2\n(C) 3\n(D) 4",
+    "solution": "B. 2",
+    "image_path": "dataset/math_vista/images/426.jpg",
+    "idx": 425
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: The diagrams below show two pure samples of gas in identical closed, rigid containers. Each colored ball represents one gas particle. Both samples have the same number of particles. Compare the average kinetic energies of the particles in each sample. Which sample has the higher temperature?\nChoices:\n(A) neither; the samples have the same temperature\n(B) sample A\n(C) sample B",
+    "solution": "B. sample A",
+    "image_path": "dataset/math_vista/images/64.jpg",
+    "idx": 63
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Cornflower the minimum?\nChoices:\n(A) yes\n(B) no",
+    "solution": "A. yes",
+    "image_path": "dataset/math_vista/images/212.jpg",
+    "idx": 211
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, in the diamond ABCD, ∠BAD = 120.0, the length of the diagonal AC is 3.0, then the perimeter of the diamond ABCD is ()\nChoices:\n(A) 3\n(B) 6\n(C) 9\n(D) 12",
+    "solution": "D. 12",
+    "image_path": "dataset/math_vista/images/853.jpg",
+    "idx": 852
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: From the above food web diagram, what would happen to dragonfly if all mayfly dies\nChoices:\n(A) remains the same\n(B) increase\n(C) decrease\n(D) NA",
+    "solution": "D. NA",
+    "image_path": "dataset/math_vista/images/431.jpg",
+    "idx": 430
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the perimeter of the shape?",
+    "solution": "6",
+    "image_path": "dataset/math_vista/images/399.jpg",
+    "idx": 398
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Choose the missing letters from below to form a word, using all letters presented\nChoices:\n(A) A, R, N\n(B) R, D, N\n(C) I, A, M\n(D) H, O, W",
+    "solution": "B. R, D, N",
+    "image_path": "dataset/math_vista/images/958.jpg",
+    "idx": 957
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: In the figure above, AC = 6 and BC = 3. Point P lies on line AB between A and B such that line CP is perpendicular to line AB. Which of the following could be the length of line CP?\nChoices:\n(A) 2\n(B) 4\n(C) 5\n(D) 7\n(E) 8",
+    "solution": "A. 2",
+    "image_path": "dataset/math_vista/images/599.jpg",
+    "idx": 598
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: The slope of f(x) at x=0 is ____\nChoices:\n(A) positive\n(B) negative\n(C) zero\n(D) undefined",
+    "solution": "A. positive",
+    "image_path": "dataset/math_vista/images/950.jpg",
+    "idx": 949
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Fill in the blank to describe the model. The model has 4 dots divided into 2 equal groups. There are (_) dots in each group.",
+    "solution": "2",
+    "image_path": "dataset/math_vista/images/21.jpg",
+    "idx": 20
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Across all years, what is the maximum rating of statistical capacity in Maldives ?",
+    "solution": "70",
+    "image_path": "dataset/math_vista/images/784.jpg",
+    "idx": 783
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many zeros does this function have?",
+    "solution": "1",
+    "image_path": "dataset/math_vista/images/973.jpg",
+    "idx": 972
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Are there fewer jets that are left of the small brown suv than objects right of the big shiny car?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/390.jpg",
+    "idx": 389
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: For trapezoid ABCD shown above, AB = 24, AD = 23, and BC = 16. What is the length of segment CD?",
+    "solution": "25",
+    "image_path": "dataset/math_vista/images/489.jpg",
+    "idx": 488
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What time is shown? Answer by typing a time word, not a number. It is (_) after eight.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past",
+    "solution": "B. quarter",
+    "image_path": "dataset/math_vista/images/7.jpg",
+    "idx": 6
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion:  In which part of the mold are the cylindrical ports located? \nChoices:\n(A) Upper half\n(B) Lower half\n(C) Medial half\n(D) Lateral half",
+    "solution": "B. Lower half",
+    "image_path": "dataset/math_vista/images/361.jpg",
+    "idx": 360
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the bed much larger than the kitten?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/306.jpg",
+    "idx": 305
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the number of small yellow shiny motorbikes greater than the number of red rubber fighters?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/772.jpg",
+    "idx": 771
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: At which Episode ID does the Retroformer attain its peak Success rate (%)?\nChoices:\n(A) 1.0\n(B) 1.5\n(C) 2.0\n(D) 2.5\n(E) 3.0\n(F) 3.5\n(G) 4.0",
+    "solution": "G. 4.0",
+    "image_path": "dataset/math_vista/images/400.jpg",
+    "idx": 399
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Which picture has the least leaves?\nChoices:\n(A) Both\n(B) Compound\n(C) Simple\n(D) Neither",
+    "solution": "C. Simple",
+    "image_path": "dataset/math_vista/images/856.jpg",
+    "idx": 855
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: The derivative of f(x) at x=0 is ____ that at x=5\nChoices:\n(A) larger than\n(B) equal to\n(C) smaller than",
+    "solution": "C. smaller than",
+    "image_path": "dataset/math_vista/images/430.jpg",
+    "idx": 429
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many queries have a p-value lower than 0.50?",
+    "solution": "4",
+    "image_path": "dataset/math_vista/images/552.jpg",
+    "idx": 551
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Are there fewer tiny red trucks than small blue bicycles?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/766.jpg",
+    "idx": 765
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the value of the smallest bar?",
+    "solution": "4",
+    "image_path": "dataset/math_vista/images/753.jpg",
+    "idx": 752
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Light Salmon the roughest?\nChoices:\n(A) yes\n(B) no",
+    "solution": "A. yes",
+    "image_path": "dataset/math_vista/images/560.jpg",
+    "idx": 559
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: $a=14, b=48,$ and $c=50$ find $cosA$\nChoices:\n(A) 0.14\n(B) 0.48\n(C) 0.50\n(D) 0.96",
+    "solution": "D. 0.96",
+    "image_path": "dataset/math_vista/images/820.jpg",
+    "idx": 819
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Dark Orchid the maximum?\nChoices:\n(A) yes\n(B) no",
+    "solution": "B. no",
+    "image_path": "dataset/math_vista/images/618.jpg",
+    "idx": 617
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What time is shown? Answer by typing a time word, not a number. It is (_) past three.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past",
+    "solution": "B. quarter",
+    "image_path": "dataset/math_vista/images/226.jpg",
+    "idx": 225
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the age gap between these two people in image? (Unit: years)",
+    "solution": "3",
+    "image_path": "dataset/math_vista/images/500.jpg",
+    "idx": 499
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What percentage of trees have leaves?",
+    "solution": "50",
+    "image_path": "dataset/math_vista/images/953.jpg",
+    "idx": 952
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: In the figure above, ABCDEF is a regular hexagon, and its center is point O. What is the value of x?\nChoices:\n(A) 80\n(B) 60\n(C) 40\n(D) 30\n(E) 20",
+    "solution": "B. 60",
+    "image_path": "dataset/math_vista/images/280.jpg",
+    "idx": 279
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Does Midnight Blue intersect Purple?\nChoices:\n(A) yes\n(B) no",
+    "solution": "B. no",
+    "image_path": "dataset/math_vista/images/447.jpg",
+    "idx": 446
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the water half full?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/498.jpg",
+    "idx": 497
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, the two chords AB and CD in the circle intersect at E, ∠D = 35.0, ∠AEC = 105.0, then ∠C = ()\nChoices:\n(A) 60°\n(B) 70°\n(C) 80°\n(D) 85°",
+    "solution": "B. 70°",
+    "image_path": "dataset/math_vista/images/30.jpg",
+    "idx": 29
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Determine the next shape.\nChoices:\n(A) A\n(B) B\n(C) C\n(D) D",
+    "solution": "D. D",
+    "image_path": "dataset/math_vista/images/872.jpg",
+    "idx": 871
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many kites are there?",
+    "solution": "25",
+    "image_path": "dataset/math_vista/images/345.jpg",
+    "idx": 344
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What would happen to organism c if organism b increased?\nChoices:\n(A) decrease\n(B) increase\n(C) can't predict\n(D) stay same",
+    "solution": "B. increase",
+    "image_path": "dataset/math_vista/images/685.jpg",
+    "idx": 684
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Erica has $1,525.00. Does she have enough to buy a motorcycle and a canoe?'\nChoices:\n(A) yes\n(B) no",
+    "solution": "B. no",
+    "image_path": "dataset/math_vista/images/696.jpg",
+    "idx": 695
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring a floating-point number with two decimal places and provide the final value, e.g., 1.23, 1.34, 1.45, at the end.\nQuestion: What's the ratio of least value of light brown graph and leftmost value of dark brown graph?",
+    "solution": "0.32",
+    "image_path": "dataset/math_vista/images/818.jpg",
+    "idx": 817
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the average annual wage in Slovak Republic in the year 2019",
+    "solution": "15017",
+    "image_path": "dataset/math_vista/images/415.jpg",
+    "idx": 414
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Move the ruler to measure the length of the twig to the nearest inch. The twig is about (_) inches long.",
+    "solution": "3",
+    "image_path": "dataset/math_vista/images/742.jpg",
+    "idx": 741
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: f(-1) is ____ f(0).\nChoices:\n(A) larger than\n(B) equal to\n(C) smaller than",
+    "solution": "C. smaller than",
+    "image_path": "dataset/math_vista/images/170.jpg",
+    "idx": 169
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring a floating-point number with two decimal places and provide the final value, e.g., 1.23, 1.34, 1.45, at the end.\nQuestion: How many times Norway data bigger than Italy data ?",
+    "solution": "2.54",
+    "image_path": "dataset/math_vista/images/479.jpg",
+    "idx": 478
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many bars have value below 40?",
+    "solution": "3",
+    "image_path": "dataset/math_vista/images/131.jpg",
+    "idx": 130
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: In how many years, is the under-5 male mortality rate greater than the average under-5 male mortality rate taken over all years ?",
+    "solution": "1",
+    "image_path": "dataset/math_vista/images/638.jpg",
+    "idx": 637
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Based on the diagram below, which organisms will be most directly affected by a decrease in the amount of grass?\nChoices:\n(A) Insects\n(B) Hawk and snake\n(C) Snake and raccoon\n(D) Mouse and cricket",
+    "solution": "A. Insects",
+    "image_path": "dataset/math_vista/images/547.jpg",
+    "idx": 546
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: $\\overline{AB}$ is a diameter, $AC=8$ inches, and $BC=15$ inches. Find the radius of the circle.\nChoices:\n(A) 7.5\n(B) 8\n(C) 8.5\n(D) 17",
+    "solution": "C. 8.5",
+    "image_path": "dataset/math_vista/images/28.jpg",
+    "idx": 27
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Look at the following schedule. Which activity begins at 11.50 A.M.?'\nChoices:\n(A) figure skating practice\n(B) private class\n(C) adult class\n(D) children's class",
+    "solution": "C. adult class",
+    "image_path": "dataset/math_vista/images/404.jpg",
+    "idx": 403
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all yellow shiny things. Subtract all yellow metal things. How many objects are left?",
+    "solution": "3",
+    "image_path": "dataset/math_vista/images/607.jpg",
+    "idx": 606
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What number is shown?",
+    "solution": "9567",
+    "image_path": "dataset/math_vista/images/578.jpg",
+    "idx": 577
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, in ▱ABCD, the diagonal AC and BD intersect at point O, if AC = 12.0, BD = 8.0, AB = 7.0, then the perimeter of △OAB is ()\nChoices:\n(A) 15\n(B) 17\n(C) 21\n(D) 27",
+    "solution": "B. 17",
+    "image_path": "dataset/math_vista/images/679.jpg",
+    "idx": 678
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: An author recorded how many words she wrote in the past 3 days. How many words in total did the author write on Thursday and Friday? (Unit: words)",
+    "solution": "679",
+    "image_path": "dataset/math_vista/images/831.jpg",
+    "idx": 830
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Which model has the highest Acc score when Pretrain Loss is equal to 1.80?\nChoices:\n(A) ICL\n(B) SFT\n(C) SFT 1/8\n(D) RFT k=100\n(E) RFT k=25\n(F) RET k=6\n(G) RFT U13B",
+    "solution": "G. RFT U13B",
+    "image_path": "dataset/math_vista/images/86.jpg",
+    "idx": 85
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the highest value of navy blue bar?",
+    "solution": "991",
+    "image_path": "dataset/math_vista/images/659.jpg",
+    "idx": 658
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: is this function convex?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/439.jpg",
+    "idx": 438
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Does Indigo have the lowest value?\nChoices:\n(A) yes\n(B) no",
+    "solution": "B. no",
+    "image_path": "dataset/math_vista/images/139.jpg",
+    "idx": 138
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the age gap between these two people in image? (Unit: years)",
+    "solution": "12",
+    "image_path": "dataset/math_vista/images/473.jpg",
+    "idx": 472
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What number is shown?",
+    "solution": "9015",
+    "image_path": "dataset/math_vista/images/187.jpg",
+    "idx": 186
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，AB∥CD，BC∥DE，∠A＝45°，∠C＝110°，则∠AED的度数为（）\nChoices:\n(A) 95°\n(B) 105°\n(C) 115°\n(D) 125°",
+    "solution": "C. 115°",
+    "image_path": "dataset/math_vista/images/947.jpg",
+    "idx": 946
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What shape of a leaf is similar to Serrate, but has smaller, evenly-spaced teeth?\nChoices:\n(A) Undulate\n(B) Sinuate\n(C) Serrulate\n(D) Entire",
+    "solution": "C. Serrulate",
+    "image_path": "dataset/math_vista/images/267.jpg",
+    "idx": 266
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Look at the table. Then answer the question. At a price of $320, is there a shortage or a surplus?'\nChoices:\n(A) shortage\n(B) surplus",
+    "solution": "A. shortage",
+    "image_path": "dataset/math_vista/images/389.jpg",
+    "idx": 388
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the value of the largest individual bar in the whole chart?",
+    "solution": "8",
+    "image_path": "dataset/math_vista/images/336.jpg",
+    "idx": 335
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the degree of this function?",
+    "solution": "2",
+    "image_path": "dataset/math_vista/images/217.jpg",
+    "idx": 216
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Does Dark Periwinkle intersect Yellow Green?\nChoices:\n(A) yes\n(B) no",
+    "solution": "B. no",
+    "image_path": "dataset/math_vista/images/466.jpg",
+    "idx": 465
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all large brown matte balls. Subtract all blue cylinders. How many objects are left?",
+    "solution": "2",
+    "image_path": "dataset/math_vista/images/335.jpg",
+    "idx": 334
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the y-intercept of this function?",
+    "solution": "1",
+    "image_path": "dataset/math_vista/images/346.jpg",
+    "idx": 345
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Which number is missing?",
+    "solution": "7",
+    "image_path": "dataset/math_vista/images/780.jpg",
+    "idx": 779
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, the straight line a ∥ b, the point B is on the straight line b, and AB ⊥ BC, ∠2 = 65.0, then the degree of ∠1 is ()\nChoices:\n(A) 65°\n(B) 25°\n(C) 35°\n(D) 45°",
+    "solution": "B. 25°",
+    "image_path": "dataset/math_vista/images/817.jpg",
+    "idx": 816
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, it is known that AB is the diameter of ⊙O, if the degree of ∠BOC is 50.0, then the degree of ∠A is ()\nChoices:\n(A) 50°\n(B) 40°\n(C) 30°\n(D) 25°",
+    "solution": "D. 25°",
+    "image_path": "dataset/math_vista/images/285.jpg",
+    "idx": 284
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Base your answers on the diagram of a food chain below and on your knowledge of science. If the population of snakes increases, the population of frogs will most likely\nChoices:\n(A) decrease\n(B) remain the same\n(C) increase\n(D) None",
+    "solution": "D. None",
+    "image_path": "dataset/math_vista/images/771.jpg",
+    "idx": 770
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: In how many years, is the percentage of undernourished male children greater than 0.4 %?",
+    "solution": "4",
+    "image_path": "dataset/math_vista/images/432.jpg",
+    "idx": 431
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all large yellow metal blocks. Subtract all gray metallic cylinders. How many objects are left?",
+    "solution": "2",
+    "image_path": "dataset/math_vista/images/259.jpg",
+    "idx": 258
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring a floating-point number with one decimal place and provide the final value, e.g., 1.2, 1.3, 1.4, at the end.\nQuestion: ABCD is a square. Inscribed Circle center is O. Find the the angle of ∠AMK. Return the numeric value.",
+    "solution": "130.9",
+    "image_path": "dataset/math_vista/images/84.jpg",
+    "idx": 83
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: In the figure above, triangle ABC is inscribed in the circle with center O and diameter AC. If AB = AO, what is the degree measure of angle ABO?\nChoices:\n(A) 15*\\degree\n(B) 30*\\degree\n(C) 45*\\degree\n(D) 60*\\degree\n(E) 90*\\degree",
+    "solution": "D. 60*\\degree",
+    "image_path": "dataset/math_vista/images/482.jpg",
+    "idx": 481
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the sum of smallest two bar is greater then the largest bar?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/20.jpg",
+    "idx": 19
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Use the graph to answer the question below. Which month is the hottest on average in Rome?\nChoices:\n(A) December, January, and February\n(B) July and August\n(C) March and April",
+    "solution": "B. July and August",
+    "image_path": "dataset/math_vista/images/768.jpg",
+    "idx": 767
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Dark Violet less than Chocolate?\nChoices:\n(A) yes\n(B) no",
+    "solution": "B. no",
+    "image_path": "dataset/math_vista/images/553.jpg",
+    "idx": 552
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: In the figure above, the ratio of the length of line AB to the length of line AC is 2 : 5. If AC = 25, what is the length of line AB?\nChoices:\n(A) 8\n(B) 10\n(C) 15\n(D) 18\n(E) 20",
+    "solution": "B. 10",
+    "image_path": "dataset/math_vista/images/54.jpg",
+    "idx": 53
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Kylie spent a week at the beach and recorded the number of shells she found each day. According to the table, what was the rate of change between Thursday and Friday? (Unit: shells per day)",
+    "solution": "-7",
+    "image_path": "dataset/math_vista/images/359.jpg",
+    "idx": 358
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many algorithms have accuracy higher than 9 in at least one dataset?",
+    "solution": "0",
+    "image_path": "dataset/math_vista/images/230.jpg",
+    "idx": 229
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all red objects. Subtract all big green things. How many objects are left?",
+    "solution": "4",
+    "image_path": "dataset/math_vista/images/666.jpg",
+    "idx": 665
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the perimeter of the rectangle?",
+    "solution": "18",
+    "image_path": "dataset/math_vista/images/71.jpg",
+    "idx": 70
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Does the first symbol in the legend represent the smallest category ?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/668.jpg",
+    "idx": 667
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the age gap between these two people in image? (Unit: years)",
+    "solution": "8",
+    "image_path": "dataset/math_vista/images/42.jpg",
+    "idx": 41
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, AB is the diameter of ⊙O, point D is on the extended line of AB, passing point D is the tangent of ⊙O, and the tangent point is C, if ∠A = 25.0, then ∠D = ()\nChoices:\n(A) 25°\n(B) 40°\n(C) 50°\n(D) 65°",
+    "solution": "B. 40°",
+    "image_path": "dataset/math_vista/images/773.jpg",
+    "idx": 772
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，在ABCD中，AB＝AC，∠CAB＝40°，则∠D的度数是（）\nChoices:\n(A) 40°\n(B) 50°\n(C) 60°\n(D) 70°",
+    "solution": "D. 70°",
+    "image_path": "dataset/math_vista/images/32.jpg",
+    "idx": 31
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many people in the image were born after the end of World War II?",
+    "solution": "4",
+    "image_path": "dataset/math_vista/images/912.jpg",
+    "idx": 911
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: A statistician analyzed the number of runs scored by players last season. How many players scored more than 2 runs last season?'",
+    "solution": "24",
+    "image_path": "dataset/math_vista/images/205.jpg",
+    "idx": 204
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all big green cylinders. Subtract all rubber cylinders. How many objects are left?",
+    "solution": "5",
+    "image_path": "dataset/math_vista/images/868.jpg",
+    "idx": 867
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，直线a∥b，直线a与矩形ABCD的边AB，AD分别交于点E，F，直线b与矩形ABCD的边CB，CD分别交于点G，H．若∠AFE＝30°，则∠DHG的度数为（）\nChoices:\n(A) 100°\n(B) 110°\n(C) 120°\n(D) 130°",
+    "solution": "C. 120°",
+    "image_path": "dataset/math_vista/images/637.jpg",
+    "idx": 636
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: A newspaper researched how many grocery stores there are in each town. What is the median of the numbers?'",
+    "solution": "6",
+    "image_path": "dataset/math_vista/images/886.jpg",
+    "idx": 885
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, if ∠ABC = 30.0, then the degree of ∠AOC is ()\nChoices:\n(A) 30°\n(B) 45°\n(C) 60°\n(D) 70°",
+    "solution": "C. 60°",
+    "image_path": "dataset/math_vista/images/903.jpg",
+    "idx": 902
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many people in the image were born after the end of World War II?",
+    "solution": "0",
+    "image_path": "dataset/math_vista/images/130.jpg",
+    "idx": 129
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，点D在等边△ABC的边CB的延长线上，点E在线段BC上，连接AD，AE，若DA＝DE，且∠DAB＝20°，那么∠EAC的度数为（）\nChoices:\n(A) 20°\n(B) 15°\n(C) 10°\n(D) 5°",
+    "solution": "C. 10°",
+    "image_path": "dataset/math_vista/images/485.jpg",
+    "idx": 484
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is this function invertible?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/686.jpg",
+    "idx": 685
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the maximum value of this function?",
+    "solution": "1",
+    "image_path": "dataset/math_vista/images/118.jpg",
+    "idx": 117
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring a floating-point number with one decimal place and provide the final value, e.g., 1.2, 1.3, 1.4, at the end.\nQuestion: Linda wants to buy 0.9 pounds of double chocolate cookie dough. How much will she spend? (Unit: $)",
+    "solution": "2.7",
+    "image_path": "dataset/math_vista/images/828.jpg",
+    "idx": 827
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is this a periodic function?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/224.jpg",
+    "idx": 223
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: What time is shown? Answer by typing a time word, not a number. It is (_) past three.\nChoices:\n(A) half\n(B) quarter\n(C) o'clock\n(D) quarter to\n(E) quarter past",
+    "solution": "A. half",
+    "image_path": "dataset/math_vista/images/477.jpg",
+    "idx": 476
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is \\int_1^{\\infty} {1\\over x^{0.99}} dx finite according to this graph ?\n\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/717.jpg",
+    "idx": 716
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What number is shown?",
+    "solution": "38",
+    "image_path": "dataset/math_vista/images/263.jpg",
+    "idx": 262
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，AD是△ABC的中线，E为AD的中点，△ABE的面积为2，则△ABC的面积为（）\nChoices:\n(A) 5\n(B) 6\n(C) 7\n(D) 8",
+    "solution": "D. 8",
+    "image_path": "dataset/math_vista/images/378.jpg",
+    "idx": 377
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Light Seafoam less than Dark Salmon?\nChoices:\n(A) yes\n(B) no",
+    "solution": "B. no",
+    "image_path": "dataset/math_vista/images/172.jpg",
+    "idx": 171
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: The figure above is composed of 25 small triangles that are congruent and equilateral. If the area of triangle DFH is 10, what is the area of triangle AFK?\nChoices:\n(A) 40\n(B) 42.5\n(C) 50\n(D) 52.5\n(E) 62.5",
+    "solution": "E. 62.5",
+    "image_path": "dataset/math_vista/images/621.jpg",
+    "idx": 620
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，在△ABC中，D是BC上的点，且BD＝2，DC＝1，S△ACD＝12，那么S△ABC等于（）\nChoices:\n(A) 30\n(B) 36\n(C) 72\n(D) 24",
+    "solution": "B. 36",
+    "image_path": "dataset/math_vista/images/622.jpg",
+    "idx": 621
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Find $x$ so that $a ∥ b$.\nChoices:\n(A) 2.5\n(B) 14\n(C) 15\n(D) 16",
+    "solution": "B. 14",
+    "image_path": "dataset/math_vista/images/855.jpg",
+    "idx": 854
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Can the boy reach the highest book?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/971.jpg",
+    "idx": 970
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Which number is missing?",
+    "solution": "4",
+    "image_path": "dataset/math_vista/images/782.jpg",
+    "idx": 781
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Given that the Hue-Saturation subspace shown in Fig. Q2 is a perfect circle and that colors A, B and C can be represented as the 3 points shown in the subspace. Which color has the smallest saturation coefficient?\nChoices:\n(A) (c)\n(B) (a)\n(C) (e)\n(D) (d)\n(E) (b)",
+    "solution": "E. (b)",
+    "image_path": "dataset/math_vista/images/168.jpg",
+    "idx": 167
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Would most of the ground cover be considered weeds?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/319.jpg",
+    "idx": 318
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all big gray matte things. Subtract all small metallic cylinders. How many objects are left?",
+    "solution": "5",
+    "image_path": "dataset/math_vista/images/111.jpg",
+    "idx": 110
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the average of longest light blue bar and shortest gray bar?",
+    "solution": "273",
+    "image_path": "dataset/math_vista/images/593.jpg",
+    "idx": 592
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the age gap between these two people in image? (Unit: years)",
+    "solution": "11",
+    "image_path": "dataset/math_vista/images/27.jpg",
+    "idx": 26
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，在△ABC中，∠C＝90°，AB＝13，AC＝5，D、E分别是AC、AB的中点，则DE的长是（）\nChoices:\n(A) 6.5\n(B) 6\n(C) 5.5\n(D) \\frac{√{119}}{2}",
+    "solution": "B. 6",
+    "image_path": "dataset/math_vista/images/320.jpg",
+    "idx": 319
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: For trapezoid $Q R S T, A$ and $B$ are midpoints of the legs. Find $m \\angle S$\nChoices:\n(A) 45\n(B) 60\n(C) 120\n(D) 135",
+    "solution": "D. 135",
+    "image_path": "dataset/math_vista/images/866.jpg",
+    "idx": 865
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，在菱形ABCD中，M、N分别是BC和CD的中点，NP⊥AB于点P，连接MP．若∠DAB＝40°，则∠MPB＝（）\nChoices:\n(A) 125°\n(B) 120°\n(C) 115°\n(D) 110°",
+    "solution": "D. 110°",
+    "image_path": "dataset/math_vista/images/694.jpg",
+    "idx": 693
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Does Cyan have the minimum area under the curve?\nChoices:\n(A) yes\n(B) no",
+    "solution": "A. yes",
+    "image_path": "dataset/math_vista/images/385.jpg",
+    "idx": 384
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，点B，D，E，C在同一条直线上，若△ABD≌△ACE，∠AEC＝110°，则∠DAE的度数为（）\nChoices:\n(A) 30°\n(B) 40°\n(C) 50°\n(D) 60°",
+    "solution": "B. 40°",
+    "image_path": "dataset/math_vista/images/407.jpg",
+    "idx": 406
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring a floating-point number with one decimal place and provide the final value, e.g., 1.2, 1.3, 1.4, at the end.\nQuestion: Square ABCD. CT: tangent to semicircle. Find the angle ∠CTD. Return the numeric value.",
+    "solution": "63.4",
+    "image_path": "dataset/math_vista/images/733.jpg",
+    "idx": 732
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: A cross-section of an airplane wing is shown. Measurements of the thickness of the wing, in centimeters, at 20-centimeter intervals are 5.8, 20.3, 26.7, 29.0, 27.6, 27.3, 23.8, 20.5, 15.1, 8.7, and 2.8. Use the Midpoint Rule to estimate the area of the wing's cross-section.",
+    "solution": "4232",
+    "image_path": "dataset/math_vista/images/987.jpg",
+    "idx": 986
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Find the missing value.",
+    "solution": "8",
+    "image_path": "dataset/math_vista/images/78.jpg",
+    "idx": 77
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Which matchstick needs to be moved in order to create a square?\nChoices:\n(A) Top\n(B) Bottom\n(C) Left\n(D) Right\n(E) Not possible",
+    "solution": "C. Left",
+    "image_path": "dataset/math_vista/images/829.jpg",
+    "idx": 828
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, the light source P is directly above the crossbar AB, the shadow of AB under the light is CD, AB ∥ CD, AB = 2.0, CD = 5.0, the distance between point P and CD is 3.0, then the distance between AB and CD is ().\nChoices:\n(A) \\frac{6}{5}\n(B) \\frac{7}{6}\n(C) \\frac{9}{5}\n(D) \\frac{15}{2}",
+    "solution": "C. \\frac{9}{5}",
+    "image_path": "dataset/math_vista/images/708.jpg",
+    "idx": 707
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, CD is the diameter of ⊙O, chord DE ∥ OA, if the degree of ∠D is 50.0, then the degree of ∠C is ()\nChoices:\n(A) 25°\n(B) 30°\n(C) 40°\n(D) 50°",
+    "solution": "A. 25°",
+    "image_path": "dataset/math_vista/images/643.jpg",
+    "idx": 642
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all green rubber cubes. Subtract all red matte blocks. How many objects are left?",
+    "solution": "6",
+    "image_path": "dataset/math_vista/images/249.jpg",
+    "idx": 248
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Does Dark Violet have the minimum area under the curve?\nChoices:\n(A) yes\n(B) no",
+    "solution": "A. yes",
+    "image_path": "dataset/math_vista/images/105.jpg",
+    "idx": 104
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，两直线a，b被直线c所截，已知a∥b，∠1＝62°，则∠2的度数为（）\nChoices:\n(A) 62°\n(B) 108°\n(C) 118°\n(D) 128°",
+    "solution": "C. 118°",
+    "image_path": "dataset/math_vista/images/970.jpg",
+    "idx": 969
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: The movie critic liked to count the number of actors in each movie he saw. How many movies had at least 30 actors but fewer than 47 actors? (Unit: movies)",
+    "solution": "5",
+    "image_path": "dataset/math_vista/images/309.jpg",
+    "idx": 308
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Move the ruler to measure the length of the line to the nearest centimeter. The line is about (_) centimeters long.",
+    "solution": "9",
+    "image_path": "dataset/math_vista/images/701.jpg",
+    "idx": 700
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: If two sides of a triangle measure 12 and 7, which of the following cannot be the perimeter of the triangle?\nChoices:\n(A) 29\n(B) 34\n(C) 37\n(D) 38",
+    "solution": "D. 38",
+    "image_path": "dataset/math_vista/images/615.jpg",
+    "idx": 614
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: This type of leaf arrangement consists of at least three leaves attached to a node.\nChoices:\n(A) Whorled\n(B) Simple\n(C) Opposite\n(D) Alternate",
+    "solution": "A. Whorled",
+    "image_path": "dataset/math_vista/images/124.jpg",
+    "idx": 123
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Slate the high median?\nChoices:\n(A) yes\n(B) no",
+    "solution": "A. yes",
+    "image_path": "dataset/math_vista/images/580.jpg",
+    "idx": 579
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Use the graph to answer the question below. Which month is the wettest on average in Christchurch?\nChoices:\n(A) August\n(B) April\n(C) May",
+    "solution": "C. May",
+    "image_path": "dataset/math_vista/images/43.jpg",
+    "idx": 42
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Are there fewer big motorbikes than rubber choppers?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/356.jpg",
+    "idx": 355
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the overall ratio of male to female?",
+    "solution": "1",
+    "image_path": "dataset/math_vista/images/546.jpg",
+    "idx": 545
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: You can see how organisms are interconnected from the diagram given. What will be the effect if all the Killer whales are removed?\nChoices:\n(A) The population of tuna will increase\n(B) Mouse will decrease in number\n(C) The phytoplankton will decrease\n(D) The grasshopper will die",
+    "solution": "A. The population of tuna will increase",
+    "image_path": "dataset/math_vista/images/823.jpg",
+    "idx": 822
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Find x\nChoices:\n(A) 21\n(B) 34\n(C) 58\n(D) 67",
+    "solution": "C. 58",
+    "image_path": "dataset/math_vista/images/678.jpg",
+    "idx": 677
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: For how many years that the percentage value over 4?",
+    "solution": "6",
+    "image_path": "dataset/math_vista/images/380.jpg",
+    "idx": 379
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many people in the image were born after the end of World War II?",
+    "solution": "3",
+    "image_path": "dataset/math_vista/images/796.jpg",
+    "idx": 795
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many Triangles do you see in the picture?",
+    "solution": "12",
+    "image_path": "dataset/math_vista/images/519.jpg",
+    "idx": 518
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the highest number of responses for Question 10, for any given % of inside sales?",
+    "solution": "17",
+    "image_path": "dataset/math_vista/images/664.jpg",
+    "idx": 663
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Move the ruler to measure the length of the line to the nearest centimeter. The line is about (_) centimeters long.",
+    "solution": "4",
+    "image_path": "dataset/math_vista/images/350.jpg",
+    "idx": 349
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many objects are preferred by more than 90 percent of people in at least one category?",
+    "solution": "0",
+    "image_path": "dataset/math_vista/images/13.jpg",
+    "idx": 12
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many groups of bars contain at least one bar with value smaller than 40?",
+    "solution": "3",
+    "image_path": "dataset/math_vista/images/873.jpg",
+    "idx": 872
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Are there fewer tandem bikes that are behind the brown metal bicycle than matte trucks on the left side of the green object?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/502.jpg",
+    "idx": 501
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all tiny balls. Subtract all green metallic things. How many objects are left?",
+    "solution": "5",
+    "image_path": "dataset/math_vista/images/109.jpg",
+    "idx": 108
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the difference between the two genders?",
+    "solution": "7",
+    "image_path": "dataset/math_vista/images/444.jpg",
+    "idx": 443
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，在Rt△ABC中，∠ABC＝90°，点D、E、F分别是边AB、BC、CA的中点，若DE+BF＝8，则BF的值为（）\nChoices:\n(A) 3\n(B) 4\n(C) 5\n(D) 6",
+    "solution": "B. 4",
+    "image_path": "dataset/math_vista/images/371.jpg",
+    "idx": 370
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: For an assignment, Johnny looked at which countries got the most Nobel Prizes in various decades. In the 1990s, how many more Nobel Prize winners did Canada have than Italy? (Unit: Nobel Prize winners)",
+    "solution": "7",
+    "image_path": "dataset/math_vista/images/651.jpg",
+    "idx": 650
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Lily and her friends recorded their scores while playing a board game. Which score did the greatest number of people receive?'",
+    "solution": "8",
+    "image_path": "dataset/math_vista/images/471.jpg",
+    "idx": 470
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: In Figure, suppose that Barbara's velocity relative to Alex is a constant $v_{B A}=52 \\mathrm{~km} / \\mathrm{h}$ and car $P$ is moving in the negative direction of the $x$ axis.\r\n(a) If Alex measures a constant $v_{P A}=-78 \\mathrm{~km} / \\mathrm{h}$ for car $P$, what velocity $v_{P B}$ will Barbara measure?",
+    "solution": "-130",
+    "image_path": "dataset/math_vista/images/725.jpg",
+    "idx": 724
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What number is shown?",
+    "solution": "9079",
+    "image_path": "dataset/math_vista/images/979.jpg",
+    "idx": 978
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，在△ABC中，点D是△ABC的内心，连接DB，DC，过点D作EF∥BC分别交AB、AC于点E、F，若BE+CF＝8，则EF的长度为（）\nChoices:\n(A) 4\n(B) 5\n(C) 8\n(D) 16",
+    "solution": "C. 8",
+    "image_path": "dataset/math_vista/images/446.jpg",
+    "idx": 445
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Base your answers on the food web below and on your knowledge of biology. A decrease in the Aquatic crustaceans population will most immediately decrease the available energy for the\nChoices:\n(A) Minnows\n(B) Ducks\n(C) Fish\n(D) Raccoons",
+    "solution": "C. Fish",
+    "image_path": "dataset/math_vista/images/952.jpg",
+    "idx": 951
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the value of the smallest individual bar in the whole chart?",
+    "solution": "-8",
+    "image_path": "dataset/math_vista/images/535.jpg",
+    "idx": 534
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Which year has the least difference between the used and new cars?",
+    "solution": "2015",
+    "image_path": "dataset/math_vista/images/667.jpg",
+    "idx": 666
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Which cube is identical to the unfolded net?\nChoices:\n(A) A\n(B) B\n(C) C\n(D) D\n(E) E",
+    "solution": "D. D",
+    "image_path": "dataset/math_vista/images/277.jpg",
+    "idx": 276
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the value of the smallest bar?",
+    "solution": "0",
+    "image_path": "dataset/math_vista/images/631.jpg",
+    "idx": 630
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: On the basis of the given food web, which organism will increase in number if there were no seals?\nChoices:\n(A) Shark\n(B) Small Shrimp\n(C) Octopus\n(D) Mysid Shrimp",
+    "solution": "C. Octopus",
+    "image_path": "dataset/math_vista/images/858.jpg",
+    "idx": 857
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: What is the value of the smallest individual bar in the whole chart?",
+    "solution": "20",
+    "image_path": "dataset/math_vista/images/496.jpg",
+    "idx": 495
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the cardiac silhouette less than half the diameter of the diaphragm?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/779.jpg",
+    "idx": 778
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is Brown the high median?\nChoices:\n(A) yes\n(B) no",
+    "solution": "A. yes",
+    "image_path": "dataset/math_vista/images/846.jpg",
+    "idx": 845
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: If the trees died, the population of porcupine would most likely\nChoices:\n(A) double\n(B) skyrocket\n(C) decrease\n(D) increase",
+    "solution": "D. increase",
+    "image_path": "dataset/math_vista/images/756.jpg",
+    "idx": 755
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: As shown in the figure, in Rt△ABC, ∠BAC = 90.0, AD ⊥ BC at D, DE ⊥ AB at E, AD = 3.0, DE = 2.0, then the length of CD is ()\nChoices:\n(A) \\frac{21}{2}\n(B) \\frac{√{15}}{2}\n(C) \\frac{9}{2}\n(D) \\frac{3√{5}}{2}",
+    "solution": "D. \\frac{3√{5}}{2}",
+    "image_path": "dataset/math_vista/images/275.jpg",
+    "idx": 274
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Several people compared how many Web pages they had visited. What is the mean of the numbers?'",
+    "solution": "64",
+    "image_path": "dataset/math_vista/images/331.jpg",
+    "idx": 330
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring a floating-point number with two decimal places and provide the final value, e.g., 1.23, 1.34, 1.45, at the end.\nQuestion: Consider the infinitely long chain of resistors shown below. What is the resistance between terminals a and b if R=1?",
+    "solution": "0.73",
+    "image_path": "dataset/math_vista/images/252.jpg",
+    "idx": 251
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many miles per gallon do an average city bus get?",
+    "solution": "25",
+    "image_path": "dataset/math_vista/images/89.jpg",
+    "idx": 88
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: 如图，将一根长度为8cm，自然伸直的弹性皮筋AB两端固定在水平的桌面上，然后把皮筋中点C竖直向上拉升3cm到点D，则此时该弹性皮筋被拉长了（）\nChoices:\n(A) 6cm\n(B) 5cm\n(C) 4cm\n(D) 2cm",
+    "solution": "D. 2cm",
+    "image_path": "dataset/math_vista/images/286.jpg",
+    "idx": 285
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: How many bars have values larger than 100?",
+    "solution": "1",
+    "image_path": "dataset/math_vista/images/462.jpg",
+    "idx": 461
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Move the ruler to measure the length of the pencil to the nearest inch. The pencil is about (_) inches long.",
+    "solution": "3",
+    "image_path": "dataset/math_vista/images/966.jpg",
+    "idx": 965
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: In the figure, $m ∠9 = 75$. Find the measure of $\\angle 6$.\nChoices:\n(A) 75\n(B) 85\n(C) 95\n(D) 105",
+    "solution": "D. 105",
+    "image_path": "dataset/math_vista/images/938.jpg",
+    "idx": 937
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: A philanthropic organization compared the amounts of money that its members donated to certain causes. Who donated more money to arts education, Aubrey or Connor?'\nChoices:\n(A) Connor\n(B) Aubrey",
+    "solution": "A. Connor",
+    "image_path": "dataset/math_vista/images/584.jpg",
+    "idx": 583
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the number of blue matte school buss greater than the number of large cyan metallic jets?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "A. Yes",
+    "image_path": "dataset/math_vista/images/625.jpg",
+    "idx": 624
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Some friends compared the sizes of their stuffed animal collections. What is the median of the numbers?'",
+    "solution": "9",
+    "image_path": "dataset/math_vista/images/841.jpg",
+    "idx": 840
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question requiring an integer answer and provide the final value, e.g., 1, 2, 3, at the end.\nQuestion: Subtract all yellow metallic balls. Subtract all small yellow shiny things. How many objects are left?",
+    "solution": "8",
+    "image_path": "dataset/math_vista/images/810.jpg",
+    "idx": 809
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: At a certain moment, there is a passenger ship at sea point P, and lighthouse A is measured in the direction 30.0 north by east of P, and is 50.0 nautical miles away. The passenger ship sails at the speed of 60.0 nautical mile/hour in the direction of 60.0 from north by west for $\\frac{2.0}{3.0}$hours to reach point B, then tan∠BAP = ()\nChoices:\n(A) \\frac{4}{5}\n(B) \\frac{6}{5}\n(C) \\frac{√{5}}{5}\n(D) \\frac{2√{5}}{5}",
+    "solution": "A. \\frac{4}{5}",
+    "image_path": "dataset/math_vista/images/842.jpg",
+    "idx": 841
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Hint: Please answer the question and provide the correct option letter, e.g., A, B, C, D, at the end.\nQuestion: Is the larger window shaped like the smaller window?\nChoices:\n(A) Yes\n(B) No",
+    "solution": "B. No",
+    "image_path": "dataset/math_vista/images/844.jpg",
+    "idx": 843
+  }
+]

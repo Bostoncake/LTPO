@@ -1,0 +1,1802 @@
+[
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the expected ratio of offspring with climbing growth to offspring with bush growth? Choose the most likely ratio.\n\nOptions:\nA. 2:2\nB. 0:4\nC. 1:3\nD. 3:1\nE. 4:0",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_5140639544131899602.png",
+    "idx": 1665
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which continent is highlighted?\n\nOptions:\nA. Asia\nB. Africa\nC. Antarctica\nD. Australia",
+    "solution": "B. Africa",
+    "image_path": "dataset/scienceqa/images/test/sample_3846552505110746693.png",
+    "idx": 1781
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Colorado?\n\nOptions:\nA. Denver\nB. Boulder\nC. Olympia\nD. Tallahassee",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-2555194112616497824.png",
+    "idx": 477
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which country is highlighted?\n\nOptions:\nA. Dominica\nB. Haiti\nC. Cuba\nD. The Bahamas",
+    "solution": "B. Haiti",
+    "image_path": "dataset/scienceqa/images/test/sample_-1037475186396268819.png",
+    "idx": 672
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Complete the sentence.\nThe word \"antebellum\" means ().\n\nOptions:\nA. after the long peace\nB. before the war\nC. after the election\nD. before the feast",
+    "solution": "B. before the war",
+    "image_path": "dataset/scienceqa/images/test/sample_7757383582167174017.png",
+    "idx": 1585
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of these organisms contains matter that was once part of the bear sedge?\n\nOptions:\nA. Arctic fox\nB. barren-ground caribou\nC. bilberry",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-5673373069313211857.png",
+    "idx": 302
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the name of the colony shown?\n\nOptions:\nA. South Carolina\nB. Massachusetts\nC. New Jersey\nD. Georgia",
+    "solution": "C. New Jersey",
+    "image_path": "dataset/scienceqa/images/test/sample_5480986741800807516.png",
+    "idx": 1615
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which solution has a higher concentration of green particles?\n\nOptions:\nA. Solution B\nB. Solution A\nC. neither; their concentrations are the same",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_3671371441879237658.png",
+    "idx": 1844
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Is a bowling ball a solid, a liquid, or a gas?\n\nOptions:\nA. a liquid\nB. a solid\nC. a gas",
+    "solution": "B. a solid",
+    "image_path": "dataset/scienceqa/images/test/sample_4539687598564041217.png",
+    "idx": 1220
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnitude of the magnetic force is the same in both pairs.\nB. The magnitude of the magnetic force is smaller in Pair 1.\nC. The magnitude of the magnetic force is smaller in Pair 2.",
+    "solution": "C. The magnitude of the magnetic force is smaller in Pair 2.",
+    "image_path": "dataset/scienceqa/images/test/sample_5933323343931043933.png",
+    "idx": 5
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnitude of the magnetic force is greater in Pair 1.\nB. The magnitude of the magnetic force is greater in Pair 2.\nC. The magnitude of the magnetic force is the same in both pairs.",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-559229770670281761.png",
+    "idx": 567
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Maryland?\n\nOptions:\nA. Birmingham\nB. Frankfort\nC. Annapolis\nD. Baltimore",
+    "solution": "C. Annapolis",
+    "image_path": "dataset/scienceqa/images/test/sample_7962962129956554474.png",
+    "idx": 1758
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which continent is highlighted?\n\nOptions:\nA. Asia\nB. Europe\nC. Australia\nD. North America",
+    "solution": "B. Europe",
+    "image_path": "dataset/scienceqa/images/test/sample_2114230027039915864.png",
+    "idx": 2015
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Alabama?\n\nOptions:\nA. Montgomery\nB. Columbus\nC. Oklahoma City\nD. Birmingham",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_944420445195486946.png",
+    "idx": 296
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the name of the colony shown?\n\nOptions:\nA. Maryland\nB. New Jersey\nC. Virginia\nD. West Virginia",
+    "solution": "C. Virginia",
+    "image_path": "dataset/scienceqa/images/test/sample_3090725006728919371.png",
+    "idx": 266
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which statement describes the Peary Land ecosystem?\n\nOptions:\nA. It has warm summers and cool winters.\nB. It has many evergreen trees.\nC. It has mostly small plants.",
+    "solution": "C. It has mostly small plants.",
+    "image_path": "dataset/scienceqa/images/test/sample_-5669482212284227418.png",
+    "idx": 1106
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of the following could Emmy's test show?\n\nOptions:\nA. if the blade guards would break in a crash\nB. how much the drone weighed with the blade guards\nC. if adding the blade guards made the drone fly poorly",
+    "solution": "C. if adding the blade guards made the drone fly poorly",
+    "image_path": "dataset/scienceqa/images/test/sample_-5716148565637308603.png",
+    "idx": 513
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Maine?\n\nOptions:\nA. Augusta\nB. Boston\nC. Topeka\nD. Green Bay",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_1129536351700680795.png",
+    "idx": 1635
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Florida?\n\nOptions:\nA. Denver\nB. Tallahassee\nC. Tampa\nD. Orlando",
+    "solution": "B. Tallahassee",
+    "image_path": "dataset/scienceqa/images/test/sample_-3565110502330921631.png",
+    "idx": 357
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which country is highlighted?\n\nOptions:\nA. Saint Vincent and the Grenadines\nB. Saint Lucia\nC. Grenada\nD. Haiti",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-7626422225622174092.png",
+    "idx": 225
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Is the air inside a bubble a solid, a liquid, or a gas?\n\nOptions:\nA. a liquid\nB. a gas\nC. a solid",
+    "solution": "B. a gas",
+    "image_path": "dataset/scienceqa/images/test/sample_2315195778906922895.png",
+    "idx": 1353
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of these cities is marked on the map?\n\nOptions:\nA. New York City\nB. Washington, D.C.\nC. Philadelphia\nD. Boston",
+    "solution": "C. Philadelphia",
+    "image_path": "dataset/scienceqa/images/test/sample_5568334692951074859.png",
+    "idx": 1774
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of these states is farthest north?\n\nOptions:\nA. Florida\nB. Illinois\nC. Ohio\nD. New Hampshire",
+    "solution": "D. New Hampshire",
+    "image_path": "dataset/scienceqa/images/test/sample_-262174875333149833.png",
+    "idx": 52
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnetic force is weaker in Pair 2.\nB. The strength of the magnetic force is the same in both pairs.\nC. The magnetic force is weaker in Pair 1.",
+    "solution": "C. The magnetic force is weaker in Pair 1.",
+    "image_path": "dataset/scienceqa/images/test/sample_1086435041183568785.png",
+    "idx": 269
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these three objects have in common?\n\nOptions:\nA. fragile\nB. bouncy\nC. yellow",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_2896540790285970375.png",
+    "idx": 30
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the organism in the same genus as the Chinese alligator.\n\nOptions:\nA. Miscanthus sinensis\nB. Alligator sinensis\nC. Strix varia",
+    "solution": "B. Alligator sinensis",
+    "image_path": "dataset/scienceqa/images/test/sample_-8691521318436998386.png",
+    "idx": 733
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Indiana?\n\nOptions:\nA. Indianapolis\nB. Jefferson City\nC. Newport\nD. Frankfort",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-763951062925533855.png",
+    "idx": 1617
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Compare the average kinetic energies of the particles in each sample. Which sample has the higher temperature?\n\nOptions:\nA. sample A\nB. sample B\nC. neither; the samples have the same temperature",
+    "solution": "B. sample B",
+    "image_path": "dataset/scienceqa/images/test/sample_-1234585750499060011.png",
+    "idx": 1614
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these two objects have in common?\n\nOptions:\nA. smooth\nB. rough",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-2247664509854736529.png",
+    "idx": 487
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which solution has a higher concentration of yellow particles?\n\nOptions:\nA. Solution B\nB. Solution A\nC. neither; their concentrations are the same",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-1656387507000559629.png",
+    "idx": 1205
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Colorado?\n\nOptions:\nA. Santa Fe\nB. Denver\nC. Boise\nD. Colorado Springs",
+    "solution": "B. Denver",
+    "image_path": "dataset/scienceqa/images/test/sample_5195328719498915569.png",
+    "idx": 663
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the organism in the same species as the pink-backed pelican.\n\nOptions:\nA. Balearica pavonina\nB. Tyto alba\nC. Pelecanus rufescens",
+    "solution": "C. Pelecanus rufescens",
+    "image_path": "dataset/scienceqa/images/test/sample_-5508435523349904040.png",
+    "idx": 32
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. According to the text, what evidence of a volcanic eruption did the captain observe?\n\nOptions:\nA. He heard a report on the radio warning about a volcanic eruption.\nB. He saw a nearby boat that was on fire.\nC. He smelled sulfur and saw pieces of molten rock shooting out of the water.",
+    "solution": "C. He smelled sulfur and saw pieces of molten rock shooting out of the water.",
+    "image_path": "dataset/scienceqa/images/test/sample_-6342191580525858438.png",
+    "idx": 356
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of the following could Diane and Sofia's test show?\n\nOptions:\nA. if a new batch of concrete was firm enough to use\nB. if the concrete from each batch took the same amount of time to dry",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-124908535129100833.png",
+    "idx": 543
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the amphibian below.\n\nOptions:\nA. brown tree frog\nB. woodpecker",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-6534171330761286424.png",
+    "idx": 107
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnetic force is stronger in Pair 2.\nB. The magnetic force is stronger in Pair 1.\nC. The strength of the magnetic force is the same in both pairs.",
+    "solution": "C. The strength of the magnetic force is the same in both pairs.",
+    "image_path": "dataset/scienceqa/images/test/sample_2963116171018354357.png",
+    "idx": 259
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which continent is highlighted?\n\nOptions:\nA. Europe\nB. Africa\nC. Asia\nD. Antarctica",
+    "solution": "C. Asia",
+    "image_path": "dataset/scienceqa/images/test/sample_-668666797915118856.png",
+    "idx": 1519
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Hawaii?\n\nOptions:\nA. Honolulu\nB. Little Rock\nC. Hilo\nD. Jefferson City",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-1092344674804266455.png",
+    "idx": 862
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Does this passage describe the weather or the climate?\n\nOptions:\nA. climate\nB. weather",
+    "solution": "B. weather",
+    "image_path": "dataset/scienceqa/images/test/sample_1645483615024894020.png",
+    "idx": 1077
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Missouri?\n\nOptions:\nA. Salem\nB. Saint Louis\nC. Jefferson City\nD. Kansas City",
+    "solution": "C. Jefferson City",
+    "image_path": "dataset/scienceqa/images/test/sample_3016891916498159501.png",
+    "idx": 232
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Based on the bubble map, which statement is true?\n\nOptions:\nA. Kangaroos eat grass.\nB. Kangaroos sleep during the day.",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-8876270874403342142.png",
+    "idx": 1527
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which month is the hottest on average in Rome?\n\nOptions:\nA. December, January, and February\nB. July and August\nC. March and April",
+    "solution": "B. July and August",
+    "image_path": "dataset/scienceqa/images/test/sample_-7012809619161811700.png",
+    "idx": 130
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Texas?\n\nOptions:\nA. Raleigh\nB. Montgomery\nC. Austin\nD. Dallas",
+    "solution": "C. Austin",
+    "image_path": "dataset/scienceqa/images/test/sample_8774195156080283617.png",
+    "idx": 975
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Complete the sentence.\nPollination is what happens when ().\n\nOptions:\nA. pollen lands on a female cone\nB. sperm fuses with an egg",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-5144304710214173313.png",
+    "idx": 918
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnitude of the magnetic force is smaller in Pair 2.\nB. The magnitude of the magnetic force is smaller in Pair 1.\nC. The magnitude of the magnetic force is the same in both pairs.",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_2886603589823374496.png",
+    "idx": 1593
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What type of rock is sandstone?\n\nOptions:\nA. igneous\nB. metamorphic\nC. sedimentary",
+    "solution": "C. sedimentary",
+    "image_path": "dataset/scienceqa/images/test/sample_1052627461213601159.png",
+    "idx": 741
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Louisiana?\n\nOptions:\nA. Frankfort\nB. Salem\nC. Baton Rouge\nD. New Orleans",
+    "solution": "C. Baton Rouge",
+    "image_path": "dataset/scienceqa/images/test/sample_-1817028178092137966.png",
+    "idx": 1051
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the organism in the same genus as the gray heron.\n\nOptions:\nA. Lissotriton helveticus\nB. Ardea cinerea\nC. Hyla cinerea",
+    "solution": "B. Ardea cinerea",
+    "image_path": "dataset/scienceqa/images/test/sample_-6055755717737748844.png",
+    "idx": 1215
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of these states is farthest south?\n\nOptions:\nA. Kansas\nB. Connecticut\nC. Ohio\nD. South Dakota",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-2567446003937918384.png",
+    "idx": 223
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which ocean is highlighted?\n\nOptions:\nA. the Southern Ocean\nB. the Pacific Ocean\nC. the Arctic Ocean\nD. the Indian Ocean",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_84823365853696081.png",
+    "idx": 925
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the fish below.\n\nOptions:\nA. flamingo\nB. bull shark",
+    "solution": "B. bull shark",
+    "image_path": "dataset/scienceqa/images/test/sample_7828063108486394314.png",
+    "idx": 1031
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Connecticut?\n\nOptions:\nA. Spokane\nB. Bridgeport\nC. New Haven\nD. Hartford",
+    "solution": "D. Hartford",
+    "image_path": "dataset/scienceqa/images/test/sample_-8176861933299691140.png",
+    "idx": 453
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Wisconsin?\n\nOptions:\nA. Madison\nB. Green Bay\nC. Milwaukee\nD. Jefferson City",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-6353899951631648489.png",
+    "idx": 1936
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Oregon?\n\nOptions:\nA. Boston\nB. Portland\nC. Salem\nD. Jefferson City",
+    "solution": "C. Salem",
+    "image_path": "dataset/scienceqa/images/test/sample_8813526138204942056.png",
+    "idx": 1259
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Compare the average kinetic energies of the particles in each sample. Which sample has the higher temperature?\n\nOptions:\nA. neither; the samples have the same temperature\nB. sample A\nC. sample B",
+    "solution": "B. sample A",
+    "image_path": "dataset/scienceqa/images/test/sample_-1486257850314431000.png",
+    "idx": 88
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Idaho?\n\nOptions:\nA. Portland\nB. Nampa\nC. Columbus\nD. Boise",
+    "solution": "D. Boise",
+    "image_path": "dataset/scienceqa/images/test/sample_5729492211661557994.png",
+    "idx": 1489
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these three objects have in common?\n\nOptions:\nA. fuzzy\nB. smooth\nC. transparent",
+    "solution": "B. smooth",
+    "image_path": "dataset/scienceqa/images/test/sample_3862792429373292102.png",
+    "idx": 1604
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which i in column 4?\n\nOptions:\nA. the theater\nB. the fire department\nC. the pond\nD. the shopping mall",
+    "solution": "D. the shopping mall",
+    "image_path": "dataset/scienceqa/images/test/sample_3712929050371213124.png",
+    "idx": 1861
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the name of the colony shown?\n\nOptions:\nA. Maryland\nB. North Carolina\nC. Delaware\nD. Virginia",
+    "solution": "D. Virginia",
+    "image_path": "dataset/scienceqa/images/test/sample_-3853146739102077187.png",
+    "idx": 1775
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which air temperature was measured within the outlined area shown?\n\nOptions:\nA. 30°C\nB. 14°C\nC. 10°C",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_1024232467020600498.png",
+    "idx": 1349
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of North Dakota?\n\nOptions:\nA. Kansas City\nB. Bismarck\nC. Fargo\nD. Davenport",
+    "solution": "B. Bismarck",
+    "image_path": "dataset/scienceqa/images/test/sample_621488494909937712.png",
+    "idx": 1067
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these three objects have in common?\n\nOptions:\nA. smooth\nB. scratchy\nC. slippery",
+    "solution": "B. scratchy",
+    "image_path": "dataset/scienceqa/images/test/sample_7640512566793071899.png",
+    "idx": 617
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnitude of the magnetic force is the same in both pairs.\nB. The magnitude of the magnetic force is greater in Pair 1.\nC. The magnitude of the magnetic force is greater in Pair 2.",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-7301204853181034750.png",
+    "idx": 938
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of the following fossils is younger? Select the more likely answer.\n\nOptions:\nA. fern\nB. palm leaf",
+    "solution": "B. palm leaf",
+    "image_path": "dataset/scienceqa/images/test/sample_3971441653857959892.png",
+    "idx": 1317
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Complete the statement.\nCalcium oxide is ().\n\nOptions:\nA. an elementary substance\nB. a compound",
+    "solution": "B. a compound",
+    "image_path": "dataset/scienceqa/images/test/sample_8077686006588317991.png",
+    "idx": 1974
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the name of the colony shown?\n\nOptions:\nA. New Jersey\nB. South Carolina\nC. West Virginia\nD. Rhode Island",
+    "solution": "B. South Carolina",
+    "image_path": "dataset/scienceqa/images/test/sample_2945118128808698881.png",
+    "idx": 63
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Identify the question that Kira's experiment can best answer.\n\nOptions:\nA. Does linen fabric turn darker than cotton fabric when soaked in a mixture of black dye and water?\nB. Does fabric turn darker when soaked in a mixture of black dye and water for 15 minutes compared to 30 minutes?",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_2817770649042021388.png",
+    "idx": 124
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Why are deserts so dry?\n\nOptions:\nA. The sand soaks up all the rain.\nB. They don't get very much rain.",
+    "solution": "B. They don't get very much rain.",
+    "image_path": "dataset/scienceqa/images/test/sample_-4545242044902435233.png",
+    "idx": 980
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which solution has a higher concentration of blue particles?\n\nOptions:\nA. neither; their concentrations are the same\nB. Solution B\nC. Solution A",
+    "solution": "B. Solution B",
+    "image_path": "dataset/scienceqa/images/test/sample_-4446836646514167013.png",
+    "idx": 1735
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of California?\n\nOptions:\nA. Cheyenne\nB. Sacramento\nC. Honolulu\nD. Birmingham",
+    "solution": "B. Sacramento",
+    "image_path": "dataset/scienceqa/images/test/sample_-8969736010738303694.png",
+    "idx": 822
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the name of the colony shown?\n\nOptions:\nA. Georgia\nB. Rhode Island\nC. Pennsylvania\nD. Iowa",
+    "solution": "C. Pennsylvania",
+    "image_path": "dataset/scienceqa/images/test/sample_7346731276666228584.png",
+    "idx": 873
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. During this time, thermal energy was transferred from () to ().\n\nOptions:\nA. the surroundings . . . each aquarium\nB. each aquarium . . . the surroundings",
+    "solution": "B. each aquarium . . . the surroundings",
+    "image_path": "dataset/scienceqa/images/test/sample_-6868939457297857951.png",
+    "idx": 1405
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which animal's legs are also adapted for wading?\n\nOptions:\nA. common kingfisher\nB. painted stork",
+    "solution": "B. painted stork",
+    "image_path": "dataset/scienceqa/images/test/sample_2926680162380505975.png",
+    "idx": 221
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Kentucky?\n\nOptions:\nA. Pierre\nB. Lexington\nC. Frankfort\nD. Jefferson City",
+    "solution": "C. Frankfort",
+    "image_path": "dataset/scienceqa/images/test/sample_-8632200824848992806.png",
+    "idx": 1004
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The strength of the magnetic force is the same in both pairs.\nB. The magnetic force is stronger in Pair 1.\nC. The magnetic force is stronger in Pair 2.",
+    "solution": "B. The magnetic force is stronger in Pair 1.",
+    "image_path": "dataset/scienceqa/images/test/sample_3674558112547284933.png",
+    "idx": 1458
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Ohio?\n\nOptions:\nA. Charleston\nB. Columbus\nC. Lincoln\nD. Fargo",
+    "solution": "B. Columbus",
+    "image_path": "dataset/scienceqa/images/test/sample_-6772485732072879242.png",
+    "idx": 1863
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which continent is highlighted?\n\nOptions:\nA. Antarctica\nB. South America\nC. Asia\nD. Europe",
+    "solution": "B. South America",
+    "image_path": "dataset/scienceqa/images/test/sample_-4372307809510426979.png",
+    "idx": 908
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which country is highlighted?\n\nOptions:\nA. Australia\nB. the Marshall Islands\nC. New Zealand\nD. Papua New Guinea",
+    "solution": "C. New Zealand",
+    "image_path": "dataset/scienceqa/images/test/sample_-4265631453561918254.png",
+    "idx": 150
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Is candle wax a mineral?\n\nOptions:\nA. no\nB. yes",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-3911196064078264586.png",
+    "idx": 1841
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the name of the colony shown?\n\nOptions:\nA. North Carolina\nB. Mississippi\nC. New York\nD. Massachusetts",
+    "solution": "C. New York",
+    "image_path": "dataset/scienceqa/images/test/sample_1645043769132335781.png",
+    "idx": 165
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Oklahoma?\n\nOptions:\nA. Tallahassee\nB. Little Rock\nC. Oklahoma City\nD. Missoula",
+    "solution": "C. Oklahoma City",
+    "image_path": "dataset/scienceqa/images/test/sample_1551484790410444865.png",
+    "idx": 659
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Look at the picture. Which word best describes the sound this thunderstorm makes?\n\nOptions:\nA. purring\nB. booming\nC. squeaking",
+    "solution": "B. booming",
+    "image_path": "dataset/scienceqa/images/test/sample_-3382006025535251617.png",
+    "idx": 1245
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Utah?\n\nOptions:\nA. Salt Lake City\nB. Denver\nC. Des Moines\nD. Provo",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-408876412074053229.png",
+    "idx": 303
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Maryland?\n\nOptions:\nA. Juneau\nB. Augusta\nC. Annapolis\nD. Providence",
+    "solution": "C. Annapolis",
+    "image_path": "dataset/scienceqa/images/test/sample_3923290961431638828.png",
+    "idx": 134
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnitude of the magnetic force is greater in Pair 2.\nB. The magnitude of the magnetic force is greater in Pair 1.\nC. The magnitude of the magnetic force is the same in both pairs.",
+    "solution": "B. The magnitude of the magnetic force is greater in Pair 1.",
+    "image_path": "dataset/scienceqa/images/test/sample_-7716238890847345276.png",
+    "idx": 258
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of New Hampshire?\n\nOptions:\nA. Boston\nB. Manchester\nC. Des Moines\nD. Concord",
+    "solution": "D. Concord",
+    "image_path": "dataset/scienceqa/images/test/sample_3072834718668046117.png",
+    "idx": 563
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What can Nina and Ivan trade to each get what they want?\n\nOptions:\nA. Ivan can trade his almonds for Nina's tomatoes.\nB. Nina can trade her tomatoes for Ivan's sandwich.\nC. Nina can trade her tomatoes for Ivan's broccoli.\nD. Ivan can trade his broccoli for Nina's oranges.",
+    "solution": "C. Nina can trade her tomatoes for Ivan's broccoli.",
+    "image_path": "dataset/scienceqa/images/test/sample_1084757786002082927.png",
+    "idx": 1278
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of the following is on the map?\n\nOptions:\nA. water in clouds\nB. water in oceans",
+    "solution": "B. water in oceans",
+    "image_path": "dataset/scienceqa/images/test/sample_-7370244517625377814.png",
+    "idx": 1296
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which solution has a higher concentration of yellow particles?\n\nOptions:\nA. Solution B\nB. neither; their concentrations are the same\nC. Solution A",
+    "solution": "B. neither; their concentrations are the same",
+    "image_path": "dataset/scienceqa/images/test/sample_-3284167316613911576.png",
+    "idx": 1198
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of these states is farthest north?\n\nOptions:\nA. Georgia\nB. Kentucky\nC. New Mexico\nD. Arkansas",
+    "solution": "B. Kentucky",
+    "image_path": "dataset/scienceqa/images/test/sample_-1379906505744331313.png",
+    "idx": 1123
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Wyoming?\n\nOptions:\nA. Santa Fe\nB. Laramie\nC. Salt Lake City\nD. Cheyenne",
+    "solution": "D. Cheyenne",
+    "image_path": "dataset/scienceqa/images/test/sample_5988408755951977933.png",
+    "idx": 665
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What can Bryce and Victor trade to each get what they want?\n\nOptions:\nA. Victor can trade his broccoli for Bryce's oranges.\nB. Bryce can trade his tomatoes for Victor's broccoli.\nC. Victor can trade his almonds for Bryce's tomatoes.\nD. Bryce can trade his tomatoes for Victor's carrots.",
+    "solution": "B. Bryce can trade his tomatoes for Victor's broccoli.",
+    "image_path": "dataset/scienceqa/images/test/sample_-2670205997739126123.png",
+    "idx": 780
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What can Samir and Derek trade to each get what they want?\n\nOptions:\nA. Samir can trade his tomatoes for Derek's carrots.\nB. Derek can trade his broccoli for Samir's oranges.\nC. Derek can trade his almonds for Samir's tomatoes.\nD. Samir can trade his tomatoes for Derek's broccoli.",
+    "solution": "D. Samir can trade his tomatoes for Derek's broccoli.",
+    "image_path": "dataset/scienceqa/images/test/sample_-6958726634802484341.png",
+    "idx": 1223
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Complete the statement.\nPotassium bromide is ().\n\nOptions:\nA. an elementary substance\nB. a compound",
+    "solution": "B. a compound",
+    "image_path": "dataset/scienceqa/images/test/sample_-5839633007217340158.png",
+    "idx": 1086
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of these states is farthest east?\n\nOptions:\nA. North Dakota\nB. Maine\nC. Iowa\nD. Kansas",
+    "solution": "B. Maine",
+    "image_path": "dataset/scienceqa/images/test/sample_8779178320414565219.png",
+    "idx": 603
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the expected ratio of offspring that have horns to offspring that do not have horns? Choose the most likely ratio.\n\nOptions:\nA. 3:1\nB. 2:2\nC. 1:3\nD. 4:0\nE. 0:4",
+    "solution": "E. 0:4",
+    "image_path": "dataset/scienceqa/images/test/sample_12190806754222051.png",
+    "idx": 929
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Alabama?\n\nOptions:\nA. Cheyenne\nB. Charleston\nC. Montgomery\nD. Providence",
+    "solution": "C. Montgomery",
+    "image_path": "dataset/scienceqa/images/test/sample_-4045948520463315323.png",
+    "idx": 1035
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which solution has a higher concentration of green particles?\n\nOptions:\nA. Solution A\nB. Solution B\nC. neither; their concentrations are the same",
+    "solution": "B. Solution B",
+    "image_path": "dataset/scienceqa/images/test/sample_9205203985188055712.png",
+    "idx": 1239
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. In this food web, which organism contains matter that eventually moves to the earthworm?\n\nOptions:\nA. barren-ground caribou\nB. bilberry",
+    "solution": "B. bilberry",
+    "image_path": "dataset/scienceqa/images/test/sample_-1250345565666782151.png",
+    "idx": 881
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of the following could Marcy and Brenda's test show?\n\nOptions:\nA. if a new batch of concrete was firm enough to use\nB. if the concrete from each batch took the same amount of time to dry",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_7650400784521283012.png",
+    "idx": 203
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What can Joey and Darell trade to each get what they want?\n\nOptions:\nA. Joey can trade his tomatoes for Darell's sandwich.\nB. Darell can trade his broccoli for Joey's oranges.\nC. Darell can trade his almonds for Joey's tomatoes.\nD. Joey can trade his tomatoes for Darell's broccoli.",
+    "solution": "D. Joey can trade his tomatoes for Darell's broccoli.",
+    "image_path": "dataset/scienceqa/images/test/sample_3423900587746418997.png",
+    "idx": 1624
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which animal's feet are also adapted for grabbing prey?\n\nOptions:\nA. brahminy kite\nB. dromedary camel",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_5769551567684007403.png",
+    "idx": 1437
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which ocean is highlighted?\n\nOptions:\nA. the Indian Ocean\nB. the Southern Ocean\nC. the Pacific Ocean\nD. the Atlantic Ocean",
+    "solution": "B. the Southern Ocean",
+    "image_path": "dataset/scienceqa/images/test/sample_5285264340723860540.png",
+    "idx": 234
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The strength of the magnetic force is the same in both pairs.\nB. The magnetic force is weaker in Pair 2.\nC. The magnetic force is weaker in Pair 1.",
+    "solution": "C. The magnetic force is weaker in Pair 1.",
+    "image_path": "dataset/scienceqa/images/test/sample_-4832141132398291028.png",
+    "idx": 1746
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which colony was Middle Colonies?\n\nOptions:\nA. Connecticut\nB. Georgia\nC. New Jersey",
+    "solution": "C. New Jersey",
+    "image_path": "dataset/scienceqa/images/test/sample_-533669571662121382.png",
+    "idx": 1340
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Illinois?\n\nOptions:\nA. Springfield\nB. Albany\nC. Chicago\nD. Madison",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_4768327134667485047.png",
+    "idx": 1333
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which solution has a higher concentration of green particles?\n\nOptions:\nA. Solution B\nB. neither; their concentrations are the same\nC. Solution A",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-58661258879891236.png",
+    "idx": 1797
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which animal's legs are also adapted for wading?\n\nOptions:\nA. shoebill\nB. satin bowerbird",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_7972295710349644053.png",
+    "idx": 1574
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnetic force is stronger in Pair 2.\nB. The magnetic force is stronger in Pair 1.\nC. The strength of the magnetic force is the same in both pairs.",
+    "solution": "B. The magnetic force is stronger in Pair 1.",
+    "image_path": "dataset/scienceqa/images/test/sample_-3520236384888242351.png",
+    "idx": 1129
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which animal's feet are also adapted for swimming?\n\nOptions:\nA. water rail\nB. European beaver",
+    "solution": "B. European beaver",
+    "image_path": "dataset/scienceqa/images/test/sample_-225651293771035429.png",
+    "idx": 1476
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these four objects have in common?\n\nOptions:\nA. salty\nB. stretchy\nC. transparent",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_3448422051991748467.png",
+    "idx": 1772
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Hawaii?\n\nOptions:\nA. Lincoln\nB. Honolulu\nC. Hilo\nD. Juneau",
+    "solution": "B. Honolulu",
+    "image_path": "dataset/scienceqa/images/test/sample_6457408618936536389.png",
+    "idx": 440
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the organism in the same species as the Chinese mitten crab.\n\nOptions:\nA. Melanoplus bivittatus\nB. Acanthaster planci\nC. Eriocheir sinensis",
+    "solution": "C. Eriocheir sinensis",
+    "image_path": "dataset/scienceqa/images/test/sample_6518062563358588120.png",
+    "idx": 880
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the name of the colony shown?\n\nOptions:\nA. New Hampshire\nB. Georgia\nC. Rhode Island\nD. Connecticut",
+    "solution": "C. Rhode Island",
+    "image_path": "dataset/scienceqa/images/test/sample_-880366743561360873.png",
+    "idx": 924
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these three objects have in common?\n\nOptions:\nA. translucent\nB. hard\nC. soft",
+    "solution": "B. hard",
+    "image_path": "dataset/scienceqa/images/test/sample_-5294075292577267446.png",
+    "idx": 1818
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Pennsylvania?\n\nOptions:\nA. Harrisburg\nB. Dover\nC. Montpelier\nD. Concord",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_2228472426864414036.png",
+    "idx": 467
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which trait did Galeocerdo have? Select the trait you can observe on the fossil.\n\nOptions:\nA. a round, flat body\nB. fins on its back\nC. gray skin",
+    "solution": "B. fins on its back",
+    "image_path": "dataset/scienceqa/images/test/sample_-3276789380994442934.png",
+    "idx": 847
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Does this passage describe the weather or the climate?\n\nOptions:\nA. climate\nB. weather",
+    "solution": "B. weather",
+    "image_path": "dataset/scienceqa/images/test/sample_2681016111077202040.png",
+    "idx": 694
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these four objects have in common?\n\nOptions:\nA. sticky\nB. stretchy\nC. slippery",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-5649625372651513905.png",
+    "idx": 1694
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Compare the average kinetic energies of the particles in each sample. Which sample has the higher temperature?\n\nOptions:\nA. neither; the samples have the same temperature\nB. sample B\nC. sample A",
+    "solution": "C. sample A",
+    "image_path": "dataset/scienceqa/images/test/sample_7111728434020703116.png",
+    "idx": 928
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Is a crown a solid, a liquid, or a gas?\n\nOptions:\nA. a solid\nB. a gas\nC. a liquid",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_1274422098800902038.png",
+    "idx": 816
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which animal's feet are also adapted for walking on large, floating leaves?\n\nOptions:\nA. Magellan penguin\nB. purple gallinule",
+    "solution": "B. purple gallinule",
+    "image_path": "dataset/scienceqa/images/test/sample_-4995471477836016475.png",
+    "idx": 851
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of the following could Kenji's test show?\n\nOptions:\nA. if the spacecraft was damaged when using a parachute with a 1 m vent going 200 km per hour\nB. how steady a parachute with a 1 m vent was at 200 km per hour\nC. whether a parachute with a 1 m vent would swing too much at 400 km per hour",
+    "solution": "B. how steady a parachute with a 1 m vent was at 200 km per hour",
+    "image_path": "dataset/scienceqa/images/test/sample_1949573728031069469.png",
+    "idx": 1494
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the mammal below.\n\nOptions:\nA. gray wolf\nB. keel-billed toucan",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-7078630682737159842.png",
+    "idx": 194
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Complete the statement.\nEthane is ().\n\nOptions:\nA. an elementary substance\nB. a compound",
+    "solution": "B. a compound",
+    "image_path": "dataset/scienceqa/images/test/sample_-8408019507647349498.png",
+    "idx": 640
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Compare the average kinetic energies of the particles in each sample. Which sample has the higher temperature?\n\nOptions:\nA. sample A\nB. sample B\nC. neither; the samples have the same temperature",
+    "solution": "B. sample B",
+    "image_path": "dataset/scienceqa/images/test/sample_-6323610904789933452.png",
+    "idx": 874
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which country is highlighted?\n\nOptions:\nA. Fiji\nB. Solomon Islands\nC. Vanuatu\nD. Tuvalu",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-1783903585613764530.png",
+    "idx": 1362
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which solution has a higher concentration of pink particles?\n\nOptions:\nA. Solution B\nB. Solution A\nC. neither; their concentrations are the same",
+    "solution": "B. Solution A",
+    "image_path": "dataset/scienceqa/images/test/sample_4900232655357273804.png",
+    "idx": 522
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which material is this bucket made of?\n\nOptions:\nA. metal\nB. porcelain",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-7576903362154762628.png",
+    "idx": 766
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Identify the question that Ashley's experiment can best answer.\n\nOptions:\nA. Do circuits that include iron produce dimmer light than circuits that include copper?\nB. Can light bulbs stay lit longer when circuits include copper or when circuits include iron?",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_2885959127383433662.png",
+    "idx": 1952
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these two objects have in common?\n\nOptions:\nA. rough\nB. stretchy",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_8203771455045675655.png",
+    "idx": 312
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which material are these steps made of?\n\nOptions:\nA. concrete\nB. silk",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_8749667488733750470.png",
+    "idx": 1406
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these four objects have in common?\n\nOptions:\nA. transparent\nB. smooth\nC. flexible",
+    "solution": "B. smooth",
+    "image_path": "dataset/scienceqa/images/test/sample_8163262269905371590.png",
+    "idx": 1890
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnitude of the magnetic force is the same in both pairs.\nB. The magnitude of the magnetic force is greater in Pair 1.\nC. The magnitude of the magnetic force is greater in Pair 2.",
+    "solution": "C. The magnitude of the magnetic force is greater in Pair 2.",
+    "image_path": "dataset/scienceqa/images/test/sample_4847004722180713320.png",
+    "idx": 971
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of New Jersey?\n\nOptions:\nA. Newark\nB. Montpelier\nC. Jersey City\nD. Trenton",
+    "solution": "D. Trenton",
+    "image_path": "dataset/scienceqa/images/test/sample_5622330775598532188.png",
+    "idx": 137
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of New Mexico?\n\nOptions:\nA. Albuquerque\nB. Santa Fe\nC. Carson City\nD. Lexington",
+    "solution": "B. Santa Fe",
+    "image_path": "dataset/scienceqa/images/test/sample_-8922215042585735871.png",
+    "idx": 186
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Is a stuffed hippo a solid, a liquid, or a gas?\n\nOptions:\nA. a gas\nB. a liquid\nC. a solid",
+    "solution": "C. a solid",
+    "image_path": "dataset/scienceqa/images/test/sample_-1878330242882709160.png",
+    "idx": 1703
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property matches this object?\n\nOptions:\nA. flexible\nB. fragile",
+    "solution": "B. fragile",
+    "image_path": "dataset/scienceqa/images/test/sample_-2500325360184611170.png",
+    "idx": 174
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the organism in the same species as the snowy owl.\n\nOptions:\nA. Bubo scandiacus\nB. Ardea herodias\nC. Pelecanus erythrorhynchos",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_6345632524476650993.png",
+    "idx": 190
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which statement describes the Kibale National Forest ecosystem?\n\nOptions:\nA. It has soil that is poor in nutrients.\nB. It has soil that is rich in nutrients.",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_7512457450919485811.png",
+    "idx": 884
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Will these magnets attract or repel each other?\n\nOptions:\nA. attract\nB. repel",
+    "solution": "B. repel",
+    "image_path": "dataset/scienceqa/images/test/sample_-8528050009246412777.png",
+    "idx": 197
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnitude of the magnetic force is the same in both pairs.\nB. The magnitude of the magnetic force is smaller in Pair 1.\nC. The magnitude of the magnetic force is smaller in Pair 2.",
+    "solution": "C. The magnitude of the magnetic force is smaller in Pair 2.",
+    "image_path": "dataset/scienceqa/images/test/sample_4400527611230012767.png",
+    "idx": 1524
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Arizona?\n\nOptions:\nA. Juneau\nB. Phoenix\nC. Provo\nD. Newport",
+    "solution": "B. Phoenix",
+    "image_path": "dataset/scienceqa/images/test/sample_5502301550637328523.png",
+    "idx": 1513
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Earth's organisms rely on the atmosphere for which of the following?\n\nOptions:\nA. stable temperatures\nB. sunlight",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_3784972322687309918.png",
+    "idx": 763
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnetic force is weaker in Pair 1.\nB. The magnetic force is weaker in Pair 2.\nC. The strength of the magnetic force is the same in both pairs.",
+    "solution": "C. The strength of the magnetic force is the same in both pairs.",
+    "image_path": "dataset/scienceqa/images/test/sample_-7664226151198205948.png",
+    "idx": 1662
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these three objects have in common?\n\nOptions:\nA. sticky\nB. bouncy\nC. stretchy",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_5969149410569716955.png",
+    "idx": 1139
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which material is this egg carton made of?\n\nOptions:\nA. wood\nB. styrofoam",
+    "solution": "B. styrofoam",
+    "image_path": "dataset/scienceqa/images/test/sample_8454774930624296530.png",
+    "idx": 122
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these four objects have in common?\n\nOptions:\nA. translucent\nB. flexible\nC. sweet",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-2435764651343532783.png",
+    "idx": 1201
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these four objects have in common?\n\nOptions:\nA. stretchy\nB. shiny\nC. transparent",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_7102943116281952196.png",
+    "idx": 1959
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Does this passage describe the weather or the climate?\n\nOptions:\nA. climate\nB. weather",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-2500992486872816676.png",
+    "idx": 1150
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnetic force is stronger in Pair 2.\nB. The strength of the magnetic force is the same in both pairs.\nC. The magnetic force is stronger in Pair 1.",
+    "solution": "C. The magnetic force is stronger in Pair 1.",
+    "image_path": "dataset/scienceqa/images/test/sample_-4974093529611097551.png",
+    "idx": 675
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of New Hampshire?\n\nOptions:\nA. Manchester\nB. Nampa\nC. Concord\nD. Grand Rapids",
+    "solution": "C. Concord",
+    "image_path": "dataset/scienceqa/images/test/sample_-4563291088058629742.png",
+    "idx": 1372
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which country is highlighted?\n\nOptions:\nA. Saint Lucia\nB. Jamaica\nC. Haiti\nD. Cuba",
+    "solution": "B. Jamaica",
+    "image_path": "dataset/scienceqa/images/test/sample_5652951902890847447.png",
+    "idx": 250
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Connecticut?\n\nOptions:\nA. Bridgeport\nB. Albany\nC. Hartford\nD. New Haven",
+    "solution": "C. Hartford",
+    "image_path": "dataset/scienceqa/images/test/sample_4445631462274647802.png",
+    "idx": 841
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of these states is farthest west?\n\nOptions:\nA. New Mexico\nB. Kansas\nC. Maryland\nD. Alabama",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_5746422129913579133.png",
+    "idx": 724
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of the following could Audrey's test show?\n\nOptions:\nA. whether different types of bacteria would need different nutrients to produce insulin\nB. whether producing more insulin would help the bacteria grow faster\nC. whether she added enough nutrients to help the bacteria produce 20% more insulin",
+    "solution": "C. whether she added enough nutrients to help the bacteria produce 20% more insulin",
+    "image_path": "dataset/scienceqa/images/test/sample_2277890613088251015.png",
+    "idx": 1789
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Connecticut?\n\nOptions:\nA. Hartford\nB. Burlington\nC. Boston\nD. Harrisburg",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-8079649479148083508.png",
+    "idx": 1927
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which number marks the New England Colonies?\n\nOptions:\nA. 1\nB. 3\nC. 2",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_4096589684247209085.png",
+    "idx": 1536
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these two objects have in common?\n\nOptions:\nA. hard\nB. soft",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_5805626246586416089.png",
+    "idx": 866
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Is the following statement about our solar system true or false?\nSaturn's volume is more than 50% of Jupiter's volume.\n\nOptions:\nA. false\nB. true",
+    "solution": "B. true",
+    "image_path": "dataset/scienceqa/images/test/sample_3113159127681118787.png",
+    "idx": 1777
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these three objects have in common?\n\nOptions:\nA. fragile\nB. bouncy\nC. hard",
+    "solution": "C. hard",
+    "image_path": "dataset/scienceqa/images/test/sample_-6673645308530779282.png",
+    "idx": 1875
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Kentucky?\n\nOptions:\nA. Lexington\nB. Frankfort\nC. Anchorage\nD. Baton Rouge",
+    "solution": "B. Frankfort",
+    "image_path": "dataset/scienceqa/images/test/sample_-6364257410772054855.png",
+    "idx": 105
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which country is highlighted?\n\nOptions:\nA. Haiti\nB. Cuba\nC. the Dominican Republic\nD. The Bahamas",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-3751302308646403030.png",
+    "idx": 1983
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which state is highlighted?\n\nOptions:\nA. Missouri\nB. Illinois\nC. Indiana\nD. Michigan",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-2690041585622969266.png",
+    "idx": 589
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Washington?\n\nOptions:\nA. Seattle\nB. Sacramento\nC. Salt Lake City\nD. Olympia",
+    "solution": "D. Olympia",
+    "image_path": "dataset/scienceqa/images/test/sample_4394653991669235216.png",
+    "idx": 1229
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Compare the average kinetic energies of the particles in each sample. Which sample has the higher temperature?\n\nOptions:\nA. sample B\nB. neither; the samples have the same temperature\nC. sample A",
+    "solution": "C. sample A",
+    "image_path": "dataset/scienceqa/images/test/sample_6840397085292064413.png",
+    "idx": 639
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which statement describes the Steigerwald Forest ecosystem?\n\nOptions:\nA. It has soil that is rich in nutrients.\nB. It has a small amount of rain or snow.\nC. It has soil that is poor in nutrients.",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_1610209932391393024.png",
+    "idx": 720
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What can Arianna and Clarence trade to each get what they want?\n\nOptions:\nA. Arianna can trade her tomatoes for Clarence's sandwich.\nB. Arianna can trade her tomatoes for Clarence's broccoli.\nC. Clarence can trade his broccoli for Arianna's oranges.\nD. Clarence can trade his almonds for Arianna's tomatoes.",
+    "solution": "B. Arianna can trade her tomatoes for Clarence's broccoli.",
+    "image_path": "dataset/scienceqa/images/test/sample_-6125829123033656798.png",
+    "idx": 212
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which animal's mouth is also adapted to get insects out of burrows?\n\nOptions:\nA. gorilla\nB. long-beaked echidna",
+    "solution": "B. long-beaked echidna",
+    "image_path": "dataset/scienceqa/images/test/sample_7708607033400635424.png",
+    "idx": 1183
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnetic force is weaker in Pair 2.\nB. The strength of the magnetic force is the same in both pairs.\nC. The magnetic force is weaker in Pair 1.",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-1252977695407838044.png",
+    "idx": 1039
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which solution has a higher concentration of yellow particles?\n\nOptions:\nA. Solution A\nB. Solution B\nC. neither; their concentrations are the same",
+    "solution": "B. Solution B",
+    "image_path": "dataset/scienceqa/images/test/sample_-3533453190217549655.png",
+    "idx": 435
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of these continents does the prime meridian intersect?\n\nOptions:\nA. North America\nB. Africa\nC. South America",
+    "solution": "B. Africa",
+    "image_path": "dataset/scienceqa/images/test/sample_-5658592106333505832.png",
+    "idx": 316
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnitude of the magnetic force is greater in Pair 1.\nB. The magnitude of the magnetic force is the same in both pairs.\nC. The magnitude of the magnetic force is greater in Pair 2.",
+    "solution": "C. The magnitude of the magnetic force is greater in Pair 2.",
+    "image_path": "dataset/scienceqa/images/test/sample_-2944322433792234461.png",
+    "idx": 1344
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Is apple juice a solid or a liquid?\n\nOptions:\nA. a solid\nB. a liquid",
+    "solution": "B. a liquid",
+    "image_path": "dataset/scienceqa/images/test/sample_7092249914401683322.png",
+    "idx": 987
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the amphibian below.\n\nOptions:\nA. poison dart frog\nB. helmeted iguana",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_2388726787872903769.png",
+    "idx": 459
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Identify the question that Farid's experiment can best answer.\n\nOptions:\nA. Can pennies hold more drops of pure water or water mixed with hand soap?\nB. Can pennies hold more drops of water mixed with dish soap or water mixed with hand soap?",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-8919086543568692052.png",
+    "idx": 717
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which solution has a higher concentration of green particles?\n\nOptions:\nA. Solution A\nB. Solution B\nC. neither; their concentrations are the same",
+    "solution": "B. Solution B",
+    "image_path": "dataset/scienceqa/images/test/sample_-7821220713661535500.png",
+    "idx": 1731
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Is the following statement about our solar system true or false?\n50% of the planets are made mainly of gas.\n\nOptions:\nA. true\nB. false",
+    "solution": "B. false",
+    "image_path": "dataset/scienceqa/images/test/sample_-2344389323177228793.png",
+    "idx": 752
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of the following statements is supported by the passage?\n\nOptions:\nA. Scientists can study air masses to predict weather events.\nB. Meteorologists are scientists who study meteors.",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_7488910785661536451.png",
+    "idx": 235
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. In this food chain, the katydid is a primary consumer. Why?\n\nOptions:\nA. It eats a primary consumer.\nB. It makes its own food.\nC. It eats a producer.",
+    "solution": "C. It eats a producer.",
+    "image_path": "dataset/scienceqa/images/test/sample_5024440264610417405.png",
+    "idx": 1561
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which continent is highlighted?\n\nOptions:\nA. Antarctica\nB. Asia\nC. Australia\nD. Africa",
+    "solution": "C. Australia",
+    "image_path": "dataset/scienceqa/images/test/sample_3717802790337759593.png",
+    "idx": 570
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Is the following statement about our solar system true or false?\nThe smallest planet is made mainly of rock.\n\nOptions:\nA. false\nB. true",
+    "solution": "B. true",
+    "image_path": "dataset/scienceqa/images/test/sample_2237804774887673704.png",
+    "idx": 1175
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What can Jaylen and Porter trade to each get what they want?\n\nOptions:\nA. Jaylen can trade his tomatoes for Porter's broccoli.\nB. Porter can trade his almonds for Jaylen's tomatoes.\nC. Jaylen can trade his tomatoes for Porter's sandwich.\nD. Porter can trade his broccoli for Jaylen's oranges.",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_2677803416125520565.png",
+    "idx": 463
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of New York?\n\nOptions:\nA. New York City\nB. Albany\nC. Buffalo\nD. Honolulu",
+    "solution": "B. Albany",
+    "image_path": "dataset/scienceqa/images/test/sample_-5824194678250044534.png",
+    "idx": 1653
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which animal's feet are also adapted for swimming?\n\nOptions:\nA. giraffe\nB. African clawed frog",
+    "solution": "B. African clawed frog",
+    "image_path": "dataset/scienceqa/images/test/sample_-7998358493886486959.png",
+    "idx": 878
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the organism in the same species as the moon jellyfish.\n\nOptions:\nA. Aequorea victoria\nB. Aurelia aurita\nC. Cyanea capillata",
+    "solution": "B. Aurelia aurita",
+    "image_path": "dataset/scienceqa/images/test/sample_-5319327973537763174.png",
+    "idx": 1730
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the organism in the same genus as the pickerel frog.\n\nOptions:\nA. Lithobates catesbeianus\nB. Agalychnis callidryas\nC. Bufo guttatus",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_6399378675789013308.png",
+    "idx": 1148
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of the following was a dependent variable in this experiment?\n\nOptions:\nA. the number of bacteria in a drop of tea\nB. the amount of time that the tea sat on the desk",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_738739913285090221.png",
+    "idx": 1995
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of the following is better evidence that the train's kinetic energy changed?\n\nOptions:\nA. The train was stopped, and then it began to move forward and away from the station.\nB. Electricity started flowing to the motor when the ride operator flipped the switch.",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_8530624059834299577.png",
+    "idx": 1571
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the bird below.\n\nOptions:\nA. western toad\nB. barn owl",
+    "solution": "B. barn owl",
+    "image_path": "dataset/scienceqa/images/test/sample_1423295469318844489.png",
+    "idx": 1676
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What location was involved in the triangular trade?\n\nOptions:\nA. China\nB. the Thirteen Colonies",
+    "solution": "B. the Thirteen Colonies",
+    "image_path": "dataset/scienceqa/images/test/sample_-3191236159453753315.png",
+    "idx": 1273
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnitude of the magnetic force is greater in Pair 1.\nB. The magnitude of the magnetic force is greater in Pair 2.\nC. The magnitude of the magnetic force is the same in both pairs.",
+    "solution": "B. The magnitude of the magnetic force is greater in Pair 2.",
+    "image_path": "dataset/scienceqa/images/test/sample_4605177489206859425.png",
+    "idx": 1256
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which i in row B?\n\nOptions:\nA. the fire department\nB. the police department\nC. the library\nD. the diner",
+    "solution": "C. the library",
+    "image_path": "dataset/scienceqa/images/test/sample_-4698223696444585545.png",
+    "idx": 1382
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which continent is highlighted?\n\nOptions:\nA. Africa\nB. Asia\nC. South America\nD. Antarctica",
+    "solution": "C. South America",
+    "image_path": "dataset/scienceqa/images/test/sample_5398754972149930051.png",
+    "idx": 1316
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Tennessee?\n\nOptions:\nA. Nashville\nB. Knoxville\nC. Memphis\nD. Indianapolis",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-1181178627384560362.png",
+    "idx": 1140
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnitude of the magnetic force is smaller in Pair 2.\nB. The magnitude of the magnetic force is smaller in Pair 1.\nC. The magnitude of the magnetic force is the same in both pairs.",
+    "solution": "C. The magnitude of the magnetic force is the same in both pairs.",
+    "image_path": "dataset/scienceqa/images/test/sample_922404992914845178.png",
+    "idx": 53
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which continent is highlighted?\n\nOptions:\nA. Europe\nB. Asia\nC. Africa\nD. South America",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_5402949969579945155.png",
+    "idx": 1247
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Alaska?\n\nOptions:\nA. Bismarck\nB. Juneau\nC. Nampa\nD. Santa Fe",
+    "solution": "B. Juneau",
+    "image_path": "dataset/scienceqa/images/test/sample_-9038128100317877138.png",
+    "idx": 1902
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What can Rob and Carrie trade to each get what they want?\n\nOptions:\nA. Rob can trade his tomatoes for Carrie's broccoli.\nB. Carrie can trade her broccoli for Rob's oranges.\nC. Carrie can trade her almonds for Rob's tomatoes.\nD. Rob can trade his tomatoes for Carrie's sandwich.",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_104586843422659421.png",
+    "idx": 1347
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. In this experiment, which were part of a control group?\n\nOptions:\nA. the uncovered side mirrors\nB. the covered side mirrors",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-3013894438413629075.png",
+    "idx": 1698
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which animal is also adapted to be camouflaged among green leaves?\n\nOptions:\nA. fox snake\nB. emerald tree boa",
+    "solution": "B. emerald tree boa",
+    "image_path": "dataset/scienceqa/images/test/sample_-492315740312580374.png",
+    "idx": 1420
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which country is highlighted?\n\nOptions:\nA. Samoa\nB. Nauru\nC. Tonga\nD. New Zealand",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-5278323601449015656.png",
+    "idx": 547
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the probability that an American curl cat produced by this cross will be homozygous dominant for the ear type gene?\n\nOptions:\nA. 0/4\nB. 2/4\nC. 4/4\nD. 3/4\nE. 1/4",
+    "solution": "C. 4/4",
+    "image_path": "dataset/scienceqa/images/test/sample_4269524617405216389.png",
+    "idx": 59
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which continent is highlighted?\n\nOptions:\nA. Africa\nB. South America\nC. Europe\nD. Australia",
+    "solution": "C. Europe",
+    "image_path": "dataset/scienceqa/images/test/sample_-8259512306504239469.png",
+    "idx": 369
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of these states is farthest west?\n\nOptions:\nA. Virginia\nB. South Carolina\nC. Idaho\nD. Connecticut",
+    "solution": "C. Idaho",
+    "image_path": "dataset/scienceqa/images/test/sample_-4595500511073018852.png",
+    "idx": 559
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of these states is farthest west?\n\nOptions:\nA. Georgia\nB. Iowa\nC. New York\nD. North Dakota",
+    "solution": "D. North Dakota",
+    "image_path": "dataset/scienceqa/images/test/sample_-4962635092845815682.png",
+    "idx": 1439
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which continent is highlighted?\n\nOptions:\nA. Australia\nB. Asia\nC. Antarctica",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-1558537488045581670.png",
+    "idx": 632
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Will these magnets attract or repel each other?\n\nOptions:\nA. repel\nB. attract",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_5724284746542016595.png",
+    "idx": 1887
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnitude of the magnetic force is the same in both pairs.\nB. The magnitude of the magnetic force is smaller in Pair 2.\nC. The magnitude of the magnetic force is smaller in Pair 1.",
+    "solution": "C. The magnitude of the magnetic force is smaller in Pair 1.",
+    "image_path": "dataset/scienceqa/images/test/sample_7866196431262351479.png",
+    "idx": 695
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the name of the colony shown?\n\nOptions:\nA. New Hampshire\nB. Delaware\nC. Kentucky\nD. Wisconsin",
+    "solution": "B. Delaware",
+    "image_path": "dataset/scienceqa/images/test/sample_-3159607493390796044.png",
+    "idx": 718
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of these states is farthest north?\n\nOptions:\nA. Maine\nB. South Carolina\nC. Kansas\nD. Delaware",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-6083682254422503267.png",
+    "idx": 12
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Vermont?\n\nOptions:\nA. Burlington\nB. Montpelier\nC. Annapolis\nD. Philadelphia",
+    "solution": "B. Montpelier",
+    "image_path": "dataset/scienceqa/images/test/sample_-7322532521237549431.png",
+    "idx": 371
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which country is highlighted?\n\nOptions:\nA. Tonga\nB. Nauru\nC. the Federated States of Micronesia\nD. Samoa",
+    "solution": "D. Samoa",
+    "image_path": "dataset/scienceqa/images/test/sample_-834606159967536370.png",
+    "idx": 293
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which solution has a higher concentration of purple particles?\n\nOptions:\nA. neither; their concentrations are the same\nB. Solution B\nC. Solution A",
+    "solution": "B. Solution B",
+    "image_path": "dataset/scienceqa/images/test/sample_3267747149910951466.png",
+    "idx": 1159
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Will these magnets attract or repel each other?\n\nOptions:\nA. repel\nB. attract",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_6789291393724495419.png",
+    "idx": 1346
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Is the water in a fishbowl a solid, a liquid, or a gas?\n\nOptions:\nA. a liquid\nB. a gas\nC. a solid",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_4856560442683336421.png",
+    "idx": 820
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which type of relationship is formed when a bristle worm lives on a white sea urchin?\n\nOptions:\nA. mutualistic\nB. commensal\nC. parasitic",
+    "solution": "B. commensal",
+    "image_path": "dataset/scienceqa/images/test/sample_-2127043764999186546.png",
+    "idx": 142
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Look at the models of molecules below. Select the elementary substance.\n\nOptions:\nA. fluoromethanol\nB. tetraphosphorus\nC. methane",
+    "solution": "B. tetraphosphorus",
+    "image_path": "dataset/scienceqa/images/test/sample_-4744005139777376968.png",
+    "idx": 290
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Compare the average kinetic energies of the particles in each sample. Which sample has the higher temperature?\n\nOptions:\nA. sample A\nB. sample B\nC. neither; the samples have the same temperature",
+    "solution": "B. sample B",
+    "image_path": "dataset/scienceqa/images/test/sample_5002578408082728183.png",
+    "idx": 1517
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Delaware?\n\nOptions:\nA. Baton Rouge\nB. Salem\nC. Wilmington\nD. Dover",
+    "solution": "D. Dover",
+    "image_path": "dataset/scienceqa/images/test/sample_-1155172426059301917.png",
+    "idx": 1990
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Complete the statement.\nHydrogen is ().\n\nOptions:\nA. an elementary substance\nB. a compound",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_8949358873265224596.png",
+    "idx": 62
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which trait did Palaeopython have? Select the trait you can observe on the fossil.\n\nOptions:\nA. black stripes on its skin\nB. large fins on its body\nC. a long, thin body",
+    "solution": "C. a long, thin body",
+    "image_path": "dataset/scienceqa/images/test/sample_1091103813516119338.png",
+    "idx": 187
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these three objects have in common?\n\nOptions:\nA. bouncy\nB. blue\nC. transparent",
+    "solution": "B. blue",
+    "image_path": "dataset/scienceqa/images/test/sample_-885155454096319229.png",
+    "idx": 1528
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which better describes the tide pool ecosystems in Little Corona Beach?\n\nOptions:\nA. It has daily flooding and draining of seawater. It also has water that is poor in nutrients.\nB. It has daily flooding and draining of seawater. It also has water that is rich in nutrients.",
+    "solution": "B. It has daily flooding and draining of seawater. It also has water that is rich in nutrients.",
+    "image_path": "dataset/scienceqa/images/test/sample_1299068889323265133.png",
+    "idx": 770
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which statement describes the Yasuni National Park ecosystem?\n\nOptions:\nA. It has mostly small plants.\nB. It has soil that is poor in nutrients.\nC. It has soil that is rich in nutrients.",
+    "solution": "B. It has soil that is poor in nutrients.",
+    "image_path": "dataset/scienceqa/images/test/sample_1559459816188355016.png",
+    "idx": 859
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Montana?\n\nOptions:\nA. Helena\nB. Birmingham\nC. Tucson\nD. Salem",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-8586824659425721709.png",
+    "idx": 698
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of these cities is marked on the map?\n\nOptions:\nA. Nashville\nB. Houston\nC. Charlotte\nD. New Orleans",
+    "solution": "B. Houston",
+    "image_path": "dataset/scienceqa/images/test/sample_512972888029403997.png",
+    "idx": 322
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which statement describes the Steigerwald Forest ecosystem?\n\nOptions:\nA. It has soil that is poor in nutrients.\nB. It has soil that is rich in nutrients.",
+    "solution": "B. It has soil that is rich in nutrients.",
+    "image_path": "dataset/scienceqa/images/test/sample_146586002939216552.png",
+    "idx": 757
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Florida?\n\nOptions:\nA. Tallahassee\nB. Charleston\nC. Helena\nD. Nashville",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-6723978797118867805.png",
+    "idx": 638
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Colorado?\n\nOptions:\nA. Salt Lake City\nB. Colorado Springs\nC. Denver\nD. Boulder",
+    "solution": "C. Denver",
+    "image_path": "dataset/scienceqa/images/test/sample_2375023465124440211.png",
+    "idx": 1477
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these three objects have in common?\n\nOptions:\nA. rough\nB. shiny\nC. transparent",
+    "solution": "B. shiny",
+    "image_path": "dataset/scienceqa/images/test/sample_-1344730300034180687.png",
+    "idx": 664
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of the following could Duncan's test show?\n\nOptions:\nA. whether a parachute with a 1 m vent would swing too much at 400 km per hour\nB. if the spacecraft was damaged when using a parachute with a 1 m vent going 200 km per hour\nC. how steady a parachute with a 1 m vent was at 200 km per hour",
+    "solution": "C. how steady a parachute with a 1 m vent was at 200 km per hour",
+    "image_path": "dataset/scienceqa/images/test/sample_4115006425308947236.png",
+    "idx": 1590
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which term matches the picture?\n\nOptions:\nA. endoskeleton\nB. exoskeleton",
+    "solution": "B. exoskeleton",
+    "image_path": "dataset/scienceqa/images/test/sample_-7796034853930957609.png",
+    "idx": 1928
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the probability that a budgerigar parakeet produced by this cross will be heterozygous for the body feather color gene?\n\nOptions:\nA. 4/4\nB. 2/4\nC. 3/4\nD. 1/4\nE. 0/4",
+    "solution": "B. 2/4",
+    "image_path": "dataset/scienceqa/images/test/sample_3135772869546192377.png",
+    "idx": 1162
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Montana?\n\nOptions:\nA. Billings\nB. Honolulu\nC. Cincinnati\nD. Helena",
+    "solution": "D. Helena",
+    "image_path": "dataset/scienceqa/images/test/sample_-5109366536980245441.png",
+    "idx": 1221
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What can Reid and Daniel trade to each get what they want?\n\nOptions:\nA. Reid can trade his tomatoes for Daniel's carrots.\nB. Daniel can trade his broccoli for Reid's oranges.\nC. Reid can trade his tomatoes for Daniel's broccoli.\nD. Daniel can trade his almonds for Reid's tomatoes.",
+    "solution": "C. Reid can trade his tomatoes for Daniel's broccoli.",
+    "image_path": "dataset/scienceqa/images/test/sample_-6599902232824467245.png",
+    "idx": 173
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which material is this clothes hanger made of?\n\nOptions:\nA. cardboard\nB. wood",
+    "solution": "B. wood",
+    "image_path": "dataset/scienceqa/images/test/sample_972125378110471953.png",
+    "idx": 1809
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these three objects have in common?\n\nOptions:\nA. stretchy\nB. rough\nC. bouncy",
+    "solution": "B. rough",
+    "image_path": "dataset/scienceqa/images/test/sample_6192424775125959111.png",
+    "idx": 318
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which type of force from the boy moves the cart forward?\n\nOptions:\nA. pull\nB. push",
+    "solution": "B. push",
+    "image_path": "dataset/scienceqa/images/test/sample_8664755823960765882.png",
+    "idx": 1545
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Idaho?\n\nOptions:\nA. Austin\nB. Boise\nC. Santa Fe\nD. Des Moines",
+    "solution": "B. Boise",
+    "image_path": "dataset/scienceqa/images/test/sample_633219637933351983.png",
+    "idx": 1265
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which solution has a higher concentration of green particles?\n\nOptions:\nA. Solution B\nB. neither; their concentrations are the same\nC. Solution A",
+    "solution": "B. neither; their concentrations are the same",
+    "image_path": "dataset/scienceqa/images/test/sample_-6294014685628776313.png",
+    "idx": 101
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the fish below.\n\nOptions:\nA. mandarinfish\nB. green iguana\nC. red-headed poison frog\nD. water buffalo",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_3658512350474949799.png",
+    "idx": 1380
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of the following could Charlotte's test show?\n\nOptions:\nA. if the blade guards would break in a crash\nB. if adding the blade guards made the drone fly poorly\nC. how much the drone weighed with the blade guards",
+    "solution": "B. if adding the blade guards made the drone fly poorly",
+    "image_path": "dataset/scienceqa/images/test/sample_1509130570358298277.png",
+    "idx": 167
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which animal is also adapted to be camouflaged in the snow?\n\nOptions:\nA. polar bear\nB. porcupine",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_8425691239147747915.png",
+    "idx": 557
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these three objects have in common?\n\nOptions:\nA. transparent\nB. fragile\nC. flexible",
+    "solution": "C. flexible",
+    "image_path": "dataset/scienceqa/images/test/sample_467477755068099044.png",
+    "idx": 907
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the fish below.\n\nOptions:\nA. manta ray\nB. giraffe",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_2461830186886189181.png",
+    "idx": 1355
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What evidence of a drought does this picture show?\n\nOptions:\nA. The riverbed is dry and cracked.\nB. The ground is mostly flat.",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_6468644663087681752.png",
+    "idx": 868
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the name of the colony shown?\n\nOptions:\nA. Virginia\nB. Connecticut\nC. New Hampshire\nD. Pennsylvania",
+    "solution": "D. Pennsylvania",
+    "image_path": "dataset/scienceqa/images/test/sample_3956558863667840782.png",
+    "idx": 994
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which state is highlighted?\n\nOptions:\nA. Montana\nB. Oregon\nC. California\nD. Washington",
+    "solution": "B. Oregon",
+    "image_path": "dataset/scienceqa/images/test/sample_6881936143628951652.png",
+    "idx": 1243
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnetic force is stronger in Pair 2.\nB. The strength of the magnetic force is the same in both pairs.\nC. The magnetic force is stronger in Pair 1.",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-2042218324785087832.png",
+    "idx": 905
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which material is this clothes hanger made of?\n\nOptions:\nA. metal\nB. wool",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_8501418219559950715.png",
+    "idx": 848
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The strength of the magnetic force is the same in both pairs.\nB. The magnetic force is stronger in Pair 1.\nC. The magnetic force is stronger in Pair 2.",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_2423972584447145576.png",
+    "idx": 441
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What can Krysta and Malik trade to each get what they want?\n\nOptions:\nA. Malik can trade his almonds for Krysta's tomatoes.\nB. Krysta can trade her tomatoes for Malik's carrots.\nC. Malik can trade his broccoli for Krysta's oranges.\nD. Krysta can trade her tomatoes for Malik's broccoli.",
+    "solution": "D. Krysta can trade her tomatoes for Malik's broccoli.",
+    "image_path": "dataset/scienceqa/images/test/sample_-9135285242031567470.png",
+    "idx": 1546
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which country is highlighted?\n\nOptions:\nA. Haiti\nB. the Dominican Republic\nC. Cuba\nD. Dominica",
+    "solution": "B. the Dominican Republic",
+    "image_path": "dataset/scienceqa/images/test/sample_6698367903440240277.png",
+    "idx": 1049
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Identify the question that Nate's experiment can best answer.\n\nOptions:\nA. Can pennies hold more drops of water mixed with dish soap or water mixed with hand soap?\nB. Can pennies hold more drops of pure water or water mixed with hand soap?",
+    "solution": "B. Can pennies hold more drops of pure water or water mixed with hand soap?",
+    "image_path": "dataset/scienceqa/images/test/sample_8476158391613752517.png",
+    "idx": 233
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. During this time, thermal energy was transferred from () to ().\n\nOptions:\nA. each refrigerator . . . the surroundings\nB. the surroundings . . . each refrigerator",
+    "solution": "B. the surroundings . . . each refrigerator",
+    "image_path": "dataset/scienceqa/images/test/sample_4472124967443994364.png",
+    "idx": 706
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which country is highlighted?\n\nOptions:\nA. Solomon Islands\nB. Papua New Guinea\nC. New Zealand\nD. Australia",
+    "solution": "B. Papua New Guinea",
+    "image_path": "dataset/scienceqa/images/test/sample_6947474317614260435.png",
+    "idx": 227
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Tennessee?\n\nOptions:\nA. Wilmington\nB. Nashville\nC. Columbia\nD. Cheyenne",
+    "solution": "B. Nashville",
+    "image_path": "dataset/scienceqa/images/test/sample_-8239444699641726566.png",
+    "idx": 580
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Illinois?\n\nOptions:\nA. Chicago\nB. Columbus\nC. Springfield\nD. Jefferson City",
+    "solution": "C. Springfield",
+    "image_path": "dataset/scienceqa/images/test/sample_-5640874970499723728.png",
+    "idx": 1388
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which is this organism's common name?\n\nOptions:\nA. Bradypus variegatus\nB. brown-throated sloth",
+    "solution": "B. brown-throated sloth",
+    "image_path": "dataset/scienceqa/images/test/sample_-3591542018903981523.png",
+    "idx": 1389
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which of these states is farthest west?\n\nOptions:\nA. Colorado\nB. California\nC. Texas\nD. North Dakota",
+    "solution": "B. California",
+    "image_path": "dataset/scienceqa/images/test/sample_3822215776602095700.png",
+    "idx": 1214
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the expected ratio of offspring with yellow fruit to offspring with red fruit? Choose the most likely ratio.\n\nOptions:\nA. 0:4\nB. 2:2\nC. 1:3\nD. 4:0\nE. 3:1",
+    "solution": "D. 4:0",
+    "image_path": "dataset/scienceqa/images/test/sample_7744736987347570383.png",
+    "idx": 996
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Compare the average kinetic energies of the particles in each sample. Which sample has the higher temperature?\n\nOptions:\nA. neither; the samples have the same temperature\nB. sample A\nC. sample B",
+    "solution": "C. sample B",
+    "image_path": "dataset/scienceqa/images/test/sample_-7624601728646746838.png",
+    "idx": 1079
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Nevada?\n\nOptions:\nA. Carson City\nB. Reno\nC. Salem\nD. Las Vegas",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_4072956242986880636.png",
+    "idx": 1366
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which better describes the Masoala National Park ecosystem?\n\nOptions:\nA. It has year-round rain. It also has many different types of organisms.\nB. It has cold winters. It also has many different types of organisms.",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-4139363060411923179.png",
+    "idx": 631
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What can Austen and Naomi trade to each get what they want?\n\nOptions:\nA. Naomi can trade her broccoli for Austen's oranges.\nB. Austen can trade his tomatoes for Naomi's broccoli.\nC. Austen can trade his tomatoes for Naomi's sandwich.\nD. Naomi can trade her almonds for Austen's tomatoes.",
+    "solution": "B. Austen can trade his tomatoes for Naomi's broccoli.",
+    "image_path": "dataset/scienceqa/images/test/sample_3198758835974913394.png",
+    "idx": 93
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which animal's limbs are also adapted for climbing trees?\n\nOptions:\nA. okapi\nB. Sumatran orangutan",
+    "solution": "B. Sumatran orangutan",
+    "image_path": "dataset/scienceqa/images/test/sample_1315241476539693930.png",
+    "idx": 451
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Think about the magnetic force between the magnets in each pair. Which of the following statements is true?\n\nOptions:\nA. The magnitude of the magnetic force is smaller in Pair 1.\nB. The magnitude of the magnetic force is smaller in Pair 2.\nC. The magnitude of the magnetic force is the same in both pairs.",
+    "solution": "C. The magnitude of the magnetic force is the same in both pairs.",
+    "image_path": "dataset/scienceqa/images/test/sample_-4565793769804003143.png",
+    "idx": 809
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the direction of this push?\n\nOptions:\nA. away from the bulldozer\nB. toward the bulldozer",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-4473380433440123388.png",
+    "idx": 2016
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the name of the colony shown?\n\nOptions:\nA. Maine\nB. Pennsylvania\nC. Delaware\nD. Massachusetts",
+    "solution": "B. Pennsylvania",
+    "image_path": "dataset/scienceqa/images/test/sample_-4068589131571479529.png",
+    "idx": 1227
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the Morelet's crocodile's scientific name?\n\nOptions:\nA. Crocodylus moreletii\nB. Crocodylus anthropophagus",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-4660916037420117752.png",
+    "idx": 112
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which continent is highlighted?\n\nOptions:\nA. Africa\nB. North America\nC. South America\nD. Asia",
+    "solution": "D. Asia",
+    "image_path": "dataset/scienceqa/images/test/sample_-1589969822617695636.png",
+    "idx": 15
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Compare the average kinetic energies of the particles in each sample. Which sample has the higher temperature?\n\nOptions:\nA. sample B\nB. sample A\nC. neither; the samples have the same temperature",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-3910962051362103813.png",
+    "idx": 418
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these three objects have in common?\n\nOptions:\nA. flexible\nB. yellow\nC. fuzzy",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-2610299835542252539.png",
+    "idx": 432
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which country is highlighted?\n\nOptions:\nA. Jamaica\nB. Saint Lucia\nC. Barbados\nD. Saint Vincent and the Grenadines",
+    "solution": "B. Saint Lucia",
+    "image_path": "dataset/scienceqa/images/test/sample_7536222622256421723.png",
+    "idx": 281
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Is plagioclase a mineral?\n\nOptions:\nA. no\nB. yes",
+    "solution": "B. yes",
+    "image_path": "dataset/scienceqa/images/test/sample_-3096854720240588634.png",
+    "idx": 1565
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which state is highlighted?\n\nOptions:\nA. Pennsylvania\nB. Vermont\nC. Rhode Island\nD. New Jersey",
+    "solution": "D. New Jersey",
+    "image_path": "dataset/scienceqa/images/test/sample_1249579216907307528.png",
+    "idx": 523
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which material is this door made of?\n\nOptions:\nA. wood\nB. cardboard",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_2780963660234038192.png",
+    "idx": 592
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Will these magnets attract or repel each other?\n\nOptions:\nA. attract\nB. repel",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-258897752460821263.png",
+    "idx": 671
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Is the following statement about our solar system true or false?\nThe volume of Mars is more than ten times as large as Mercury's.\n\nOptions:\nA. true\nB. false",
+    "solution": "B. false",
+    "image_path": "dataset/scienceqa/images/test/sample_7464656869750837583.png",
+    "idx": 245
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What can Nancy and Dominic trade to each get what they want?\n\nOptions:\nA. Nancy can trade her tomatoes for Dominic's carrots.\nB. Dominic can trade his broccoli for Nancy's oranges.\nC. Dominic can trade his almonds for Nancy's tomatoes.\nD. Nancy can trade her tomatoes for Dominic's broccoli.",
+    "solution": "D. Nancy can trade her tomatoes for Dominic's broccoli.",
+    "image_path": "dataset/scienceqa/images/test/sample_913241633644717924.png",
+    "idx": 1018
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of South Carolina?\n\nOptions:\nA. Charleston\nB. Lexington\nC. Columbia\nD. Topeka",
+    "solution": "C. Columbia",
+    "image_path": "dataset/scienceqa/images/test/sample_1021781017449250996.png",
+    "idx": 1529
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these three objects have in common?\n\nOptions:\nA. blue\nB. sticky\nC. fuzzy",
+    "solution": "C. fuzzy",
+    "image_path": "dataset/scienceqa/images/test/sample_-1219904003941403776.png",
+    "idx": 359
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the capital of Iowa?\n\nOptions:\nA. Davenport\nB. Helena\nC. Lansing\nD. Des Moines",
+    "solution": "D. Des Moines",
+    "image_path": "dataset/scienceqa/images/test/sample_8770555284977355.png",
+    "idx": 264
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. In this food web, which organism contains matter that eventually moves to the mushroom?\n\nOptions:\nA. brown lemming\nB. bilberry",
+    "solution": "B. bilberry",
+    "image_path": "dataset/scienceqa/images/test/sample_668444273864215021.png",
+    "idx": 778
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which better describes the tide pool ecosystems in Tongue Point Marine Life Sanctuary?\n\nOptions:\nA. It has no sunlight. It also has daily flooding and draining of seawater.\nB. It has daily flooding and draining of seawater. It also has many different types of organisms.",
+    "solution": "B. It has daily flooding and draining of seawater. It also has many different types of organisms.",
+    "image_path": "dataset/scienceqa/images/test/sample_870246986974370189.png",
+    "idx": 1090
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which ocean is highlighted?\n\nOptions:\nA. the Indian Ocean\nB. the Pacific Ocean\nC. the Arctic Ocean\nD. the Atlantic Ocean",
+    "solution": "C. the Arctic Ocean",
+    "image_path": "dataset/scienceqa/images/test/sample_2328045476369467266.png",
+    "idx": 1441
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Complete the text to describe the diagram.\nSolute particles moved in both directions across the permeable membrane. But more solute particles moved across the membrane (). When there was an equal concentration on both sides, the particles reached equilibrium.\n\nOptions:\nA. to the left than to the right\nB. to the right than to the left",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-4055214155695278094.png",
+    "idx": 471
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the mammal below.\n\nOptions:\nA. common toad\nB. human\nC. box turtle\nD. clownfish",
+    "solution": "B. human",
+    "image_path": "dataset/scienceqa/images/test/sample_-1804982395719874427.png",
+    "idx": 1024
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property do these two objects have in common?\n\nOptions:\nA. sticky\nB. salty",
+    "solution": "B. salty",
+    "image_path": "dataset/scienceqa/images/test/sample_6518688797993662741.png",
+    "idx": 1144
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Is plagioclase a mineral or a rock?\n\nOptions:\nA. rock\nB. mineral",
+    "solution": "B. mineral",
+    "image_path": "dataset/scienceqa/images/test/sample_-7152845553250797345.png",
+    "idx": 1706
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the organism in the same species as the marbled salamander.\n\nOptions:\nA. Lissotriton helveticus\nB. Taricha torosa\nC. Ambystoma opacum",
+    "solution": "C. Ambystoma opacum",
+    "image_path": "dataset/scienceqa/images/test/sample_6539980760734108524.png",
+    "idx": 1368
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Does this passage describe the weather or the climate?\n\nOptions:\nA. weather\nB. climate",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-7624303878580971516.png",
+    "idx": 1651
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Select the bird below.\n\nOptions:\nA. flamingo\nB. cane toad",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-302015123987678059.png",
+    "idx": 725
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Will these magnets attract or repel each other?\n\nOptions:\nA. repel\nB. attract",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-5701876186712215095.png",
+    "idx": 147
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which property matches this object?\n\nOptions:\nA. scratchy\nB. breakable",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_-7685916949379626443.png",
+    "idx": 813
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which continent is highlighted?\n\nOptions:\nA. Australia\nB. Asia\nC. Africa\nD. North America",
+    "solution": "C. Africa",
+    "image_path": "dataset/scienceqa/images/test/sample_5896779714798960044.png",
+    "idx": 1764
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. What is the name of the colony shown?\n\nOptions:\nA. New Hampshire\nB. Vermont\nC. New York\nD. Delaware",
+    "solution": "C. New York",
+    "image_path": "dataset/scienceqa/images/test/sample_-1541342079952707853.png",
+    "idx": 86
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Compare the average kinetic energies of the particles in each sample. Which sample has the higher temperature?\n\nOptions:\nA. sample A\nB. sample B\nC. neither; the samples have the same temperature",
+    "solution": "",
+    "image_path": "dataset/scienceqa/images/test/sample_7566370766864620365.png",
+    "idx": 893
+  },
+  {
+    "prompt": "Solve the problem with proper reasoning, and make sure to put the FINAL CHOICE inside \\boxed{}. Which country is highlighted?\n\nOptions:\nA. Barbados\nB. the Dominican Republic\nC. Saint Lucia\nD. Saint Vincent and the Grenadines",
+    "solution": "C. Saint Lucia",
+    "image_path": "dataset/scienceqa/images/test/sample_-8606604275836638244.png",
+    "idx": 38
+  }
+]
