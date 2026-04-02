@@ -215,6 +215,16 @@ def parse_args():
         choices=["add", "prepend"],
         help="How evidence is merged with latent tokens: 'add' (default) | 'prepend'",
     )
+    parser.add_argument(
+        "--workspace_route_mode", type=str, default="avg",
+        choices=["avg", "per_token"],
+        help=(
+            "How thought tokens are used to select workspace slots: "
+            "'avg' (default) uses mean thought embedding; "
+            "'per_token' has each token vote for its top-r slots and selects "
+            "the r slots with the most votes."
+        ),
+    )
 
     # Misc
     parser.add_argument("--seed", type=int, default=42)
@@ -299,12 +309,14 @@ def main(args):
         num_pooled_tokens=args.num_pooled_tokens,   # None → auto
         num_route_slots=args.num_route_slots,
         workspace_inject_mode=args.workspace_inject_mode,
+        workspace_route_mode=args.workspace_route_mode,
     )
     if args.use_workspace:
         P = ws_config.effective_num_pooled()
         print(
             f"[Workspace-Fixed] enabled  K={ws_config.num_workspace_slots}  "
-            f"P={P}  r={ws_config.num_route_slots}  mode={ws_config.workspace_inject_mode}"
+            f"P={P}  r={ws_config.num_route_slots}  "
+            f"inject={ws_config.workspace_inject_mode}  route={ws_config.workspace_route_mode}"
         )
 
     # ---- Load dataset ----
@@ -319,7 +331,8 @@ def main(args):
         f"-ws{ws_config.num_workspace_slots}"
         f"p{ws_config.effective_num_pooled()}"
         f"r{ws_config.num_route_slots}"
-        f"-{ws_config.workspace_inject_mode}-fixed"
+        f"-{ws_config.workspace_inject_mode}"
+        f"-{ws_config.workspace_route_mode}-fixed"
         if args.use_workspace else ""
     )
 

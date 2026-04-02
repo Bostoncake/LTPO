@@ -44,12 +44,18 @@ class WorkspaceConfig:
     workspace_inject_mode : str
         "add"     – add the weighted-mean evidence vector to thought tokens.
         "prepend" – insert r evidence-token positions before thought tokens.
+    workspace_route_mode : str
+        "avg"       – route using the mean of all thought-token embeddings (default).
+        "per_token" – each thought token independently votes for its top-r slots;
+                      the r slots with the most votes are selected (ties broken by
+                      average similarity score).
     """
     enabled: bool = False
     num_workspace_slots: int = 8
     num_pooled_tokens: Optional[int] = None   # None → auto (max(K*4, 32))
     num_route_slots: int = 2
     workspace_inject_mode: str = "add"
+    workspace_route_mode: str = "avg"         # "avg" | "per_token"
 
     def effective_num_pooled(self) -> int:
         if self.num_pooled_tokens is not None:
@@ -169,11 +175,17 @@ class WorkspaceRouter:
     """
     Route the current latent thought state to the top-r workspace slots.
 
-    Unchanged from visual_workspace.WorkspaceRouter.
+    Supports two routing modes:
+      "avg"       – original behaviour: route using the mean of all thought-token
+                    embeddings as a single query.
+      "per_token" – each of the T thought tokens independently votes for its top-r
+                    most similar slots; the r slots with the most votes are selected
+                    (ties broken by average similarity score across tokens).
     """
 
-    def __init__(self, num_route_slots: int):
+    def __init__(self, num_route_slots: int, route_mode: str = "avg"):
         self.r = num_route_slots
+        self.route_mode = route_mode
 
     @torch.no_grad()
     def route(
@@ -189,10 +201,36 @@ class WorkspaceRouter:
         """
         K = workspace_slots.shape[0]
         r = min(self.r, K)
+        states = thought_hidden_states.detach()
 
-        query = thought_hidden_states.detach().mean(dim=0)    # (d,)
-        scores = workspace_slots @ query                       # (K,)
-        top_vals, top_indices = torch.topk(scores, k=r, largest=True)
-        alpha = F.softmax(top_vals, dim=0)                    # (r,)
-        selected_slots = workspace_slots[top_indices]          # (r, d)
+        if self.route_mode == "per_token":
+            # scores[t, k] = similarity of thought token t to workspace slot k
+            scores = states @ workspace_slots.T          # (T, K)
+            T = states.shape[0]
+            r_vote = min(r, K)
+            # Each token votes for its r_vote most similar slots
+            top_indices_per_token = torch.topk(
+                scores, k=r_vote, largest=True
+            ).indices                                     # (T, r_vote)
+            # Tally votes: slot k gets 1 vote per token that selected it
+            votes = torch.zeros(K, device=states.device, dtype=scores.dtype)
+            votes.scatter_add_(
+                0,
+                top_indices_per_token.flatten(),
+                torch.ones(T * r_vote, device=states.device, dtype=scores.dtype),
+            )
+            # Select r slots with highest vote counts; break ties with avg similarity
+            avg_scores = scores.mean(dim=0)              # (K,)
+            # Combine: primary key = votes, secondary = avg_scores (small tiebreak)
+            combined = votes + avg_scores / (avg_scores.abs().max() + 1e-8) * 1e-4
+            top_indices = torch.topk(combined, k=r, largest=True).indices
+            top_vals = avg_scores[top_indices]
+        else:
+            # "avg" mode – original: route from the mean thought embedding
+            query = states.mean(dim=0)                   # (d,)
+            scores_1d = workspace_slots @ query          # (K,)
+            top_vals, top_indices = torch.topk(scores_1d, k=r, largest=True)
+
+        alpha = F.softmax(top_vals, dim=0)               # (r,)
+        selected_slots = workspace_slots[top_indices]    # (r, d)
         return alpha, top_indices, selected_slots

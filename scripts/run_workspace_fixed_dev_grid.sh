@@ -8,9 +8,10 @@
 #   K (num_workspace_slots) ∈ {8, 16}
 #   r (num_route_slots)     ∈ {2, 4}
 #   inject_mode             ∈ {prepend, add}
+#   route_mode              ∈ {avg, per_token}
 #
-# Total: 2×2×2 = 8 configs × 7 datasets = 56 jobs.
-# Est. wall time (8 GPUs, ~5 min/job): ≈ 35 min.
+# Total: 2×2×2×2 = 16 configs × 7 datasets = 112 jobs.
+# Est. wall time (8 GPUs, ~5 min/job): ≈ 70 min.
 #
 # Usage:
 #   N_GPUS=8 bash scripts/run_workspace_fixed_dev_grid.sh
@@ -43,18 +44,21 @@ LTPO_TOKENS[scienceqa_dev]=2;   LTPO_STEPS[scienceqa_dev]=10; LTPO_SIGMA[science
 K_VALUES=(8 16)
 R_VALUES=(2 4)
 INJECT_MODES=(prepend add)
+ROUTE_MODES=(per_token)
 DATASETS=(mmvp_dev mmstar_dev mm_math_dev math_vista_dev math_vision_dev hallusion_dev scienceqa_dev)
 
-root_output=./output/workspace_fixed_dev_grid
+root_output=./output/workspace_fixed_dev_grid_avgroute
 mkdir -p "${root_output}"
 
-# Build flat job list: "K r inject_mode dataset"
+# Build flat job list: "K r inject_mode route_mode dataset"
 jobs=()
 for K in "${K_VALUES[@]}"; do
     for r in "${R_VALUES[@]}"; do
         for inject_mode in "${INJECT_MODES[@]}"; do
-            for dataset in "${DATASETS[@]}"; do
-                jobs+=("${K} ${r} ${inject_mode} ${dataset}")
+            for route_mode in "${ROUTE_MODES[@]}"; do
+                for dataset in "${DATASETS[@]}"; do
+                    jobs+=("${K} ${r} ${inject_mode} ${route_mode} ${dataset}")
+                done
             done
         done
     done
@@ -63,7 +67,7 @@ total=${#jobs[@]}
 
 echo "════════════════════════════════════════════════════════════════"
 echo "Workspace Fixed Grid Search on dev sets"
-echo "    K ∈ {${K_VALUES[*]}}  r ∈ {${R_VALUES[*]}}  mode ∈ {${INJECT_MODES[*]}}"
+echo "    K ∈ {${K_VALUES[*]}}  r ∈ {${R_VALUES[*]}}  inject ∈ {${INJECT_MODES[*]}}  route ∈ {${ROUTE_MODES[*]}}"
 echo "    LTPO HPs: per-dataset best (sigma_decay=0.95, top_k=10 fixed)"
 echo "    Datasets: ${#DATASETS[@]}   Workspace configs: $(( total / ${#DATASETS[@]} ))"
 echo "    Total jobs: ${total}   GPUs: ${N_GPUS}"
@@ -80,18 +84,18 @@ while [ $job_idx -lt $total ]; do
         [ $job_idx -ge $total ] && break
         pid=${gpu_pids[$g]}
         if [ "$pid" -eq -1 ] || ! kill -0 "$pid" 2>/dev/null; then
-            read -r K r inject_mode dataset <<< "${jobs[$job_idx]}"
+            read -r K r inject_mode route_mode dataset <<< "${jobs[$job_idx]}"
 
             tokens=${LTPO_TOKENS[$dataset]}
             steps=${LTPO_STEPS[$dataset]}
             sigma=${LTPO_SIGMA[$dataset]}
             lr=${LTPO_LR[$dataset]}
 
-            out_dir="${root_output}/K${K}_r${r}_${inject_mode}"
+            out_dir="${root_output}/K${K}_r${r}_${inject_mode}_${route_mode}"
             mkdir -p "${out_dir}"
-            log="${root_output}/K${K}_r${r}_${inject_mode}_${dataset}.log"
+            log="${root_output}/K${K}_r${r}_${inject_mode}_${route_mode}_${dataset}.log"
 
-            echo "[$(date +%T)] GPU ${g}  ←  K=${K} r=${r} mode=${inject_mode}  |  ${dataset}  (tokens=${tokens} steps=${steps} sigma=${sigma} lr=${lr})"
+            echo "[$(date +%T)] GPU ${g}  ←  K=${K} r=${r} inject=${inject_mode} route=${route_mode}  |  ${dataset}  (tokens=${tokens} steps=${steps} sigma=${sigma} lr=${lr})"
 
             CUDA_VISIBLE_DEVICES=${g} python main_vl_workspace_fixed.py \
                 --dataset             "${dataset}"    \
@@ -114,6 +118,7 @@ while [ $job_idx -lt $total ]; do
                 --num_workspace_slots "${K}"          \
                 --num_route_slots     "${r}"          \
                 --workspace_inject_mode "${inject_mode}" \
+                --workspace_route_mode  "${route_mode}"  \
                 --use_llm_verify                      \
                 --verbose 1                           \
                 > "${log}" 2>&1 &

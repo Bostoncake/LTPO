@@ -347,7 +347,10 @@ def generate_vl_workspace_fixed(
     device = inputs_embeds.device
 
     router = (
-        WorkspaceRouter(num_route_slots=ws_config.num_route_slots)
+        WorkspaceRouter(
+            num_route_slots=ws_config.num_route_slots,
+            route_mode=ws_config.workspace_route_mode,
+        )
         if ws_config.enabled else None
     )
 
