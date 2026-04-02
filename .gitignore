@@ -214,3 +214,5 @@ __marimo__/
 output/
 dataset/
 .claude
+docs/
+scripts2/
