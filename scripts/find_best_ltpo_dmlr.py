@@ -60,6 +60,7 @@ WORKSPACE_DIR_RE = re.compile(
     r"(?:-conf)?"
     r"-ws(?P<K>\d+)p(?P<P>\d+)r(?P<r>\d+)"
     r"-(?P<inject_mode>[^-]+)"
+    r"-per_token"
     r"-fixed-workspace$"
 )
 
