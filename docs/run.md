@@ -5,7 +5,7 @@
 
 ## First
 
-表格栏目：
+对应表格栏目：
 > Qwen-2.5-VL-3B:
 > Vanilla	全量 qwen-max 复现（LTPO codebase, align DMLR settings, mllm branch）:
 
