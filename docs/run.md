@@ -10,8 +10,8 @@
 > Vanilla	全量 qwen-max 复现（LTPO codebase, align DMLR settings, mllm branch）:
 
 ```bash
-nohup bash scripts2/step3a_baseline_3models_h200.sh &> output2/baseline_dev.log &
-nohup python scripts2/step4_verify_results.py ./output/dmlr_vanilla &
+bash scripts2/step3a_baseline_h200.sh
+python scripts2/step4_verify_results.py ./output/dmlr_vanilla
 ```
 
 ## Second
