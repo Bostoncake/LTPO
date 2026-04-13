@@ -214,5 +214,10 @@ __marimo__/
 output/
 dataset/
 .claude
-docs/
-scripts2/
+scripts2/check_env.sh
+scripts2/check_models.sh
+scripts2/download_scienceqa_fixed.py
+scripts2/step_combined_reward_h200.sh
+docs/before
+
+
