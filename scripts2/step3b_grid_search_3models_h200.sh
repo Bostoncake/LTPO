@@ -21,22 +21,33 @@ cd "$PROJ_ROOT"
 # ---- 配置区 (按需修改) ----
 N_GPUS=${N_GPUS:-8}
 MODEL_DIR=${MODEL_DIR:-/inspire/hdd/project/qproject-fundationmodel/xiashijie-240108120112/qsh/models}
+# MODELS=(
+#     "Qwen2.5-VL-3B-Instruct"
+#     "Qwen3-VL-4B-Instruct"
+#     "Qwen3-VL-8B-Instruct"
+# )
 MODELS=(
-    "Qwen2.5-VL-3B-Instruct"
     "Qwen3-VL-4B-Instruct"
     "Qwen3-VL-8B-Instruct"
 )
 
-TOKENS_LIST=(2 4)
-STEPS_LIST=(10 15)
-SIGMA_LIST=(5.0 25.0)
+# TOKENS_LIST=(2 4)
+# STEPS_LIST=(10 15)
+# SIGMA_LIST=(5.0 25.0)
+# SIGMA_DECAY=0.95
+# LR_LIST=(5e-3 1e-2 5e-2)
+# TOP_K=10
+
+TOKENS_LIST=(1 2)
+STEPS_LIST=(1 3)
+SIGMA_LIST=(10.0 20.0)
 SIGMA_DECAY=0.95
-LR_LIST=(5e-3 1e-2 5e-2)
+LR_LIST=(1e-4 5e-4 1e-3)
 TOP_K=10
 
 DATASETS=("mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev")
 
-root_output=./output/ltpo_dmlr_grid_dev
+root_output=./output/ltpo_dmlr_grid_dev_v4
 mkdir -p "${root_output}"
 
 # 构建 job 列表: model × tokens × steps × sigma × lr × dataset
