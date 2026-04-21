@@ -4,16 +4,17 @@
 # Generation configs, prompts, and verification mirror DMLR/script/run.sh.
 # The LTPO code framework (pre-merged visual tokens, single-process) is kept.
 
-export HUGGING_FACE_TOKEN=<YOUR_HF_TOKEN>
-export OPENAI_API_KEY=<YOUR_OPENAI_KEY>
+export HUGGING_FACE_TOKEN="***REDACTED_HF_TOKEN***"
+export OPENAI_API_KEY="***REDACTED_OPENAI_KEY***"
 export OPENAI_API_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 export MODEL_TYPE=qwen-max
 
 output=./output/dmlr_aligned_dev
 mkdir -p ${output}
 gpu=0
-for dataset in "mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev"; do
-    model=/WillDevExt/xiongyizhe/models/Qwen2.5-VL-7B-Instruct
+# "mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev"
+for dataset in "math_vista_dev"; do
+    model=/export/home/lanliwei.1/abcxyz/storage/models/Qwen2.5-VL-3B-Instruct
 
     CUDA_VISIBLE_DEVICES=$gpu python main_vl_dmlr.py \
         --dataset $dataset \

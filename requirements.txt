@@ -2,7 +2,7 @@ Pillow==11.3.0
 fastNLP==0.7.0
 torch==2.4.1
 peft==0.17.1
-transformers==4.56.1
+transformers==4.57.1
 # try 4.57.1 for both qwen 2.5 and qwen 3
 pandas==2.3.2
 datasets==4.0.0
