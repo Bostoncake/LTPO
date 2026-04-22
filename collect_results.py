@@ -1,7 +1,10 @@
+"""
+python collect_results.py output/dmlr_aligned_dev_v3_prompt
+"""
+
 import os
 import re
 import argparse
-
 
 BENCHMARKS = [
     ("MathVista", "math_vista_dev"),
