@@ -1,22 +1,29 @@
 #!/bin/bash
-# run_ltpo_vl_dmlr.sh — LTPO VL evaluation with DMLR-compatible pipeline.
+# run_ltpo_vl_dmlr_v5_dev.sh — LTPO VL evaluation with v5 prompts.
 #
-# Generation configs, prompts, and verification mirror DMLR/script/run.sh.
-# The LTPO code framework (pre-merged visual tokens, single-process) is kept.
+# v5 prompt design:
+#   - System prompt: UNCHANGED from baseline ("Please reason step by step,
+#     and put your final answer within \boxed{}.")
+#   - Per-dataset method hint (single sentence) added to user content.
+#   - Short bridge text: "The following tokens are your internal thinking space."
+#   - REMOVED "You do NOT need to output explicit reasoning steps." and
+#     "After these tokens, directly provide your final answer."
+#
+# Generation configs and verification mirror DMLR/script/run.sh.
 
 export HUGGING_FACE_TOKEN="***REDACTED_HF_TOKEN***"
 export OPENAI_API_KEY="***REDACTED_OPENAI_KEY***"
 export OPENAI_API_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 export MODEL_TYPE=qwen-max
 
-output=./output/dmlr_aligned_dev_original_prompt
+output=./output/dmlr_aligned_dev_v5_prompt
 mkdir -p ${output}
 gpu=0
 # "mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev"
 for dataset in "mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev"; do
     model=/export/home/lanliwei.1/abcxyz/storage/models/Qwen2.5-VL-3B-Instruct
 
-    CUDA_VISIBLE_DEVICES=$gpu python main_vl_dmlr.py \
+    CUDA_VISIBLE_DEVICES=$gpu python main_vl_dmlr_v5.py \
         --dataset $dataset \
         --data_root mllm_data \
         --image_root . \

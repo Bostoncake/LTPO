@@ -1,19 +1,40 @@
 """
-main_vl_dmlr_v2.py – Evaluate LTPO on Vision-Language benchmarks with a
-DMLR-compatible pipeline.
+main_vl_dmlr_v4.py – Evaluate LTPO on Vision-Language benchmarks with a
+DMLR-compatible pipeline — v4 dataset-specific prompts with strategy hints
+and restored bridge text.
 
-Changes from main_vl.py:
-- Uses ltpo_vl_dmlr.generate_vl (DMLR-compatible prompts / SYSTEM_PROMPT).
-- Loads model with attn_implementation="eager", torch.float32, and
-  padding_side="left" (matching DMLR's _load_model_with_retry settings).
-- Adds --min_pixels / --max_pixels args for the processor.
-- Answer extraction: checks <answer>…</answer> tags first, then \\boxed{}.
-- Verification: --use_llm_verify calls a structured LLM verifier
-  (pydantic-based, same as DMLR's verify_solution_equivalence).
-  Without the flag, a rule-based judge is used as fallback.
+v4 prompt changes (see ltpo_vl_dmlr_v4.py for full rationale):
+  - Dataset-specific system prompt via get_system_prompt(data_name).
+    Each includes a brief task-strategy hint BEFORE the standard
+    "Please reason step by step, and put your final answer within \\boxed{}."
+    sentence.  The hint nudges the model toward the right approach for each
+    benchmark without overriding the instructions already in the data prompt.
+
+    Dataset → hint prefix:
+      * hallusion   → "Look carefully at the image details before deciding."
+      * mmvp        → "Pay close attention to visual details in the image."
+      * mmstar      → "Examine the image carefully and consider each option."
+      * scienceqa   → "Apply relevant scientific knowledge to the question."
+      * mm_math     → "Identify key information from the figure for your
+                       calculations."
+      * math_vista  → "Interpret the visual information precisely before
+                       solving."
+      * math_vision → "Analyze the geometric or mathematical figure
+                       carefully."
+
+  - User content restores a short bridge sentence between the question and the
+    thought tokens:
+      "{prompt}\nThe following tokens represent your internal thinking space.\n{tokens}"
+    (v3 removed this bridge and performance dropped; v4 brings it back in a
+    shorter form.)
+
+  - Baseline path also uses get_system_prompt for fair comparison.
+
+Everything else (model loading, RL loop, answer extraction, verification)
+is identical to main_vl_dmlr.py / main_vl_dmlr_v3.py.
 
 Usage:
-    python main_vl_dmlr_v2.py \\
+    python main_vl_dmlr_v4.py \\
         --dataset scienceqa \\
         --data_root mllm_data \\
         --model_name_or_path /path/to/Qwen2.5-VL-7B-Instruct \\
@@ -41,7 +62,7 @@ from transformers import AutoProcessor, AutoModelForVision2Seq
 from openai import OpenAI
 
 from data_vl import get_mllm_dataset
-from ltpo_vl_dmlr_v2 import generate_vl, SYSTEM_PROMPT
+from ltpo_vl_dmlr_v4 import generate_vl, get_system_prompt
 
 
 huggingface_token = os.environ.get('HUGGING_FACE_TOKEN')
@@ -314,6 +335,11 @@ def main(args):
         print(f"Loaded {len(dataset)} examples from '{args.dataset}'")
         print(f"Example[0]: {dataset[0]['question'][:120]}...")
 
+    # v4: dataset-specific system prompt
+    system_prompt = get_system_prompt(args.dataset)
+    if args.verbose:
+        print(f"System prompt: {system_prompt}")
+
     model_name = args.model_name_or_path.split("/")[-1]
     data_name = args.dataset.split("/")[-1]
     conf_suffix = "" if args.disable_conf_reward else "-conf"
@@ -375,7 +401,7 @@ def main(args):
             if image is not None:
                 if 'qwen' in args.model_name_or_path.lower():
                     messages = [
-                        {'role': 'system', 'content': SYSTEM_PROMPT},
+                        {'role': 'system', 'content': system_prompt},
                         {
                             'role': 'user',
                             'content': [
@@ -397,7 +423,7 @@ def main(args):
                     ).to(device)
             else:
                 messages = [
-                    {'role': 'system', 'content': SYSTEM_PROMPT},
+                    {'role': 'system', 'content': system_prompt},
                     {'role': 'user', 'content': question},
                 ]
                 text = processor.apply_chat_template(
@@ -418,7 +444,7 @@ def main(args):
             output = tokenizer.decode(raw_outputs[0], skip_special_tokens=True)
 
         else:
-            # ---- LTPO optimised generation (DMLR-compatible) ----
+            # ---- LTPO optimised generation (v4 prompts) ----
             output, best_reward, best_reward_step, stop_reason = generate_vl(
                 processor=processor,
                 model=model,
@@ -451,16 +477,6 @@ def main(args):
 
         correct += is_correct
         total += 1
-
-        # Print full model response for the first 10 questions
-        # if total <= 10:
-        #     print(f"\n{'='*60}")
-        #     print(f"[{i}] FULL MODEL RESPONSE (question {total}/{min(10, end_data_idx - start_data_idx)}):")
-        #     print(f"{'='*60}")
-        #     print(f"Q: {question}")
-        #     print(f"{'-'*60}")
-        #     print(output)
-        #     print(f"{'='*60}\n")
 
         if args.verbose:
             if args.verbose > 1:

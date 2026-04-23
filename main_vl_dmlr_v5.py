@@ -1,19 +1,24 @@
 """
-main_vl_dmlr_v2.py – Evaluate LTPO on Vision-Language benchmarks with a
-DMLR-compatible pipeline.
+main_vl_dmlr_v5.py – Evaluate LTPO on Vision-Language benchmarks with a
+DMLR-compatible pipeline — v5 prompts.
 
-Changes from main_vl.py:
-- Uses ltpo_vl_dmlr.generate_vl (DMLR-compatible prompts / SYSTEM_PROMPT).
-- Loads model with attn_implementation="eager", torch.float32, and
-  padding_side="left" (matching DMLR's _load_model_with_retry settings).
-- Adds --min_pixels / --max_pixels args for the processor.
-- Answer extraction: checks <answer>…</answer> tags first, then \\boxed{}.
-- Verification: --use_llm_verify calls a structured LLM verifier
-  (pydantic-based, same as DMLR's verify_solution_equivalence).
-  Without the flag, a rule-based judge is used as fallback.
+v5 prompt changes (see ltpo_vl_dmlr_v5.py for full rationale):
+  - System prompt: IDENTICAL to baseline — "Please reason step by step, and
+    put your final answer within \\boxed{}."  This keeps the comparison fair.
+  - Per-dataset answer_instruction: a single-sentence method hint added to user
+    content (e.g. "Focus on the visual details in the image." for mmvp).
+  - Short bridge text before thought tokens:
+    "The following tokens are your internal thinking space."
+  - REMOVED the lines "You do NOT need to output explicit reasoning steps."
+    and "After these tokens, directly provide your final answer." which likely
+    suppressed chain-of-thought in earlier versions.
+  - Baseline path uses the same SYSTEM_PROMPT (unchanged from baseline).
+
+Everything else (model loading, RL loop, answer extraction, verification)
+is identical to main_vl_dmlr.py.
 
 Usage:
-    python main_vl_dmlr_v2.py \\
+    python main_vl_dmlr_v5.py \\
         --dataset scienceqa \\
         --data_root mllm_data \\
         --model_name_or_path /path/to/Qwen2.5-VL-7B-Instruct \\
@@ -41,7 +46,7 @@ from transformers import AutoProcessor, AutoModelForVision2Seq
 from openai import OpenAI
 
 from data_vl import get_mllm_dataset
-from ltpo_vl_dmlr_v2 import generate_vl, SYSTEM_PROMPT
+from ltpo_vl_dmlr_v5 import generate_vl, SYSTEM_PROMPT
 
 
 huggingface_token = os.environ.get('HUGGING_FACE_TOKEN')
@@ -418,7 +423,7 @@ def main(args):
             output = tokenizer.decode(raw_outputs[0], skip_special_tokens=True)
 
         else:
-            # ---- LTPO optimised generation (DMLR-compatible) ----
+            # ---- LTPO optimised generation (v5 prompts) ----
             output, best_reward, best_reward_step, stop_reason = generate_vl(
                 processor=processor,
                 model=model,
@@ -451,16 +456,6 @@ def main(args):
 
         correct += is_correct
         total += 1
-
-        # Print full model response for the first 10 questions
-        # if total <= 10:
-        #     print(f"\n{'='*60}")
-        #     print(f"[{i}] FULL MODEL RESPONSE (question {total}/{min(10, end_data_idx - start_data_idx)}):")
-        #     print(f"{'='*60}")
-        #     print(f"Q: {question}")
-        #     print(f"{'-'*60}")
-        #     print(output)
-        #     print(f"{'='*60}\n")
 
         if args.verbose:
             if args.verbose > 1:
