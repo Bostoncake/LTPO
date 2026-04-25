@@ -49,7 +49,7 @@ from transformers import AutoProcessor, AutoModelForVision2Seq
 from openai import OpenAI
 
 from data_vl import get_mllm_dataset
-from ltpo_vl_dmlr_v7 import generate_vl, get_system_prompt, SYSTEM_PROMPT
+from ltpo_vl_dmlr_v7 import generate_vl, SYSTEM_PROMPT
 
 
 huggingface_token = os.environ.get('HUGGING_FACE_TOKEN')
@@ -322,11 +322,8 @@ def main(args):
         print(f"Loaded {len(dataset)} examples from '{args.dataset}'")
         print(f"Example[0]: {dataset[0]['question'][:120]}...")
 
-    # v6: baseline uses unified SYSTEM_PROMPT; LTPO uses per-dataset prompt
-    if args.eval_baseline:
-        system_prompt = SYSTEM_PROMPT
-    else:
-        system_prompt = get_system_prompt(args.dataset)
+    # v7: unified SYSTEM_PROMPT for both baseline and LTPO
+    system_prompt = SYSTEM_PROMPT
     if args.verbose:
         print(f"System prompt: {system_prompt}")
 
