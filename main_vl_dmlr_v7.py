@@ -49,7 +49,7 @@ from transformers import AutoProcessor, AutoModelForVision2Seq
 from openai import OpenAI
 
 from data_vl import get_mllm_dataset
-from ltpo_vl_dmlr_v6 import generate_vl, get_system_prompt, SYSTEM_PROMPT
+from ltpo_vl_dmlr_v7 import generate_vl, get_system_prompt, SYSTEM_PROMPT
 
 
 huggingface_token = os.environ.get('HUGGING_FACE_TOKEN')
