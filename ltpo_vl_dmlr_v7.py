@@ -1,189 +1,56 @@
-"""
-LTPO generate for Vision-Language Models — DMLR-compatible, v6 prompts.
-
-v6 prompt design rationale
-==========================
-v6 cherry-picks the best-performing prompt configuration for EACH dataset
-from prior experiments (v2, v3, v4).  There are two separate prompt
-concepts:
-
-  1. **system_prompt** — used in the chat-template "system" role.
-     - Baseline mode (--eval_baseline): ALL datasets use the v2 system
-       prompt, which is a single unified sentence:
-         "Please reason step by step, and MUST put your final answer
-          within \\boxed{}."
-     - LTPO mode: each dataset gets its own system prompt (see below).
-
-  2. **prompt_instruction** — the user-content formatting that wraps
-     {question} and {thought_tokens}.  Each dataset may use a different
-     style of bridge text between the question and the thought tokens.
-     (This is NOT a system prompt; it lives in the user message.)
-
-Per-dataset configuration (LTPO / non-baseline mode):
-  ┌──────────────┬─────────┬─────────────────────────────────────────────┬──────────────────────────────────────────┐
-  │ Dataset      │ Source  │ system_prompt                              │ prompt_instruction (user content)         │
-  ├──────────────┼─────────┼─────────────────────────────────────────────┼──────────────────────────────────────────┤
-  │ MathVista    │ v4      │ "Interpret the visual information          │ "{prompt}\n"                             │
-  │              │         │  precisely before solving. Please reason   │ "The following tokens represent your     │
-  │              │         │  step by step, and put your final answer   │  internal thinking space.\n"             │
-  │              │         │  within \\boxed{}."                        │ "{tokens}"                               │
-  ├──────────────┼─────────┼─────────────────────────────────────────────┼──────────────────────────────────────────┤
-  │ MathVision   │ v3      │ "Please reason step by step, and put your │ "{prompt}\n{tokens}"                     │
-  │              │         │  final answer within \\boxed{}."           │ (no bridge text)                         │
-  ├──────────────┼─────────┼─────────────────────────────────────────────┼──────────────────────────────────────────┤
-  │ MM-Math      │ v2      │ "Please reason step by step, and MUST put │ "{prompt}\n\n"                           │
-  │              │         │  your final answer within \\boxed{}."      │ "The following special tokens represent  │
-  │              │         │                                             │  YOUR INTERNAL THINKING SPACE where your │
-  │              │         │                                             │  reasoning happens implicitly.\n"        │
-  │              │         │                                             │ "{tokens}"                               │
-  ├──────────────┼─────────┼─────────────────────────────────────────────┼──────────────────────────────────────────┤
-  │ HallusionB.  │ v4      │ "Look carefully at the image details      │ v4 bridge (same as MathVista)            │
-  │              │         │  before deciding. Please reason step by    │                                          │
-  │              │         │  step, and put your final answer within    │                                          │
-  │              │         │  \\boxed{}."                               │                                          │
-  ├──────────────┼─────────┼─────────────────────────────────────────────┼──────────────────────────────────────────┤
-  │ MMVP         │ v2      │ "Please reason step by step, and MUST put │ v2 bridge (same as MM-Math)              │
-  │              │         │  your final answer within \\boxed{}."      │                                          │
-  ├──────────────┼─────────┼─────────────────────────────────────────────┼──────────────────────────────────────────┤
-  │ MMStar       │ v4      │ "Examine the image carefully and consider │ v4 bridge (same as MathVista)            │
-  │              │         │  each option. Please reason step by step,  │                                          │
-  │              │         │  and put your final answer within          │                                          │
-  │              │         │  \\boxed{}."                               │                                          │
-  ├──────────────┼─────────┼─────────────────────────────────────────────┼──────────────────────────────────────────┤
-  │ ScienceQA    │ v4      │ "Apply relevant scientific knowledge to   │ v4 bridge (same as MathVista)            │
-  │              │         │  the question. Please reason step by step, │                                          │
-  │              │         │  and put your final answer within          │                                          │
-  │              │         │  \\boxed{}."                               │                                          │
-  └──────────────┴─────────┴─────────────────────────────────────────────┴──────────────────────────────────────────┘
-
-  Default (unknown dataset): v2 system_prompt + v2 bridge.
-
-Everything else (RL loop, visual-token merging, generate_vl signature)
-is identical to ltpo_vl_dmlr_v4.py.
-"""
-
 import torch
 from fastNLP import logger
 from reward import RewardModel
 from ltpo import get_confidence
 
-
-# ---------------------------------------------------------------------------
-# Baseline system_prompt (used by --eval_baseline for ALL datasets)
-# ---------------------------------------------------------------------------
-
 SYSTEM_PROMPT = (
     "Please reason step by step, and MUST put your final answer within \\boxed{}."
 )
 
-
-# ---------------------------------------------------------------------------
-# Per-dataset system_prompt (used in LTPO / non-baseline mode)
-# ---------------------------------------------------------------------------
-
-_SYSTEM_PROMPT_MATH_VISTA = (
-    "Interpret the visual information precisely before solving. "
-    "Please reason step by step, and put your final answer within \\boxed{}."
-)
-
-_SYSTEM_PROMPT_MATH_VISION = (
-    "Please reason step by step, and put your final answer within \\boxed{}."
-)
-
-_SYSTEM_PROMPT_MM_MATH = (
-    "Please reason step by step, and MUST put your final answer within \\boxed{}."
-)
-
-_SYSTEM_PROMPT_HALLUSION = (
-    "Look carefully at the image details before deciding. "
-    "Please reason step by step, and put your final answer within \\boxed{}."
-)
-
-_SYSTEM_PROMPT_MMVP = (
-    "Please reason step by step, and MUST put your final answer within \\boxed{}."
-)
-
-_SYSTEM_PROMPT_MMSTAR = (
-    "Examine the image carefully and consider each option. "
-    "Please reason step by step, and put your final answer within \\boxed{}."
-)
-
-_SYSTEM_PROMPT_SCIENCEQA = (
-    "Apply relevant scientific knowledge to the question. "
-    "Please reason step by step, and put your final answer within \\boxed{}."
-)
-
-_SYSTEM_PROMPT_DEFAULT = (
-    "Please reason step by step, and MUST put your final answer within \\boxed{}."
-)
-
-
-def get_system_prompt(data_name: str) -> str:
-    """Return the best-performing system prompt for the given dataset."""
-    dn = data_name.lower() if data_name else ""
-    if "math_vista" in dn:
-        return _SYSTEM_PROMPT_MATH_VISTA
-    if "math_vision" in dn:
-        return _SYSTEM_PROMPT_MATH_VISION
-    if "mm_math" in dn:
-        return _SYSTEM_PROMPT_MM_MATH
-    if "hallusion" in dn:
-        return _SYSTEM_PROMPT_HALLUSION
-    if "mmvp" in dn:
-        return _SYSTEM_PROMPT_MMVP
-    if "mmstar" in dn:
-        return _SYSTEM_PROMPT_MMSTAR
-    if "scienceqa" in dn:
-        return _SYSTEM_PROMPT_SCIENCEQA
-    return _SYSTEM_PROMPT_DEFAULT
-
-
-# ---------------------------------------------------------------------------
-# Per-dataset prompt_instruction builder (user-content formatting)
-# ---------------------------------------------------------------------------
-
 def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) -> str:
-    """
-    Build the user-content string that wraps the question and thought tokens.
-
-    Different datasets use different bridge text styles based on which
-    version (v2/v3/v4) worked best for that dataset.
-    """
     dn = data_name.lower() if data_name else ""
 
-    # v4 bridge: short single sentence
-    if any(k in dn for k in ("math_vista", "hallusion", "mmstar", "scienceqa")):
+    if "math_vista" in dn:
         return (
             f'{prompt}\n'
+            f'Interpret the visual information precisely before solving.\n'
+            f'The following tokens represent your internal thinking space.\n'
+            f'{thought_tokens}'
+        )
+    
+    if "hallusion" in dn:
+        return (
+            f'{prompt}\n'
+            f'Look carefully at the image details before deciding.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
 
-    # v3 bridge: no bridge text at all
-    if "math_vision" in dn:
-        return f'{prompt}\n{thought_tokens}'
-
-    # v2 bridge: longer descriptive sentence
-    if any(k in dn for k in ("mm_math", "mmvp")):
+    if "mmstar" in dn:
         return (
-            f'{prompt}\n\n'
-            f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
-            f'where your reasoning happens implicitly.\n'
+            f'{prompt}\n'
+            f'Examine the image carefully and consider each option.\n'
+            f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
 
-    # Default: v2 bridge
+    if "scienceqa" in dn:
+        return (
+            f'{prompt}\n'
+            f'Apply relevant scientific knowledge to the question.\n'
+            f'The following tokens represent your internal thinking space.\n'
+            f'{thought_tokens}'
+        )
+
+    if "math_vision" in dn:
+        return f'{prompt}\n{thought_tokens}'
+
     return (
         f'{prompt}\n\n'
         f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
         f'where your reasoning happens implicitly.\n'
         f'{thought_tokens}'
     )
-
-
-# ---------------------------------------------------------------------------
-# Thought-token helpers (unchanged from ltpo_vl.py)
-# ---------------------------------------------------------------------------
 
 def _thought_token_ids(tokenizer, model_name: str, num: int) -> list[int]:
     """Return the token-ID list that represents the thought token block."""
@@ -230,11 +97,6 @@ def _find_thought_token_start(token_ids: list[int], thought_ids: list[int]) -> i
         f"Could not locate thought token block in input_ids. "
         f"First few expected IDs: {thought_ids[:5]}"
     )
-
-
-# ---------------------------------------------------------------------------
-# Visual-token pre-merging (unchanged from ltpo_vl.py)
-# ---------------------------------------------------------------------------
 
 def _merge_visual_tokens(
     model, input_ids: torch.Tensor, inputs: dict, model_name: str
@@ -286,11 +148,6 @@ def _merge_visual_tokens(
         )
         return model.get_input_embeddings()(input_ids)
 
-
-# ---------------------------------------------------------------------------
-# build_inputs_vl  — v6 dataset-aware prompt with per-dataset bridge text
-# ---------------------------------------------------------------------------
-
 def build_inputs_vl(
     processor,
     model,
@@ -302,10 +159,10 @@ def build_inputs_vl(
     model_name: str = '',
 ):
     """
-    Construct multimodal inputs for LTPO — v6 prompt.
+    Construct multimodal inputs for LTPO — v7 prompt.
 
-    System prompt: dataset-specific (cherry-picked from v2/v3/v4).
-    User content (prompt_instruction): dataset-specific bridge text style.
+    System prompt: unified across all datasets.
+    User content (prompt_instruction): dataset-specific instruction + question + thought tokens.
     """
     if num_thought_tokens <= 0:
         raise ValueError('num_thought_tokens must be a positive integer')
@@ -313,7 +170,7 @@ def build_inputs_vl(
     tokenizer = processor.tokenizer if hasattr(processor, 'tokenizer') else processor
     latent_thought_tokens = _thought_token_str(model_name, num_thought_tokens)
 
-    system_prompt = get_system_prompt(data_name)
+    system_prompt = SYSTEM_PROMPT
     input_content = _build_prompt_instruction(prompt, latent_thought_tokens, data_name)
 
     # ---- Build multimodal message & tokenise ----
