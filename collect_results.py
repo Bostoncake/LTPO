@@ -1,5 +1,5 @@
 """
-python collect_results.py output/dmlr_aligned_dev_v3_prompt
+python collect_results.py output/dmlr_aligned_dev_v6_prompt
 """
 
 import os
