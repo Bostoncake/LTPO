@@ -171,7 +171,15 @@ def _merge_visual_tokens(
         if pixel_values is not None:
             image_grid_thw = inputs.get('image_grid_thw')
             pv = pixel_values.to(dtype=next(model.visual.parameters()).dtype)
-            image_embeds = model.visual(pv, grid_thw=image_grid_thw)
+            # image_embeds = model.visual(pv, grid_thw=image_grid_thw)
+            vision_output = model.visual(pv, grid_thw=image_grid_thw)
+            # Qwen2.5-VL returns a tensor; Qwen3-VL returns a tuple or dataclass
+            if isinstance(vision_output, torch.Tensor):
+                image_embeds = vision_output
+            elif isinstance(vision_output, tuple):
+                image_embeds = vision_output[0]
+            else:
+                image_embeds = vision_output.pooler_output
             image_token_id = model.config.image_token_id
             mask = (input_ids == image_token_id).unsqueeze(-1).expand_as(inputs_embeds)
             image_embeds = image_embeds.to(
