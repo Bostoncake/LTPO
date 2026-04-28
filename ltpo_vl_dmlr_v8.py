@@ -4,7 +4,16 @@ from reward import RewardModel
 from ltpo import get_confidence
 
 SYSTEM_PROMPT = (
-    "Please reason step by step, and MUST put your final answer within \\boxed{}."
+    # baseline: MathVision 0.40
+    # "Please reason step by step, and MUST put your final answer within \\boxed{}."
+    # baseline: MathVision 0.37 - 0.41
+    # "You are a careful visual reasoning assistant. Use the image and question to answer. "
+    # "Give the final answer in \\boxed{}."
+    # baseline: MathVision 0.27
+    "A conversation between User and Assistant. The user asks a question, and the Assistant solves it. "
+    "The assistant first thinks about the reasoning process in the mind and then provides the user with the answer. "
+    "The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, "
+    "i.e., <think> reasoning process here </think><answer> answer here </answer>"
 )
 
 def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) -> str:
@@ -12,83 +21,137 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
 
     if "math_vista" in dn:
         return (
-            # baseline: 0.4700
             # f'{prompt}\n'
             # f'Interpret the visual information precisely before solving.\n'
             # f'The following tokens represent your internal thinking space.\n'
-            # f'{thought_tokens}' -> 0.4500
+            # f'{thought_tokens}' 
             # f'{prompt}\n'
             # f"Carefully analyze the visual information and convert it into a mathematical problem.\n"
             # f"Reason step by step and verify intermediate results.\n"
             # f'The following tokens represent your internal thinking space.\n'
-            # f'{thought_tokens}' ->  0.4367
+            # f'{thought_tokens}'
             # f'{prompt}\n'
             # f"Carefully examine the image and use the information it provides to answer the question.\n"
             # f"Reason carefully and ensure your answer is consistent with the image.\n"
             # f'The following tokens represent your internal thinking space.\n'
-            # f'{thought_tokens}' ->  0.4200
-            # 0.4500
-            f'{prompt}\n'
-            f'The following tokens represent your internal thinking space.\n'
-            f'{thought_tokens}'
+            # f'{thought_tokens}'
             # f'{prompt}\n' 
             # f"Carefully use the visual information provided.\n"
             # f"Ensure your answer is consistent with the image.\n"
             # f'The following tokens represent your internal thinking space.\n'
-            # f'{thought_tokens}' -> 0.4267
+            # f'{thought_tokens}'
+            # v7:
+            # f'{prompt}\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
+            f'{prompt}\n\n'
+            f'Extract the needed visual facts first, then solve the problem.\n'
+            f'The following tokens represent your internal thinking space.\n'
+            f'{thought_tokens}'
+        )
+    
+    if "math_vision" in dn:
+        return (
+            # baseline: 0.2700
+            # v7:
+            # f'{prompt}\n\n'
+            # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
+            # f'where your reasoning happens implicitly.\n'
+            # f'{thought_tokens}'
+            f'{prompt}\n\n'
+            f'Read the diagram carefully and solve using the visual quantities and relations.\n'
+            f'The following tokens represent your internal thinking space.\n'
+            f'{thought_tokens}'
+        )
+    
+    if "mm_math" in dn:
+        return (
+            # v7:
+            # f'{prompt}\n\n'
+            # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
+            # f'where your reasoning happens implicitly.\n'
+            # f'{thought_tokens}'
+            f'{prompt}\n\n'
+            f'The following tokens represent your internal thinking space.\n'
+            f'{thought_tokens}'
         )
     
     if "hallusion" in dn:
         return (
+            # baseline: 0.6867
             # f'{prompt}\n'
             # f'Look carefully at the image details before deciding.\n'
             # f'The following tokens represent your internal thinking space.\n'
-            # f'{thought_tokens}' 64.00
-            # 0.6567
-            f'{prompt}\n'
-            f'Look carefully at the image details before deciding.\n'
-            f"Carefully examine the image and avoid making unsupported assumptions.\n"
+            # f'{thought_tokens}'
+            # v7:
+            # f'{prompt}\n'
+            # f'Look carefully at the image details before deciding.\n'
+            # f"Carefully examine the image and avoid making unsupported assumptions.\n"
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
+            f'{prompt}\n\n'
+            f'Answer only from visible evidence; if the image does not support a claim, treat it as false.\n'
+            f'The following tokens represent your internal thinking space.\n'
+            f'{thought_tokens}'
+        )
+    
+    if "mmvp" in dn:
+        return (
+            # baseline: 0.7667
+            # v7:
+            # f'{prompt}\n\n'
+            # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
+            # f'where your reasoning happens implicitly.\n'
+            # f'{thought_tokens}'
+            f'{prompt}\n\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
 
     if "mmstar" in dn:
         return (
+            # baseline: 0.6000
             # f'{prompt}\n'
             # f'Examine the image carefully and consider each option. Please reason step by step.\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
             # f'where your reasoning happens implicitly.\n'
-            # f'{thought_tokens}' 44.67
-            # 0.4733
-            f'{prompt}\n'
-            f"Look at the image and answer the question, Pay attention to fine-grained details\n"
-            f"Check all options before deciding, and avoid making assumptions not supported by the image.\n"
-            f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
-            f'where your reasoning happens implicitly.\n'
+            # f'{thought_tokens}' 
+            # v7:
+            # f'{prompt}\n'
+            # f"Look at the image and answer the question, Pay attention to fine-grained details\n"
+            # f"Check all options before deciding, and avoid making assumptions not supported by the image.\n"
+            # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
+            # f'where your reasoning happens implicitly.\n'
+            # f'{thought_tokens}'
+            f'{prompt}\n\n'
+            f'Compare each option with the image and choose the best supported answer.\n'
+            f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
 
     if "scienceqa" in dn:
         return (
+            # baseline: 0.6000
+            # v7:
+            # f'{prompt}\n'
+            # f'Apply relevant scientific knowledge to the question.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
             f'{prompt}\n'
-            f'Apply relevant scientific knowledge to the question.\n'
+            f'Use the image evidence together with relevant scientific knowledge.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
 
-    if "math_vision" in dn:
-        return (
-            f'{prompt}\n\n'
-            f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
-            f'where your reasoning happens implicitly.\n'
-            f'{thought_tokens}'
-        )
-        # return f'{prompt}\n{thought_tokens}'
 
     return (
+        # v7:
+        # f'{prompt}\n\n'
+        # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
+        # f'where your reasoning happens implicitly.\n'
+        # f'{thought_tokens}'
         f'{prompt}\n\n'
-        f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
-        f'where your reasoning happens implicitly.\n'
+        f'The following tokens represent your internal thinking space.\n'
         f'{thought_tokens}'
     )
 
