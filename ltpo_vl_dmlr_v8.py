@@ -12,22 +12,22 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
 
     if "math_vista" in dn:
         return (
-            # baseline: 47
+            # baseline: 0.4700
             # f'{prompt}\n'
             # f'Interpret the visual information precisely before solving.\n'
             # f'The following tokens represent your internal thinking space.\n'
-            # f'{thought_tokens}' 45.00
+            # f'{thought_tokens}' -> 0.4500
             # f'{prompt}\n'
             # f"Carefully analyze the visual information and convert it into a mathematical problem.\n"
             # f"Reason step by step and verify intermediate results.\n"
             # f'The following tokens represent your internal thinking space.\n'
-            # f'{thought_tokens}' 0.4367
+            # f'{thought_tokens}' ->  0.4367
             # f'{prompt}\n'
             # f"Carefully examine the image and use the information it provides to answer the question.\n"
             # f"Reason carefully and ensure your answer is consistent with the image.\n"
             # f'The following tokens represent your internal thinking space.\n'
-            # f'{thought_tokens}' 0.4200
-            # 45.00
+            # f'{thought_tokens}' ->  0.4200
+            # 0.4500
             f'{prompt}\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
@@ -35,7 +35,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f"Carefully use the visual information provided.\n"
             # f"Ensure your answer is consistent with the image.\n"
             # f'The following tokens represent your internal thinking space.\n'
-            # f'{thought_tokens}'
+            # f'{thought_tokens}' -> 0.4267
         )
     
     if "hallusion" in dn:

@@ -30,8 +30,10 @@ output=./output/dmlr_aligned_dev_v7_prompt
 mkdir -p ${output}
 gpu=0
 # "mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev"
+# "mmstar_dev" "math_vista_dev" "hallusion_dev"
 for dataset in "mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev"; do
     model=/export/home/lanliwei.1/abcxyz/storage/models/Qwen2.5-VL-3B-Instruct
+    # model=/export/home/lanliwei.1/abcxyz/storage/models/Qwen3-VL-4B-Instruct
 
     CUDA_VISIBLE_DEVICES=$gpu python main_vl_dmlr_v7.py \
         --dataset $dataset \
@@ -53,5 +55,8 @@ for dataset in "mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_visi
         --use_llm_verify \
         --verbose 1 > ${output}/${dataset}.log 2>&1 &
     gpu=$((gpu+1))
+    # if [ $gpu -eq 5 ]; then
+    #     gpu=6
+    # fi
 done
 wait
