@@ -44,6 +44,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'{prompt}\n'
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
+            # below: 0.4367
             f'{prompt}\n\n'
             f'Extract the needed visual facts first, then solve the problem.\n'
             f'The following tokens represent your internal thinking space.\n'
@@ -89,6 +90,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f"Carefully examine the image and avoid making unsupported assumptions.\n"
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
+            # below: 0.6600
             f'{prompt}\n\n'
             f'Answer only from visible evidence; if the image does not support a claim, treat it as false.\n'
             f'The following tokens represent your internal thinking space.\n'
@@ -103,6 +105,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
             # f'where your reasoning happens implicitly.\n'
             # f'{thought_tokens}'
+            # below: 0.7433
             f'{prompt}\n\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
@@ -123,6 +126,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
             # f'where your reasoning happens implicitly.\n'
             # f'{thought_tokens}'
+            # below: 0.5200
             f'{prompt}\n\n'
             f'Compare each option with the image and choose the best supported answer.\n'
             f'The following tokens represent your internal thinking space.\n'
@@ -137,6 +141,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'Apply relevant scientific knowledge to the question.\n'
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
+            # below: 0.5567
             f'{prompt}\n'
             f'Use the image evidence together with relevant scientific knowledge.\n'
             f'The following tokens represent your internal thinking space.\n'
