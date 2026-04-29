@@ -7,10 +7,17 @@ export MODEL_TYPE=qwen-max
 
 output=./output/dmlr_aligned_dev_v8_prompt
 mkdir -p ${output}
-gpu=0
+GPUS=(0 1 2 3 4 5 6)
+gpu_idx=0
 # "mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev"
 # "mmstar_dev" "math_vista_dev" "hallusion_dev"
 for dataset in "mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev"; do
+    if [ ${gpu_idx} -ge ${#GPUS[@]} ]; then
+        echo "Not enough GPU ids in GPUS for dataset ${dataset}" >&2
+        exit 1
+    fi
+    gpu=${GPUS[$gpu_idx]}
+
     # model=/export/home/lanliwei.1/abcxyz/storage/models/Qwen2.5-VL-3B-Instruct
     model=/export/home/lanliwei.1/abcxyz/storage/models/Qwen3-VL-4B-Instruct
 
@@ -33,9 +40,6 @@ for dataset in "mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_visi
         --top_k 10 \
         --use_llm_verify \
         --verbose 1 > ${output}/${dataset}.log 2>&1 &
-    gpu=$((gpu+1))
-    # if [ $gpu -eq 5 ]; then
-    #     gpu=6
-    # fi
+    gpu_idx=$((gpu_idx+1))
 done
 wait
