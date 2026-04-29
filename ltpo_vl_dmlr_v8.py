@@ -64,6 +64,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'Solve step by step.\n'
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
+            # below: 0.4600
             f'{prompt}\n\n'
             f'Extract exact numerical values and relationships from the image.\n'
             f'Use them to solve the problem precisely.\n'
@@ -90,7 +91,12 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.2300
+            # f'{prompt}\n\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
             f'{prompt}\n\n'
+            f'Translate the visual diagram into mathematical notation.\n'
+            f'Then solve step by step using mathematical reasoning.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
@@ -153,8 +159,14 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.6733
+            # f'{prompt}\n\n'
+            # f'Reject any assumption — confirm only what the image directly and clearly supports.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
+            # below: 0.6733
             f'{prompt}\n\n'
-            f'Reject any assumption — confirm only what the image directly and clearly supports.\n'
+            f'Do not rely on assumptions — treat the image as the only source of truth.\n'
+            f'Confirm your answer only if the image directly and explicitly supports it.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
@@ -192,8 +204,14 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.7533
+            # f'{prompt}\n\n'
+            # f'Scrutinize the image carefully before answering.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
+            # below: 0.7033
             f'{prompt}\n\n'
-            f'Scrutinize the image carefully before answering.\n'
+            f'Before answering, observe every visual detail in the image meticulously.\n'
+            f'Pay special attention to colors, counts, positions, and spatial relationships.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
@@ -237,6 +255,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'Determine the correct answer by matching each option to the visual evidence in the image.\n'
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
+            # below: 0.4733
             f'{prompt}\n\n'
             f'Pay attention to fine-grained visual details in the image.\n'
             f'Check all options before deciding and avoid making unsupported assumptions.\n'
@@ -276,6 +295,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'Apply scientific knowledge to determine the correct answer.\n'
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
+            # below: 0.5767
             f'{prompt}\n\n'
             f'Identify the scientific concept being tested.\n'
             f'Use it to select the most accurate answer.\n'
