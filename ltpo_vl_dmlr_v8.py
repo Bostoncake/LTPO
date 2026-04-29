@@ -21,6 +21,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
 
     if "math_vista" in dn:
         return (
+            # baseline: 0.6533
             # f'{prompt}\n'
             # f'Interpret the visual information precisely before solving.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -59,6 +60,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
             # f'where your reasoning happens implicitly.\n'
             # f'{thought_tokens}'
+            # below: 0.2200
             f'{prompt}\n\n'
             f'Read the diagram carefully and solve using the visual quantities and relations.\n'
             f'The following tokens represent your internal thinking space.\n'
@@ -67,11 +69,13 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
     
     if "mm_math" in dn:
         return (
+            # baseline: 0.5867
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
             # f'where your reasoning happens implicitly.\n'
             # f'{thought_tokens}'
+            # below: 0.5333
             f'{prompt}\n\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
