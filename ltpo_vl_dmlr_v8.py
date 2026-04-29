@@ -56,11 +56,15 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.4600
+            # f'{prompt}\n\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
             f'{prompt}\n\n'
+            f'Solve step by step.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
-    
+
     if "math_vision" in dn:
         return (
             # baseline: 0.2700
@@ -75,8 +79,11 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.2167
+            # f'{prompt}\n\n'
+            # f'Carefully interpret the diagram and extract all mathematical information before solving.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
             f'{prompt}\n\n'
-            f'Carefully interpret the diagram and extract all mathematical information before solving.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
@@ -124,8 +131,13 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.6833
+            # f'{prompt}\n\n'
+            # f'Do not rely on assumptions — verify that the image content directly supports your answer.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
+            # below: 0.6633
             f'{prompt}\n\n'
-            f'Do not rely on assumptions — verify that the image content directly supports your answer.\n'
+            f'Never assume — check your answer directly against the visible image content.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
@@ -148,8 +160,13 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.7133
+            # f'{prompt}\n\n'
+            # f'Consider both the image and the question carefully before answering.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
+            # below: 0.7467
             f'{prompt}\n\n'
-            f'Consider both the image and the question carefully before answering.\n'
+            f'Examine the image carefully before answering.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
@@ -180,8 +197,12 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.5167
+            # f'{prompt}\n\n'
+            # f'Use the image to answer the question.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
+            # below: 0.5100
             f'{prompt}\n\n'
-            f'Use the image to answer the question.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
@@ -205,7 +226,12 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.5633
+            # f'{prompt}\n\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
+            # below: 0.5800
             f'{prompt}\n\n'
+            f'Select the correct answer based on scientific reasoning.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
