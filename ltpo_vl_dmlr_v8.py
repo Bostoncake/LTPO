@@ -17,8 +17,18 @@ SYSTEM_PROMPT = (
 )
 
 BASELINE_SYSTEM_PROMPT = (
-    # version 1
-    "You are a helpful visual assistant. Answer the user's question based on the image."
+    # version 1: MathVista 0.6200, MathVision 0.4000, mm_math 0.5800, hallusion 0.6800, mmvp 0.7833, mmstar 0.6067, scienceqa 0.5900
+    # "You are a helpful visual assistant. Answer the user's question based on the image."
+    # version 2:
+    "You are a knowledgeable and careful visual assistant. "
+    "When presented with an image and a question, take your time to understand both thoroughly. "
+    "Visual content can be rich and nuanced — pay attention to all details in the image, "
+    "including objects, quantities, spatial layout, colors, labels, and any text that appears. "
+    "It is important to ground your answer in what the image actually shows rather than relying on prior assumptions. "
+    "If the question involves numbers, measurements, or comparisons, extract the relevant values from the image carefully. "
+    "If the question is about a concept or category, consider what the image depicts and how it relates to that concept. "
+    "When multiple interpretations of the image seem possible, reflect on which one is most consistent with the visual evidence. "
+    "Be thorough in your thinking, and aim to give an answer that is both accurate and well-supported by the image content."
 )
 
 def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) -> str:
@@ -29,6 +39,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_long: 0.6533
             # baseline_short: 0.6100
             # baseline_v1: 0.6200
+            # baseline_v2: 0.6100
             # f'{prompt}\n'
             # f'Interpret the visual information precisely before solving.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -98,6 +109,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_long: 0.2700
             # baseline_short: 0.4000
             # baseline_v1: 0.4000
+            # baseline_v2: 0.4000
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -135,6 +147,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_long: 0.5867
             # baseline_short: 0.5767
             # baseline_v1: 0.5800
+            # baseline_v2: 0.5767
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -156,6 +169,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_long: 0.6867
             # baseline_short: 0.6900
             # baseline_v1: 0.6800
+            # baseline_v2: 0.7167
             # f'{prompt}\n'
             # f'Look carefully at the image details before deciding.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -219,6 +233,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_long: 0.7667
             # baseline_short: 0.7767
             # baseline_v1: 0.7833
+            # baseline_v2: 0.8000
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -276,6 +291,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_long: 0.6000
             # baseline_short: 0.5767
             # baseline_v1: 0.6067
+            # baseline_v2: 0.5900
             # f'{prompt}\n'
             # f'Examine the image carefully and consider each option. Please reason step by step.\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -334,6 +350,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_long: 0.6000
             # baseline_short: 0.5967
             # baseline_v1: 0.5900
+            # baseline_v2: 0.6000
             # v7:
             # f'{prompt}\n'
             # f'Apply relevant scientific knowledge to the question.\n'
