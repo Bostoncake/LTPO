@@ -16,6 +16,11 @@ SYSTEM_PROMPT = (
     "i.e., <think> reasoning process here </think><answer> answer here </answer>"
 )
 
+BASELINE_SYSTEM_PROMPT = (
+    # version 1
+    "You are a helpful visual assistant. Answer the user's question based on the image."
+)
+
 def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) -> str:
     dn = data_name.lower() if data_name else ""
 
@@ -23,6 +28,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
         return (
             # baseline_long: 0.6533
             # baseline_short: 0.6100
+            # baseline_v1: 0.6200
             # f'{prompt}\n'
             # f'Interpret the visual information precisely before solving.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -91,6 +97,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
         return (
             # baseline_long: 0.2700
             # baseline_short: 0.4000
+            # baseline_v1: 0.4000
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -127,6 +134,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
         return (
             # baseline_long: 0.5867
             # baseline_short: 0.5767
+            # baseline_v1: 0.5800
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -147,6 +155,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
         return (
             # baseline_long: 0.6867
             # baseline_short: 0.6900
+            # baseline_v1: 0.6800
             # f'{prompt}\n'
             # f'Look carefully at the image details before deciding.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -209,6 +218,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
         return (
             # baseline_long: 0.7667
             # baseline_short: 0.7767
+            # baseline_v1: 0.7833
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -265,6 +275,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
         return (
             # baseline_long: 0.6000
             # baseline_short: 0.5767
+            # baseline_v1: 0.6067
             # f'{prompt}\n'
             # f'Examine the image carefully and consider each option. Please reason step by step.\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -322,6 +333,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
         return (
             # baseline_long: 0.6000
             # baseline_short: 0.5967
+            # baseline_v1: 0.5900
             # v7:
             # f'{prompt}\n'
             # f'Apply relevant scientific knowledge to the question.\n'
