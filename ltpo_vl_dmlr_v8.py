@@ -4,12 +4,12 @@ from reward import RewardModel
 from ltpo import get_confidence
 
 SYSTEM_PROMPT = (
-    # baseline: MathVision 0.40
+    # baseline_short: MathVision 0.40
     # "Please reason step by step, and MUST put your final answer within \\boxed{}."
-    # baseline: MathVision 0.37 - 0.41
+    # baseline_test: MathVision 0.37 - 0.41
     # "You are a careful visual reasoning assistant. Use the image and question to answer. "
     # "Give the final answer in \\boxed{}."
-    # baseline: MathVision 0.27
+    # baseline_long: MathVision 0.27
     "A conversation between User and Assistant. The user asks a question, and the Assistant solves it. "
     "The assistant first thinks about the reasoning process in the mind and then provides the user with the answer. "
     "The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, "
@@ -21,7 +21,8 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
 
     if "math_vista" in dn:
         return (
-            # baseline: 0.6533
+            # baseline_long: 0.6533
+            # baseline_short: 0.6100
             # f'{prompt}\n'
             # f'Interpret the visual information precisely before solving.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -71,17 +72,25 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.4733
+            # f'{prompt}\n\n'
+            # f'Step 1: Read all visual information from the image (numbers, labels, chart data).\n'
+            # f'Step 2: Determine the appropriate mathematical approach.\n'
+            # f'Step 3: Compute the answer precisely.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
+            # below: 0.4567
             f'{prompt}\n\n'
-            f'Step 1: Read all visual information from the image (numbers, labels, chart data).\n'
-            f'Step 2: Determine the appropriate mathematical approach.\n'
-            f'Step 3: Compute the answer precisely.\n'
+            f'Step 1: Extract all visual data (numbers, units, and relationships) from the image.\n'
+            f'Step 2: Identify the mathematical approach needed.\n'
+            f'Step 3: Solve precisely and verify your answer.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
 
     if "math_vision" in dn:
         return (
-            # baseline: 0.2700
+            # baseline_long: 0.2700
+            # baseline_short: 0.4000
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -102,16 +111,22 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.2133
+            # f'{prompt}\n\n'
+            # f'Translate the visual diagram into mathematical notation.\n'
+            # f'Then solve step by step using mathematical reasoning.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
+            # below: 0.2567
             f'{prompt}\n\n'
-            f'Translate the visual diagram into mathematical notation.\n'
-            f'Then solve step by step using mathematical reasoning.\n'
+            f'Carefully analyze the mathematical diagram, extract relevant quantities and relationships, then solve step by step.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
     
     if "mm_math" in dn:
         return (
-            # baseline: 0.5867
+            # baseline_long: 0.5867
+            # baseline_short: 0.5767
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -130,7 +145,8 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
 
     if "hallusion" in dn:
         return (
-            # baseline: 0.6867
+            # baseline_long: 0.6867
+            # baseline_short: 0.6900
             # f'{prompt}\n'
             # f'Look carefully at the image details before deciding.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -178,15 +194,21 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.6833
+            # f'{prompt}\n\n'
+            # f'Do not rely on assumptions — ensure only what is directly visible in the image supports your answer.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
+            # below: 0.6500
             f'{prompt}\n\n'
-            f'Do not rely on assumptions — ensure only what is directly visible in the image supports your answer.\n'
+            f'Answer based strictly on what is directly visible in the image; do not assume or infer beyond the visual evidence.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
     
     if "mmvp" in dn:
         return (
-            # baseline: 0.7667
+            # baseline_long: 0.7667
+            # baseline_short: 0.7767
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -228,15 +250,21 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.7333
+            # f'{prompt}\n\n'
+            # f'Inspect every detail of the image with maximum care before answering.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
+            # below: 0.7500
             f'{prompt}\n\n'
-            f'Inspect every detail of the image with maximum care before answering.\n'
+            f'Scrutinize the image carefully before answering.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
 
     if "mmstar" in dn:
         return (
-            # baseline: 0.6000
+            # baseline_long: 0.6000
+            # baseline_short: 0.5767
             # f'{prompt}\n'
             # f'Examine the image carefully and consider each option. Please reason step by step.\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -280,15 +308,20 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.5100
+            # f'{prompt}\n\n'
+            # f'Observe the image carefully and identify which answer option it directly supports.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
             f'{prompt}\n\n'
-            f'Observe the image carefully and identify which answer option it directly supports.\n'
+            f'Carefully match each answer option to the visual evidence in the image to select the correct answer.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
 
     if "scienceqa" in dn:
         return (
-            # baseline: 0.6000
+            # baseline_long: 0.6000
+            # baseline_short: 0.5967
             # v7:
             # f'{prompt}\n'
             # f'Apply relevant scientific knowledge to the question.\n'
@@ -325,8 +358,13 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.5800
+            # f'{prompt}\n\n'
+            # f'Reason through the scientific principles to select the most accurate answer.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
+            # below: 0.4967
             f'{prompt}\n\n'
-            f'Reason through the scientific principles to select the most accurate answer.\n'
+            f'Reason through the relevant scientific principles and select the most accurate answer.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
         )
