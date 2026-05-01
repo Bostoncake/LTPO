@@ -185,6 +185,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_short: 0.6900
             # baseline_v1: 0.6800
             # baseline_v2: 0.7167
+            # baseline_v3: 0.7167
             # f'{prompt}\n'
             # f'Look carefully at the image details before deciding.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -249,6 +250,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_short: 0.7767
             # baseline_v1: 0.7833
             # baseline_v2: 0.8000
+            # baseline_v3: 0.7700
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -307,6 +309,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_short: 0.5767
             # baseline_v1: 0.6067
             # baseline_v2: 0.5900
+            # baseline_v3: 0.5967
             # f'{prompt}\n'
             # f'Examine the image carefully and consider each option. Please reason step by step.\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -366,6 +369,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_short: 0.5967
             # baseline_v1: 0.5900
             # baseline_v2: 0.6000
+            # baseline_v3: 0.5867
             # v7:
             # f'{prompt}\n'
             # f'Apply relevant scientific knowledge to the question.\n'
