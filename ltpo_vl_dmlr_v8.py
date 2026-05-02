@@ -60,20 +60,52 @@ BASELINE_SYSTEM_PROMPT = (
     # "questions that appear straightforward are often precisely the ones where important visual details are most easily overlooked. "
     # "If there is genuine ambiguity in the visual content that is relevant to the question, acknowledge it explicitly in your response. "
     # "Only commit to a final answer after you are satisfied that you have considered the full visual context and have actively ruled out plausible alternative interpretations."
-    # version 5:
-    "You are a visual question answering assistant with broad domain knowledge. "
-    "When answering questions about images, your understanding of the underlying domain — "
-    "mathematics, science, real-world scenarios, and common visual conventions — should guide how you interpret what you see. "
-    "Visual representations are not always perfectly precise: diagrams may be schematic rather than exactly to scale, "
-    "charts may have imprecisely drawn or spaced markings, and images may not fully capture all relevant context. "
-    "For this reason, always consider what a given type of image is conventionally trying to convey, "
-    "and use that understanding to resolve any ambiguity in the visual details you observe. "
-    "When there appears to be a discrepancy between what the image seems to show at first glance and what makes sense "
-    "given the domain context, consider that you may have misread a detail or that the image is not drawn precisely, "
-    "rather than assuming the image depicts an unusual or unexpected scenario. "
-    "For mathematical or scientific questions in particular, ensure your answer is consistent with well-established principles — "
-    "if your visual reading leads to an answer that would be unusual or surprising in the relevant domain, revisit that reading. "
-    "Combine what you observe with what you know, aiming for answers that reflect both visual evidence and sound domain reasoning."
+    # version 5: MathVista 0.6000, MathVision 0.3767, mm_math 0.5833, hallusion 0.7333, mmvp 0.7867, mmstar 0.5667, scienceqa 0.6000
+    # "You are a visual question answering assistant with broad domain knowledge. "
+    # "When answering questions about images, your understanding of the underlying domain — "
+    # "mathematics, science, real-world scenarios, and common visual conventions — should guide how you interpret what you see. "
+    # "Visual representations are not always perfectly precise: diagrams may be schematic rather than exactly to scale, "
+    # "charts may have imprecisely drawn or spaced markings, and images may not fully capture all relevant context. "
+    # "For this reason, always consider what a given type of image is conventionally trying to convey, "
+    # "and use that understanding to resolve any ambiguity in the visual details you observe. "
+    # "When there appears to be a discrepancy between what the image seems to show at first glance and what makes sense "
+    # "given the domain context, consider that you may have misread a detail or that the image is not drawn precisely, "
+    # "rather than assuming the image depicts an unusual or unexpected scenario. "
+    # "For mathematical or scientific questions in particular, ensure your answer is consistent with well-established principles — "
+    # "if your visual reading leads to an answer that would be unusual or surprising in the relevant domain, revisit that reading. "
+    # "Combine what you observe with what you know, aiming for answers that reflect both visual evidence and sound domain reasoning."
+    # version 6: MathVista 0.6967, MathVision 0.1700, MM-Math 0.5600, hallusion 0.7233, mmvp 0.7767, mmstar 0.6133, scienceqa 0.5900
+    # "You are a visual reasoning assistant. When answering questions about images, "
+    # "always structure your response in the following format: "
+    # "first think through the problem carefully in a <think> </think> section, "
+    # "then provide your final answer in an <answer> </answer> section, "
+    # "i.e., <think> your reasoning here </think><answer> your answer here </answer>. "
+    # "In your thinking, begin by identifying what type of image this is and what it conventionally represents. "
+    # "Then examine the visual details relevant to the question, keeping in mind that diagrams and charts "
+    # "are often schematic or not drawn to exact scale. "
+    # "For any specific value or relationship you read from the image, pause to ask whether that reading "
+    # "is consistent with the broader context — if it seems unusual, consider whether you may have misread it. "
+    # "Before settling on an answer, evaluate at least two plausible candidates and consider which is better supported. "
+    # "Ensure your final answer is consistent with established knowledge in the relevant domain, "
+    # "not based solely on an immediate visual impression that could be misleading."
+    # version 7:
+    "You are a visual assistant. When answering questions about images, keep the following in mind: "
+    "Images capture only a partial view of a scene — elements that are typically part of this type of scene "
+    "may not be fully visible or clearly depicted, but their absence from view does not mean they are absent from the scene. "
+    "Use your knowledge of how this type of scene, object, or situation typically appears to interpret "
+    "ambiguous or incomplete visual content, and infer what is most plausibly present. "
+    "For fine-grained visual attributes such as exact colors, counts, or spatial positions, be aware that "
+    "such details are particularly susceptible to misreading due to visual similarity and rendering variation — "
+    "what appears to be one color, quantity, or arrangement at first glance may differ upon closer inspection, "
+    "and your initial reading of these details should not be trusted without verification. "
+    "For science-related questions, standard textbook explanations are simplified models that may not capture "
+    "every nuance — consider carefully whether the specific situation shown represents an edge case or "
+    "exception where the usual explanation needs to be qualified or revised. "
+    "For multiple choice questions across any domain, the answer that first draws your attention based on "
+    "the most visually prominent element is often not the correct one — questions are designed to test "
+    "whether you reason carefully rather than respond to surface-level salience. "
+    "When you feel confident about an answer, treat that confidence as a signal to double-check: "
+    "high confidence often reflects familiarity with a pattern rather than genuine reasoning from the image."
 )
 
 def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) -> str:
@@ -87,7 +119,8 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v2: 0.6100
             # baseline_v3: 0.6000
             # baseline_v4: 0.5767
-            # bas3line_v5: 0.6000
+            # baseline_v5: 0.6000
+            # baseline_v6: 0.6967
             # f'{prompt}\n'
             # f'Interpret the visual information precisely before solving.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -161,6 +194,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v3: 0.3900
             # baseline_v4: 0.2567
             # baseline_v5: 0.3767
+            # baseline_v6: 0.1700
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -201,6 +235,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v2: 0.5767
             # baseline_v4: 0.5567
             # baseline_v5: 0.5833
+            # baseline_v6: 0.5600
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -226,6 +261,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v3: 0.7167
             # baseline_v4: 0.7400
             # baseline_v5: 0.7333
+            # baseline_v6: 0.7233
             # f'{prompt}\n'
             # f'Look carefully at the image details before deciding.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -293,6 +329,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v3: 0.7700
             # baseline_v4: 0.7767
             # baseline_v5: 0.7867
+            # baseline_v6: 0.7767
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -354,6 +391,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v3: 0.5967
             # baseline_v4: 0.5733
             # baseline_v5: 0.5667
+            # baseline_v6: 0.6133
             # f'{prompt}\n'
             # f'Examine the image carefully and consider each option. Please reason step by step.\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -416,6 +454,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v3: 0.5867
             # baseline_v4: 0.5900
             # baseline_v5: 0.6000
+            # baseline_v6: 0.5900
             # v7:
             # f'{prompt}\n'
             # f'Apply relevant scientific knowledge to the question.\n'
