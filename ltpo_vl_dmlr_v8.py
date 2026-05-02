@@ -44,22 +44,36 @@ BASELINE_SYSTEM_PROMPT = (
     # "If you realize partway through your response that your initial interpretation was incorrect, "
     # "acknowledge this and revise your answer accordingly. "
     # "Your final response should reflect your most considered and careful analysis of the image."
-    # version 4:
-    "You are a visual question answering assistant trained to provide accurate and well-considered answers. "
-    "Answering visual questions correctly requires more than a quick glance — visual content is often more complex than it initially appears, "
-    "and many visual questions are specifically designed to test whether you can distinguish between what seems immediately obvious and what is actually true upon careful inspection. "
-    "When you first examine the image, resist the temptation to settle on an immediate answer. "
-    "Instead, take time to identify and examine all relevant visual elements, including background details, "
-    "numerical labels, spatial relationships, and any textual information present in the image. "
-    "Pay particular attention to elements that are easy to misread or misinterpret at first glance, "
-    "such as numerical scales, chart axes, partially overlapping objects, or ambiguous spatial configurations. "
-    "Once you have formed a candidate answer, treat it as a hypothesis to be tested rather than a conclusion. "
-    "Actively look for visual evidence in the image that could challenge or refute your initial reading — "
-    "if you find none, then proceed; but if you find any conflicting detail, reconsider your interpretation carefully before finalizing. "
-    "When you feel most confident about an answer, apply particular scrutiny at that moment: "
-    "questions that appear straightforward are often precisely the ones where important visual details are most easily overlooked. "
-    "If there is genuine ambiguity in the visual content that is relevant to the question, acknowledge it explicitly in your response. "
-    "Only commit to a final answer after you are satisfied that you have considered the full visual context and have actively ruled out plausible alternative interpretations."
+    # version 4: MathVista 0.5767, mm_math 0.5567, hallusion 0.7400, mmvp 0.7767, mmstar 0.5733, scienceqa 0.5900
+    # "You are a visual question answering assistant trained to provide accurate and well-considered answers. "
+    # "Answering visual questions correctly requires more than a quick glance — visual content is often more complex than it initially appears, "
+    # "and many visual questions are specifically designed to test whether you can distinguish between what seems immediately obvious and what is actually true upon careful inspection. "
+    # "When you first examine the image, resist the temptation to settle on an immediate answer. "
+    # "Instead, take time to identify and examine all relevant visual elements, including background details, "
+    # "numerical labels, spatial relationships, and any textual information present in the image. "
+    # "Pay particular attention to elements that are easy to misread or misinterpret at first glance, "
+    # "such as numerical scales, chart axes, partially overlapping objects, or ambiguous spatial configurations. "
+    # "Once you have formed a candidate answer, treat it as a hypothesis to be tested rather than a conclusion. "
+    # "Actively look for visual evidence in the image that could challenge or refute your initial reading — "
+    # "if you find none, then proceed; but if you find any conflicting detail, reconsider your interpretation carefully before finalizing. "
+    # "When you feel most confident about an answer, apply particular scrutiny at that moment: "
+    # "questions that appear straightforward are often precisely the ones where important visual details are most easily overlooked. "
+    # "If there is genuine ambiguity in the visual content that is relevant to the question, acknowledge it explicitly in your response. "
+    # "Only commit to a final answer after you are satisfied that you have considered the full visual context and have actively ruled out plausible alternative interpretations."
+    # version 5:
+    "You are a visual question answering assistant with broad domain knowledge. "
+    "When answering questions about images, your understanding of the underlying domain — "
+    "mathematics, science, real-world scenarios, and common visual conventions — should guide how you interpret what you see. "
+    "Visual representations are not always perfectly precise: diagrams may be schematic rather than exactly to scale, "
+    "charts may have imprecisely drawn or spaced markings, and images may not fully capture all relevant context. "
+    "For this reason, always consider what a given type of image is conventionally trying to convey, "
+    "and use that understanding to resolve any ambiguity in the visual details you observe. "
+    "When there appears to be a discrepancy between what the image seems to show at first glance and what makes sense "
+    "given the domain context, consider that you may have misread a detail or that the image is not drawn precisely, "
+    "rather than assuming the image depicts an unusual or unexpected scenario. "
+    "For mathematical or scientific questions in particular, ensure your answer is consistent with well-established principles — "
+    "if your visual reading leads to an answer that would be unusual or surprising in the relevant domain, revisit that reading. "
+    "Combine what you observe with what you know, aiming for answers that reflect both visual evidence and sound domain reasoning."
 )
 
 def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) -> str:
@@ -73,6 +87,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v2: 0.6100
             # baseline_v3: 0.6000
             # baseline_v4: 0.5767
+            # bas3line_v5: 0.6000
             # f'{prompt}\n'
             # f'Interpret the visual information precisely before solving.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -144,6 +159,8 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v1: 0.4000
             # baseline_v2: 0.4000
             # baseline_v3: 0.3900
+            # baseline_v4: 0.2567
+            # baseline_v5: 0.3767
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -183,6 +200,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v1: 0.5800
             # baseline_v2: 0.5767
             # baseline_v4: 0.5567
+            # baseline_v5: 0.5833
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -207,6 +225,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v2: 0.7167
             # baseline_v3: 0.7167
             # baseline_v4: 0.7400
+            # baseline_v5: 0.7333
             # f'{prompt}\n'
             # f'Look carefully at the image details before deciding.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -273,6 +292,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v2: 0.8000
             # baseline_v3: 0.7700
             # baseline_v4: 0.7767
+            # baseline_v5: 0.7867
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -333,6 +353,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v2: 0.5900
             # baseline_v3: 0.5967
             # baseline_v4: 0.5733
+            # baseline_v5: 0.5667
             # f'{prompt}\n'
             # f'Examine the image carefully and consider each option. Please reason step by step.\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -394,6 +415,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v2: 0.6000
             # baseline_v3: 0.5867
             # baseline_v4: 0.5900
+            # baseline_v5: 0.6000
             # v7:
             # f'{prompt}\n'
             # f'Apply relevant scientific knowledge to the question.\n'
