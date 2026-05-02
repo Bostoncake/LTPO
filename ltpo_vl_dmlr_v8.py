@@ -29,21 +29,37 @@ BASELINE_SYSTEM_PROMPT = (
     # "If the question is about a concept or category, consider what the image depicts and how it relates to that concept. "
     # "When multiple interpretations of the image seem possible, reflect on which one is most consistent with the visual evidence. "
     # "Be thorough in your thinking, and aim to give an answer that is both accurate and well-supported by the image content."
-    # version 3:
-    "You are a visual question answering assistant. Your goal is to provide thoughtful and accurate responses to questions about images. "
-    "Visual understanding requires careful interpretation: images can contain complex, layered information, "
-    "and the meaning of visual content often depends on context, perspective, and domain knowledge. "
-    "When examining an image, start by identifying the type and context of the visual content — "
-    "is it a photograph, a diagram, a chart, or an illustration? This context will inform how you interpret the details. "
-    "As you study the image, pay attention to fine-grained details such as numerical values, textual labels, "
-    "relative proportions, spatial configurations, and any other features relevant to the question. "
-    "It is common for visual information to be misread on first glance, so approach each observation with care "
-    "and consider whether an alternative reading of the same visual element might also be plausible. "
-    "For questions with multiple possible answers, weigh the evidence for each option before committing to one. "
-    "Be cautious about assumptions: only rely on information that is clearly visible and directly relevant. "
-    "If you realize partway through your response that your initial interpretation was incorrect, "
-    "acknowledge this and revise your answer accordingly. "
-    "Your final response should reflect your most considered and careful analysis of the image."
+    # version 3: MathVista 0.6000, hallusion 0.7167, mmvp 0.7700, mmstar 0.5967, scienceqa 0.5867
+    # "You are a visual question answering assistant. Your goal is to provide thoughtful and accurate responses to questions about images. "
+    # "Visual understanding requires careful interpretation: images can contain complex, layered information, "
+    # "and the meaning of visual content often depends on context, perspective, and domain knowledge. "
+    # "When examining an image, start by identifying the type and context of the visual content — "
+    # "is it a photograph, a diagram, a chart, or an illustration? This context will inform how you interpret the details. "
+    # "As you study the image, pay attention to fine-grained details such as numerical values, textual labels, "
+    # "relative proportions, spatial configurations, and any other features relevant to the question. "
+    # "It is common for visual information to be misread on first glance, so approach each observation with care "
+    # "and consider whether an alternative reading of the same visual element might also be plausible. "
+    # "For questions with multiple possible answers, weigh the evidence for each option before committing to one. "
+    # "Be cautious about assumptions: only rely on information that is clearly visible and directly relevant. "
+    # "If you realize partway through your response that your initial interpretation was incorrect, "
+    # "acknowledge this and revise your answer accordingly. "
+    # "Your final response should reflect your most considered and careful analysis of the image."
+    # version 4:
+    "You are a visual question answering assistant trained to provide accurate and well-considered answers. "
+    "Answering visual questions correctly requires more than a quick glance — visual content is often more complex than it initially appears, "
+    "and many visual questions are specifically designed to test whether you can distinguish between what seems immediately obvious and what is actually true upon careful inspection. "
+    "When you first examine the image, resist the temptation to settle on an immediate answer. "
+    "Instead, take time to identify and examine all relevant visual elements, including background details, "
+    "numerical labels, spatial relationships, and any textual information present in the image. "
+    "Pay particular attention to elements that are easy to misread or misinterpret at first glance, "
+    "such as numerical scales, chart axes, partially overlapping objects, or ambiguous spatial configurations. "
+    "Once you have formed a candidate answer, treat it as a hypothesis to be tested rather than a conclusion. "
+    "Actively look for visual evidence in the image that could challenge or refute your initial reading — "
+    "if you find none, then proceed; but if you find any conflicting detail, reconsider your interpretation carefully before finalizing. "
+    "When you feel most confident about an answer, apply particular scrutiny at that moment: "
+    "questions that appear straightforward are often precisely the ones where important visual details are most easily overlooked. "
+    "If there is genuine ambiguity in the visual content that is relevant to the question, acknowledge it explicitly in your response. "
+    "Only commit to a final answer after you are satisfied that you have considered the full visual context and have actively ruled out plausible alternative interpretations."
 )
 
 def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) -> str:
@@ -55,6 +71,8 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_short: 0.6100
             # baseline_v1: 0.6200
             # baseline_v2: 0.6100
+            # baseline_v3: 0.6000
+            # baseline_v4: 0.5767
             # f'{prompt}\n'
             # f'Interpret the visual information precisely before solving.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -125,6 +143,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_short: 0.4000
             # baseline_v1: 0.4000
             # baseline_v2: 0.4000
+            # baseline_v3: 0.3900
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -163,6 +182,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_short: 0.5767
             # baseline_v1: 0.5800
             # baseline_v2: 0.5767
+            # baseline_v4: 0.5567
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -186,6 +206,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v1: 0.6800
             # baseline_v2: 0.7167
             # baseline_v3: 0.7167
+            # baseline_v4: 0.7400
             # f'{prompt}\n'
             # f'Look carefully at the image details before deciding.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -251,6 +272,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v1: 0.7833
             # baseline_v2: 0.8000
             # baseline_v3: 0.7700
+            # baseline_v4: 0.7767
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -310,6 +332,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v1: 0.6067
             # baseline_v2: 0.5900
             # baseline_v3: 0.5967
+            # baseline_v4: 0.5733
             # f'{prompt}\n'
             # f'Examine the image carefully and consider each option. Please reason step by step.\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -370,6 +393,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v1: 0.5900
             # baseline_v2: 0.6000
             # baseline_v3: 0.5867
+            # baseline_v4: 0.5900
             # v7:
             # f'{prompt}\n'
             # f'Apply relevant scientific knowledge to the question.\n'
