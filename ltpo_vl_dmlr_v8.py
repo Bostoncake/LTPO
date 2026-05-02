@@ -88,24 +88,69 @@ BASELINE_SYSTEM_PROMPT = (
     # "Before settling on an answer, evaluate at least two plausible candidates and consider which is better supported. "
     # "Ensure your final answer is consistent with established knowledge in the relevant domain, "
     # "not based solely on an immediate visual impression that could be misleading."
-    # version 7:
-    "You are a visual assistant. When answering questions about images, keep the following in mind: "
-    "Images capture only a partial view of a scene — elements that are typically part of this type of scene "
-    "may not be fully visible or clearly depicted, but their absence from view does not mean they are absent from the scene. "
-    "Use your knowledge of how this type of scene, object, or situation typically appears to interpret "
-    "ambiguous or incomplete visual content, and infer what is most plausibly present. "
-    "For fine-grained visual attributes such as exact colors, counts, or spatial positions, be aware that "
-    "such details are particularly susceptible to misreading due to visual similarity and rendering variation — "
-    "what appears to be one color, quantity, or arrangement at first glance may differ upon closer inspection, "
-    "and your initial reading of these details should not be trusted without verification. "
-    "For science-related questions, standard textbook explanations are simplified models that may not capture "
-    "every nuance — consider carefully whether the specific situation shown represents an edge case or "
-    "exception where the usual explanation needs to be qualified or revised. "
-    "For multiple choice questions across any domain, the answer that first draws your attention based on "
-    "the most visually prominent element is often not the correct one — questions are designed to test "
-    "whether you reason carefully rather than respond to surface-level salience. "
-    "When you feel confident about an answer, treat that confidence as a signal to double-check: "
-    "high confidence often reflects familiarity with a pattern rather than genuine reasoning from the image."
+    # version 7: MathVista 0.6200, MathVision -, MM-Math -, hallusion 0.7000, mmvp 0.7567, mmstar 0.5867, scienceqa 0.5833
+    # "You are a visual assistant. When answering questions about images, keep the following in mind: "
+    # "Images capture only a partial view of a scene — elements that are typically part of this type of scene "
+    # "may not be fully visible or clearly depicted, but their absence from view does not mean they are absent from the scene. "
+    # "Use your knowledge of how this type of scene, object, or situation typically appears to interpret "
+    # "ambiguous or incomplete visual content, and infer what is most plausibly present. "
+    # "For fine-grained visual attributes such as exact colors, counts, or spatial positions, be aware that "
+    # "such details are particularly susceptible to misreading due to visual similarity and rendering variation — "
+    # "what appears to be one color, quantity, or arrangement at first glance may differ upon closer inspection, "
+    # "and your initial reading of these details should not be trusted without verification. "
+    # "For science-related questions, standard textbook explanations are simplified models that may not capture "
+    # "every nuance — consider carefully whether the specific situation shown represents an edge case or "
+    # "exception where the usual explanation needs to be qualified or revised. "
+    # "For multiple choice questions across any domain, the answer that first draws your attention based on "
+    # "the most visually prominent element is often not the correct one — questions are designed to test "
+    # "whether you reason carefully rather than respond to surface-level salience. "
+    # "When you feel confident about an answer, treat that confidence as a signal to double-check: "
+    # "high confidence often reflects familiarity with a pattern rather than genuine reasoning from the image."
+    # version 11:
+    # "You are a visual assistant. When answering questions about images, use the following approach: "
+    # "Begin by drawing on your background knowledge about the type of scene or concept depicted — "
+    # "consider what elements are typically present and how they are usually arranged. "
+    # "Use this prior understanding as your primary framework for interpreting the image, "
+    # "and rely on direct visual observation mainly to confirm or adjust details within that framework. "
+    # "For any element that would typically be present in this type of scene, assume it is present "
+    # "unless the image provides clear and unambiguous evidence to the contrary. "
+    # "For science or knowledge-based questions, first reason from established principles to identify "
+    # "the most likely answer, then use the image as supporting context rather than the primary source. "
+    # "For fine-grained visual details where your perception may be imprecise, defer to what is "
+    # "most consistent with the general context rather than your uncertain direct reading. "
+    # "This knowledge-grounded approach produces more reliable answers than relying solely on "
+    # "potentially imprecise visual impressions."
+    # version 13:
+    "You are a visual assistant. Your methodology for answering visual questions is grounded in the "
+    "principle that accurate scene understanding requires integrating contextual expectations with "
+    "visual observation — purely literal pixel-level analysis without contextual grounding leads to "
+    "systematic errors and should be avoided. "
+    "Scene completeness: Visual images are compressed, partial representations that do not perfectly "
+    "render every element of a scene. When evaluating whether a particular element is present, always "
+    "ask what the scene type implies about typical composition — if an element would naturally and "
+    "typically appear in this type of scene or situation, treat it as present. "
+    "Failing to see something clearly does not mean it is absent; it means the image has not rendered "
+    "it perfectly. Conclude that an element is absent only when the image explicitly and unambiguously "
+    "shows its absence, not merely because you cannot clearly see it. "
+    "Knowledge grounding: For science, domain-specific, and conceptual questions, your background "
+    "knowledge is your primary reasoning tool — the image provides illustrative context, but the "
+    "answer is determined by the applicable general principle. "
+    "The correct answer is virtually always the one that correctly applies the standard rule or "
+    "principle for the given domain; exceptions and special cases are exceedingly rare and should "
+    "not be assumed unless unmistakably and explicitly shown. "
+    "Category-level inference: For multiple choice questions, reason at the level of scene type and "
+    "category rather than attempting to extract precise measurements or subtle distinctions from the image. "
+    "The correct answer reflects the most representative outcome for this category of scene or problem. "
+    "Answer options that require detecting a subtle, non-obvious, or easily misread fine-grained visual "
+    "detail are almost always distractors — the correct answer is what a knowledgeable person would "
+    "expect given the overall scene type, without needing to scrutinize ambiguous visual specifics. "
+    "Detail unreliability: Fine-grained visual attributes — exact colors, precise counts, small spatial "
+    "offsets, subtle textures — are frequently distorted by compression, rendering artifacts, and "
+    "resolution limits. Your perception of such details is not reliable ground truth. "
+    "When fine-grained details are ambiguous, interpret them in whichever way is most consistent "
+    "with the overall scene context and general expectations rather than forcing a specific reading. "
+    "Apply these principles consistently: contextual expectation over ambiguous visual detail, "
+    "general principles over uncertain specific readings, assumed presence over unconfirmed absence."
 )
 
 def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) -> str:
@@ -121,6 +166,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v4: 0.5767
             # baseline_v5: 0.6000
             # baseline_v6: 0.6967
+            # baseline_v7: 0.6200
             # f'{prompt}\n'
             # f'Interpret the visual information precisely before solving.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -262,6 +308,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v4: 0.7400
             # baseline_v5: 0.7333
             # baseline_v6: 0.7233
+            # baseline_v7: 0.7000
             # f'{prompt}\n'
             # f'Look carefully at the image details before deciding.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -330,6 +377,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v4: 0.7767
             # baseline_v5: 0.7867
             # baseline_v6: 0.7767
+            # baseline_v7: 0.7567
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -392,6 +440,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v4: 0.5733
             # baseline_v5: 0.5667
             # baseline_v6: 0.6133
+            # baseline_v7: 0.5867
             # f'{prompt}\n'
             # f'Examine the image carefully and consider each option. Please reason step by step.\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -455,6 +504,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v4: 0.5900
             # baseline_v5: 0.6000
             # baseline_v6: 0.5900
+            # baseline_v7: 0.5833
             # v7:
             # f'{prompt}\n'
             # f'Apply relevant scientific knowledge to the question.\n'

@@ -381,12 +381,20 @@ def main(args):
                 inputs = processor(text=[text], return_tensors='pt').to(device)
 
             with torch.no_grad():
+                # raw_outputs = model.generate(
+                #     **inputs,
+                #     max_new_tokens=args.max_new_tokens,
+                #     do_sample=False,
+                #     temperature=0.0,
+                #     top_p=None,
+                #     num_beams=1,
+                # )
                 raw_outputs = model.generate(
                     **inputs,
                     max_new_tokens=args.max_new_tokens,
-                    do_sample=False,
-                    temperature=0.0,
-                    top_p=None,
+                    do_sample=True,
+                    temperature=0.7,
+                    top_p=0.9,
                     num_beams=1,
                 )
             tokenizer = processor.tokenizer if hasattr(processor, 'tokenizer') else processor
