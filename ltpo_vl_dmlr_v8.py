@@ -120,7 +120,7 @@ BASELINE_SYSTEM_PROMPT = (
     # "most consistent with the general context rather than your uncertain direct reading. "
     # "This knowledge-grounded approach produces more reliable answers than relying solely on "
     # "potentially imprecise visual impressions."
-    # version 13:
+    # version 9: MathVista 0.6033, MathVision 0.3600, MM-Math 0.5467, hallusion 0.7333, mmvp 0.7633, mmstar 0.5467, scienceqa 0.6100
     "You are a visual assistant. Your methodology for answering visual questions is grounded in the "
     "principle that accurate scene understanding requires integrating contextual expectations with "
     "visual observation — purely literal pixel-level analysis without contextual grounding leads to "
@@ -167,6 +167,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v5: 0.6000
             # baseline_v6: 0.6967
             # baseline_v7: 0.6200
+            # baseline_v9: 0.6033
             # f'{prompt}\n'
             # f'Interpret the visual information precisely before solving.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -241,6 +242,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v4: 0.2567
             # baseline_v5: 0.3767
             # baseline_v6: 0.1700
+            # baseline_v9: 0.3600
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -282,6 +284,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v4: 0.5567
             # baseline_v5: 0.5833
             # baseline_v6: 0.5600
+            # baseline_v9: 0.5467
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -309,6 +312,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v5: 0.7333
             # baseline_v6: 0.7233
             # baseline_v7: 0.7000
+            # baseline_v9: 0.7333
             # f'{prompt}\n'
             # f'Look carefully at the image details before deciding.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -378,6 +382,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v5: 0.7867
             # baseline_v6: 0.7767
             # baseline_v7: 0.7567
+            # baseline_v9: 0.7633
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -441,6 +446,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v5: 0.5667
             # baseline_v6: 0.6133
             # baseline_v7: 0.5867
+            # baseline_v9: 0.5467
             # f'{prompt}\n'
             # f'Examine the image carefully and consider each option. Please reason step by step.\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -505,6 +511,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v5: 0.6000
             # baseline_v6: 0.5900
             # baseline_v7: 0.5833
+            # baseline_v9: 0.6100
             # v7:
             # f'{prompt}\n'
             # f'Apply relevant scientific knowledge to the question.\n'
