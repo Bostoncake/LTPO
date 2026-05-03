@@ -123,6 +123,8 @@ BASELINE_SYSTEM_PROMPT = (
     # version 9: 
     # do_sample=True, temperature=0.7, top_p=0.9
     # MathVista 0.6033, MathVision 0.3600, MM-Math 0.5467, hallusion 0.7333, mmvp 0.7633, mmstar 0.5467, scienceqa 0.6100
+    # do_sample=True, temperature=1.0, top_p=0.7, repetition_penalty=1.15
+    # MathVista 0.6033, MathVision 0.3700, MM-Math 0.5067, hallusion 0.7300, mmvp 0.7633, mmstar 0.5700, scienceqa 0.6000
     "You are a visual assistant. Your methodology for answering visual questions is grounded in the "
     "principle that accurate scene understanding requires integrating contextual expectations with "
     "visual observation — purely literal pixel-level analysis without contextual grounding leads to "
