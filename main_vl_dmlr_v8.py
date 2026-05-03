@@ -389,13 +389,25 @@ def main(args):
                 #     top_p=None,
                 #     num_beams=1,
                 # )
+                # version 9: do_sample=True, temperature=0.7, top_p=0.9
+                # MathVista 0.6033, MathVision 0.3600, MM-Math 0.5467, hallusion 0.7333, mmvp 0.7633, mmstar 0.5467, scienceqa 0.6100
+                # raw_outputs = model.generate(
+                #     **inputs,
+                #     max_new_tokens=args.max_new_tokens,
+                #     do_sample=True,
+                #     temperature=0.7,
+                #     top_p=0.9,
+                #     num_beams=1,
+                # )
+                # version 10: temperature=1.0, top_p=0.7, repetition_penalty=1.15
                 raw_outputs = model.generate(
                     **inputs,
                     max_new_tokens=args.max_new_tokens,
                     do_sample=True,
-                    temperature=0.7,
-                    top_p=0.9,
+                    temperature=1.0,
+                    top_p=0.7,
                     num_beams=1,
+                    repetition_penalty=1.15,
                 )
             tokenizer = processor.tokenizer if hasattr(processor, 'tokenizer') else processor
             output = tokenizer.decode(raw_outputs[0], skip_special_tokens=True)

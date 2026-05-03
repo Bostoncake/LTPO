@@ -120,7 +120,9 @@ BASELINE_SYSTEM_PROMPT = (
     # "most consistent with the general context rather than your uncertain direct reading. "
     # "This knowledge-grounded approach produces more reliable answers than relying solely on "
     # "potentially imprecise visual impressions."
-    # version 9: MathVista 0.6033, MathVision 0.3600, MM-Math 0.5467, hallusion 0.7333, mmvp 0.7633, mmstar 0.5467, scienceqa 0.6100
+    # version 9: 
+    # do_sample=True, temperature=0.7, top_p=0.9
+    # MathVista 0.6033, MathVision 0.3600, MM-Math 0.5467, hallusion 0.7333, mmvp 0.7633, mmstar 0.5467, scienceqa 0.6100
     "You are a visual assistant. Your methodology for answering visual questions is grounded in the "
     "principle that accurate scene understanding requires integrating contextual expectations with "
     "visual observation — purely literal pixel-level analysis without contextual grounding leads to "
