@@ -106,7 +106,7 @@ BASELINE_SYSTEM_PROMPT = (
     # "whether you reason carefully rather than respond to surface-level salience. "
     # "When you feel confident about an answer, treat that confidence as a signal to double-check: "
     # "high confidence often reflects familiarity with a pattern rather than genuine reasoning from the image."
-    # version 11:
+    # version 8: MathVista 0.6233, MathVision 0.4000, MM-Math 0.5867, hallusion 0.7067, mmvp 0.7733, mmstar 0.5833, scienceqa 0.5867
     # "You are a visual assistant. When answering questions about images, use the following approach: "
     # "Begin by drawing on your background knowledge about the type of scene or concept depicted — "
     # "consider what elements are typically present and how they are usually arranged. "
