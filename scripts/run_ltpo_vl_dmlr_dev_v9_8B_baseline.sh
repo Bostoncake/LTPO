@@ -1,13 +1,13 @@
 #!/bin/bash
 
-export/home/lanliwei.1/abcxyz/projects/latent-reasoning HUGGING_FACE_TOKEN="***REDACTED_HF_TOKEN***"
-export/home/lanliwei.1/abcxyz/projects/latent-reasoning OPENAI_API_KEY="***REDACTED_OPENAI_KEY***"
-export/home/lanliwei.1/abcxyz/projects/latent-reasoning OPENAI_API_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
-export/home/lanliwei.1/abcxyz/projects/latent-reasoning MODEL_TYPE=qwen-max
+export HUGGING_FACE_TOKEN="***REDACTED_HF_TOKEN***"
+export OPENAI_API_KEY="***REDACTED_OPENAI_KEY***"
+export OPENAI_API_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
+export MODEL_TYPE=qwen-max
 
 output=./output/dmlr_aligned_dev_v9_8B_baseline
 mkdir -p ${output}
-GPUS=(0 1 3 4 5 6 7)
+GPUS=(0 1 2 3 4 5 6)
 gpu_idx=0
 # "mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev"
 # "mmstar_dev" "math_vista_dev" "hallusion_dev"
@@ -18,8 +18,8 @@ for dataset in "mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_visi
     fi
     gpu=${GPUS[$gpu_idx]}
 
-    # model=/export/home/lanliwei.1/abcxyz/projects/latent-reasoning/LTPO/lanliwei.1/abcxyz/storage/models/Qwen2.5-VL-3B-Instruct
-    model=/export/home/lanliwei.1/abcxyz/projects/latent-reasoning/LTPO/lanliwei.1/abcxyz/storage/models/Qwen3-VL-8B-Instruct
+    # model=/export/home/lanliwei.1/abcxyz/storage/models/Qwen2.5-VL-3B-Instruct
+    model=/export/home/lanliwei.1/abcxyz/storage/models/Qwen3-VL-8B-Instruct
 
     CUDA_VISIBLE_DEVICES=$gpu python main_vl_dmlr_v9.py \
         --dataset $dataset \
