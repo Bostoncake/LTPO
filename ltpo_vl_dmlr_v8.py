@@ -125,36 +125,67 @@ BASELINE_SYSTEM_PROMPT = (
     # MathVista 0.6033, MathVision 0.3600, MM-Math 0.5467, hallusion 0.7333, mmvp 0.7633, mmstar 0.5467, scienceqa 0.6100
     # do_sample=True, temperature=1.0, top_p=0.7, repetition_penalty=1.15
     # MathVista 0.6033, MathVision 0.3700, MM-Math 0.5067, hallusion 0.7300, mmvp 0.7633, mmstar 0.5700, scienceqa 0.6000
-    "You are a visual assistant. Your methodology for answering visual questions is grounded in the "
-    "principle that accurate scene understanding requires integrating contextual expectations with "
-    "visual observation — purely literal pixel-level analysis without contextual grounding leads to "
-    "systematic errors and should be avoided. "
-    "Scene completeness: Visual images are compressed, partial representations that do not perfectly "
-    "render every element of a scene. When evaluating whether a particular element is present, always "
-    "ask what the scene type implies about typical composition — if an element would naturally and "
-    "typically appear in this type of scene or situation, treat it as present. "
-    "Failing to see something clearly does not mean it is absent; it means the image has not rendered "
-    "it perfectly. Conclude that an element is absent only when the image explicitly and unambiguously "
-    "shows its absence, not merely because you cannot clearly see it. "
-    "Knowledge grounding: For science, domain-specific, and conceptual questions, your background "
-    "knowledge is your primary reasoning tool — the image provides illustrative context, but the "
-    "answer is determined by the applicable general principle. "
-    "The correct answer is virtually always the one that correctly applies the standard rule or "
-    "principle for the given domain; exceptions and special cases are exceedingly rare and should "
-    "not be assumed unless unmistakably and explicitly shown. "
-    "Category-level inference: For multiple choice questions, reason at the level of scene type and "
-    "category rather than attempting to extract precise measurements or subtle distinctions from the image. "
-    "The correct answer reflects the most representative outcome for this category of scene or problem. "
-    "Answer options that require detecting a subtle, non-obvious, or easily misread fine-grained visual "
-    "detail are almost always distractors — the correct answer is what a knowledgeable person would "
-    "expect given the overall scene type, without needing to scrutinize ambiguous visual specifics. "
-    "Detail unreliability: Fine-grained visual attributes — exact colors, precise counts, small spatial "
-    "offsets, subtle textures — are frequently distorted by compression, rendering artifacts, and "
-    "resolution limits. Your perception of such details is not reliable ground truth. "
-    "When fine-grained details are ambiguous, interpret them in whichever way is most consistent "
-    "with the overall scene context and general expectations rather than forcing a specific reading. "
-    "Apply these principles consistently: contextual expectation over ambiguous visual detail, "
-    "general principles over uncertain specific readings, assumed presence over unconfirmed absence."
+    # "You are a visual assistant. Your methodology for answering visual questions is grounded in the "
+    # "principle that accurate scene understanding requires integrating contextual expectations with "
+    # "visual observation — purely literal pixel-level analysis without contextual grounding leads to "
+    # "systematic errors and should be avoided. "
+    # "Scene completeness: Visual images are compressed, partial representations that do not perfectly "
+    # "render every element of a scene. When evaluating whether a particular element is present, always "
+    # "ask what the scene type implies about typical composition — if an element would naturally and "
+    # "typically appear in this type of scene or situation, treat it as present. "
+    # "Failing to see something clearly does not mean it is absent; it means the image has not rendered "
+    # "it perfectly. Conclude that an element is absent only when the image explicitly and unambiguously "
+    # "shows its absence, not merely because you cannot clearly see it. "
+    # "Knowledge grounding: For science, domain-specific, and conceptual questions, your background "
+    # "knowledge is your primary reasoning tool — the image provides illustrative context, but the "
+    # "answer is determined by the applicable general principle. "
+    # "The correct answer is virtually always the one that correctly applies the standard rule or "
+    # "principle for the given domain; exceptions and special cases are exceedingly rare and should "
+    # "not be assumed unless unmistakably and explicitly shown. "
+    # "Category-level inference: For multiple choice questions, reason at the level of scene type and "
+    # "category rather than attempting to extract precise measurements or subtle distinctions from the image. "
+    # "The correct answer reflects the most representative outcome for this category of scene or problem. "
+    # "Answer options that require detecting a subtle, non-obvious, or easily misread fine-grained visual "
+    # "detail are almost always distractors — the correct answer is what a knowledgeable person would "
+    # "expect given the overall scene type, without needing to scrutinize ambiguous visual specifics. "
+    # "Detail unreliability: Fine-grained visual attributes — exact colors, precise counts, small spatial "
+    # "offsets, subtle textures — are frequently distorted by compression, rendering artifacts, and "
+    # "resolution limits. Your perception of such details is not reliable ground truth. "
+    # "When fine-grained details are ambiguous, interpret them in whichever way is most consistent "
+    # "with the overall scene context and general expectations rather than forcing a specific reading. "
+    # "Apply these principles consistently: contextual expectation over ambiguous visual detail, "
+    # "general principles over uncertain specific readings, assumed presence over unconfirmed absence."
+    # version 10: MathVista 0.5633, MathVision 0.3267, MM-Math 0.5700, hallusion 0.6867, mmvp 0.7067, mmstar 0.5167, scienceqa 0.4200
+    "You are a visual question answering assistant being evaluated under a highly conservative "
+    "uncertainty policy. Your top priority is to avoid overclaiming from an image, even if that "
+    "means not selecting a specific answer. Treat visual perception as unreliable unless every "
+    "needed detail is large, clear, centered, unambiguous, and directly relevant to the question. "
+    "Many images contain artifacts, compression, occlusion, perspective distortion, schematic "
+    "drawing conventions, incomplete labels, or misleading visual salience. Because of these "
+    "limitations, do not trust small text, small numbers, fine spatial offsets, subtle colors, "
+    "counts of multiple objects, exact geometric relations, chart values, axis positions, or any "
+    "detail that could plausibly be read in more than one way. "
+    "When a question asks for a precise value, exact count, exact color, exact position, exact "
+    "shape, or exact relationship, answer only if the image makes that detail unmistakable. If "
+    "there is any uncertainty, say that the answer cannot be determined from the image. "
+    "For diagrams, charts, and mathematical figures, assume the drawing may not be to scale and "
+    "do not infer hidden measurements, lengths, angles, coordinates, trends, or numerical values "
+    "unless they are explicitly labeled. Do not complete missing steps from common mathematical "
+    "patterns if the specific visual evidence is incomplete. "
+    "For science questions, do not rely on general textbook knowledge alone. The image must "
+    "directly show the specific evidence needed for the requested answer. If the image does not "
+    "visibly confirm the relevant condition, process, object state, or experimental setup, answer "
+    "that it cannot be determined rather than applying a default principle. "
+    "For multiple-choice questions, do not choose the option that merely seems most plausible. "
+    "Evaluate whether the image directly proves one option and directly rules out the others. "
+    "If more than one option remains possible, or if the distinction depends on a small or "
+    "ambiguous visual detail, state that the correct option cannot be determined from the image. "
+    "Avoid using prior expectations about what is normally present in a scene. Absence of clear "
+    "visual evidence should be treated as uncertainty, not as permission to infer the expected "
+    "object, property, quantity, or relationship. "
+    "Your final response should be cautious and brief. Prefer 'cannot be determined from the "
+    "image' whenever the answer depends on uncertain visual interpretation, incomplete context, "
+    "small details, or assumptions not explicitly visible."
 )
 
 def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) -> str:
@@ -172,6 +203,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v6: 0.6967
             # baseline_v7: 0.6200
             # baseline_v9: 0.6033
+            # baseline_v10: 0.5633
             # f'{prompt}\n'
             # f'Interpret the visual information precisely before solving.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -221,19 +253,19 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.4733
-            # f'{prompt}\n\n'
-            # f'Step 1: Read all visual information from the image (numbers, labels, chart data).\n'
-            # f'Step 2: Determine the appropriate mathematical approach.\n'
-            # f'Step 3: Compute the answer precisely.\n'
-            # f'The following tokens represent your internal thinking space.\n'
-            # f'{thought_tokens}'
-            # below: 0.4567
             f'{prompt}\n\n'
-            f'Step 1: Extract all visual data (numbers, units, and relationships) from the image.\n'
-            f'Step 2: Identify the mathematical approach needed.\n'
-            f'Step 3: Solve precisely and verify your answer.\n'
+            f'Step 1: Read all visual information from the image (numbers, labels, chart data).\n'
+            f'Step 2: Determine the appropriate mathematical approach.\n'
+            f'Step 3: Compute the answer precisely.\n'
             f'The following tokens represent your internal thinking space.\n'
             f'{thought_tokens}'
+            # below: 0.4567
+            # f'{prompt}\n\n'
+            # f'Step 1: Extract all visual data (numbers, units, and relationships) from the image.\n'
+            # f'Step 2: Identify the mathematical approach needed.\n'
+            # f'Step 3: Solve precisely and verify your answer.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
         )
 
     if "math_vision" in dn:
@@ -247,6 +279,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v5: 0.3767
             # baseline_v6: 0.1700
             # baseline_v9: 0.3600
+            # baseline_v10: 0.3267
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -289,6 +322,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v5: 0.5833
             # baseline_v6: 0.5600
             # baseline_v9: 0.5467
+            # baseline_v10: 0.5700
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -317,6 +351,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v6: 0.7233
             # baseline_v7: 0.7000
             # baseline_v9: 0.7333
+            # baseline_v10: 0.6867
             # f'{prompt}\n'
             # f'Look carefully at the image details before deciding.\n'
             # f'The following tokens represent your internal thinking space.\n'
@@ -338,10 +373,10 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.6833
-            # f'{prompt}\n\n'
-            # f'Do not rely on assumptions — verify that the image content directly supports your answer.\n'
-            # f'The following tokens represent your internal thinking space.\n'
-            # f'{thought_tokens}'
+            f'{prompt}\n\n'
+            f'Do not rely on assumptions — verify that the image content directly supports your answer.\n'
+            f'The following tokens represent your internal thinking space.\n'
+            f'{thought_tokens}'
             # below: 0.6633
             # f'{prompt}\n\n'
             # f'Never assume — check your answer directly against the visible image content.\n'
@@ -369,10 +404,10 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.6500
-            f'{prompt}\n\n'
-            f'Answer based strictly on what is directly visible in the image; do not assume or infer beyond the visual evidence.\n'
-            f'The following tokens represent your internal thinking space.\n'
-            f'{thought_tokens}'
+            # f'{prompt}\n\n'
+            # f'Answer based strictly on what is directly visible in the image; do not assume or infer beyond the visual evidence.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
         )
     
     if "mmvp" in dn:
@@ -387,6 +422,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v6: 0.7767
             # baseline_v7: 0.7567
             # baseline_v9: 0.7633
+            # baseline_v10: 0.7067
             # v7:
             # f'{prompt}\n\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -417,10 +453,10 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.7533
-            # f'{prompt}\n\n'
-            # f'Scrutinize the image carefully before answering.\n'
-            # f'The following tokens represent your internal thinking space.\n'
-            # f'{thought_tokens}'
+            f'{prompt}\n\n'
+            f'Scrutinize the image carefully before answering.\n'
+            f'The following tokens represent your internal thinking space.\n'
+            f'{thought_tokens}'
             # below: 0.7033
             # f'{prompt}\n\n'
             # f'Before answering, observe every visual detail in the image meticulously.\n'
@@ -433,10 +469,10 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.7500
-            f'{prompt}\n\n'
-            f'Scrutinize the image carefully before answering.\n'
-            f'The following tokens represent your internal thinking space.\n'
-            f'{thought_tokens}'
+            # f'{prompt}\n\n'
+            # f'Scrutinize the image carefully before answering.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
         )
 
     if "mmstar" in dn:
@@ -451,6 +487,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v6: 0.6133
             # baseline_v7: 0.5867
             # baseline_v9: 0.5467
+            # baseline_v10: 0.5167
             # f'{prompt}\n'
             # f'Examine the image carefully and consider each option. Please reason step by step.\n'
             # f'The following special tokens represent YOUR INTERNAL THINKING SPACE '
@@ -483,10 +520,10 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.5233
-            # f'{prompt}\n\n'
-            # f'Determine the correct answer by matching each option to the visual evidence in the image.\n'
-            # f'The following tokens represent your internal thinking space.\n'
-            # f'{thought_tokens}'
+            f'{prompt}\n\n'
+            f'Determine the correct answer by matching each option to the visual evidence in the image.\n'
+            f'The following tokens represent your internal thinking space.\n'
+            f'{thought_tokens}'
             # below: 0.4733
             # f'{prompt}\n\n'
             # f'Pay attention to fine-grained visual details in the image.\n'
@@ -498,10 +535,10 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'Observe the image carefully and identify which answer option it directly supports.\n'
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
-            f'{prompt}\n\n'
-            f'Carefully match each answer option to the visual evidence in the image to select the correct answer.\n'
-            f'The following tokens represent your internal thinking space.\n'
-            f'{thought_tokens}'
+            # f'{prompt}\n\n'
+            # f'Carefully match each answer option to the visual evidence in the image to select the correct answer.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
         )
 
     if "scienceqa" in dn:
@@ -516,6 +553,7 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # baseline_v6: 0.5900
             # baseline_v7: 0.5833
             # baseline_v9: 0.6100
+            # baseline_v10: 0.4200
             # v7:
             # f'{prompt}\n'
             # f'Apply relevant scientific knowledge to the question.\n'
@@ -536,10 +574,10 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.5800
-            # f'{prompt}\n\n'
-            # f'Select the correct answer based on scientific reasoning.\n'
-            # f'The following tokens represent your internal thinking space.\n'
-            # f'{thought_tokens}'
+            f'{prompt}\n\n'
+            f'Select the correct answer based on scientific reasoning.\n'
+            f'The following tokens represent your internal thinking space.\n'
+            f'{thought_tokens}'
             # below: 0.5733
             # f'{prompt}\n\n'
             # f'Apply scientific knowledge to determine the correct answer.\n'
@@ -557,10 +595,10 @@ def _build_prompt_instruction(prompt: str, thought_tokens: str, data_name: str) 
             # f'The following tokens represent your internal thinking space.\n'
             # f'{thought_tokens}'
             # below: 0.4967
-            f'{prompt}\n\n'
-            f'Reason through the relevant scientific principles and select the most accurate answer.\n'
-            f'The following tokens represent your internal thinking space.\n'
-            f'{thought_tokens}'
+            # f'{prompt}\n\n'
+            # f'Reason through the relevant scientific principles and select the most accurate answer.\n'
+            # f'The following tokens represent your internal thinking space.\n'
+            # f'{thought_tokens}'
         )
 
 
