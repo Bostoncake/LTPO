@@ -5,7 +5,7 @@ export OPENAI_API_KEY="***REDACTED_OPENAI_KEY***"
 export OPENAI_API_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 export MODEL_TYPE=qwen-max
 
-output=./outputdmlr_aligned_full_v8_prompt
+output=./output/dmlr_aligned_full_v8_prompt
 mkdir -p ${output}
 GPUS=(0 1 2 3 4 5 6)
 gpu_idx=0
