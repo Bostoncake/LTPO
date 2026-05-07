@@ -5,9 +5,9 @@ export OPENAI_API_KEY="***REDACTED_OPENAI_KEY***"
 export OPENAI_API_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 export MODEL_TYPE=qwen-max
 
-MODEL_4B=/export/home/lanliwei.1/abcxyz/projects/latent-reasoning/LTPO/lanliwei.1/abcxyz/storage/models/Qwen3-VL-4B-Instruct
-MODEL_8B=/export/home/lanliwei.1/abcxyz/projects/latent-reasoning/LTPO/lanliwei.1/abcxyz/storage/models/Qwen3-VL-8B-Instruct
-MODEL_3B=/export/home/lanliwei.1/abcxyz/projects/latent-reasoning/LTPO/lanliwei.1/abcxyz/storage/models/Qwen2.5-VL-3B-Instruct
+MODEL_4B=/export/home/lanliwei.1/abcxyz/storage/models/Qwen3-VL-4B-Instruct
+MODEL_8B=/export/home/lanliwei.1/abcxyz/storage/models/Qwen3-VL-8B-Instruct
+MODEL_3B=/export/home/lanliwei.1/abcxyz/storage/models/Qwen2.5-VL-3B-Instruct
 
 OUT_BASELINE=./output/dmlr_aligned_full_v8_prompt_baseline
 OUT_FULL=./output/dmlr_aligned_full_v8_prompt
