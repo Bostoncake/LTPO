@@ -5,13 +5,13 @@ export OPENAI_API_KEY="***REDACTED_OPENAI_KEY***"
 export OPENAI_API_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 export MODEL_TYPE=qwen-max
 
-output=./output/dmlr_aligned_dev_v8_prompt
+output=./output/dmlr_aligned_dev_v8_prompt_test
 mkdir -p ${output}
-GPUS=(0 1 2 3 4 5 6)
+GPUS=(0 1)
 gpu_idx=0
 # "mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev"
 # "mmstar_dev" "math_vista_dev" "hallusion_dev"
-for dataset in "mmvp_dev" "mmstar_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev"; do
+for dataset in "math_vista_dev" "hallusion_dev"; do
     if [ ${gpu_idx} -ge ${#GPUS[@]} ]; then
         echo "Not enough GPU ids in GPUS for dataset ${dataset}" >&2
         exit 1
