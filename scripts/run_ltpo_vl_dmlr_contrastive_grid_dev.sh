@@ -1,23 +1,18 @@
 #!/bin/bash
-# run_ltpo_vl_dmlr_grid_dev.sh — LTPO hyperparameter sweep on all 7 dev sets.
+# run_ltpo_vl_dmlr_contrastive_grid_dev.sh
+# Contrastive LTPO (r1 - r2) hyperparameter sweep on all 7 dev sets.
 #
-# Sweeps: num_thought_tokens × max_num_steps × sigma × lr
-# Fixed:  sigma_decay=0.95, top_k=10  (consensus from prior grid-search analysis)
+# Reward:  r1 - r2
+#   r1 = confidence with full visual attention (standard LTPO).
+#   r2 = confidence with image-token attention masked out.
+# Optimising r1 - r2 widens the reasoning gap between "with image" and
+# "without image", pushing latent thoughts to rely on the visual evidence.
 #
-#   tokens ∈ {2, 4}
-#   steps  ∈ {10, 15}
-#   sigma  ∈ {5.0, 25.0}
-#   lr     ∈ {5e-3, 1e-2, 5e-2}
-#
-# Total: 2×2×2×3 = 24 configs × 7 datasets = 168 jobs.
-# Est. wall time (8 GPUs, ~5 min/job): ≈ 105 min.
+# Sweeps: num_thought_tokens x max_num_steps x sigma x lr
+# Fixed:  sigma_decay=0.95, top_k=10
 #
 # Usage:
-#   N_GPUS=8 bash scripts/run_ltpo_vl_dmlr_grid_dev.sh
-#
-# Overridable env vars:
-#   N_GPUS    number of GPUs to use (default 8)
-#   MODEL     path to model checkpoint
+#   N_GPUS=8 bash scripts/run_ltpo_vl_dmlr_contrastive_grid_dev.sh
 
 export HUGGING_FACE_TOKEN=<YOUR_HF_TOKEN>
 export OPENAI_API_KEY=<YOUR_OPENAI_KEY>
@@ -25,28 +20,45 @@ export OPENAI_API_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 export MODEL_TYPE=qwen-max
 
 N_GPUS=${N_GPUS:-8}
-MODEL=${MODEL:-/WillDevExt/xiongyizhe/models/Qwen2.5-VL-3B-Instruct}
+MODEL=${MODEL:-/WillDevExt/xiongyizhe/models/Qwen2.5-VL-7B-Instruct}
 
-TOKENS_LIST=(1 2)
-STEPS_LIST=(1 3)
-SIGMA_LIST=(10.0 20.0)
+# TOKENS_LIST=(2 4)
+# STEPS_LIST=(10 15)
+# SIGMA_LIST=(5.0 25.0)
+# SIGMA_DECAY=0.95
+# LR_LIST=(5e-3 1e-2 5e-2)
+TOKENS_LIST=(4)
+STEPS_LIST=(15)
+SIGMA_LIST=(5.0)
 SIGMA_DECAY=0.95
-LR_LIST=(1e-4 5e-4 1e-3)
+LR_LIST=(5e-3 1e-2 5e-2)
 TOP_K=10
+
+# Gap-bonus switch: USE_GAP_BONUS=1 enables reward = r1 + lambda*clip(r1-r2, 0).
+# When USE_GAP_BONUS=0 (default) the reward stays as r1 - r2 and LAMBDA_LIST is ignored.
+USE_GAP_BONUS=${USE_GAP_BONUS:-1}
+LAMBDA_LIST=(1.0 10.0)
 
 DATASETS=("mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev")
 
-root_output=./output/ltpo_dmlr_grid_dev
+root_output=./output/ltpo_dmlr_contrastive_grid_dev/0425_contrast_clipping_qwen2.5_7B
 mkdir -p "${root_output}"
 
-# Build flat job list: "tokens steps sigma lr dataset"
+if [ "${USE_GAP_BONUS}" -eq 1 ]; then
+    LAMBDAS=("${LAMBDA_LIST[@]}")
+else
+    LAMBDAS=("0")   # placeholder; not used when USE_GAP_BONUS=0
+fi
+
 jobs=()
 for tokens in "${TOKENS_LIST[@]}"; do
     for steps in "${STEPS_LIST[@]}"; do
         for sigma in "${SIGMA_LIST[@]}"; do
             for lr in "${LR_LIST[@]}"; do
-                for dataset in "${DATASETS[@]}"; do
-                    jobs+=("${tokens} ${steps} ${sigma} ${lr} ${dataset}")
+                for lam in "${LAMBDAS[@]}"; do
+                    for dataset in "${DATASETS[@]}"; do
+                        jobs+=("${tokens} ${steps} ${sigma} ${lr} ${lam} ${dataset}")
+                    done
                 done
             done
         done
@@ -54,17 +66,21 @@ for tokens in "${TOKENS_LIST[@]}"; do
 done
 total=${#jobs[@]}
 
-echo "════════════════════════════════════════════════════════"
-echo "LTPO-DMLR Grid Search on dev sets"
-echo "    tokens ∈ {${TOKENS_LIST[*]}}  steps ∈ {${STEPS_LIST[*]}}"
-echo "    sigma  ∈ {${SIGMA_LIST[*]}}   lr    ∈ {${LR_LIST[*]}}"
+if [ "${USE_GAP_BONUS}" -eq 1 ]; then
+    obj_str="r1 + lambda*clip(r1-r2, 0)   lambda in {${LAMBDA_LIST[*]}}"
+else
+    obj_str="r1 - r2"
+fi
+echo "========================================================"
+echo "LTPO-DMLR CONTRASTIVE Grid Search on dev sets"
+echo "    objective: ${obj_str}"
+echo "    tokens in {${TOKENS_LIST[*]}}  steps in {${STEPS_LIST[*]}}"
+echo "    sigma  in {${SIGMA_LIST[*]}}   lr    in {${LR_LIST[*]}}"
 echo "    sigma_decay=${SIGMA_DECAY}  top_k=${TOP_K}  (fixed)"
 echo "    Datasets: ${#DATASETS[@]}  Configs: $(( total / ${#DATASETS[@]} ))"
 echo "    Total jobs: ${total}   GPUs: ${N_GPUS}"
-echo "    Est. wall time: $(( (total + N_GPUS - 1) / N_GPUS * 5 )) min"
-echo "════════════════════════════════════════════════════════"
+echo "========================================================"
 
-# Dynamic GPU scheduling
 declare -a gpu_pids
 for ((g=0; g<N_GPUS; g++)); do gpu_pids[$g]=-1; done
 
@@ -74,16 +90,24 @@ while [ $job_idx -lt $total ]; do
         [ $job_idx -ge $total ] && break
         pid=${gpu_pids[$g]}
         if [ "$pid" -eq -1 ] || ! kill -0 "$pid" 2>/dev/null; then
-            read -r tokens steps sigma lr dataset <<< "${jobs[$job_idx]}"
+            read -r tokens steps sigma lr lam dataset <<< "${jobs[$job_idx]}"
 
-            tag="tokens${tokens}_steps${steps}_sigma${sigma}_decay${SIGMA_DECAY}_lr${lr}_topk${TOP_K}"
+            if [ "${USE_GAP_BONUS}" -eq 1 ]; then
+                reward_tag="gapbonus${lam}"
+                gap_args=(--use_gap_bonus --gap_lambda "${lam}")
+            else
+                reward_tag="contrastive"
+                gap_args=()
+            fi
+
+            tag="tokens${tokens}_steps${steps}_sigma${sigma}_decay${SIGMA_DECAY}_lr${lr}_topk${TOP_K}_${reward_tag}"
             out_dir="${root_output}/${tag}"
             mkdir -p "${out_dir}"
             log="${out_dir}/${dataset}.log"
 
-            echo "[$(date +%T)] GPU ${g}  ←  ${tag}  |  ${dataset}"
+            echo "[$(date +%T)] GPU ${g}  <-  ${tag}  |  ${dataset}"
 
-            CUDA_VISIBLE_DEVICES=${g} python main_vl_dmlr.py \
+            CUDA_VISIBLE_DEVICES=${g} python main_vl_dmlr_contrastive.py \
                 --dataset           "${dataset}"   \
                 --data_root         mllm_data      \
                 --image_root        .              \
@@ -102,6 +126,7 @@ while [ $job_idx -lt $total ]; do
                 --top_k             "${TOP_K}"     \
                 --use_llm_verify                   \
                 --verbose 1                        \
+                "${gap_args[@]}"                   \
                 > "${log}" 2>&1 &
 
             gpu_pids[$g]=$!
@@ -113,12 +138,11 @@ done
 
 wait
 echo ""
-echo "════════════════════════════════════════════════════════"
+echo "========================================================"
 echo "All ${total} jobs done. Results in ${root_output}"
 echo "Results per config (sorted by mean accuracy across datasets):"
-echo "════════════════════════════════════════════════════════"
+echo "========================================================"
 
-# Summarise: for each config dir, average accuracy across all dataset result logs
 for cfg_dir in "${root_output}"/tokens*; do
     [ -d "$cfg_dir" ] || continue
     cfg=$(basename "$cfg_dir")

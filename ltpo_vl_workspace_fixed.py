@@ -313,6 +313,7 @@ def generate_vl_workspace_fixed(
     model_name: str = None,
     verbose: int = 1,
     top_k: int = 10,
+    warmup_steps: int = 0,
     **kwargs,
 ):
     """
@@ -323,9 +324,28 @@ def generate_vl_workspace_fixed(
       - Workspace slots are built from pooled image tokens (not raw tokens).
       - The scoring query is the text prompt mean (not latent thought tokens).
 
+    Parameters
+    ----------
+    warmup_steps : int, default 0
+        Number of initial LTPO steps during which visual evidence is NOT
+        injected (pure LTPO on the latent thought tokens). Only after step
+        `warmup_steps` does workspace routing / injection kick in. Motivation:
+        at step 0 the thought tokens are Gaussian-initialised, so the slots
+        they would retrieve are essentially random; letting LTPO train the
+        tokens for a few steps first yields a more informative query.
+
+        Notes:
+          - For `workspace_inject_mode='add'`: the warmup phase is exactly
+            equivalent to pure LTPO (no evidence is added).
+          - For `workspace_inject_mode='prepend'`: the r pre-allocated
+            placeholder positions remain zero during warmup; they are
+            overwritten with routed slots from step `warmup_steps` onward.
+          - Final-inference re-routing (after the loop) is always applied
+            when the workspace is enabled, regardless of `warmup_steps`.
+
     Returns
     -------
-    (response, best_reward, best_reward_step, stop_reason)
+    (response, best_reward, best_reward_step, stop_reason, step_rewards)
     """
     if ws_config is None:
         ws_config = WorkspaceConfig(enabled=False)
@@ -366,6 +386,7 @@ def generate_vl_workspace_fixed(
     best_reward = 0.0
     best_reward_step = 0
     best_thought_hidden_states = thought_hidden_states.clone()
+    step_rewards = []
 
     # ====================================================================
     # Per-instance latent optimisation loop
@@ -379,8 +400,13 @@ def generate_vl_workspace_fixed(
         ).to(device)
         thought_hidden_states_cand = thought_hidden_states + epsilon
 
-        # ---- Workspace evidence injection ----
-        if ws_config.enabled and workspace_slots is not None:
+        # ---- Workspace evidence injection (gated by warmup) ----
+        use_ws_this_step = (
+            ws_config.enabled
+            and workspace_slots is not None
+            and i >= warmup_steps
+        )
+        if use_ws_this_step:
             alpha, _, selected_slots = router.route(
                 thought_hidden_states_cand, workspace_slots
             )
@@ -439,6 +465,8 @@ def generate_vl_workspace_fixed(
 
         if verbose:
             logger.info(f'>>> Step {i} reward = {reward}')
+
+        step_rewards.append(float(reward))
 
         del epsilon, thought_hidden_states_cand, effective_thought
         torch.cuda.empty_cache()
@@ -511,4 +539,4 @@ def generate_vl_workspace_fixed(
     else:
         stop_reason = 'other'
 
-    return response, best_reward, best_reward_step, stop_reason
+    return response, best_reward, best_reward_step, stop_reason, step_rewards

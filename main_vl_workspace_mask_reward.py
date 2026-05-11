@@ -1,19 +1,23 @@
 """
-main_vl_workspace_fixed.py – Evaluate LTPO + Fixed Visual Workspace on VL benchmarks.
+main_vl_workspace_mask_reward.py
+================================
+Evaluate LTPO + Mask-Reward Visual Workspace on VL benchmarks.
 
-Identical to main_vl_workspace.py except it imports from the fixed modules:
-  - visual_workspace_fixed.WorkspaceConfig  (adds num_pooled_tokens field)
-  - ltpo_vl_workspace_fixed.generate_vl_workspace_fixed
+Key difference vs. main_vl_workspace_fixed.py
+---------------------------------------------
+During LTPO optimisation, latent thought tokens do NOT interact with image
+slots at all (pure LTPO).  After optimisation converges, every image slot
+is evaluated by masking the raw image tokens that belong to it and measuring
+the drop in reward; the slot whose removal hurts reward the most is added
+(summed) to every latent thought token before the final generation pass.
 
-Fixed workspace changes (see visual_workspace_fixed.py for details):
-  1. Workspace slots are built from POOLED image tokens (adaptive avg pool →
-     P aggregated tokens) rather than raw image tokens.
-  2. The scoring query is the QUESTION TEXT mean embedding, not the initial
-     latent thought-token embeddings (which are fixed/random).
+See visual_workspace_mask_reward.py / ltpo_vl_workspace_mask_reward.py for
+details.
 
-New CLI arg compared to main_vl_workspace.py:
-  --num_pooled_tokens P  intermediate pooled size before top-K selection
-                         (default: auto = max(K*4, 32))
+CLI additions (vs. main_vl_dmlr.py):
+  --use_mask_reward_workspace    enable the mask-reward workspace (default off)
+  --num_workspace_slots K        target slot count (default 8)
+  --inject_scale s               scale applied to the injected slot (default 1.0)
 """
 
 import argparse
@@ -30,16 +34,16 @@ from transformers import AutoProcessor, AutoModelForVision2Seq
 from openai import OpenAI
 
 from data_vl import get_mllm_dataset
-from ltpo_vl_dmlr import generate_vl as generate_vl_dmlr, SYSTEM_PROMPT
-from ltpo_vl_workspace_fixed import generate_vl_workspace_fixed
-from visual_workspace_fixed import WorkspaceConfig
+from ltpo_vl_dmlr import SYSTEM_PROMPT
+from ltpo_vl_workspace_mask_reward import generate_vl_mask_reward
+from visual_workspace_mask_reward import MaskRewardWorkspaceConfig
 
 
 huggingface_token = os.environ.get('HUGGING_FACE_TOKEN')
 
 
 # ---------------------------------------------------------------------------
-# Answer extraction  (identical to main_vl_dmlr.py)
+# Answer extraction (identical to main_vl_dmlr.py)
 # ---------------------------------------------------------------------------
 
 def extract_answer(text: str) -> str:
@@ -89,7 +93,7 @@ def extract_answer(text: str) -> str:
 
 
 # ---------------------------------------------------------------------------
-# Verification  (identical to main_vl_dmlr.py)
+# Verification (identical to main_vl_dmlr.py)
 # ---------------------------------------------------------------------------
 
 _llm_client = None
@@ -160,9 +164,8 @@ def judge_answer_rule(predicted: str, ground_truth: str) -> bool:
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Evaluate LTPO + Fixed Visual Workspace on MLLM benchmarks"
+        description="Evaluate LTPO + Mask-Reward Visual Workspace on MLLM benchmarks"
     )
-    # Dataset / paths
     parser.add_argument("--dataset", type=str, required=True)
     parser.add_argument("--data_root", type=str, default="mllm_data")
     parser.add_argument("--image_root", type=str, default="")
@@ -173,11 +176,10 @@ def parse_args():
     parser.add_argument("--max_new_tokens", type=int, default=2048)
     parser.add_argument("--device", type=str, default="cuda")
 
-    # Processor pixel budget
     parser.add_argument("--min_pixels", type=int, default=128)
     parser.add_argument("--max_pixels", type=int, default=256)
 
-    # Optimisation — DMLR defaults
+    # LTPO hyperparameters (DMLR defaults)
     parser.add_argument("--num_thought_tokens", type=int, default=2)
     parser.add_argument("--sigma", type=float, default=25.0)
     parser.add_argument("--sigma_decay", type=float, default=0.95)
@@ -190,49 +192,20 @@ def parse_args():
     parser.add_argument("--disable_conf_reward", action="store_true")
     parser.add_argument("--disable_best_reward", action="store_true")
 
-    # ---- Fixed Visual Workspace args ----
+    # Mask-Reward Workspace
     parser.add_argument(
-        "--use_workspace", action="store_true",
-        help="Enable fixed visual workspace + routing (default: off)",
+        "--use_mask_reward_workspace", action="store_true",
+        help="Enable post-hoc mask-reward slot injection (default: off)",
     )
     parser.add_argument(
         "--num_workspace_slots", type=int, default=8,
-        help="K: final workspace capacity (slots built per sample)",
+        help="K: target number of disjoint image slots to evaluate",
     )
     parser.add_argument(
-        "--num_pooled_tokens", type=int, default=None,
+        "--inject_scale", type=float, default=1.0,
         help=(
-            "P: intermediate pooled image-token count before top-K selection. "
-            "Must be >= num_workspace_slots. Default: auto = max(K*4, 32)."
-        ),
-    )
-    parser.add_argument(
-        "--num_route_slots", type=int, default=2,
-        help="r: number of slots injected per optimisation step",
-    )
-    parser.add_argument(
-        "--workspace_inject_mode", type=str, default="add",
-        choices=["add", "prepend"],
-        help="How evidence is merged with latent tokens: 'add' (default) | 'prepend'",
-    )
-    parser.add_argument(
-        "--workspace_route_mode", type=str, default="avg",
-        choices=["avg", "per_token"],
-        help=(
-            "How thought tokens are used to select workspace slots: "
-            "'avg' (default) uses mean thought embedding; "
-            "'per_token' has each token vote for its top-r slots and selects "
-            "the r slots with the most votes."
-        ),
-    )
-    parser.add_argument(
-        "--workspace_warmup_steps", type=int, default=0,
-        help=(
-            "Number of initial LTPO steps that skip workspace injection "
-            "(pure LTPO on latent thought tokens). From step N onward the "
-            "workspace routes + injects evidence as usual. Default 0 means "
-            "workspace is active from step 0 (original behaviour). "
-            "Only meaningful when --use_workspace is set."
+            "Scale factor applied to the selected slot embedding when adding "
+            "it to every latent thought token. 1.0 = raw sum."
         ),
     )
 
@@ -247,18 +220,11 @@ def parse_args():
     parser.add_argument("--use_llm_verify", action="store_true")
     parser.add_argument(
         "--save_reward_trace", action="store_true",
-        help=(
-            "If set, save per-step LTPO rewards (step_rewards list) and best-reward "
-            "step index (best_reward_step) for each example in logistics.pt entries."
-        ),
+        help="Persist per-step LTPO rewards and selected slot index per example.",
     )
 
     return parser.parse_args()
 
-
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
 
 def set_seed(seed: int):
     torch.manual_seed(seed)
@@ -290,7 +256,6 @@ def main(args):
 
     device = args.device or ("cuda" if torch.cuda.is_available() else "cpu")
 
-    # ---- Load model (DMLR settings) ----
     model = AutoModelForVision2Seq.from_pretrained(
         args.model_name_or_path,
         torch_dtype=torch.float32,
@@ -301,7 +266,6 @@ def main(args):
     model.to(device)
     model.eval()
 
-    # ---- Load processor ----
     processor_kwargs = {
         "padding_side": "left",
         "min_pixels": args.min_pixels * 28 * 28,
@@ -311,7 +275,6 @@ def main(args):
         processor_kwargs["token"] = huggingface_token
     processor = AutoProcessor.from_pretrained(args.model_name_or_path, **processor_kwargs)
 
-    # ---- Load reward model ----
     from reward import RewardModel
     reward_model = RewardModel(
         model=model,
@@ -319,24 +282,17 @@ def main(args):
         num_thought_tokens=args.num_thought_tokens,
     )
 
-    # ---- Build WorkspaceConfig ----
-    ws_config = WorkspaceConfig(
-        enabled=args.use_workspace,
+    ws_config = MaskRewardWorkspaceConfig(
+        enabled=args.use_mask_reward_workspace,
         num_workspace_slots=args.num_workspace_slots,
-        num_pooled_tokens=args.num_pooled_tokens,   # None → auto
-        num_route_slots=args.num_route_slots,
-        workspace_inject_mode=args.workspace_inject_mode,
-        workspace_route_mode=args.workspace_route_mode,
+        inject_scale=args.inject_scale,
     )
-    if args.use_workspace:
-        P = ws_config.effective_num_pooled()
+    if ws_config.enabled:
         print(
-            f"[Workspace-Fixed] enabled  K={ws_config.num_workspace_slots}  "
-            f"P={P}  r={ws_config.num_route_slots}  "
-            f"inject={ws_config.workspace_inject_mode}  route={ws_config.workspace_route_mode}"
+            f"[Mask-Reward Workspace] K={ws_config.num_workspace_slots}  "
+            f"inject_scale={ws_config.inject_scale}"
         )
 
-    # ---- Load dataset ----
     dataset = get_mllm_dataset(args.dataset, data_root=args.data_root)
     if args.verbose:
         print(f"Loaded {len(dataset)} examples from '{args.dataset}'")
@@ -344,17 +300,10 @@ def main(args):
     model_name = args.model_name_or_path.split("/")[-1]
     data_name = args.dataset.split("/")[-1]
     conf_suffix = "" if args.disable_conf_reward else "-conf"
-    ws_suffix = (
-        f"-ws{ws_config.num_workspace_slots}"
-        f"p{ws_config.effective_num_pooled()}"
-        f"r{ws_config.num_route_slots}"
-        f"-{ws_config.workspace_inject_mode}"
-        f"-{ws_config.workspace_route_mode}-fixed"
-        if args.use_workspace else ""
-    )
-    warmup_suffix = (
-        f"-warmup{args.workspace_warmup_steps}"
-        if args.use_workspace and args.workspace_warmup_steps > 0 else ""
+    mr_suffix = (
+        f"-mr{ws_config.num_workspace_slots}"
+        f"-s{ws_config.inject_scale:g}"
+        if ws_config.enabled else ""
     )
 
     if args.eval_baseline:
@@ -369,7 +318,7 @@ def main(args):
             f"-tokens{args.num_thought_tokens}-lr{args.lr}"
             f"-sigma{args.sigma}-sigdecay{args.sigma_decay}"
             f"-steps{args.max_num_steps}-topk{args.top_k}"
-            + conf_suffix + ws_suffix + warmup_suffix + "-workspace"
+            + conf_suffix + mr_suffix + "-maskreward"
         )
 
     start_data_idx = max(0, args.start_data_idx)
@@ -409,9 +358,9 @@ def main(args):
 
         best_reward, best_reward_step, stop_reason = None, None, None
         step_rewards = None
+        selected_slot_idx = -1
 
         if args.eval_baseline:
-            # ---- Baseline: standard VL inference (no LTPO, no workspace) ----
             if image is not None:
                 if 'qwen' in args.model_name_or_path.lower():
                     messages = [
@@ -456,32 +405,31 @@ def main(args):
             output = tokenizer.decode(raw_outputs[0], skip_special_tokens=True)
 
         else:
-            # ---- LTPO optimised generation with fixed workspace ----
-            output, best_reward, best_reward_step, stop_reason, step_rewards = generate_vl_workspace_fixed(
-                processor=processor,
-                model=model,
-                reward_model=reward_model,
-                image=image,
-                question=question,
-                ws_config=ws_config,
-                num_thought_tokens=args.num_thought_tokens,
-                max_rl_steps=args.max_num_steps,
-                max_new_tokens=args.max_new_tokens,
-                reward_threshold=args.reward_threshold,
-                lr=args.lr,
-                sigma=args.sigma,
-                sigma_decay=args.sigma_decay,
-                use_auto_grad=args.use_auto_grad,
-                disable_conf_reward=args.disable_conf_reward,
-                disable_best_reward=args.disable_best_reward,
-                data_name=args.dataset,
-                model_name=args.model_name_or_path,
-                verbose=args.verbose,
-                top_k=args.top_k,
-                warmup_steps=args.workspace_warmup_steps,
+            output, best_reward, best_reward_step, stop_reason, step_rewards, selected_slot_idx = (
+                generate_vl_mask_reward(
+                    processor=processor,
+                    model=model,
+                    reward_model=reward_model,
+                    image=image,
+                    question=question,
+                    ws_config=ws_config,
+                    num_thought_tokens=args.num_thought_tokens,
+                    max_rl_steps=args.max_num_steps,
+                    max_new_tokens=args.max_new_tokens,
+                    reward_threshold=args.reward_threshold,
+                    lr=args.lr,
+                    sigma=args.sigma,
+                    sigma_decay=args.sigma_decay,
+                    use_auto_grad=args.use_auto_grad,
+                    disable_conf_reward=args.disable_conf_reward,
+                    disable_best_reward=args.disable_best_reward,
+                    data_name=args.dataset,
+                    model_name=args.model_name_or_path,
+                    verbose=args.verbose,
+                    top_k=args.top_k,
+                )
             )
 
-        # ---- Extract & judge answer ----
         answer = extract_answer(output)
 
         if args.use_llm_verify:
@@ -496,7 +444,10 @@ def main(args):
             if args.verbose > 1:
                 print(f"[{i}] LLM response:\n{output}")
             print(f"[{i}] Extracted: {answer}  |  True: {true_answer}  |  Correct: {is_correct}")
-            print(f"[{i}] Best reward: {best_reward}, step: {best_reward_step}, stop: {stop_reason}")
+            print(
+                f"[{i}] Best reward: {best_reward}, step: {best_reward_step}, "
+                f"stop: {stop_reason}, selected_slot: {selected_slot_idx}"
+            )
 
         if not args.disable_save_logistics:
             entry = dict(
@@ -509,6 +460,7 @@ def main(args):
                 best_reward=best_reward,
                 best_reward_step=best_reward_step,
                 stop_reason=stop_reason,
+                selected_slot_idx=selected_slot_idx,
             )
             if args.save_reward_trace:
                 entry["step_rewards"] = step_rewards
@@ -522,7 +474,6 @@ def main(args):
 
         print(f"Running accuracy: {correct}/{total} = {correct / total:.4f}")
 
-    # ---- Final summary ----
     if total > 0:
         print(f"\n>>> Final: correct={correct}, total={total}, accuracy={correct / total:.4f}")
     print(f">>> Correct indices: {[e['data_idx'] for e in entries if e['is_correct']]}")

@@ -1,18 +1,13 @@
 """
-LTPO generate for Vision-Language Models — DMLR-compatible prompts.
+LTPO + Contrastive Latent-DPO for Vision-Language Models (DMLR prompts).
 
-Differences from ltpo_vl.py:
-- Uses DMLR's SYSTEM_PROMPT (<think>/<answer> format).
-- Uses DMLR's input_content structure ("PROBLEM: ...\n\nspecial tokens instruction").
-- Default hyperparameters match DMLR (sigma=25.0, sigma_decay=0.95, lr=0.01, etc.).
-- Returns a 4-tuple (response, best_reward, best_reward_step, stop_reason) for
-  compatibility with the richer DMLR result format.
-
-Core RL loop and visual-token pre-merging follow the original LTPO framework
-(ltpo_vl.py) unchanged.
+Adds `generate_vl_dpo` which replaces the REINFORCE latent update with a
+DPO-style preference update built from full vs. masked visual inputs.
+The original `generate_vl` (REINFORCE) is preserved for comparison.
 """
 
 import torch
+import torch.nn.functional as F
 from fastNLP import logger
 from reward import RewardModel
 from ltpo import get_confidence
@@ -166,9 +161,11 @@ def build_inputs_vl(
     - Detects multiple-choice questions to adjust the answer instruction.
 
     Returns:
-        inputs      – dict with 'inputs_embeds' and 'attention_mask'
-                      (pixel_values already merged in; input_ids removed)
-        thought_idx – [start, end) indices of thought tokens in inputs_embeds
+        inputs               – dict with 'inputs_embeds' and 'attention_mask'
+                               (pixel_values already merged in; input_ids removed)
+        thought_idx          – [start, end) indices of thought tokens in inputs_embeds
+        image_token_positions – 1-D LongTensor of indices in the sequence axis
+                               where image tokens live (empty if no image)
     """
     if num_thought_tokens <= 0:
         raise ValueError('num_thought_tokens must be a positive integer')
@@ -267,7 +264,16 @@ def build_inputs_vl(
         ),
     }
 
-    return clean_inputs, thought_idx
+    # ---- Locate image-token positions (for DPO masked-input construction) ----
+    img_token_id = getattr(model.config, 'image_token_id', None)
+    if img_token_id is None:
+        img_token_id = getattr(model.config, 'image_token_index', None)
+    if image is not None and img_token_id is not None:
+        image_token_positions = (input_ids[0] == img_token_id).nonzero(as_tuple=True)[0]
+    else:
+        image_token_positions = torch.tensor([], dtype=torch.long, device=device)
+
+    return clean_inputs, thought_idx, image_token_positions
 
 
 # ---------------------------------------------------------------------------
@@ -304,7 +310,7 @@ def generate_vl(
     """
     model.eval()
 
-    inputs, thought_idx = build_inputs_vl(
+    inputs, thought_idx, _ = build_inputs_vl(
         processor=processor,
         model=model,
         image=image,
@@ -422,4 +428,314 @@ def generate_vl(
     else:
         stop_reason = "other"
 
+    return response, best_reward, best_reward_step, stop_reason
+
+
+# ---------------------------------------------------------------------------
+# Masked visual input construction (DPO)
+# ---------------------------------------------------------------------------
+
+def _build_masked_inputs(
+    inputs: dict,
+    image_token_positions: torch.Tensor,
+    mask_ratio: float,
+    mask_fill: str,
+):
+    """
+    Construct a masked-image variant of `inputs`.
+
+    mask_fill modes:
+      - 'zero'      : replace selected image-token EMBEDDINGS with 0
+      - 'mean'      : replace selected image-token EMBEDDINGS with image-mean
+      - 'attn_zero' : keep embeddings; zero the ATTENTION MASK at selected
+                      image-token positions (matches ltpo_vl_dmlr_contrastive
+                      attn-fill ablation; cleaner removal of visual signal)
+    """
+    masked = {k: v for k, v in inputs.items()}
+    masked['inputs_embeds'] = inputs['inputs_embeds'].clone()
+    if image_token_positions.numel() == 0 or mask_ratio <= 0:
+        return masked
+
+    n_img = image_token_positions.numel()
+    n_mask = max(1, int(n_img * float(mask_ratio)))
+    perm = torch.randperm(n_img, device=image_token_positions.device)
+    sel = image_token_positions[perm[:n_mask]]
+
+    if mask_fill == 'attn_zero':
+        new_attn = inputs['attention_mask'].clone()
+        new_attn[0, sel] = 0
+        masked['attention_mask'] = new_attn
+    else:
+        new_embeds = masked['inputs_embeds']
+        if mask_fill == 'mean':
+            fill = inputs['inputs_embeds'][0, image_token_positions].mean(dim=0)
+        else:
+            fill = torch.zeros_like(new_embeds[0, 0])
+        new_embeds[0, sel] = fill.to(dtype=new_embeds.dtype, device=new_embeds.device)
+    return masked
+
+
+# ---------------------------------------------------------------------------
+# Preference-pair construction (DPO)
+# ---------------------------------------------------------------------------
+
+def _build_dpo_pairs(g: torch.Tensor, use_soft: bool, margin: float, topk: int):
+    """
+    Build (i_idx, j_idx) preference pairs from contrastive scores g.
+
+    - soft mode: enumerate all i != j (or top-k vs bottom-k).
+    - hard mode: keep only pairs with g_i > g_j + margin.
+    Returns two LongTensors on g's device, each shape (P,).  Empty if no pairs.
+    """
+    B = g.shape[0]
+    device = g.device
+    if topk and topk > 0 and topk * 2 <= B:
+        order = torch.argsort(g, descending=True)
+        top_idx = order[:topk]
+        bot_idx = order[-topk:]
+        I, J = torch.meshgrid(top_idx, bot_idx, indexing='ij')
+        i_idx = I.reshape(-1)
+        j_idx = J.reshape(-1)
+        keep = i_idx != j_idx
+        i_idx, j_idx = i_idx[keep], j_idx[keep]
+    else:
+        ii, jj = torch.meshgrid(
+            torch.arange(B, device=device),
+            torch.arange(B, device=device),
+            indexing='ij',
+        )
+        keep = ii != jj
+        i_idx = ii[keep]
+        j_idx = jj[keep]
+
+    if not use_soft:
+        diff = g[i_idx] - g[j_idx]
+        keep = diff > margin
+        i_idx = i_idx[keep]
+        j_idx = j_idx[keep]
+    elif margin > 0:
+        keep = (g[i_idx] - g[j_idx]).abs() > margin
+        i_idx = i_idx[keep]
+        j_idx = j_idx[keep]
+
+    return i_idx, j_idx
+
+
+# ---------------------------------------------------------------------------
+# Gaussian log-prob (DPO)
+# ---------------------------------------------------------------------------
+
+def compute_gaussian_logprob(A: torch.Tensor, H: torch.Tensor, sigma: float):
+    """log N(A; H, sigma^2 I) up to additive const, reduced over latent dims."""
+    sigma2 = max(float(sigma) * float(sigma), 1e-8)
+    diff_sq = (A - H) ** 2
+    latent_dims = tuple(range(A.dim() - H.dim(), A.dim()))
+    return -diff_sq.sum(dim=latent_dims) / (2.0 * sigma2)
+
+
+# ---------------------------------------------------------------------------
+# generate_vl_dpo  – Contrastive Latent-DPO replacement for REINFORCE
+# ---------------------------------------------------------------------------
+
+def generate_vl_dpo(
+    processor,
+    model,
+    reward_model: RewardModel,
+    image,
+    question: str,
+    num_thought_tokens: int = 2,
+    lr: float = 0.01,
+    sigma: float = 25.0,
+    sigma_decay: float = 0.95,
+    max_rl_steps: int = 15,
+    reward_threshold: float = -1,
+    max_new_tokens: int = 2048,
+    disable_best_reward: bool = False,
+    data_name: str = None,
+    model_name: str = None,
+    verbose: int = 1,
+    top_k: int = 10,
+    # DPO-specific
+    dpo_num_candidates: int = 4,
+    dpo_beta: float = 0.1,
+    dpo_alpha: float = 1.0,
+    lambda_mask: float = 1.0,
+    dpo_margin: float = 0.0,
+    dpo_topk_pairs: int = 0,
+    use_soft_dpo: bool = True,
+    mask_ratio: float = 0.3,
+    mask_fill: str = 'zero',
+    dpo_update_mode: str = 'explicit',     # explicit | backward
+    best_select_metric: str = 'g',         # g | r1
+    **kwargs,
+):
+    """
+    Test-time latent optimisation via contrastive DPO.
+
+    For each step we sample B = `dpo_num_candidates` latent perturbations
+    A_i = H + eps_i, score them on full and masked visual inputs, form
+    contrastive scores g_i = r1_i - lambda_mask * r2_i, build pairwise
+    preferences and update H by minimising the latent-policy DPO loss.
+    Final answer is generated from the optimised H using the FULL image only.
+    """
+    model.eval()
+    for p in model.parameters():
+        p.requires_grad_(False)
+
+    inputs, thought_idx, img_positions = build_inputs_vl(
+        processor=processor,
+        model=model,
+        image=image,
+        num_thought_tokens=num_thought_tokens,
+        prompt=question,
+        data_name=data_name,
+        model_name=model_name,
+    )
+
+    inputs_embeds = inputs['inputs_embeds']
+    device = inputs_embeds.device
+    dtype = inputs_embeds.dtype
+
+    masked_inputs = _build_masked_inputs(inputs, img_positions, mask_ratio, mask_fill)
+
+    H_init = inputs_embeds[0, thought_idx[0]:thought_idx[1]].detach().clone()
+    if dpo_update_mode == 'backward':
+        H = torch.nn.Parameter(H_init.clone())
+        optimizer = torch.optim.Adam([H], lr=lr)
+    else:
+        # explicit: plain tensor, updated under no_grad with LTPO-style formula
+        H = H_init.clone().detach()
+        optimizer = None
+
+    B = max(2, int(dpo_num_candidates))
+    best_reward = -float('inf')
+    best_reward_step = 0
+    best_H = H.detach().clone()
+
+    for step in range(max_rl_steps):
+        # Sample B candidates A_i = H + eps_i (eps stop-gradient)
+        eps = torch.randn((B,) + tuple(H.shape), device=device, dtype=dtype) * sigma
+        A = (H.detach().unsqueeze(0) + eps).detach()
+
+        # Score r1 (full) and r2 (masked) under no_grad
+        r1 = torch.empty(B, device=device, dtype=torch.float32)
+        r2 = torch.empty(B, device=device, dtype=torch.float32)
+        with torch.no_grad():
+            for i in range(B):
+                r1[i] = get_confidence(
+                    model=model, inputs=inputs,
+                    thought_idx=thought_idx,
+                    thought_hidden_states=A[i], k=top_k,
+                ).float()
+                r2[i] = get_confidence(
+                    model=model, inputs=masked_inputs,
+                    thought_idx=thought_idx,
+                    thought_hidden_states=A[i], k=top_k,
+                ).float()
+
+        g = (r1 - lambda_mask * r2).detach()  # contrastive score, stop-grad
+
+        # Build preference pairs
+        i_idx, j_idx = _build_dpo_pairs(
+            g, use_soft=use_soft_dpo, margin=dpo_margin, topk=int(dpo_topk_pairs or 0)
+        )
+
+        if i_idx.numel() == 0:
+            if verbose:
+                logger.info(f'>>> [DPO] step {step} no valid pairs, skip update')
+        else:
+            sigma2 = max(sigma * sigma, 1e-8)
+            if dpo_update_mode == 'backward':
+                # Backward DPO: autograd through H (Parameter)
+                log_pi_H = compute_gaussian_logprob(A, H, sigma)
+                log_pi_ref = compute_gaussian_logprob(A, H_init, sigma)
+                z = dpo_beta * (
+                    log_pi_H[i_idx] - log_pi_ref[i_idx]
+                    - log_pi_H[j_idx] + log_pi_ref[j_idx]
+                )
+                if use_soft_dpo:
+                    p_ij = torch.sigmoid(dpo_alpha * (g[i_idx] - g[j_idx])).detach()
+                    loss = -(p_ij * F.logsigmoid(z) + (1.0 - p_ij) * F.logsigmoid(-z)).mean()
+                else:
+                    loss = -F.logsigmoid(z).mean()
+
+                optimizer.zero_grad()
+                loss.backward()
+                optimizer.step()
+                if verbose:
+                    logger.info(
+                        f'>>> [DPO/bwd] step {step} loss={float(loss):.4f} '
+                        f'g_max={float(g.max()):.4f} g_min={float(g.min()):.4f} pairs={i_idx.numel()}'
+                    )
+            else:
+                # Explicit DPO update, LTPO-style (no backward, no optimizer)
+                with torch.no_grad():
+                    log_pi_H_all = compute_gaussian_logprob(A, H, sigma)
+                    log_pi_ref_all = compute_gaussian_logprob(A, H_init, sigma)
+                    z = dpo_beta * (
+                        log_pi_H_all[i_idx] - log_pi_ref_all[i_idx]
+                        - log_pi_H_all[j_idx] + log_pi_ref_all[j_idx]
+                    )
+                    if use_soft_dpo:
+                        p_ij = torch.sigmoid(dpo_alpha * (g[i_idx] - g[j_idx]))
+                    else:
+                        p_ij = torch.ones_like(z)
+                    coeff = (p_ij - torch.sigmoid(z)) * dpo_beta / sigma2  # (P,)
+                    diff_A = A[i_idx] - A[j_idx]                            # (P, num_th, d)
+                    coeff_b = coeff.view(-1, *([1] * (diff_A.dim() - 1)))
+                    delta_H = (coeff_b * diff_A).mean(dim=0)
+                    H.add_(lr * delta_H)
+                if verbose:
+                    logger.info(
+                        f'>>> [DPO/exp] step {step} '
+                        f'g_max={float(g.max()):.4f} g_min={float(g.min()):.4f} '
+                        f'|dH|={float(delta_H.norm()):.4f} pairs={i_idx.numel()}'
+                    )
+
+        sigma *= sigma_decay
+
+        # Best-candidate selection (decoupled from update score)
+        sel = g if best_select_metric == 'g' else r1
+        cur_best = float(sel.max().item())
+        if cur_best > best_reward:
+            best_reward = cur_best
+            best_reward_step = step
+            best_H = H.detach().clone()
+
+        if reward_threshold > 0 and cur_best >= reward_threshold:
+            break
+
+        del eps, A, r1, r2, g
+        torch.cuda.empty_cache()
+
+    # ---- Final answer generation from optimised H, full visual input ----
+    final_H = H.detach() if disable_best_reward else best_H
+    with torch.no_grad():
+        inputs['inputs_embeds'][0, thought_idx[0]:thought_idx[1]] = final_H
+
+    outputs = model.generate(
+        **inputs,
+        max_new_tokens=max_new_tokens,
+        do_sample=False,
+        temperature=0.0,
+        top_p=None,
+        num_beams=1,
+    )
+    tokenizer = processor.tokenizer if hasattr(processor, 'tokenizer') else processor
+    response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+    input_length = inputs['inputs_embeds'].shape[1]
+    generated_tokens = outputs[0].tolist()
+    new_tokens_count = len(generated_tokens) - input_length
+    if new_tokens_count >= max_new_tokens:
+        stop_reason = "length"
+    elif tokenizer.eos_token_id is not None and generated_tokens and generated_tokens[-1] == tokenizer.eos_token_id:
+        stop_reason = "eos_token"
+    elif tokenizer.pad_token_id is not None and generated_tokens and generated_tokens[-1] == tokenizer.pad_token_id:
+        stop_reason = "pad_token"
+    else:
+        stop_reason = "other"
+
+    if best_reward == -float('inf'):
+        best_reward = 0.0
     return response, best_reward, best_reward_step, stop_reason

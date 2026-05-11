@@ -16,7 +16,7 @@ Supports two experiment types via --mode:
             Default root: output/workspace_fixed_dev_grid
 
 Usage (from repo root):
-    python scripts/find_best_ltpo_dmlr.py [--root DIR] [--top N] [--mode dmlr|workspace]
+    python scripts/find_best_ltpo_dmlr.py [--root DIR] [--top N] [--mode dmlr|workspace] [--model MODEL]
 """
 import argparse
 import os
@@ -27,8 +27,8 @@ from collections import defaultdict
 # ── Patterns ──────────────────────────────────────────────────────────────────
 
 DATASETS = [
-    "mmvp_dev", "mmstar_dev", "mm_math_dev",
-    "math_vista_dev", "math_vision_dev", "hallusion_dev", "scienceqa_dev",
+    "math_vista_dev", "math_vision_dev", "mm_math_dev", "hallusion_dev", 
+    "mmvp_dev", "mmstar_dev", "scienceqa_dev",
 ]
 
 _DS_ALT = "|".join(re.escape(d) for d in DATASETS)
@@ -61,7 +61,7 @@ WORKSPACE_DIR_RE = re.compile(
     r"-ws(?P<K>\d+)p(?P<P>\d+)r(?P<r>\d+)"
     r"-(?P<inject_mode>[^-]+)"
     r"-per_token"
-    r"-fixed-workspace$"
+    r"-fixed-warmup7-workspace$"
 )
 
 # Last accuracy line in results.log:  correct=42, total=300, accuracy=0.1400
@@ -93,12 +93,15 @@ def parse_args():
                    help="Root output directory (default depends on --mode)")
     p.add_argument("--top", type=int, default=3,
                    help="Number of top configs to show per dataset (default: %(default)s)")
+    p.add_argument("--model", default=None,
+                   help="Filter results to dirs whose model name contains this substring "
+                        "(case-insensitive). E.g. --model Qwen2.5-VL-3B")
     return p.parse_args()
 
 
 # ── DMLR mode ─────────────────────────────────────────────────────────────────
 
-def run_dmlr(root: str, top_n: int):
+def run_dmlr(root: str, top_n: int, model_filter: str | None = None):
     results = defaultdict(list)
     n_found = n_unmatched = 0
 
@@ -109,6 +112,9 @@ def run_dmlr(root: str, top_n: int):
         m = DMLR_DIR_RE.match(dir_name)
         if not m:
             n_unmatched += 1
+            continue
+
+        if model_filter and model_filter.lower() not in m.group("model").lower():
             continue
 
         parsed = parse_results_log(os.path.join(dirpath, "results.log"))
@@ -130,7 +136,8 @@ def run_dmlr(root: str, top_n: int):
 
     W = 74
     print("=" * W)
-    print(f"LTPO-DMLR Grid Search  —  {root}")
+    print(f"LTPO-DMLR Grid Search  —  {root}"
+          + (f"  [model filter: {model_filter}]" if model_filter else ""))
     print(f"  Completed runs : {n_found}"
           + (f"   |   Unrecognised dirs : {n_unmatched}" if n_unmatched else ""))
     print("=" * W)
@@ -218,7 +225,7 @@ def run_dmlr(root: str, top_n: int):
 
 # ── Workspace mode ─────────────────────────────────────────────────────────────
 
-def run_workspace(root: str, top_n: int):
+def run_workspace(root: str, top_n: int, model_filter: str | None = None):
     results = defaultdict(list)
     n_found = n_unmatched = 0
 
@@ -229,6 +236,9 @@ def run_workspace(root: str, top_n: int):
         m = WORKSPACE_DIR_RE.match(dir_name)
         if not m:
             n_unmatched += 1
+            continue
+
+        if model_filter and model_filter.lower() not in m.group("model").lower():
             continue
 
         parsed = parse_results_log(os.path.join(dirpath, "results.log"))
@@ -252,7 +262,8 @@ def run_workspace(root: str, top_n: int):
 
     W = 80
     print("=" * W)
-    print(f"Workspace-Fixed Grid Search  —  {root}")
+    print(f"Workspace-Fixed Grid Search  —  {root}"
+          + (f"  [model filter: {model_filter}]" if model_filter else ""))
     print(f"  Completed runs : {n_found}"
           + (f"   |   Unrecognised dirs : {n_unmatched}" if n_unmatched else ""))
     print("=" * W)
@@ -337,7 +348,7 @@ def run_workspace(root: str, top_n: int):
         for cfg, vs in ranked_partial:
             print(f"    mean={sum(vs)/len(vs):.4f}  n={len(vs)}  {cfg}")
 
-    print()
+    print(" ".join(f"{acc*100:.2f}" for acc in accs))
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -355,9 +366,9 @@ def main():
         sys.exit(f"ERROR: directory not found: {root}")
 
     if args.mode == "dmlr":
-        run_dmlr(root, args.top)
+        run_dmlr(root, args.top, args.model)
     else:
-        run_workspace(root, args.top)
+        run_workspace(root, args.top, args.model)
 
 
 if __name__ == "__main__":
@@ -365,5 +376,7 @@ if __name__ == "__main__":
 
 # Examples:
 # python scripts/find_best_ltpo_dmlr.py --root output/ltpo_dmlr_grid_dev --top 5
+# python scripts/find_best_ltpo_dmlr.py --root output/ltpo_dmlr_grid_dev --model Qwen2.5-VL-3B
 # python scripts/find_best_ltpo_dmlr.py --mode workspace --top 5
 # python scripts/find_best_ltpo_dmlr.py --mode workspace --root output/workspace_fixed_dev_grid --top 3
+# python scripts/find_best_ltpo_dmlr.py --mode workspace --model Qwen2.5-VL-7B
