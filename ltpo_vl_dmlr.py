@@ -294,6 +294,7 @@ def generate_vl(
     model_name: str = None,
     verbose: int = 1,
     top_k: int = 10,
+    log_topk_tokens: bool = False,
     **kwargs,
 ):
     """
@@ -303,6 +304,8 @@ def generate_vl(
         (response, best_reward, best_reward_step, stop_reason)
     """
     model.eval()
+
+    tokenizer = processor.tokenizer if hasattr(processor, 'tokenizer') else processor
 
     inputs, thought_idx = build_inputs_vl(
         processor=processor,
@@ -335,6 +338,7 @@ def generate_vl(
 
         epsilon = torch.normal(mean=0.0, std=sigma, size=thought_hidden_states.shape).to(device)
         thought_hidden_states_cand = thought_hidden_states + epsilon
+        topk_info = None
 
         if disable_conf_reward:
             with torch.no_grad():
@@ -355,13 +359,18 @@ def generate_vl(
                 reward.backward(retain_graph=True)
             else:
                 with torch.no_grad():
-                    reward = get_confidence(
+                    conf_out = get_confidence(
                         model=model,
                         inputs=inputs,
                         thought_idx=thought_idx,
                         thought_hidden_states=thought_hidden_states_cand,
                         k=top_k,
+                        return_topk_info=log_topk_tokens,
                     )
+                    if log_topk_tokens:
+                        reward, topk_info = conf_out
+                    else:
+                        reward, topk_info = conf_out, None
 
         if not disable_conf_reward and use_auto_grad:
             optimizer.step()
@@ -374,6 +383,23 @@ def generate_vl(
 
         if verbose:
             logger.info(f'>>> Step {i} reward = {reward}')
+
+        if log_topk_tokens and topk_info is not None:
+            logger.info(
+                f'>>> Step {i} top-{top_k} tokens at reward-scored positions '
+                f'(thought_idx={thought_idx}, num_thought_tokens={num_thought_tokens}):'
+            )
+            for (pos, ids, probs_) in topk_info:
+                offset = pos - thought_idx[0]
+                if offset < num_thought_tokens:
+                    label = f'thought#{offset}'
+                elif offset == num_thought_tokens:
+                    label = 'after-last-thought'
+                else:
+                    label = f'after-last-thought+{offset - num_thought_tokens}'
+                decoded = [repr(tokenizer.decode([tid])) for tid in ids]
+                pairs = ', '.join(f'{tok}={p:.4f}' for tok, p in zip(decoded, probs_))
+                logger.info(f'    pos={pos} ({label}): {pairs}')
 
         del epsilon, thought_hidden_states_cand
         torch.cuda.empty_cache()

@@ -50,7 +50,7 @@ TOP_K=10
 
 DATASETS=("mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev")
 
-root_output=./output/ltpo_dmlr_paired_grid_dev/0512_ltpo_param_search
+root_output=./output/ltpo_dmlr_paired_grid_dev/0513_ltpo_param_search_extra_tok_reward
 mkdir -p "${root_output}"
 
 # Build flat job list: "tokens steps sigma lr dataset"
@@ -116,6 +116,7 @@ while [ $job_idx -lt $total ]; do
                 --top_k             "${TOP_K}"     \
                 --use_llm_verify                   \
                 --verbose 1                        \
+                --no-per_token_optimize            \
                 > "${log}" 2>&1 &
 
             gpu_pids[$g]=$!

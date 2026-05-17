@@ -49,6 +49,7 @@ def get_confidence_per_token(
     thought_idx,
     thought_hidden_states,
     k: int = 10,
+    per_token_optimize: bool = False,
 ):
     """
     Per-latent-token confidence reward.
@@ -64,6 +65,8 @@ def get_confidence_per_token(
     probs = torch.softmax(logits, dim=-1)
 
     num_thought_tokens = thought_idx[1] - thought_idx[0]
+    if not per_token_optimize:
+        num_thought_tokens += 1
     per_token = torch.zeros(num_thought_tokens, device=logits.device, dtype=probs.dtype)
     for j in range(num_thought_tokens):
         idx = thought_idx[0] + j
@@ -96,6 +99,7 @@ def generate_vl(
     model_name: str = None,
     verbose: int = 1,
     top_k: int = 10,
+    per_token_optimize: bool = True,
     **kwargs,
 ):
     """
@@ -148,6 +152,7 @@ def generate_vl(
                 thought_idx=thought_idx,
                 thought_hidden_states=cand_pos,
                 k=top_k,
+                per_token_optimize=per_token_optimize,
             )
             reward_neg = get_confidence_per_token(
                 model=model,
@@ -155,11 +160,16 @@ def generate_vl(
                 thought_idx=thought_idx,
                 thought_hidden_states=cand_neg,
                 k=top_k,
+                per_token_optimize=per_token_optimize,
             )
 
-        # Per-token directional reward; update each token with its own scalar.
-        direction = reward_pos - reward_neg              # (num_thought_tokens,)
-        update = lr * direction.unsqueeze(-1) * epsilon / (2.0 * sigma ** 2)
+        # Directional reward: per-token (vector) or averaged across tokens (scalar).
+        if per_token_optimize:
+            direction = reward_pos - reward_neg          # (num_thought_tokens,)
+            update = lr * direction.unsqueeze(-1) * epsilon / (2.0 * sigma ** 2)
+        else:
+            direction = reward_pos.mean() - reward_neg.mean()  # scalar
+            update = lr * direction * epsilon / (2.0 * sigma ** 2)
         thought_hidden_states = thought_hidden_states + update
 
         sigma *= sigma_decay

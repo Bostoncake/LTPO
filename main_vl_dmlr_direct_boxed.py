@@ -1,30 +1,17 @@
 """
-main_vl_dmlr.py – Evaluate LTPO on Vision-Language benchmarks with a
-DMLR-compatible pipeline.
+main_vl_dmlr_direct_boxed.py — Evaluate LTPO direct-boxed variant.
 
-Changes from main_vl.py:
-- Uses ltpo_vl_dmlr.generate_vl (DMLR-compatible prompts / SYSTEM_PROMPT).
-- Loads model with attn_implementation="eager", torch.float32, and
-  padding_side="left" (matching DMLR's _load_model_with_retry settings).
-- Adds --min_pixels / --max_pixels args for the processor.
-- Answer extraction: checks <answer>…</answer> tags first, then \\boxed{}.
-- Verification: --use_llm_verify calls a structured LLM verifier
-  (pydantic-based, same as DMLR's verify_solution_equivalence).
-  Without the flag, a rule-based judge is used as fallback.
+Identical to main_vl_dmlr.py except:
+- Imports generate_vl / SYSTEM_PROMPT / ASSISTANT_BOXED_PREFIX from
+  ltpo_vl_dmlr_direct_boxed so the LTPO path forces the assistant to
+  begin its output with "\\boxed{" and uses the first-generated-token
+  confidence reward.
+- The --eval_baseline path also appends ASSISTANT_BOXED_PREFIX to the
+  tokeniser input so the baseline measurement runs under the same
+  forced-template condition as LTPO (only the optimisation differs).
 
-Usage:
-    python main_vl_dmlr.py \\
-        --dataset scienceqa \\
-        --data_root mllm_data \\
-        --model_name_or_path /path/to/Qwen2.5-VL-7B-Instruct \\
-        --output_dir ./output \\
-        --use_llm_verify
-
-Required env vars:
-    HUGGING_FACE_TOKEN      – HuggingFace access token
-    OPENAI_API_KEY          – Key for the LLM verifier
-    OPENAI_API_BASE_URL     – Verifier API base URL
-    MODEL_TYPE              – Verifier model name (e.g. qwen-max)
+Required env vars (unchanged from main_vl_dmlr.py):
+    HUGGING_FACE_TOKEN, OPENAI_API_KEY, OPENAI_API_BASE_URL, MODEL_TYPE
 """
 
 import argparse
@@ -41,30 +28,31 @@ from transformers import AutoProcessor, AutoModelForVision2Seq
 from openai import OpenAI
 
 from data_vl import get_mllm_dataset
-from ltpo_vl_dmlr import generate_vl, SYSTEM_PROMPT
+from ltpo_vl_dmlr_direct_boxed import (
+    generate_vl,
+    SYSTEM_PROMPT,
+    ASSISTANT_BOXED_PREFIX,
+)
+from ltpo_vl_dmlr import (
+    _thought_token_str,
+    _thought_token_ids,
+    _find_thought_token_start,
+    _merge_visual_tokens,
+)
 
 
 huggingface_token = os.environ.get('HUGGING_FACE_TOKEN')
 
 
 # ---------------------------------------------------------------------------
-# Answer extraction — DMLR-compatible
+# Answer extraction — DMLR-compatible (unchanged)
 # ---------------------------------------------------------------------------
 
 def extract_answer(text: str) -> str:
-    """
-    Extract the final answer from a model response.
-
-    Priority (matches DMLR's extract_answer from DMLR/utils.py):
-      1. <answer>…</answer> tag  (driven by SYSTEM_PROMPT)
-      2. Last \\boxed{…} with balanced braces
-      3. Return the original text as fallback
-    """
     if not text:
         return ""
 
     try:
-        # 1) <answer>...</answer>
         low = text.lower()
         start = low.find("<answer>")
         end = low.find("</answer>")
@@ -76,7 +64,6 @@ def extract_answer(text: str) -> str:
             if ans:
                 return ans
 
-        # 2) Last \\boxed{…} with balanced braces
         boxed_contents = []
         for m in re.finditer(r'\\boxed\s*\{', text):
             open_brace_pos = text.find('{', m.end() - 1)
@@ -94,7 +81,6 @@ def extract_answer(text: str) -> str:
                         boxed = text[open_brace_pos + 1:i]
                         boxed = boxed.strip().strip('$')
                         boxed = re.sub(r'\\displaystyle\s*', '', boxed)
-                        # Unwrap a single-level \text{...}
                         b = boxed.strip()
                         if b.startswith(r'\text{') and b.endswith('}'):
                             b = b[len(r'\text{'):-1].strip()
@@ -109,12 +95,11 @@ def extract_answer(text: str) -> str:
     except Exception:
         pass
 
-    # 3) Fallback
     return text.strip()
 
 
 # ---------------------------------------------------------------------------
-# Verification — DMLR-compatible
+# Verification — DMLR-compatible (unchanged)
 # ---------------------------------------------------------------------------
 
 _llm_client: OpenAI | None = None
@@ -138,10 +123,6 @@ def _get_llm_client() -> OpenAI:
 
 
 def verify_solution_equivalence(solution: str, ground_truth: str) -> bool:
-    """
-    LLM-based structured verification (matches DMLR's verify_solution_equivalence).
-    Returns True if solution is equivalent to ground_truth.
-    """
     if not solution or not ground_truth:
         return False
 
@@ -176,10 +157,6 @@ def verify_solution_equivalence(solution: str, ground_truth: str) -> bool:
 
 
 def judge_answer_rule(predicted: str, ground_truth: str) -> bool:
-    """
-    Rule-based judge (fallback when --use_llm_verify is not set).
-    Matches DMLR's judge_answer logic.
-    """
     p = str(predicted).strip()
     g = str(ground_truth).strip()
     if p == g:
@@ -197,7 +174,7 @@ def judge_answer_rule(predicted: str, ground_truth: str) -> bool:
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Evaluate LTPO on MLLM benchmarks (DMLR-compatible pipeline)"
+        description="Evaluate LTPO direct-boxed variant on MLLM benchmarks"
     )
     parser.add_argument("--dataset", type=str, required=True)
     parser.add_argument("--data_root", type=str, default="mllm_data")
@@ -209,29 +186,32 @@ def parse_args():
     parser.add_argument("--max_new_tokens", type=int, default=2048)
     parser.add_argument("--device", type=str, default="cuda")
 
-    # Processor pixel budget (DMLR-style)
-    parser.add_argument("--min_pixels", type=int, default=128,
-                        help="Min image pixels (multiplied by 28*28 internally)")
-    parser.add_argument("--max_pixels", type=int, default=256,
-                        help="Max image pixels (multiplied by 28*28 internally)")
+    parser.add_argument("--min_pixels", type=int, default=128)
+    parser.add_argument("--max_pixels", type=int, default=256)
 
-    # Optimisation — DMLR defaults
     parser.add_argument("--num_thought_tokens", type=int, default=2)
     parser.add_argument("--sigma", type=float, default=25.0)
     parser.add_argument("--sigma_decay", type=float, default=0.95)
     parser.add_argument("--lr", type=float, default=0.01)
     parser.add_argument("--max_num_steps", type=int, default=15)
 
-    # Reward
     parser.add_argument("--reward_threshold", type=float, default=-1)
     parser.add_argument("--top_k", type=int, default=10)
     parser.add_argument("--disable_conf_reward", action="store_true")
     parser.add_argument("--disable_best_reward", action="store_true")
-    parser.add_argument("--per_token_optimize", action=argparse.BooleanOptionalAction, default=True,
-                        help="(paired only) per-token direction; use --no-per_token_optimize "
-                             "to average confidence across tokens before computing direction.")
+    parser.add_argument(
+        "--reward_type",
+        type=str,
+        default="confidence",
+        choices=["confidence", "entropy"],
+        help=(
+            "Optimisation objective for the internal LTPO reward at the "
+            "first-generated-token position. 'confidence' (default) uses "
+            "the negative mean log of the top-k probs; 'entropy' uses the "
+            "information entropy -sum(p_i*log p_i) over the top-k probs."
+        ),
+    )
 
-    # Misc
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--ckpt_suffix", type=str, default="")
@@ -239,15 +219,88 @@ def parse_args():
     parser.add_argument("--eval_baseline", action="store_true")
     parser.add_argument("--verbose", type=int, default=1)
     parser.add_argument("--disable_save_logistics", action="store_true")
-    parser.add_argument("--log_topk_tokens", action="store_true",
-                        help="Log the top-k token IDs / decoded strings at the "
-                             "positions whose probabilities are summed in the "
-                             "confidence reward (i.e. the tokens whose "
-                             "predictions are being enhanced by LTPO).")
+    parser.add_argument("--log_topk_tokens", action="store_true")
+    parser.add_argument(
+        "--use_baseline_prompt",
+        action="store_true",
+        help=(
+            "If set, the LTPO path uses the eval-baseline user prompt "
+            "(just the raw question) and places the latent thought tokens "
+            "in the assistant turn, immediately after the assistant role "
+            "marker and before '\\boxed{' (with a single newline between "
+            "the thought tokens and '\\boxed{'). Otherwise the default "
+            "direct-boxed LTPO prompt is used (thought tokens embedded in "
+            "the user turn, surrounded by DMLR-style instructions)."
+        ),
+    )
+    parser.add_argument(
+        "--baseline_with_thought_tokens",
+        action="store_true",
+        help=(
+            "Only meaningful with --eval_baseline. If set, the baseline "
+            "inserts --num_thought_tokens latent thought tokens between "
+            "the assistant role marker and the forced '\\boxed{' prefix "
+            "(separated by a single newline), matching the placement "
+            "used by --use_baseline_prompt LTPO. No optimisation is "
+            "performed — the model just runs inference with the default "
+            "embeddings of those tokens."
+        ),
+    )
+    parser.add_argument(
+        "--baseline_thought_init_from_hidden",
+        action="store_true",
+        help=(
+            "Only meaningful together with --eval_baseline and "
+            "--baseline_with_thought_tokens. If set, the latent thought "
+            "tokens are initialised from the last-layer hidden state "
+            "(pre lm_head) of the position immediately before them — "
+            "i.e. the last token of the assistant role marker — instead "
+            "of from the default '<|endoftext|>' (or model-specific) "
+            "token embedding. No optimisation is performed; the model "
+            "just runs a single forward generation pass with the "
+            "re-initialised embeddings."
+        ),
+    )
+    parser.add_argument(
+        "--baseline_thought_init_from_mean",
+        action="store_true",
+        help=(
+            "Only meaningful together with --eval_baseline and "
+            "--baseline_with_thought_tokens. If set, the latent thought "
+            "tokens are initialised from the mean of the model's input "
+            "token-embedding table (averaged across the vocabulary). "
+            "Mutually exclusive with --baseline_thought_init_from_hidden. "
+            "No optimisation is performed."
+        ),
+    )
+    parser.add_argument(
+        "--ltpo_thought_init_from_hidden",
+        action="store_true",
+        help=(
+            "Re-initialise the latent thought-token embeddings in the "
+            "LTPO path from the last-layer hidden state (pre lm_head) of "
+            "the position immediately before the thought block, mirroring "
+            "the eval-baseline '--baseline_thought_init_from_hidden' "
+            "init. Without this flag, the thought tokens start from the "
+            "default '<|endoftext|>' (or model-specific) token embedding."
+        ),
+    )
+    parser.add_argument(
+        "--enable_baseline_fallback",
+        action="store_true",
+        help=(
+            "If set, compute the first-generated-token reward of the "
+            "no-thought-token baseline inputs (vanilla eval-baseline "
+            "prompt + forced '\\boxed{' prefix) once per sample and let "
+            "it compete in the best-step selection. If no LTPO step "
+            "beats this baseline reward, generation falls back to the "
+            "no-thought-token baseline inputs. Only applies to the "
+            "first-token reward path (confidence/entropy); ignored when "
+            "--disable_conf_reward is set."
+        ),
+    )
 
-    # Verification (DMLR-compatible)
-    parser.add_argument("--use_llm_verify", action="store_true",
-                        help="Use structured LLM verifier (DMLR's verify_solution_equivalence)")
+    parser.add_argument("--use_llm_verify", action="store_true")
 
     return parser.parse_args()
 
@@ -267,7 +320,6 @@ def set_seed(seed: int):
 
 
 def load_image(image_path: str, image_root: str) -> Image.Image | None:
-    """Load a PIL image, resolving relative paths against image_root."""
     if not image_path:
         return None
     path = image_path if os.path.isabs(image_path) else os.path.join(image_root, image_path)
@@ -282,12 +334,17 @@ def load_image(image_path: str, image_root: str) -> Image.Image | None:
 # ---------------------------------------------------------------------------
 
 def main(args):
+    if args.baseline_thought_init_from_hidden and args.baseline_thought_init_from_mean:
+        raise ValueError(
+            "--baseline_thought_init_from_hidden and "
+            "--baseline_thought_init_from_mean are mutually exclusive."
+        )
+
     if args.seed:
         set_seed(args.seed)
 
     device = args.device or ("cuda" if torch.cuda.is_available() else "cpu")
 
-    # ---- Load model (DMLR settings: eager attn, float32) ----
     model = AutoModelForVision2Seq.from_pretrained(
         args.model_name_or_path,
         torch_dtype=torch.float32,
@@ -298,7 +355,6 @@ def main(args):
     model.to(device)
     model.eval()
 
-    # ---- Load processor (DMLR settings: padding_side=left, pixel budget) ----
     processor_kwargs = {
         "padding_side": "left",
         "min_pixels": args.min_pixels * 28 * 28,
@@ -308,7 +364,6 @@ def main(args):
         processor_kwargs["token"] = huggingface_token
     processor = AutoProcessor.from_pretrained(args.model_name_or_path, **processor_kwargs)
 
-    # ---- Load reward model (same base LLM for confidence reward) ----
     from reward import RewardModel
     reward_model = RewardModel(
         model=model,
@@ -316,7 +371,6 @@ def main(args):
         num_thought_tokens=args.num_thought_tokens,
     )
 
-    # ---- Load dataset ----
     dataset = get_mllm_dataset(args.dataset, data_root=args.data_root)
     if args.verbose:
         print(f"Loaded {len(dataset)} examples from '{args.dataset}'")
@@ -324,21 +378,40 @@ def main(args):
 
     model_name = args.model_name_or_path.split("/")[-1]
     data_name = args.dataset.split("/")[-1]
-    conf_suffix = "" if args.disable_conf_reward else "-conf"
+    if args.disable_conf_reward:
+        reward_suffix = ""
+    elif args.reward_type == "entropy":
+        reward_suffix = "-entropy"
+    else:
+        reward_suffix = "-conf"
 
     if args.eval_baseline:
         output_suffix = "-" + args.ckpt_suffix if args.ckpt_suffix else ""
+        if args.baseline_with_thought_tokens:
+            if args.baseline_thought_init_from_hidden:
+                init_tag = "-hinit"
+            elif args.baseline_thought_init_from_mean:
+                init_tag = "-minit"
+            else:
+                init_tag = ""
+            baseline_thtok_suffix = f"-thtok{args.num_thought_tokens}{init_tag}"
+        else:
+            baseline_thtok_suffix = ""
         output_dir = (
             f"{args.output_dir}/{model_name}-{data_name}"
-            f"-max_tokens{args.max_new_tokens}" + output_suffix
+            f"-max_tokens{args.max_new_tokens}-boxed"
+            + baseline_thtok_suffix + output_suffix
         )
     else:
+        prompt_suffix = "-baseprompt" if args.use_baseline_prompt else ""
+        fallback_suffix = "-bfallback" if args.enable_baseline_fallback else ""
+        init_suffix = "-hinit" if args.ltpo_thought_init_from_hidden else ""
         output_dir = (
             f"{args.output_dir}/{model_name}-{data_name}"
             f"-tokens{args.num_thought_tokens}-lr{args.lr}"
             f"-sigma{args.sigma}-sigdecay{args.sigma_decay}"
-            f"-steps{args.max_num_steps}-topk{args.top_k}" + conf_suffix
-            + ("-dmlr" if not args.eval_baseline else "")
+            f"-steps{args.max_num_steps}-topk{args.top_k}" + reward_suffix
+            + "-boxed" + prompt_suffix + fallback_suffix + init_suffix
         )
 
     start_data_idx = max(0, args.start_data_idx)
@@ -362,7 +435,7 @@ def main(args):
     for i in tqdm(range(start_data_idx, end_data_idx)):
         example = dataset[i]
         question = example['question']
-        true_answer = example['answer']  # already correct format in JSON
+        true_answer = example['answer']
 
         if true_answer is None:
             continue
@@ -379,7 +452,18 @@ def main(args):
         best_reward, best_reward_step, stop_reason = None, None, None
 
         if args.eval_baseline:
-            # ---- Baseline: standard VL inference ----
+            # ---- Baseline still uses the forced "\\boxed{" assistant prefix ----
+            # Optionally insert latent thought tokens between the assistant
+            # role marker and "\\boxed{" (same placement as LTPO under
+            # --use_baseline_prompt) — inference only, no optimisation.
+            if args.baseline_with_thought_tokens:
+                assistant_suffix = (
+                    _thought_token_str(args.model_name_or_path, args.num_thought_tokens)
+                    + "\n" + ASSISTANT_BOXED_PREFIX
+                )
+            else:
+                assistant_suffix = ASSISTANT_BOXED_PREFIX
+
             if image is not None:
                 if 'qwen' in args.model_name_or_path.lower():
                     messages = [
@@ -395,11 +479,12 @@ def main(args):
                     text = processor.apply_chat_template(
                         messages, tokenize=False, add_generation_prompt=True
                     )
+                    text = text + assistant_suffix
                     inputs = processor(
                         text=[text], images=[image], return_tensors='pt'
                     ).to(device)
                 else:
-                    text = f"<image>\n{question}"
+                    text = f"<image>\n{question}" + assistant_suffix
                     inputs = processor(
                         images=image, text=text, return_tensors='pt'
                     ).to(device)
@@ -411,22 +496,79 @@ def main(args):
                 text = processor.apply_chat_template(
                     messages, tokenize=False, add_generation_prompt=True
                 )
+                text = text + assistant_suffix
                 inputs = processor(text=[text], return_tensors='pt').to(device)
 
-            with torch.no_grad():
-                raw_outputs = model.generate(
-                    **inputs,
-                    max_new_tokens=args.max_new_tokens,
-                    do_sample=False,
-                    temperature=0.0,
-                    top_p=None,
-                    num_beams=1,
-                )
             tokenizer = processor.tokenizer if hasattr(processor, 'tokenizer') else processor
-            output = tokenizer.decode(raw_outputs[0], skip_special_tokens=True)
+
+            reinit_thought = args.baseline_with_thought_tokens and (
+                args.baseline_thought_init_from_hidden
+                or args.baseline_thought_init_from_mean
+            )
+
+            if reinit_thought:
+                # Re-initialise the thought-token embeddings to either the
+                # last-layer hidden state (pre lm_head) of the position
+                # immediately before the thought block, or the mean of
+                # the model's input token-embedding table. Then run a
+                # single generate pass over inputs_embeds (no optimisation).
+                input_ids = inputs['input_ids']
+                thought_ids = _thought_token_ids(
+                    tokenizer, args.model_name_or_path, args.num_thought_tokens
+                )
+                thought_start = _find_thought_token_start(
+                    input_ids[0].tolist(), thought_ids
+                )
+                with torch.no_grad():
+                    inputs_embeds = _merge_visual_tokens(
+                        model, input_ids, inputs, args.model_name_or_path
+                    )
+                    attn = inputs.get(
+                        'attention_mask',
+                        torch.ones(inputs_embeds.shape[:2], device=device),
+                    )
+                    if args.baseline_thought_init_from_hidden:
+                        fwd = model(
+                            inputs_embeds=inputs_embeds,
+                            attention_mask=attn,
+                            output_hidden_states=True,
+                            return_dict=True,
+                        )
+                        init_vec = fwd.hidden_states[-1][0, thought_start - 1]
+                    else:
+                        embed_weight = model.get_input_embeddings().weight
+                        init_vec = embed_weight.mean(dim=0).to(
+                            dtype=inputs_embeds.dtype, device=inputs_embeds.device
+                        )
+                    inputs_embeds[0, thought_start:thought_start + args.num_thought_tokens] = init_vec
+                    raw_outputs = model.generate(
+                        inputs_embeds=inputs_embeds,
+                        attention_mask=attn,
+                        max_new_tokens=args.max_new_tokens,
+                        do_sample=False,
+                        temperature=0.0,
+                        top_p=None,
+                        num_beams=1,
+                    )
+                # generate(inputs_embeds=...) returns only new tokens;
+                # prepend the boxed prefix so extract_answer can still
+                # recover "\boxed{...}".
+                output = ASSISTANT_BOXED_PREFIX + tokenizer.decode(
+                    raw_outputs[0], skip_special_tokens=True
+                )
+            else:
+                with torch.no_grad():
+                    raw_outputs = model.generate(
+                        **inputs,
+                        max_new_tokens=args.max_new_tokens,
+                        do_sample=False,
+                        temperature=0.0,
+                        top_p=None,
+                        num_beams=1,
+                    )
+                output = tokenizer.decode(raw_outputs[0], skip_special_tokens=True)
 
         else:
-            # ---- LTPO optimised generation (DMLR-compatible) ----
             output, best_reward, best_reward_step, stop_reason = generate_vl(
                 processor=processor,
                 model=model,
@@ -447,11 +589,13 @@ def main(args):
                 model_name=args.model_name_or_path,
                 verbose=args.verbose,
                 top_k=args.top_k,
-                per_token_optimize=args.per_token_optimize,
                 log_topk_tokens=args.log_topk_tokens,
+                reward_type=args.reward_type,
+                use_baseline_prompt=args.use_baseline_prompt,
+                enable_baseline_fallback=args.enable_baseline_fallback,
+                thought_init_from_hidden=args.ltpo_thought_init_from_hidden,
             )
 
-        # ---- Extract & judge answer (DMLR-compatible) ----
         answer = extract_answer(output)
 
         if args.use_llm_verify:
@@ -489,7 +633,6 @@ def main(args):
 
         print(f"Running accuracy: {correct}/{total} = {correct / total:.4f}")
 
-    # ---- Final summary ----
     if total > 0:
         print(f"\n>>> Final: correct={correct}, total={total}, accuracy={correct / total:.4f}")
     print(f">>> Correct indices: {[e['data_idx'] for e in entries if e['is_correct']]}")

@@ -105,16 +105,27 @@ def get_confidence(
     thought_idx,
     thought_hidden_states,
     k=10,
+    return_topk_info=False,
 ):
     inputs['inputs_embeds'][0, thought_idx[0]:thought_idx[1]] = thought_hidden_states
     logits = model(**inputs, return_dict=True)['logits'][0]
     probs = torch.softmax(logits, dim=-1)
     confidence = 0.0
+    topk_info = [] if return_topk_info else None
     for idx in range(thought_idx[0], thought_idx[1] + 1):
-        topk = torch.topk(probs[idx], k=k, largest=True)[0]
-        confidence -= torch.sum(torch.log(topk + 1e-10)) / k
+        topk = torch.topk(probs[idx], k=k, largest=True)
+        confidence -= torch.sum(torch.log(topk.values + 1e-10)) / k
+        if return_topk_info:
+            topk_info.append((
+                idx,
+                topk.indices.detach().cpu().tolist(),
+                topk.values.detach().cpu().tolist(),
+            ))
     num_tokens = thought_idx[1] - thought_idx[0] + 1
-    return confidence / num_tokens
+    conf = confidence / num_tokens
+    if return_topk_info:
+        return conf, topk_info
+    return conf
 
 def generate(
     tokenizer,
