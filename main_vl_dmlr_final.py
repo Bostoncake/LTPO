@@ -237,6 +237,55 @@ def parse_args():
             "will be saved. Ignored for confidence/plain entropy rewards."
         ),
     )
+    parser.add_argument(
+        "--enable_lookthink",
+        action="store_true",
+        help=(
+            "Enable the FINAL look/think branch. This is only valid with "
+            "--reward_type entropy_diff, --compound_best_selection diff, "
+            "and without --use_auto_grad. When the current r1-r2 value is "
+            "above --lookthink_threshold, the step performs LOOK: pool the "
+            "top-p image tokens attended by the final input token in the "
+            "first language layer and add the pooled visual vector to all "
+            "latent thought tokens. Otherwise it performs the normal LTPO "
+            "entropy_diff update."
+        ),
+    )
+    parser.add_argument(
+        "--lookthink_threshold",
+        type=float,
+        default=0.0,
+        help=(
+            "LOOK gate threshold for --enable_lookthink. A step switches to "
+            "LOOK when r1_pos-r2_pos is greater than this value, meaning the "
+            "normal-image entropy is not sufficiently lower than the "
+            "image-masked entropy."
+        ),
+    )
+    parser.add_argument(
+        "--lookthink_top_p",
+        type=float,
+        default=0.2,
+        help=(
+            "Attention-mass top-p used by --enable_lookthink to select image "
+            "tokens from the first-layer attention of the final input token. "
+            "Must be in [0, 1]; values outside are clamped inside generate_vl."
+        ),
+    )
+    parser.add_argument(
+        "--lookthink_stagnation_steps",
+        type=int,
+        default=0,
+        help=(
+            "Alternative LOOK gate for --enable_lookthink. When > 0, the "
+            "fixed --lookthink_threshold gate is replaced by a stagnation "
+            "gate: LOOK is triggered when the best reward has not been "
+            "refreshed for this many consecutive optimisation steps. The "
+            "stagnation counter resets after a LOOK trigger and after any "
+            "best-reward refresh. Defaults to 0 (disabled) so the existing "
+            "threshold-based behaviour is preserved."
+        ),
+    )
 
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--resume", action="store_true")
@@ -477,13 +526,26 @@ def main(args):
         fallback_suffix = "-bfallback" if args.enable_baseline_fallback else ""
         init_suffix = "-hinit" if args.ltpo_thought_init_from_hidden else ""
         persist_suffix = "-persist" if args.persist_latent_tokens else ""
+        if args.enable_lookthink:
+            if args.lookthink_stagnation_steps > 0:
+                lookthink_suffix = (
+                    f"-lookthink-stag{args.lookthink_stagnation_steps}"
+                    f"-topp{args.lookthink_top_p}"
+                )
+            else:
+                lookthink_suffix = (
+                    f"-lookthink-thr{args.lookthink_threshold}"
+                    f"-topp{args.lookthink_top_p}"
+                )
+        else:
+            lookthink_suffix = ""
         output_dir = (
             f"{args.output_dir}/{model_name}-{data_name}"
             f"-tokens{args.num_thought_tokens}-lr{args.lr}"
             f"-sigma{args.sigma}-sigdecay{args.sigma_decay}"
             f"-steps{args.max_num_steps}-topk{args.top_k}" + reward_suffix
             + "-boxed" + prompt_suffix + fallback_suffix + init_suffix
-            + persist_suffix
+            + persist_suffix + lookthink_suffix
         )
 
     start_data_idx = max(0, args.start_data_idx)
@@ -711,6 +773,10 @@ def main(args):
                 log_topk_tokens=args.log_topk_tokens,
                 reward_type=args.reward_type,
                 compound_best_selection=args.compound_best_selection,
+                enable_lookthink=args.enable_lookthink,
+                lookthink_threshold=args.lookthink_threshold,
+                lookthink_top_p=args.lookthink_top_p,
+                lookthink_stagnation_steps=args.lookthink_stagnation_steps,
                 use_baseline_prompt=args.use_baseline_prompt,
                 enable_baseline_fallback=args.enable_baseline_fallback,
                 thought_init_from_hidden=args.ltpo_thought_init_from_hidden,

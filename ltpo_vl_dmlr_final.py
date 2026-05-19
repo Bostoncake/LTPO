@@ -342,6 +342,190 @@ def _build_baseline_inputs_vl(
 # get_confidence — score the FIRST generated token's prediction only
 # ---------------------------------------------------------------------------
 
+def _apply_optional_image_mask(
+    inputs,
+    mask_image_tokens: bool = False,
+    image_token_mask: torch.Tensor | None = None,
+):
+    if (
+        mask_image_tokens
+        and image_token_mask is not None
+        and image_token_mask.any()
+    ):
+        inputs_local = dict(inputs)
+        base_attn = inputs_local.get('attention_mask')
+        if base_attn is not None:
+            mask_t = image_token_mask.to(base_attn.device)
+            inputs_local['attention_mask'] = base_attn.masked_fill(mask_t, 0)
+        return inputs_local
+    return inputs
+
+
+def _forward_with_thought_embeds(
+    model,
+    inputs,
+    thought_idx,
+    thought_hidden_states,
+    output_attentions: bool = False,
+):
+    if 'inputs_embeds' in inputs:
+        # Legacy embeds path: clone the pre-merged inputs_embeds and assign
+        # the thought-token rows into the clone. Cloning is required so that
+        # when ``thought_hidden_states`` carries ``requires_grad=True`` (the
+        # ``use_auto_grad`` path), the slice assignment becomes an
+        # autograd-tracked CopySlices op on a non-leaf tensor — writing
+        # in-place into the original leaf ``inputs['inputs_embeds']`` (which
+        # has ``requires_grad=False``) would silently break the graph.
+        if thought_idx[1] > thought_idx[0]:
+            embeds = inputs['inputs_embeds'].clone()
+            embeds[0, thought_idx[0]:thought_idx[1]] = thought_hidden_states
+            fwd_inputs = dict(inputs)
+            fwd_inputs['inputs_embeds'] = embeds
+        else:
+            fwd_inputs = inputs
+        return model(
+            **fwd_inputs,
+            return_dict=True,
+            output_attentions=output_attentions,
+        )
+
+    # Hook path: official input_ids + pixel_values forward, with a forward
+    # pre-hook on model.language_model that splices the thought-token rows of
+    # the internal inputs_embeds.
+    handle = None
+    if thought_idx[1] > thought_idx[0]:
+        injector = ThoughtEmbedInjector(
+            thought_idx[0], thought_idx[1], thought_hidden_states
+        )
+        handle = model.language_model.register_forward_pre_hook(
+            injector, with_kwargs=True
+        )
+    try:
+        return model(
+            **inputs,
+            return_dict=True,
+            output_attentions=output_attentions,
+        )
+    finally:
+        if handle is not None:
+            handle.remove()
+
+
+def _first_layer_last_token_image_attention(
+    model,
+    inputs,
+    thought_idx,
+    thought_hidden_states,
+    image_token_mask: torch.Tensor | None,
+) -> torch.Tensor | None:
+    """
+    Return head-averaged first-layer attention from the final input token
+    (the logits row used by ``get_confidence``) to all image-token positions.
+    Shape: (num_image_tokens,), aligned with
+    ``image_token_mask[0].nonzero()``.
+    """
+    if image_token_mask is None or not image_token_mask.any():
+        return None
+
+    outputs = _forward_with_thought_embeds(
+        model=model,
+        inputs=inputs,
+        thought_idx=thought_idx,
+        thought_hidden_states=thought_hidden_states,
+        output_attentions=True,
+    )
+    return _extract_first_layer_last_token_image_attention(
+        outputs=outputs,
+        image_token_mask=image_token_mask,
+    )
+
+
+def _extract_first_layer_last_token_image_attention(
+    outputs,
+    image_token_mask: torch.Tensor | None,
+) -> torch.Tensor | None:
+    if image_token_mask is None or not image_token_mask.any():
+        return None
+
+    attentions = getattr(outputs, 'attentions', None)
+    if attentions is None and isinstance(outputs, dict):
+        attentions = outputs.get('attentions')
+    if not attentions:
+        return None
+
+    first_attn = attentions[0]
+    if first_attn is None:
+        return None
+
+    img_pos = image_token_mask[0].to(first_attn.device).nonzero(as_tuple=True)[0]
+    if img_pos.numel() == 0:
+        return None
+
+    # Typical shape is (batch, heads, query_len, key_len).  Some model
+    # wrappers may squeeze batch; support that too.
+    if first_attn.dim() == 4:
+        query_pos = first_attn.shape[-2] - 1
+        scores = first_attn[0, :, query_pos, img_pos].mean(dim=0)
+    elif first_attn.dim() == 3:
+        query_pos = first_attn.shape[-2] - 1
+        scores = first_attn[:, query_pos, img_pos].mean(dim=0)
+    else:
+        return None
+
+    return scores.detach().float()
+
+
+def _pool_top_p_visual_tokens(
+    visual_inputs_embeds: torch.Tensor | None,
+    image_token_mask: torch.Tensor | None,
+    attention_scores: torch.Tensor | None,
+    top_p: float,
+) -> tuple[torch.Tensor, int, float] | None:
+    """
+    Select the smallest set of image tokens whose normalised first-layer
+    attention mass reaches ``top_p`` and return their attention-weighted
+    pooled embedding.  The returned tuple is (pooled_vector, count, mass).
+    """
+    if (
+        visual_inputs_embeds is None
+        or image_token_mask is None
+        or attention_scores is None
+        or not image_token_mask.any()
+    ):
+        return None
+
+    img_pos = image_token_mask[0].to(visual_inputs_embeds.device).nonzero(as_tuple=True)[0]
+    if img_pos.numel() == 0 or attention_scores.numel() != img_pos.numel():
+        return None
+
+    scores = attention_scores.to(visual_inputs_embeds.device).clamp_min(0.0)
+    total = scores.sum()
+    if not torch.isfinite(total) or float(total) <= 0.0:
+        weights = torch.full_like(scores, 1.0 / scores.numel())
+    else:
+        weights = scores / total
+
+    p = float(max(0.0, min(1.0, top_p)))
+    sorted_weights, order = torch.sort(weights, descending=True)
+    if p <= 0.0:
+        keep_n = 1
+    elif p >= 1.0:
+        keep_n = sorted_weights.numel()
+    else:
+        cumsum = torch.cumsum(sorted_weights, dim=0)
+        keep_n = int((cumsum < p).sum().item()) + 1
+    keep_order = order[:keep_n]
+    selected_weights = weights[keep_order]
+    selected_weights = selected_weights / selected_weights.sum().clamp_min(1e-12)
+    selected_embeds = visual_inputs_embeds[0, img_pos[keep_order]]
+    pooled = torch.sum(
+        selected_embeds * selected_weights.to(selected_embeds.dtype).unsqueeze(-1),
+        dim=0,
+    )
+    mass = float(weights[keep_order].sum())
+    return pooled.detach(), int(keep_n), mass
+
+
 def get_confidence(
     model,
     inputs,
@@ -353,6 +537,7 @@ def get_confidence(
     reward_on_latent_tokens: bool = False,
     mask_image_tokens: bool = False,
     image_token_mask: torch.Tensor | None = None,
+    return_first_layer_image_attention: bool = False,
 ):
     """
     LTPO reward at the prediction of the first to-be-generated token
@@ -388,49 +573,25 @@ def get_confidence(
     scattered into ``inputs_embeds``; only the language-model attention
     is prevented from attending to them.
     """
-    if (
-        mask_image_tokens
-        and image_token_mask is not None
-        and image_token_mask.any()
-    ):
-        inputs_local = dict(inputs)
-        base_attn = inputs_local.get('attention_mask')
-        if base_attn is not None:
-            mask_t = image_token_mask.to(base_attn.device)
-            new_attn = base_attn.masked_fill(mask_t, 0)
-            inputs_local['attention_mask'] = new_attn
-    else:
-        inputs_local = inputs
-
-    if 'inputs_embeds' in inputs_local:
-        # Legacy embeds path: clone the pre-merged inputs_embeds and assign
-        # the thought-token rows into the clone. Cloning is required so that
-        # when ``thought_hidden_states`` carries ``requires_grad=True`` (the
-        # ``use_auto_grad`` path), the slice assignment becomes an
-        # autograd-tracked CopySlices op on a non-leaf tensor — writing
-        # in-place into the original leaf ``inputs['inputs_embeds']`` (which
-        # has ``requires_grad=False``) would silently break the graph.
-        if thought_idx[1] > thought_idx[0]:
-            embeds = inputs_local['inputs_embeds'].clone()
-            embeds[0, thought_idx[0]:thought_idx[1]] = thought_hidden_states
-            fwd_inputs = dict(inputs_local)
-            fwd_inputs['inputs_embeds'] = embeds
-        else:
-            fwd_inputs = inputs_local
-        logits = model(**fwd_inputs, return_dict=True)['logits'][0]
-    else:
-        # Hook path: official input_ids + pixel_values forward, with a
-        # forward pre-hook on model.language_model that splices the
-        # thought-token rows of the internal inputs_embeds.
-        handle = None
-        if thought_idx[1] > thought_idx[0]:
-            injector = ThoughtEmbedInjector(thought_idx[0], thought_idx[1], thought_hidden_states)
-            handle = model.language_model.register_forward_pre_hook(injector, with_kwargs=True)
-        try:
-            logits = model(**inputs_local, return_dict=True)['logits'][0]
-        finally:
-            if handle is not None:
-                handle.remove()
+    inputs_local = _apply_optional_image_mask(
+        inputs=inputs,
+        mask_image_tokens=mask_image_tokens,
+        image_token_mask=image_token_mask,
+    )
+    outputs = _forward_with_thought_embeds(
+        model=model,
+        inputs=inputs_local,
+        thought_idx=thought_idx,
+        thought_hidden_states=thought_hidden_states,
+        output_attentions=return_first_layer_image_attention,
+    )
+    logits = outputs['logits'][0]
+    first_layer_image_attention = None
+    if return_first_layer_image_attention:
+        first_layer_image_attention = _extract_first_layer_last_token_image_attention(
+            outputs=outputs,
+            image_token_mask=image_token_mask,
+        )
     probs = torch.softmax(logits, dim=-1)
     if reward_on_latent_tokens and thought_idx[1] > thought_idx[0]:
         positions = list(range(thought_idx[0], thought_idx[1]))
@@ -457,8 +618,12 @@ def get_confidence(
                 topk_probs.detach().cpu().tolist(),
             ))
     reward = torch.stack(rewards).mean() if len(rewards) > 1 else rewards[0]
+    if return_topk_info and return_first_layer_image_attention:
+        return reward, topk_info, first_layer_image_attention
     if return_topk_info:
         return reward, topk_info
+    if return_first_layer_image_attention:
+        return reward, first_layer_image_attention
     return reward
 
 
@@ -489,6 +654,10 @@ def generate_vl(
     log_topk_tokens: bool = False,
     reward_type: str = "confidence",
     compound_best_selection: str = "r1_pos",
+    enable_lookthink: bool = False,
+    lookthink_threshold: float = 0.0,
+    lookthink_top_p: float = 0.2,
+    lookthink_stagnation_steps: int = 0,
     use_baseline_prompt: bool = False,
     enable_baseline_fallback: bool = False,
     thought_init_from_hidden: bool = False,
@@ -554,6 +723,25 @@ def generate_vl(
             f"compound_best_selection='{compound_best_selection}' is invalid. "
             f"Expected one of {sorted(valid_compound_best)}."
         )
+    lookthink_allowed = (
+        reward_type == "entropy_diff"
+        and compound_best_selection == "diff"
+        and not use_auto_grad
+        and not disable_conf_reward
+    )
+    if enable_lookthink and not lookthink_allowed:
+        raise ValueError(
+            "--enable_lookthink is only supported when "
+            "--reward_type entropy_diff, --compound_best_selection diff, "
+            "and --use_auto_grad is not set."
+        )
+    lookthink_active = enable_lookthink and lookthink_allowed
+    lookthink_top_p = float(max(0.0, min(1.0, lookthink_top_p)))
+    # When > 0, the LOOK gate switches from the fixed reward threshold to a
+    # stagnation counter: trigger LOOK once the best reward has not improved
+    # for this many consecutive steps.
+    lookthink_use_stagnation = lookthink_active and lookthink_stagnation_steps > 0
+    stagnation_count = 0
 
     if use_inputs_embeds:
         inputs_embeds = inputs['inputs_embeds']
@@ -621,6 +809,19 @@ def generate_vl(
         initial_thought_embeds = override
         if use_inputs_embeds:
             inputs_embeds[0, thought_idx[0]:thought_idx[1]] = override
+
+    lookthink_visual_inputs_embeds = None
+    if lookthink_active and image_token_mask is not None and image_token_mask.any():
+        with torch.no_grad():
+            if use_inputs_embeds:
+                lookthink_visual_inputs_embeds = inputs['inputs_embeds'].detach()
+            else:
+                lookthink_visual_inputs_embeds = _merge_visual_tokens(
+                    model=model,
+                    input_ids=inputs['input_ids'],
+                    inputs=inputs,
+                    model_name=model_name,
+                ).detach()
 
     # Entropy objective is minimisation (lower entropy = sharper top-k).
     # The compound entropy rewards are also minimisation. Confidence
@@ -774,6 +975,10 @@ def generate_vl(
         r1_antithetic = None
         r2 = None
         post_update_entropy = None
+        lookthink_mode = None
+        lookthink_visual_update = None
+        lookthink_selected_count = 0
+        lookthink_selected_mass = 0.0
         # Compound entropy rewards bypass the generic NES update direction
         # and supply their own ``grad_step`` (mixes antithetic and single-
         # sample estimators per spec).
@@ -869,9 +1074,17 @@ def generate_vl(
                             reward_type="entropy",
                             reward_on_latent_tokens=False,
                             mask_image_tokens=False,
+                            image_token_mask=image_token_mask,
+                            return_first_layer_image_attention=lookthink_active,
                         )
-                        if log_topk_tokens:
+                        attn_scores = None
+                        if log_topk_tokens and lookthink_active:
+                            r1_pos, topk_info, attn_scores = r1_pos_out
+                        elif log_topk_tokens:
                             r1_pos, topk_info = r1_pos_out
+                        elif lookthink_active:
+                            r1_pos, attn_scores = r1_pos_out
+                            topk_info = None
                         else:
                             r1_pos, topk_info = r1_pos_out, None
                         r2_pos = get_confidence(
@@ -892,6 +1105,34 @@ def generate_vl(
                         compound_grad_step = (
                             -lr * reward * epsilon / sigma ** 2
                         )
+                        if lookthink_active:
+                            if lookthink_use_stagnation:
+                                gate_open = (
+                                    stagnation_count >= lookthink_stagnation_steps
+                                )
+                            else:
+                                gate_open = float(reward) > lookthink_threshold
+                        else:
+                            gate_open = False
+                        if gate_open:
+                            pooled_info = _pool_top_p_visual_tokens(
+                                visual_inputs_embeds=lookthink_visual_inputs_embeds,
+                                image_token_mask=image_token_mask,
+                                attention_scores=attn_scores,
+                                top_p=lookthink_top_p,
+                            )
+                            if pooled_info is not None:
+                                (
+                                    lookthink_visual_update,
+                                    lookthink_selected_count,
+                                    lookthink_selected_mass,
+                                ) = pooled_info
+                                lookthink_mode = "look"
+                                compound_grad_step = None
+                                if lookthink_use_stagnation:
+                                    stagnation_count = 0
+                            else:
+                                lookthink_mode = "think_no_visual"
                     elif reward_type == "entropy_clip":
                         # Mixed estimator (per spec):
                         #   effective = (r1_pos - r1_neg)
@@ -993,7 +1234,13 @@ def generate_vl(
                     f'||param||: {prev_norm:.6e} -> {new_norm:.6e}'
                 )
         else:
-            if compound_grad_step is not None:
+            if lookthink_visual_update is not None:
+                update = lookthink_visual_update.to(
+                    device=thought_hidden_states.device,
+                    dtype=thought_hidden_states.dtype,
+                )
+                thought_hidden_states = thought_hidden_states + update.unsqueeze(0)
+            elif compound_grad_step is not None:
                 # Compound entropy rewards supply their own step direction.
                 thought_hidden_states = thought_hidden_states + compound_grad_step
             elif entropy_objective and antithetic_reward is not None:
@@ -1030,10 +1277,27 @@ def generate_vl(
         if verbose:
             if is_compound_entropy:
                 if reward_type == "entropy_diff":
-                    logger.info(
+                    msg = (
                         f'>>> Step {i} entropy_diff: r1(+eps)={float(r1)}  '
                         f'reward(r1-r2)={float(reward)}'
                     )
+                    if lookthink_active:
+                        mode = lookthink_mode or "think"
+                        msg += f'  mode={mode}'
+                        if lookthink_use_stagnation:
+                            msg += (
+                                f'  stagnation={stagnation_count}'
+                                f'/{lookthink_stagnation_steps}'
+                            )
+                        else:
+                            msg += f'  look_threshold={lookthink_threshold}'
+                        if lookthink_visual_update is not None:
+                            msg += (
+                                f'  look_top_p={lookthink_top_p}'
+                                f'  selected_img_tokens={lookthink_selected_count}'
+                                f'  selected_mass={lookthink_selected_mass:.4f}'
+                            )
+                    logger.info(msg)
                 else:  # entropy_clip
                     logger.info(
                         f'>>> Step {i} entropy_clip: r1(+eps)={float(r1)}  '
@@ -1085,12 +1349,22 @@ def generate_vl(
                 best_reward_step = i
                 best_thought_hidden_states = thought_hidden_states.clone()
                 use_baseline_for_gen = False
+                if lookthink_use_stagnation:
+                    stagnation_count = 0
+            else:
+                if lookthink_use_stagnation and lookthink_mode != "look":
+                    stagnation_count += 1
         else:
             if float(reward) > best_reward:
                 best_reward = float(reward)
                 best_reward_step = i
                 best_thought_hidden_states = thought_hidden_states.clone()
                 use_baseline_for_gen = False
+                if lookthink_use_stagnation:
+                    stagnation_count = 0
+            else:
+                if lookthink_use_stagnation and lookthink_mode != "look":
+                    stagnation_count += 1
 
         if reward_threshold > 0:
             if entropy_objective:
