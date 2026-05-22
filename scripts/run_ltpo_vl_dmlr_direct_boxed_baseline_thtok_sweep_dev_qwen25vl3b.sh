@@ -1,23 +1,21 @@
 #!/bin/bash
-# run_ltpo_vl_dmlr_direct_boxed_baseline_thtok_sweep_dev.sh
+# run_ltpo_vl_dmlr_direct_boxed_baseline_thtok_sweep_dev_qwen25vl3b.sh
 #
-# Direct-boxed BASELINE thought-token-init sweep on dev sets.
-# For a single selected model, runs 5 baseline scenarios:
-#   (1) no thought tokens                                    -> tag: nothtok
-#   (2) 2 thought tokens, endofthought-embedding init        -> tag: thtok2_endof
-#   (3) 4 thought tokens, endofthought-embedding init        -> tag: thtok4_endof
-#   (4) 2 thought tokens, last-hidden init                   -> tag: thtok2_hidden
-#   (5) 4 thought tokens, last-hidden init                   -> tag: thtok4_hidden
+# Direct-boxed BASELINE thought-token-init sweep on dev sets for Qwen2.5-VL-3B.
+# Tests --baseline_thought_init_from_mean across 1-5 latent thought tokens:
+#   (1) 1 thought token,  mean-of-text-embeddings init  -> tag: thtok1_mean
+#   (2) 2 thought tokens, mean-of-text-embeddings init  -> tag: thtok2_mean
+#   (3) 3 thought tokens, mean-of-text-embeddings init  -> tag: thtok3_mean
+#   (4) 4 thought tokens, mean-of-text-embeddings init  -> tag: thtok4_mean
+#   (5) 5 thought tokens, mean-of-text-embeddings init  -> tag: thtok5_mean
 #
 # Mirrors the baseline branch of
 # run_ltpo_vl_dmlr_direct_boxed_oracle_dev.sh (same datasets, same
-# inference args, same per-GPU pid-tracking scheduler). All scenarios for
-# the chosen model are launched in a single pool so no GPU is left idle.
+# inference args, same per-GPU pid-tracking scheduler). All scenarios are
+# launched in a single pool so no GPU is left idle.
 #
 # Usage:
-#   bash scripts/run_ltpo_vl_dmlr_direct_boxed_baseline_thtok_sweep_dev.sh qwen25vl3b
-#   bash scripts/run_ltpo_vl_dmlr_direct_boxed_baseline_thtok_sweep_dev.sh qwen3vl4b
-#   bash scripts/run_ltpo_vl_dmlr_direct_boxed_baseline_thtok_sweep_dev.sh qwen3vl8b
+#   bash scripts/run_ltpo_vl_dmlr_direct_boxed_baseline_thtok_sweep_dev_qwen25vl3b.sh qwen25vl3b
 #
 # Overridable env vars:
 #   N_GPUS         number of GPUs to use (default 8)
@@ -27,7 +25,7 @@
 set -u
 
 if [ "$#" -lt 1 ]; then
-    echo "Usage: bash $0 {qwen25vl3b|qwen3vl4b|qwen3vl8b}" >&2
+    echo "Usage: bash $0 {qwen25vl3b}" >&2
     exit 1
 fi
 
@@ -38,16 +36,8 @@ case "${MODEL_KEY}" in
         DEFAULT_MODEL=/WillDevExt/xiongyizhe/models/Qwen2.5-VL-3B-Instruct
         MODEL_TAG=qwen25vl3b
         ;;
-    qwen3vl4b)
-        DEFAULT_MODEL=/WillDevExt/xiongyizhe/models/Qwen3-VL-4B-Instruct
-        MODEL_TAG=qwen3vl4b
-        ;;
-    qwen3vl8b)
-        DEFAULT_MODEL=/WillDevExt/xiongyizhe/models/Qwen3-VL-8B-Instruct
-        MODEL_TAG=qwen3vl8b
-        ;;
     *)
-        echo "Unknown MODEL_KEY '${MODEL_KEY}'. Use qwen25vl3b | qwen3vl4b | qwen3vl8b." >&2
+        echo "Unknown MODEL_KEY '${MODEL_KEY}'. Use qwen25vl3b." >&2
         exit 1
         ;;
 esac
@@ -59,22 +49,17 @@ export MODEL_TYPE=qwen-max
 
 N_GPUS=${N_GPUS:-8}
 MODEL=${MODEL:-${DEFAULT_MODEL}}
-ROOT_OUTPUT=${ROOT_OUTPUT:-./output/ltpo_dmlr_direct_boxed/0519_baseline_thtok_sweep_${MODEL_TAG}}
+ROOT_OUTPUT=${ROOT_OUTPUT:-./output/ltpo_dmlr_direct_boxed/0521_baseline_thtok_sweep_${MODEL_TAG}}
 
 DATASETS=("mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev")
 
-# Each scenario encodes: tag | num_thought_tokens | with_thought_tokens(0/1) | init_from_hidden(0/1)
-# SCENARIOS=(
-#     "nothtok|0|0|0"
-#     "thtok2_endof|2|1|0"
-#     "thtok4_endof|4|1|0"
-#     "thtok2_hidden|2|1|1"
-#     "thtok4_hidden|4|1|1"
-# )
+# Each scenario encodes: tag | num_thought_tokens | with_thought_tokens(0/1) | init_from_hidden(0/1) | init_from_mean(0/1)
 SCENARIOS=(
-    "thtok1_endof|1|1|0"
-    "thtok3_endof|3|1|0"
-    "thtok5_endof|5|1|0"
+    "thtok1_mean|1|1|0|1"
+    "thtok2_mean|2|1|0|1"
+    "thtok3_mean|3|1|0|1"
+    "thtok4_mean|4|1|0|1"
+    "thtok5_mean|5|1|0|1"
 )
 
 mkdir -p "${ROOT_OUTPUT}"
@@ -107,7 +92,7 @@ while [ $job_idx -lt $total ]; do
         pid=${gpu_pids[$g]}
         if [ "$pid" -eq -1 ] || ! kill -0 "$pid" 2>/dev/null; then
             read -r s_idx dataset <<< "${jobs[$job_idx]}"
-            IFS='|' read -r tag num_tokens with_thtok init_hidden <<< "${SCENARIOS[$s_idx]}"
+            IFS='|' read -r tag num_tokens with_thtok init_hidden init_mean <<< "${SCENARIOS[$s_idx]}"
 
             out_dir="${ROOT_OUTPUT}/${tag}"
             mkdir -p "${out_dir}"
@@ -121,6 +106,9 @@ while [ $job_idx -lt $total ]; do
                 extra_args+=(--num_thought_tokens "${num_tokens}")
                 if [ "${init_hidden}" = "1" ]; then
                     extra_args+=(--baseline_thought_init_from_hidden)
+                fi
+                if [ "${init_mean}" = "1" ]; then
+                    extra_args+=(--baseline_thought_init_from_mean)
                 fi
             else
                 # Still pass num_thought_tokens for argparse default consistency

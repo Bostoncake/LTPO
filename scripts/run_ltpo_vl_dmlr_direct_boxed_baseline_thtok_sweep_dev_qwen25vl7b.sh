@@ -27,16 +27,16 @@
 set -u
 
 if [ "$#" -lt 1 ]; then
-    echo "Usage: bash $0 {qwen25vl3b|qwen3vl4b|qwen3vl8b}" >&2
+    echo "Usage: bash $0 {qwen25vl7b|qwen3vl4b|qwen3vl8b}" >&2
     exit 1
 fi
 
 MODEL_KEY="$1"
 
 case "${MODEL_KEY}" in
-    qwen25vl3b)
-        DEFAULT_MODEL=/WillDevExt/xiongyizhe/models/Qwen2.5-VL-3B-Instruct
-        MODEL_TAG=qwen25vl3b
+    qwen25vl7b)
+        DEFAULT_MODEL=/WillDevExt/xiongyizhe/models/Qwen2.5-VL-7B-Instruct
+        MODEL_TAG=qwen25vl7b
         ;;
     qwen3vl4b)
         DEFAULT_MODEL=/WillDevExt/xiongyizhe/models/Qwen3-VL-4B-Instruct
@@ -64,17 +64,9 @@ ROOT_OUTPUT=${ROOT_OUTPUT:-./output/ltpo_dmlr_direct_boxed/0519_baseline_thtok_s
 DATASETS=("mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev")
 
 # Each scenario encodes: tag | num_thought_tokens | with_thought_tokens(0/1) | init_from_hidden(0/1)
-# SCENARIOS=(
-#     "nothtok|0|0|0"
-#     "thtok2_endof|2|1|0"
-#     "thtok4_endof|4|1|0"
-#     "thtok2_hidden|2|1|1"
-#     "thtok4_hidden|4|1|1"
-# )
 SCENARIOS=(
-    "thtok1_endof|1|1|0"
-    "thtok3_endof|3|1|0"
-    "thtok5_endof|5|1|0"
+    "thtok2_hidden|2|1|1"
+    "thtok4_hidden|4|1|1"
 )
 
 mkdir -p "${ROOT_OUTPUT}"

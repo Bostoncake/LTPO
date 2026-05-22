@@ -661,6 +661,7 @@ def generate_vl(
     use_baseline_prompt: bool = False,
     enable_baseline_fallback: bool = False,
     thought_init_from_hidden: bool = False,
+    thought_init_from_mean: bool = False,
     use_inputs_embeds: bool = False,
     initial_thought_embeds_override: torch.Tensor | None = None,
     return_best_thought_embeds: bool = False,
@@ -762,6 +763,12 @@ def generate_vl(
             model.get_input_embeddings()(thought_ids_tensor).detach().clone()
         )
 
+    if thought_init_from_hidden and thought_init_from_mean:
+        raise ValueError(
+            "thought_init_from_hidden and thought_init_from_mean are "
+            "mutually exclusive."
+        )
+
     # Optional thought-token re-init: use the last-layer hidden state (pre
     # lm_head) at the position immediately before the thought block as the
     # init vector. Mirrors --baseline_thought_init_from_hidden. Skipped when
@@ -789,6 +796,25 @@ def generate_vl(
         if use_inputs_embeds:
             # Also write init_vec back into inputs_embeds so the legacy
             # path's subsequent forwards see the re-initialised rows.
+            inputs_embeds[0, thought_idx[0]:thought_idx[1]] = init_vec
+        initial_thought_embeds = (
+            init_vec.unsqueeze(0).expand(num_thought_tokens, -1).contiguous().clone()
+        )
+
+    # Optional thought-token re-init: use the mean of the model's input
+    # token-embedding table (averaged across the vocabulary) as the init
+    # vector. Mirrors --baseline_thought_init_from_mean. Skipped when the
+    # caller supplied ``initial_thought_embeds_override`` (persist mode).
+    if (
+        thought_init_from_mean
+        and initial_thought_embeds_override is None
+    ):
+        with torch.no_grad():
+            embed_weight = model.get_input_embeddings().weight
+            init_vec = embed_weight.mean(dim=0).to(
+                dtype=initial_thought_embeds.dtype, device=device
+            ).clone()
+        if use_inputs_embeds:
             inputs_embeds[0, thought_idx[0]:thought_idx[1]] = init_vec
         initial_thought_embeds = (
             init_vec.unsqueeze(0).expand(num_thought_tokens, -1).contiguous().clone()

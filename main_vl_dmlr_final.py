@@ -361,6 +361,17 @@ def parse_args():
         ),
     )
     parser.add_argument(
+        "--ltpo_thought_init_from_mean",
+        action="store_true",
+        help=(
+            "Re-initialise the latent thought-token embeddings in the "
+            "LTPO path from the mean of the model's input token-embedding "
+            "table (averaged across the vocabulary), mirroring the "
+            "eval-baseline '--baseline_thought_init_from_mean' init. "
+            "Mutually exclusive with --ltpo_thought_init_from_hidden."
+        ),
+    )
+    parser.add_argument(
         "--reward_on_latent_tokens",
         action="store_true",
         help=(
@@ -454,6 +465,11 @@ def main(args):
             "--baseline_thought_init_from_hidden and "
             "--baseline_thought_init_from_mean are mutually exclusive."
         )
+    if args.ltpo_thought_init_from_hidden and args.ltpo_thought_init_from_mean:
+        raise ValueError(
+            "--ltpo_thought_init_from_hidden and "
+            "--ltpo_thought_init_from_mean are mutually exclusive."
+        )
 
     if args.seed:
         set_seed(args.seed)
@@ -524,7 +540,12 @@ def main(args):
     else:
         prompt_suffix = "-baseprompt" if args.use_baseline_prompt else ""
         fallback_suffix = "-bfallback" if args.enable_baseline_fallback else ""
-        init_suffix = "-hinit" if args.ltpo_thought_init_from_hidden else ""
+        if args.ltpo_thought_init_from_hidden:
+            init_suffix = "-hinit"
+        elif args.ltpo_thought_init_from_mean:
+            init_suffix = "-minit"
+        else:
+            init_suffix = ""
         persist_suffix = "-persist" if args.persist_latent_tokens else ""
         if args.enable_lookthink:
             if args.lookthink_stagnation_steps > 0:
@@ -780,6 +801,7 @@ def main(args):
                 use_baseline_prompt=args.use_baseline_prompt,
                 enable_baseline_fallback=args.enable_baseline_fallback,
                 thought_init_from_hidden=args.ltpo_thought_init_from_hidden,
+                thought_init_from_mean=args.ltpo_thought_init_from_mean,
                 use_inputs_embeds=args.use_inputs_embeds,
                 initial_thought_embeds_override=persistent_thought_embeds,
                 return_best_thought_embeds=args.persist_latent_tokens,

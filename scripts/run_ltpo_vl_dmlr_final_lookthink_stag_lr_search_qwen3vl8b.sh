@@ -1,0 +1,239 @@
+#!/bin/bash
+# run_ltpo_vl_dmlr_final_lookthink_stag_lr_search_qwen3vl8b.sh
+#
+# LTPO learning-rate sweep on top of the per-dataset best
+# (num_thought_tokens, init, lookthink_top_p, lookthink_stagnation_steps,
+#  sigma, max_num_steps) selected from the previous searches:
+#   - run_ltpo_vl_dmlr_final_lookthink_stag_param_search_qwen3vl8b.sh
+#     (top_p, stag)
+#   - run_ltpo_vl_dmlr_final_lookthink_stag_sigma_step_search_qwen3vl8b.sh
+#     (sigma, max_num_steps)
+#
+# Per-dataset frozen hyperparameters (everything except lr):
+#                       tokens  init        top_p   stag    sigma   steps
+#   math_vista_dev      2       endoftext   0.5     5       25.0    10
+#   math_vision_dev     4       endoftext   0.9     5       25.0    10
+#   mm_math_dev         4       endoftext   0.5     2       25.0    10
+#   hallusion_dev       2       endoftext   0.5     2       25.0    10
+#   mmvp_dev            4       endoftext   0.9     5       25.0    10
+#   mmstar_dev          2       endoftext   0.5     2       25.0    10
+#   scienceqa_dev       2       endoftext   0.5     5       25.0    10
+#
+# Other fixed settings:
+#   reward_type               = entropy_diff
+#   compound_best_selection   = diff
+#   sigma_decay               = 0.95
+#   top_k                     = 10
+#
+# Swept setting:
+#   lr              in {1e-5, 1e-4, 1e-3, 1e-2}
+#
+# Usage:
+#   bash scripts/run_ltpo_vl_dmlr_final_lookthink_stag_lr_search_qwen3vl8b.sh
+#
+# Overridable env vars:
+#   N_GPUS  number of GPUs to use (default 8)
+#   MODEL   path to model checkpoint
+
+set -u
+
+export HUGGING_FACE_TOKEN=<YOUR_HF_TOKEN>
+export OPENAI_API_KEY=<YOUR_OPENAI_KEY>
+export OPENAI_API_BASE_URL="${OPENAI_API_BASE_URL:-https://dashscope.aliyuncs.com/compatible-mode/v1}"
+export MODEL_TYPE="${MODEL_TYPE:-qwen-max}"
+
+N_GPUS=${N_GPUS:-8}
+MODEL=${MODEL:-/WillDevExt/xiongyizhe/models/Qwen3-VL-8B-Instruct}
+
+# ===========================================================================
+# Per-dataset fixed init: "<num_thought_tokens> <init_mode>"
+#   init_mode in {endoftext, hidden}
+#   - endoftext: default embedding-table init for thought tokens
+#                (no extra flag, default hook path)
+#   - hidden:    --ltpo_thought_init_from_hidden + --use_inputs_embeds
+# ===========================================================================
+declare -A DATASET_TOKENS=(
+    ["math_vista_dev"]=2
+    ["math_vision_dev"]=4
+    ["mm_math_dev"]=4
+    ["hallusion_dev"]=2
+    ["mmvp_dev"]=4
+    ["mmstar_dev"]=2
+    ["scienceqa_dev"]=2
+)
+declare -A DATASET_INIT=(
+    ["math_vista_dev"]=endoftext
+    ["math_vision_dev"]=endoftext
+    ["mm_math_dev"]=endoftext
+    ["hallusion_dev"]=endoftext
+    ["mmvp_dev"]=endoftext
+    ["mmstar_dev"]=endoftext
+    ["scienceqa_dev"]=endoftext
+)
+# Per-dataset best (top_p, stag) from the lookthink-stag param search.
+declare -A DATASET_TOP_P=(
+    ["math_vista_dev"]=0.5
+    ["math_vision_dev"]=0.9
+    ["mm_math_dev"]=0.5
+    ["hallusion_dev"]=0.5
+    ["mmvp_dev"]=0.9
+    ["mmstar_dev"]=0.5
+    ["scienceqa_dev"]=0.5
+)
+declare -A DATASET_STAG=(
+    ["math_vista_dev"]=5
+    ["math_vision_dev"]=5
+    ["mm_math_dev"]=2
+    ["hallusion_dev"]=2
+    ["mmvp_dev"]=5
+    ["mmstar_dev"]=2
+    ["scienceqa_dev"]=5
+)
+# Per-dataset best (sigma, max_num_steps) from the sigma/step search.
+declare -A DATASET_SIGMA=(
+    ["math_vista_dev"]=25.0
+    ["math_vision_dev"]=25.0
+    ["mm_math_dev"]=25.0
+    ["hallusion_dev"]=5.0
+    ["mmvp_dev"]=5.0
+    ["mmstar_dev"]=25.0
+    ["scienceqa_dev"]=25.0
+)
+declare -A DATASET_STEPS=(
+    ["math_vista_dev"]=10
+    ["math_vision_dev"]=10
+    ["mm_math_dev"]=10
+    ["hallusion_dev"]=10
+    ["mmvp_dev"]=10
+    ["mmstar_dev"]=10
+    ["scienceqa_dev"]=10
+)
+DATASETS=("mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev")
+
+REWARD_TYPE=entropy_diff
+BEST_SELECTION=diff
+SIGMA_DECAY=0.95
+TOP_K=10
+LR_LIST=(1e-5 1e-3 1e-2)
+
+root_output=./output/ltpo_dmlr_final/0520_param_search_perds_init_lookthink_stag_lr_qwen3vl8b
+mkdir -p "${root_output}"
+
+jobs=()
+# Keep lr as the outer dimension so each lr variant rolls across all datasets
+# together; this matches how we later aggregate per-config mean accuracy.
+for lr in "${LR_LIST[@]}"; do
+    for dataset in "${DATASETS[@]}"; do
+        jobs+=("${lr} ${dataset}")
+    done
+done
+
+total=${#jobs[@]}
+
+echo "========================================================"
+echo "LTPO-DMLR FINAL LOOK/THINK-STAG (lr) param-search"
+echo "    reward_type=${REWARD_TYPE}  best_selection=${BEST_SELECTION}"
+echo "    lr              in {${LR_LIST[*]}}"
+echo "    sigma_decay=${SIGMA_DECAY}  top_k=${TOP_K}"
+echo "    Per-dataset (tokens, init, top_p, stag, sigma, steps):"
+for d in "${DATASETS[@]}"; do
+    echo "        ${d}: tokens=${DATASET_TOKENS[$d]}  init=${DATASET_INIT[$d]}  top_p=${DATASET_TOP_P[$d]}  stag=${DATASET_STAG[$d]}  sigma=${DATASET_SIGMA[$d]}  steps=${DATASET_STEPS[$d]}"
+done
+echo "    Datasets: ${#DATASETS[@]}  Total jobs: ${total}  GPUs: ${N_GPUS}"
+echo "========================================================"
+
+# ===========================================================================
+# Dynamic GPU scheduling
+# ===========================================================================
+
+declare -a gpu_pids
+for ((g=0; g<N_GPUS; g++)); do gpu_pids[$g]=-1; done
+
+job_idx=0
+while [ $job_idx -lt $total ]; do
+    for ((g=0; g<N_GPUS; g++)); do
+        [ $job_idx -ge $total ] && break
+        pid=${gpu_pids[$g]}
+        if [ "$pid" -eq -1 ] || ! kill -0 "$pid" 2>/dev/null; then
+            read -r lr dataset <<< "${jobs[$job_idx]}"
+            tokens=${DATASET_TOKENS[$dataset]}
+            init=${DATASET_INIT[$dataset]}
+            top_p=${DATASET_TOP_P[$dataset]}
+            stag=${DATASET_STAG[$dataset]}
+            sigma=${DATASET_SIGMA[$dataset]}
+            steps=${DATASET_STEPS[$dataset]}
+
+            init_flag=""
+            embeds_flag=""
+            init_tag="endoftext"
+            if [ "$init" = "hidden" ]; then
+                init_flag="--ltpo_thought_init_from_hidden"
+                embeds_flag="--use_inputs_embeds"
+                init_tag="hidden"
+            fi
+
+            tag="lookthink_stag_reward${REWARD_TYPE}_best${BEST_SELECTION}_decay${SIGMA_DECAY}_topk${TOP_K}_lr${lr}"
+            out_dir="${root_output}/${tag}"
+            mkdir -p "${out_dir}"
+            log="${out_dir}/${dataset}_tokens${tokens}_init${init_tag}_topp${top_p}_stag${stag}_sigma${sigma}_steps${steps}.log"
+
+            echo "[$(date +%T)] GPU ${g}  <-  ${tag}  |  ${dataset} (tokens=${tokens} init=${init_tag} topp=${top_p} stag=${stag} sigma=${sigma} steps=${steps})"
+
+            CUDA_VISIBLE_DEVICES=${g} python main_vl_dmlr_final.py \
+                --dataset           "${dataset}"   \
+                --data_root         mllm_data      \
+                --image_root        .              \
+                --model_name_or_path "${MODEL}"    \
+                --output_dir        "${out_dir}"   \
+                --device            cuda           \
+                --seed              42             \
+                --max_new_tokens    2048           \
+                --min_pixels        128            \
+                --max_pixels        256            \
+                --num_thought_tokens "${tokens}"   \
+                --sigma             "${sigma}"     \
+                --sigma_decay       "${SIGMA_DECAY}" \
+                --lr                "${lr}"        \
+                --max_num_steps     "${steps}"     \
+                --top_k             "${TOP_K}"     \
+                --reward_type       "${REWARD_TYPE}" \
+                --compound_best_selection "${BEST_SELECTION}" \
+                --enable_lookthink                 \
+                --lookthink_top_p  "${top_p}"      \
+                --lookthink_stagnation_steps "${stag}" \
+                --use_llm_verify                   \
+                --use_baseline_prompt              \
+                --enable_baseline_fallback         \
+                ${init_flag}                       \
+                ${embeds_flag}                     \
+                --verbose 1                        \
+                > "${log}" 2>&1 &
+
+            gpu_pids[$g]=$!
+            job_idx=$((job_idx+1))
+        fi
+    done
+    sleep 2
+done
+
+wait
+echo ""
+echo "========================================================"
+echo "All ${total} jobs done. Results in ${root_output}"
+echo "========================================================"
+
+# Summarise mean accuracy across datasets per config dir
+for cfg_dir in "${root_output}"/*; do
+    [ -d "$cfg_dir" ] || continue
+    cfg=$(basename "$cfg_dir")
+    total_acc=0
+    count=0
+    while IFS= read -r log; do
+        acc=$(grep -oP 'accuracy=\K[0-9.]+' "$log" | tail -1)
+        [ -n "$acc" ] && total_acc=$(awk "BEGIN{print $total_acc + $acc}") && count=$((count+1))
+    done < <(find "$cfg_dir" -name "results.log")
+    if [ "$count" -gt 0 ]; then
+        mean=$(awk "BEGIN{printf \"%.4f\", $total_acc / $count}")
+        echo "mean_acc=${mean}  n=${count}  | ${cfg}"
+    fi
+done | sort -t'=' -k2 -rn
