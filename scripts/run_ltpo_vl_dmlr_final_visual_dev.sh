@@ -4,8 +4,10 @@
 #
 # The DMLR visual-injection defaults follow /home/xiongyizhe/research/DMLR/script/run.sh.
 
-export HUGGING_FACE_TOKEN=<YOUR_HF_TOKEN>
-export OPENAI_API_KEY=<YOUR_OPENAI_KEY>
+## Do NOT hardcode secrets in scripts. Read from environment instead.
+## Example: export HUGGING_FACE_TOKEN="hf_..." && export OPENAI_API_KEY="sk-..."
+export HUGGING_FACE_TOKEN="${HUGGING_FACE_TOKEN:-}"
+export OPENAI_API_KEY="${OPENAI_API_KEY:-}"
 export OPENAI_API_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 export MODEL_TYPE=qwen-max
 
