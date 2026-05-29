@@ -10,17 +10,29 @@ export OPENAI_API_KEY=<YOUR_OPENAI_KEY>
 export OPENAI_API_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 export MODEL_TYPE=qwen-max
 
-export CUDA_VISIBLE_DEVICES=0
+# export CUDA_VISIBLE_DEVICES=0
 
-model=Qwen/Qwen2.5-VL-7B-Instruct
+model=/WillDevExt/xiongyizhe/models/Qwen2.5-VL-7B-Instruct
 image_root=.
 max_new_tokens=2048
+output_dir=./output/dmlr_aligned_baseline/
 
-for dataset in "mmstar" "mm_math" "math_vista" "math_vision" "hallusion" "scienceqa" "mmvp"; do
-    output_dir=./output/dmlr_aligned_baseline/${dataset}
-    echo "Running baseline ${dataset} ..."
+mkdir -p "${output_dir}"
 
-    python main_vl.py \
+# Sleep 3 hours before starting
+sleep $((3 * 60 * 60))
+
+# Use GPUs 0,1,3,4,5,6,7 (skip GPU 2)
+gpus=(0 1 3 4 5 6 7)
+datasets=("mmstar" "mm_math" "math_vista" "math_vision" "hallusion" "scienceqa" "mmvp")
+
+for i in "${!datasets[@]}"; do
+    dataset="${datasets[$i]}"
+    gpu="${gpus[$i]}"
+
+    echo "Running baseline ${dataset} on GPU ${gpu} ..."
+
+    CUDA_VISIBLE_DEVICES=$gpu python main_vl.py \
         --dataset "${dataset}" \
         --data_root mllm_data \
         --image_root "${image_root}" \
@@ -28,9 +40,11 @@ for dataset in "mmstar" "mm_math" "math_vista" "math_vision" "hallusion" "scienc
         --output_dir "${output_dir}" \
         --device cuda \
         --seed 42 \
-        --max_new_tokens ${max_new_tokens} \
+        --max_new_tokens "${max_new_tokens}" \
         --eval_baseline \
-        --verbose 0
-
-    echo "Done ${dataset}"
+        --verbose 0 \
+        > "${output_dir}/${dataset}.log" 2>&1 &
 done
+
+wait
+echo "All tasks launched and completed."
