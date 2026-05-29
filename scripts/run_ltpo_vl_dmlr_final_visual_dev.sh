@@ -9,9 +9,9 @@ export OPENAI_API_KEY=<YOUR_OPENAI_KEY>
 export OPENAI_API_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 export MODEL_TYPE=qwen-max
 
-MODEL=${MODEL:-/WillDevExt/xiongyizhe/models/Qwen2.5-VL-7B-Instruct}
+MODEL=${MODEL:-/WillDevExt/xiongyizhe/models/Qwen3-VL-4B-Instruct}
 
-output=./output/dmlr_final_visual
+output=./output/dmlr_final_visual/qwen3vl4b
 mkdir -p "${output}"
 
 DATASETS=("mmvp_dev" "mmstar_dev" "mm_math_dev" "math_vista_dev" "math_vision_dev" "hallusion_dev" "scienceqa_dev")
