@@ -7,9 +7,11 @@ and LLM-judge equivalence, but the per-sample generation calls
 """
 
 import argparse
+import json
 import os
 import random
 import re
+import time
 
 import numpy as np
 import torch
@@ -146,6 +148,129 @@ def judge_answer_rule(predicted: str, ground_truth: str) -> bool:
     return False
 
 
+def _cuda_synchronize(device: str):
+    if str(device).startswith("cuda") and torch.cuda.is_available():
+        torch.cuda.synchronize()
+
+
+def _sum_profiler_flops(prof) -> int:
+    total = 0
+    for event in prof.key_averages():
+        total += int(getattr(event, "flops", 0) or 0)
+    return total
+
+
+def _sum_profiler_time_ms(prof, attr: str) -> float:
+    total = 0.0
+    for event in prof.key_averages():
+        value = getattr(event, attr, None)
+        if value is None and attr == "cuda_time_total":
+            value = getattr(event, "device_time_total", 0.0)
+        total += float(value or 0.0)
+    return total / 1000.0
+
+
+def _json_default(obj):
+    if isinstance(obj, (np.integer,)):
+        return int(obj)
+    if isinstance(obj, (np.floating,)):
+        return float(obj)
+    if isinstance(obj, torch.Tensor):
+        if obj.numel() == 1:
+            return obj.item()
+        return obj.detach().cpu().tolist()
+    return str(obj)
+
+
+def _make_efficiency_summary(records: list[dict]) -> dict:
+    if not records:
+        return {"num_samples": 0}
+
+    def total(key: str) -> float:
+        return float(sum(float(r.get(key, 0.0) or 0.0) for r in records))
+
+    def avg(key: str) -> float:
+        return total(key) / max(1, len(records))
+
+    profiled = [r for r in records if r.get("profiled_flops")]
+    total_profiled_flops = float(sum(float(r.get("profiler_estimated_flops", 0.0) or 0.0) for r in profiled))
+    mean_profiled_flops = total_profiled_flops / max(1, len(profiled))
+    estimated_total_flops = (
+        total_profiled_flops
+        if len(profiled) == len(records)
+        else mean_profiled_flops * len(records)
+    )
+
+    total_wall = total("generation_wall_time_s")
+    total_generated = total("generated_tokens")
+    total_forward = total("forward_passes")
+    return {
+        "num_samples": len(records),
+        "num_profiled_flop_samples": len(profiled),
+        "flops_profiled_every_sample": len(profiled) == len(records),
+        "total_generation_wall_time_s": total_wall,
+        "avg_generation_wall_time_s": avg("generation_wall_time_s"),
+        "total_judge_time_s": total("judge_time_s"),
+        "avg_judge_time_s": avg("judge_time_s"),
+        "total_generated_tokens": int(total_generated),
+        "avg_generated_tokens": avg("generated_tokens"),
+        "generation_tokens_per_second": total_generated / max(total_wall, 1e-12),
+        "total_forward_passes": int(total_forward),
+        "avg_forward_passes": avg("forward_passes"),
+        "forward_passes_per_second": total_forward / max(total_wall, 1e-12),
+        "total_prefill_forward_passes": int(total("prefill_forward_passes")),
+        "total_decode_forward_passes": int(total("decode_forward_passes")),
+        "total_subimage_forward_passes": int(total("subimage_forward_passes")),
+        "total_attention_forward_passes": int(total("attention_forward_passes")),
+        "total_subimages_inserted": int(total("num_sub_imgs")),
+        "avg_subimages_inserted": avg("num_sub_imgs"),
+        "total_subimage_tokens_inserted": int(total("subimage_tokens_inserted")),
+        "avg_prompt_tokens": avg("prompt_tokens"),
+        "avg_image_tokens": avg("image_tokens"),
+        "avg_max_context_tokens": avg("max_context_tokens"),
+        "total_model_forward_input_tokens": int(total("model_forward_input_tokens")),
+        "total_profiled_flops": total_profiled_flops,
+        "mean_profiled_flops_per_sample": mean_profiled_flops,
+        "estimated_total_flops": estimated_total_flops,
+        "estimated_total_tflops": estimated_total_flops / 1e12,
+        "flops_note": (
+            "PyTorch profiler with_flops=True reports an operator-level estimate, "
+            "mainly for matmul/addmm/conv-like ops. Attention softmax, cache "
+            "bookkeeping, sampling, Python overhead and some fused kernels may be "
+            "missing, so treat FLOPs as a conservative comparable estimate."
+        ),
+    }
+
+
+def _write_efficiency_summary(output_dir: str, records: list[dict]):
+    summary = _make_efficiency_summary(records)
+    json_path = os.path.join(output_dir, "efficiency_summary.json")
+    md_path = os.path.join(output_dir, "efficiency_summary.md")
+    with open(json_path, "w") as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2, default=_json_default)
+
+    lines = [
+        "# ICoT Efficiency Summary",
+        "",
+        f"- Samples: {summary.get('num_samples', 0)}",
+        f"- Profiled FLOP samples: {summary.get('num_profiled_flop_samples', 0)}",
+        f"- Total generation wall time: {summary.get('total_generation_wall_time_s', 0.0):.4f} s",
+        f"- Average generation wall time: {summary.get('avg_generation_wall_time_s', 0.0):.4f} s/sample",
+        f"- Total generated tokens: {summary.get('total_generated_tokens', 0)}",
+        f"- Generation throughput: {summary.get('generation_tokens_per_second', 0.0):.4f} tokens/s",
+        f"- Total forward passes: {summary.get('total_forward_passes', 0)}",
+        f"- Average forward passes: {summary.get('avg_forward_passes', 0.0):.4f}/sample",
+        f"- Total inserted sub-images: {summary.get('total_subimages_inserted', 0)}",
+        f"- Estimated total FLOPs: {summary.get('estimated_total_flops', 0.0):.6e}",
+        f"- Estimated total TFLOPs: {summary.get('estimated_total_tflops', 0.0):.4f}",
+        "",
+        "FLOPs note: " + summary.get("flops_note", ""),
+        "",
+    ]
+    with open(md_path, "w") as f:
+        f.write("\n".join(lines))
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Evaluate ICoT baseline on MLLM benchmarks")
     parser.add_argument("--dataset", type=str, required=True)
@@ -171,6 +296,20 @@ def parse_args():
     parser.add_argument("--verbose", type=int, default=1)
     parser.add_argument("--disable_save_logistics", action="store_true")
     parser.add_argument("--use_llm_verify", action="store_true")
+    parser.add_argument("--profile_efficiency", action="store_true")
+    parser.add_argument("--profile_flops", action="store_true")
+    parser.add_argument(
+        "--profile_flops_every",
+        type=int,
+        default=1,
+        help="Profile FLOPs every N evaluated samples when --profile_flops is set.",
+    )
+    parser.add_argument(
+        "--profile_output_name",
+        type=str,
+        default="efficiency_profile.jsonl",
+        help="Per-sample JSONL efficiency output inside the run directory.",
+    )
 
     return parser.parse_args()
 
@@ -206,7 +345,7 @@ def main(args):
         torch_dtype=torch.bfloat16,
         trust_remote_code=True,
         attn_implementation="eager",
-        token=huggingface_token,
+        token=huggingface_token or None,
     )
     model.to(device)
     model.eval()
@@ -253,6 +392,16 @@ def main(args):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
+    args.profile_efficiency = args.profile_efficiency or args.profile_flops
+    profile_jsonl_path = os.path.join(output_dir, args.profile_output_name)
+    if args.profile_efficiency and (not args.resume or not entries):
+        with open(profile_jsonl_path, "w") as f:
+            pass
+    efficiency_records = [
+        e["efficiency"] for e in entries
+        if isinstance(e, dict) and isinstance(e.get("efficiency"), dict)
+    ]
+
     print(f"Evaluating '{args.dataset}' [{start_data_idx}, {end_data_idx})...")
 
     for i in tqdm(range(start_data_idx, end_data_idx)):
@@ -270,7 +419,12 @@ def main(args):
             print(f"[{i}] True answer: {true_answer}")
 
         try:
-            response, num_sub_imgs, stop_reason = generate_icot(
+            profile_this = (
+                args.profile_flops
+                and args.profile_flops_every > 0
+                and ((total % args.profile_flops_every) == 0)
+            )
+            gen_kwargs = dict(
                 processor=processor,
                 model=model,
                 image=image,
@@ -280,19 +434,85 @@ def main(args):
                 num_selected_patches=args.num_selected_patches,
                 max_sub_imgs=args.max_sub_imgs,
                 verbose=args.verbose > 1,
+                return_stats=args.profile_efficiency,
             )
+            profiler_estimated_flops = None
+            profiler_cpu_time_ms = None
+            profiler_cuda_time_ms = None
+            _cuda_synchronize(device)
+            gen_t0 = time.perf_counter()
+            if profile_this:
+                activities = [torch.profiler.ProfilerActivity.CPU]
+                if str(device).startswith("cuda") and torch.cuda.is_available():
+                    activities.append(torch.profiler.ProfilerActivity.CUDA)
+                with torch.profiler.profile(
+                    activities=activities,
+                    with_flops=True,
+                    record_shapes=False,
+                    profile_memory=False,
+                ) as prof:
+                    gen_result = generate_icot(**gen_kwargs)
+                _cuda_synchronize(device)
+                gen_t1 = time.perf_counter()
+                profiler_estimated_flops = _sum_profiler_flops(prof)
+                profiler_cpu_time_ms = _sum_profiler_time_ms(prof, "cpu_time_total")
+                profiler_cuda_time_ms = _sum_profiler_time_ms(prof, "cuda_time_total")
+            else:
+                gen_result = generate_icot(**gen_kwargs)
+                _cuda_synchronize(device)
+                gen_t1 = time.perf_counter()
+
+            if args.profile_efficiency:
+                response, num_sub_imgs, stop_reason, gen_stats = gen_result
+            else:
+                response, num_sub_imgs, stop_reason = gen_result
+                gen_stats = {}
+
+            efficiency = dict(gen_stats)
+            if args.profile_efficiency:
+                generation_wall_time_s = float(gen_t1 - gen_t0)
+                efficiency.update(dict(
+                    data_idx=i,
+                    dataset=args.dataset,
+                    profiled_flops=bool(profile_this),
+                    generation_wall_time_s=generation_wall_time_s,
+                    profiler_estimated_flops=profiler_estimated_flops,
+                    profiler_cpu_time_total_ms=profiler_cpu_time_ms,
+                    profiler_cuda_time_total_ms=profiler_cuda_time_ms,
+                    generated_tokens_per_second=(
+                        float(gen_stats.get("generated_tokens", 0))
+                        / max(generation_wall_time_s, 1e-12)
+                    ),
+                    forward_passes_per_second=(
+                        float(gen_stats.get("forward_passes", 0))
+                        / max(generation_wall_time_s, 1e-12)
+                    ),
+                ))
         except Exception as e:
             print(f"[{i}] ERROR: {e}")
             import traceback
             traceback.print_exc()
             response, num_sub_imgs, stop_reason = "", 0, f"error:{e}"
+            efficiency = dict(
+                data_idx=i,
+                dataset=args.dataset,
+                error=str(e),
+                profiled_flops=False,
+            ) if args.profile_efficiency else {}
 
         answer = extract_answer(response)
 
+        judge_t0 = time.perf_counter()
         if args.use_llm_verify:
             is_correct = verify_solution_equivalence(answer, true_answer)
         else:
             is_correct = judge_answer_rule(answer, true_answer)
+        judge_t1 = time.perf_counter()
+        if args.profile_efficiency:
+            efficiency["judge_time_s"] = float(judge_t1 - judge_t0)
+            efficiency_records.append(efficiency)
+            with open(profile_jsonl_path, "a") as f:
+                f.write(json.dumps(efficiency, ensure_ascii=False, default=_json_default) + "\n")
 
         correct += is_correct
         total += 1
@@ -315,6 +535,7 @@ def main(args):
                 is_correct=is_correct,
                 num_sub_imgs=num_sub_imgs,
                 stop_reason=stop_reason,
+                efficiency=efficiency if args.profile_efficiency else None,
             ))
             torch.save({
                 "start_idx": i + 1,
@@ -335,6 +556,12 @@ def main(args):
             f"{[entry['data_idx'] for entry in entries if entry['is_correct']]}\n"
         )
         f.write(f"correct={correct}, total={total}, accuracy={correct / max(1, total):.4f}\n")
+        if args.profile_efficiency:
+            f.write(f"efficiency_profile={profile_jsonl_path}\n")
+            f.write(f"efficiency_summary={output_dir}/efficiency_summary.json\n")
+
+    if args.profile_efficiency:
+        _write_efficiency_summary(output_dir, efficiency_records)
 
 
 if __name__ == "__main__":

@@ -95,6 +95,7 @@ def generate_icot(
     num_selected_patches: int = 16,
     max_sub_imgs: int = 3,
     verbose: int = 0,
+    return_stats: bool = False,
 ) -> Tuple[str, int, str]:
     """Drive token-by-token generation with the ICoT interleaved-modal trick.
 
@@ -120,6 +121,22 @@ def generate_icot(
         image_end = int(image_positions[-1].item()) + 1
     else:
         image_start = image_end = 0
+
+    stats = {
+        "prompt_tokens": int(input_ids.shape[1]),
+        "image_tokens": int(image_positions.numel()),
+        "generated_tokens": 0,
+        "num_sub_imgs": 0,
+        "subimage_tokens_inserted": 0,
+        "selected_patch_tokens": 0,
+        "forward_passes": 0,
+        "prefill_forward_passes": 0,
+        "decode_forward_passes": 0,
+        "subimage_forward_passes": 0,
+        "attention_forward_passes": 0,
+        "model_forward_input_tokens": 0,
+        "max_context_tokens": int(input_ids.shape[1]),
+    }
 
     # Embedding utilities.
     embed_layer = (
@@ -156,6 +173,9 @@ def generate_icot(
         return_dict=True,
         cache_position=cache_position,
     )
+    stats["forward_passes"] += 1
+    stats["prefill_forward_passes"] += 1
+    stats["model_forward_input_tokens"] += int(prefill_len)
     pkv = out.past_key_values
     last_logits = out.logits[:, -1, :].float()
     cur_attn = attention_mask
@@ -225,9 +245,15 @@ def generate_icot(
             return_dict=True,
             cache_position=step_cache_pos,
         )
+        stats["forward_passes"] += 1
+        stats["decode_forward_passes"] += 1
+        stats["model_forward_input_tokens"] += 1
+        if trigger_inject:
+            stats["attention_forward_passes"] += 1
         pkv = out.past_key_values
         last_logits = out.logits[:, -1, :].float()
         cur_len += 1
+        stats["max_context_tokens"] = max(int(stats["max_context_tokens"]), int(cur_len))
 
         if trigger_inject:
             attn_layers = [a for a in out.attentions if a is not None]
@@ -264,10 +290,19 @@ def generate_icot(
                             return_dict=True,
                             cache_position=sub_cache_pos,
                         )
+                        stats["forward_passes"] += 1
+                        stats["subimage_forward_passes"] += 1
+                        stats["model_forward_input_tokens"] += int(sub.size(1))
                         pkv = out2.past_key_values
                         last_logits = out2.logits[:, -1, :].float()
                         cur_len += sub.size(1)
                         num_sub_imgs += 1
+                        stats["num_sub_imgs"] = int(num_sub_imgs)
+                        stats["subimage_tokens_inserted"] += int(sub.size(1))
+                        stats["selected_patch_tokens"] += int(k)
+                        stats["max_context_tokens"] = max(
+                            int(stats["max_context_tokens"]), int(cur_len)
+                        )
                         suppress_newline_remaining = 2
                         if verbose:
                             logger.info(
@@ -279,6 +314,11 @@ def generate_icot(
         del out
 
     response = tokenizer.decode(generated, skip_special_tokens=True)
+    stats["generated_tokens"] = int(len(generated))
+    stats["num_sub_imgs"] = int(num_sub_imgs)
+    stats["max_context_tokens"] = max(int(stats["max_context_tokens"]), int(cur_len))
     if len(generated) >= max_new_tokens:
         stop_reason = "length"
+    if return_stats:
+        return response, num_sub_imgs, stop_reason, stats
     return response, num_sub_imgs, stop_reason
