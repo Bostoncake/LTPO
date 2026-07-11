@@ -14,9 +14,11 @@ adds the VisAttnSink hyper-params (tau/rho/summ/p/except_last_layer).
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import random
 import re
+import time
 
 import numpy as np
 import torch
@@ -27,6 +29,7 @@ from transformers import AutoProcessor, AutoModelForVision2Seq
 from openai import OpenAI
 
 from data_vl import get_mllm_dataset
+from inference_profile import InferenceProfiler
 from ltpo_vl_dmlr import SYSTEM_PROMPT
 from visattnsink_core import DIM_SINK, LogicEngine, MetadataStation
 from visattnsink_patch import install_visattnsink
@@ -160,7 +163,7 @@ def judge_answer_rule(predicted: str, ground_truth: str) -> bool:
 # ---------------------------------------------------------------------------
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="VisAttnSink baseline on MLLM dev splits")
+    parser = argparse.ArgumentParser(description="VisAttnSink baseline on MLLM splits")
     parser.add_argument("--dataset", type=str, required=True)
     parser.add_argument("--data_root", type=str, default="mllm_data")
     parser.add_argument("--image_root", type=str, default=".")
@@ -178,6 +181,10 @@ def parse_args():
     parser.add_argument("--ckpt_suffix", type=str, default="")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--disable_save_logistics", action="store_true")
+    parser.add_argument("--profile_inference", action="store_true",
+                        help="Record analytical inference FLOPs, forward counts, and wall-clock timings.")
+    parser.add_argument("--profile_sync_cuda", action="store_true",
+                        help="Synchronize CUDA around timed regions for accurate wall-clock timings.")
 
     # VisAttnSink hyper-params (from Other_baseline/VisAttnSink/A_exps/lv1.5_7b.yml).
     parser.add_argument("--vas_tau", type=float, default=20.0)
@@ -227,6 +234,99 @@ def _locate_image_span(input_ids: torch.Tensor, model) -> tuple[int, int]:
     return int(pos[0].item()), int(pos[-1].item()) + 1
 
 
+def _sync_cuda_if_needed(device: str, enabled: bool) -> None:
+    if enabled and str(device).startswith("cuda") and torch.cuda.is_available():
+        torch.cuda.synchronize()
+
+
+def _empty_metric_row() -> dict:
+    return {
+        "total_flops": 0,
+        "module_flops": 0,
+        "linear_flops": 0,
+        "conv_flops": 0,
+        "attention_flops": 0,
+        "vas_flops": 0,
+        "model_forward_calls": 0,
+        "decoder_layer_forward_calls": 0,
+        "vision_forward_calls": 0,
+        "linear_calls": 0,
+        "conv_calls": 0,
+        "attention_calls": 0,
+        "vas_calls": {},
+        "vas_time_s": {},
+    }
+
+
+def _mean(values: list[float]) -> float:
+    return float(sum(values) / len(values)) if values else 0.0
+
+
+def _percentile(values: list[float], q: float) -> float:
+    if not values:
+        return 0.0
+    ordered = sorted(values)
+    pos = (len(ordered) - 1) * q
+    lo = int(pos)
+    hi = min(lo + 1, len(ordered) - 1)
+    frac = pos - lo
+    return float(ordered[lo] * (1 - frac) + ordered[hi] * frac)
+
+
+def _summarize_profiles(rows: list[dict]) -> dict:
+    if not rows:
+        return {}
+    numeric_keys = [
+        "total_flops",
+        "module_flops",
+        "linear_flops",
+        "conv_flops",
+        "attention_flops",
+        "vas_flops",
+        "model_forward_calls",
+        "decoder_layer_forward_calls",
+        "vision_forward_calls",
+        "linear_calls",
+        "conv_calls",
+        "attention_calls",
+        "prompt_tokens",
+        "generated_tokens",
+        "image_tokens",
+        "preprocess_wall_s",
+        "generate_wall_s",
+        "judge_wall_s",
+        "total_example_wall_s",
+        "cuda_peak_memory_allocated_bytes",
+    ]
+    summary = {"num_profiled_examples": len(rows)}
+    for key in numeric_keys:
+        values = [float(row.get(key, 0) or 0) for row in rows]
+        summary[f"{key}_sum"] = float(sum(values))
+        summary[f"{key}_mean"] = _mean(values)
+        if key.endswith("_wall_s") or key in ("total_flops", "generated_tokens"):
+            summary[f"{key}_p50"] = _percentile(values, 0.50)
+            summary[f"{key}_p90"] = _percentile(values, 0.90)
+
+    vas_calls: dict[str, int] = {}
+    vas_time_s: dict[str, float] = {}
+    for row in rows:
+        for name, value in row.get("vas_calls", {}).items():
+            vas_calls[name] = vas_calls.get(name, 0) + int(value)
+        for name, value in row.get("vas_time_s", {}).items():
+            vas_time_s[name] = vas_time_s.get(name, 0.0) + float(value)
+    summary["vas_calls_sum"] = vas_calls
+    summary["vas_time_s_sum"] = vas_time_s
+    summary["flops_per_generated_token_mean"] = (
+        summary["total_flops_sum"] / summary["generated_tokens_sum"]
+        if summary.get("generated_tokens_sum", 0) > 0 else 0.0
+    )
+    summary["tokens_per_second_mean"] = (
+        summary["generated_tokens_sum"] / summary["generate_wall_s_sum"]
+        if summary.get("generate_wall_s_sum", 0) > 0 else 0.0
+    )
+    return summary
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -246,6 +346,11 @@ def main(args):
     )
     model.to(device)
     model.eval()
+
+    profiler = None
+    if args.profile_inference:
+        profiler = InferenceProfiler()
+        profiler.install(model)
 
     processor_kwargs = {
         "padding_side": "left",
@@ -277,6 +382,8 @@ def main(args):
         install_visattnsink(model)
     else:
         LogicEngine.enabled = False
+        if args.profile_inference:
+            install_visattnsink(model)
 
     # Read model config -> head/layer counts for MetadataStation.
     text_cfg = getattr(model.config, "text_config", model.config)
@@ -299,12 +406,16 @@ def main(args):
         f"-summ{args.vas_summ}-p{args.vas_p}{suffix}"
     )
     os.makedirs(output_dir, exist_ok=True)
+    profile_jsonl_path = f"{output_dir}/profile_metrics.jsonl"
+    if args.profile_inference and not args.resume and os.path.exists(profile_jsonl_path):
+        os.remove(profile_jsonl_path)
 
     start_data_idx = max(0, args.start_data_idx)
     end_data_idx = min(args.end_data_idx, len(dataset))
 
     total, correct = 0, 0
     entries = []
+    profile_records = []
 
     if args.resume and not args.disable_save_logistics:
         logistics_path = f"{output_dir}/logistics.pt"
@@ -315,16 +426,22 @@ def main(args):
             correct = logistics["correct"]
             total = logistics["total"]
             entries = logistics["entries"]
+            profile_records = [
+                entry["profile"] for entry in entries
+                if isinstance(entry, dict) and isinstance(entry.get("profile"), dict)
+            ]
 
     print(f"Evaluating '{args.dataset}' [{start_data_idx}, {end_data_idx})...")
 
     for i in tqdm(range(start_data_idx, end_data_idx)):
+        example_t0 = time.perf_counter()
         example = dataset[i]
         question = example["question"]
         true_answer = example["answer"]
         if true_answer is None:
             continue
 
+        preprocess_t0 = time.perf_counter()
         image = load_image(example["image_path"], args.image_root)
 
         if image is not None:
@@ -346,6 +463,7 @@ def main(args):
             text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
             text = text + ASSISTANT_BOXED_PREFIX
             inputs = processor(text=[text], return_tensors="pt").to(device)
+        preprocess_wall_s = time.perf_counter() - preprocess_t0
 
         img_start, img_end = _locate_image_span(inputs["input_ids"], model)
         MetadataStation.activate(
@@ -356,7 +474,21 @@ def main(args):
         )
         LogicEngine.clear()
 
+        raw_outputs = None
+        generated_tokens_count = 0
+        generate_t0 = None
+        generate_wall_s = 0.0
+        profile_before = profiler.snapshot() if profiler is not None else _empty_metric_row()
+        if (
+            args.profile_inference
+            and str(device).startswith("cuda")
+            and torch.cuda.is_available()
+        ):
+            torch.cuda.reset_peak_memory_stats()
+
         try:
+            _sync_cuda_if_needed(device, args.profile_sync_cuda)
+            generate_t0 = time.perf_counter()
             with torch.inference_mode():
                 raw_outputs = model.generate(
                     **inputs,
@@ -366,30 +498,73 @@ def main(args):
                     top_p=None,
                     num_beams=1,
                 )
+            _sync_cuda_if_needed(device, args.profile_sync_cuda)
+            generate_wall_s = time.perf_counter() - generate_t0
 
             new_tokens = raw_outputs[0, inputs["input_ids"].shape[1]:]
+            generated_tokens_count = int(new_tokens.numel())
             response = ASSISTANT_BOXED_PREFIX + tokenizer.decode(new_tokens, skip_special_tokens=True)
         except Exception as e:
+            _sync_cuda_if_needed(device, args.profile_sync_cuda)
+            generate_wall_s = time.perf_counter() - generate_t0 if generate_t0 is not None else 0.0
             print(f"[{i}] generation error: {e}")
             response = ""
         finally:
             MetadataStation.deactivate()
             LogicEngine.clear()
 
+        profile_delta = profiler.diff(profile_before) if profiler is not None else _empty_metric_row()
+        cuda_peak_memory = 0
+        if (
+            args.profile_inference
+            and str(device).startswith("cuda")
+            and torch.cuda.is_available()
+        ):
+            cuda_peak_memory = int(torch.cuda.max_memory_allocated())
+
         answer = extract_answer(response)
 
+        judge_t0 = time.perf_counter()
         if args.use_llm_verify:
             is_correct = verify_solution_equivalence(answer, true_answer)
         else:
             is_correct = judge_answer_rule(answer, true_answer)
+        judge_wall_s = time.perf_counter() - judge_t0
 
         correct += int(is_correct)
         total += 1
+
+        profile_row = None
+        if args.profile_inference:
+            prompt_tokens = int(inputs["input_ids"].shape[1])
+            image_tokens = int(max(0, img_end - img_start))
+            profile_row = dict(
+                data_idx=i,
+                prompt_tokens=prompt_tokens,
+                generated_tokens=generated_tokens_count,
+                image_tokens=image_tokens,
+                preprocess_wall_s=preprocess_wall_s,
+                generate_wall_s=generate_wall_s,
+                judge_wall_s=judge_wall_s,
+                total_example_wall_s=time.perf_counter() - example_t0,
+                cuda_peak_memory_allocated_bytes=cuda_peak_memory,
+                **profile_delta,
+            )
+            profile_records.append(profile_row)
+            with open(profile_jsonl_path, "a") as pf:
+                pf.write(json.dumps(profile_row, sort_keys=True) + "\n")
 
         if args.verbose:
             print(f"[{i}] Q: {question[:80]}...")
             print(f"[{i}] Extracted: {answer}  |  True: {true_answer}  |  Correct: {is_correct}")
             print(f"Running accuracy: {correct}/{total} = {correct / total:.4f}")
+            if profile_row is not None:
+                print(
+                    f"[{i}] Profile: flops={profile_row['total_flops']:.4e}, "
+                    f"gen_wall={profile_row['generate_wall_s']:.3f}s, "
+                    f"model_forward_calls={profile_row['model_forward_calls']}, "
+                    f"generated_tokens={profile_row['generated_tokens']}"
+                )
 
         if not args.disable_save_logistics:
             entries.append(dict(
@@ -399,6 +574,7 @@ def main(args):
                 answer=answer,
                 true_answer=true_answer,
                 is_correct=is_correct,
+                profile=profile_row,
             ))
             torch.save({
                 "start_idx": i + 1,
@@ -407,17 +583,33 @@ def main(args):
                 "entries": entries,
             }, f"{output_dir}/logistics.pt")
 
-        del raw_outputs
+        if raw_outputs is not None:
+            del raw_outputs
+        del inputs
         torch.cuda.empty_cache()
 
     if total > 0:
         print(f"\n>>> Final: correct={correct}, total={total}, accuracy={correct / total:.4f}")
+    profile_summary = _summarize_profiles(profile_records) if args.profile_inference else {}
+    if profile_summary:
+        with open(f"{output_dir}/profile_summary.json", "w") as sf:
+            json.dump(profile_summary, sf, indent=2, sort_keys=True)
+        print(
+            ">>> Profile: "
+            f"examples={profile_summary['num_profiled_examples']}, "
+            f"total_flops={profile_summary['total_flops_sum']:.4e}, "
+            f"mean_flops={profile_summary['total_flops_mean']:.4e}, "
+            f"gen_wall_sum={profile_summary['generate_wall_s_sum']:.3f}s, "
+            f"tokens/s={profile_summary['tokens_per_second_mean']:.3f}"
+        )
     with open(f"{output_dir}/results.log", "a") as f:
         f.write(
             f"Data Idx with Correct Answer: "
             f"{[entry['data_idx'] for entry in entries if entry['is_correct']]}\n"
         )
         f.write(f"correct={correct}, total={total}, accuracy={correct / total:.4f}\n")
+        if profile_summary:
+            f.write(f"profile_summary={json.dumps(profile_summary, sort_keys=True)}\n")
 
 
 if __name__ == "__main__":

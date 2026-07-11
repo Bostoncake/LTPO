@@ -20,6 +20,7 @@ from typing import Callable, List, Optional, Tuple
 import torch
 from torch import nn
 
+from inference_profile import get_active_profiler
 from visattnsink_core import (
     LogicEngine,
     MetadataStation,
@@ -58,6 +59,10 @@ def _make_eager_forward():
     ):
         key_states = _repeat_kv(key, module.num_key_value_groups)
         value_states = _repeat_kv(value, module.num_key_value_groups)
+
+        profiler = get_active_profiler()
+        if profiler is not None:
+            profiler.record_attention(query, key_states)
 
         attn_weights = torch.matmul(query, key_states.transpose(2, 3)) * scaling
         if attention_mask is not None:

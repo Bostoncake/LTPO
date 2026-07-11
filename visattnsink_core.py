@@ -28,7 +28,10 @@ from collections import defaultdict
 from typing import Dict, List, Optional, Tuple
 
 import copy
+import time
 import torch
+
+from inference_profile import get_active_profiler
 
 
 # ---------------------------------------------------------------------------
@@ -75,6 +78,12 @@ class MetadataStation:
         cls.active = False
         cls.image_start = 0
         cls.image_end = 0
+
+
+def _record_vas(name: str, start_s: float, flops: int = 0) -> None:
+    profiler = get_active_profiler()
+    if profiler is not None:
+        profiler.record_vas(name, flops=flops, elapsed_s=time.perf_counter() - start_s)
 
 
 # ---------------------------------------------------------------------------
@@ -148,14 +157,17 @@ def run_dim_prospector(hidden_states: torch.Tensor, layer_idx: int) -> None:
     large magnitude, so every token got flagged as a sink, which collapsed
     VARProcessor's redistribution and produced fp16 attention overflow.
     """
+    start_s = time.perf_counter()
     if not LogicEngine.enabled:
         return
     # First few layers: sink dimensions are unstable; skip (matches upstream).
     if layer_idx < LogicEngine.skip_first_layers:
         LogicEngine.sink_indices[layer_idx] = hidden_states.new_zeros(0, dtype=torch.long)
+        _record_vas("dim_prospector", start_s, 0)
         return
     with torch.no_grad():
         norm = _rmsnorm(hidden_states).abs()       # [bsz, seq, dim]
+        flops = 5 * int(hidden_states.numel())
         dim_sink = torch.as_tensor(
             LogicEngine.dim_sink, device=norm.device, dtype=torch.long
         )
@@ -163,12 +175,15 @@ def run_dim_prospector(hidden_states: torch.Tensor, layer_idx: int) -> None:
         dim_sink = dim_sink[dim_sink < norm.size(-1)]
         if dim_sink.numel() == 0:
             LogicEngine.sink_indices[layer_idx] = norm.new_zeros(0, dtype=torch.long)
+            _record_vas("dim_prospector", start_s, flops)
             return
         vals = norm[..., dim_sink]                 # [bsz, seq, K]
+        flops += int(norm.size(0) * norm.size(1) * dim_sink.numel())
         peak = vals.max(dim=-1)[0]                  # [bsz, seq]
         mask = (peak > LogicEngine.tau).any(dim=0)  # [seq]
         idx = torch.nonzero(mask, as_tuple=False).flatten()  # [N]
     LogicEngine.sink_indices[layer_idx] = idx.detach()
+    _record_vas("dim_prospector", start_s, flops)
 
 
 # ---------------------------------------------------------------------------
@@ -181,19 +196,23 @@ def run_head_fork(attn_weights: torch.Tensor, layer_idx: int) -> None:
     `attn_weights` is [bsz, heads, q_len, k_len] **after softmax**. Sink
     indices for this layer must already be populated by `run_dim_prospector`.
     """
+    start_s = time.perf_counter()
     if not LogicEngine.enabled or not MetadataStation.active:
         LogicEngine.forked_head[layer_idx] = attn_weights.new_zeros(0, 3, dtype=torch.long)
+        _record_vas("head_fork", start_s, 0)
         return
 
     im = MetadataStation.image_start
     pa = MetadataStation.image_end - MetadataStation.image_start
     if pa <= 0:
         LogicEngine.forked_head[layer_idx] = attn_weights.new_zeros(0, 3, dtype=torch.long)
+        _record_vas("head_fork", start_s, 0)
         return
 
     sink_inds = LogicEngine.sink_indices.get(layer_idx)
     if sink_inds is None or sink_inds.numel() == 0:
         LogicEngine.forked_head[layer_idx] = attn_weights.new_zeros(0, 3, dtype=torch.long)
+        _record_vas("head_fork", start_s, 0)
         return
 
     # vis_sink = sink tokens inside image span
@@ -202,6 +221,7 @@ def run_head_fork(attn_weights: torch.Tensor, layer_idx: int) -> None:
     vis_sink_inds = sink_inds[vis_mask]
     if vis_sink_inds.numel() == 0:
         LogicEngine.forked_head[layer_idx] = attn_weights.new_zeros(0, 3, dtype=torch.long)
+        _record_vas("head_fork", start_s, 0)
         return
 
     # k_len may exceed the prompt span during cached decode — fine, the image
@@ -210,15 +230,19 @@ def run_head_fork(attn_weights: torch.Tensor, layer_idx: int) -> None:
     k_len = attn_weights.size(-1)
     if im + pa > k_len:
         LogicEngine.forked_head[layer_idx] = attn_weights.new_zeros(0, 3, dtype=torch.long)
+        _record_vas("head_fork", start_s, 0)
         return
 
     image_attn = attn_weights[..., im:im + pa]                       # [b,h,q,pa]
     sink_local = vis_sink_inds - im
+    bsz, heads, q_len, _ = image_attn.shape
+    flops = int(bsz * heads * q_len * (pa + vis_sink_inds.numel() + 4))
     portion = image_attn[..., sink_local].sum(dim=-1) / (image_attn.sum(dim=-1) + 1e-6)
     summation = image_attn.sum(dim=-1)
     cond = (portion <= LogicEngine.rho) & (summation >= LogicEngine.summ)
     coords = torch.nonzero(cond, as_tuple=False)                     # [N,3]
     LogicEngine.forked_head[layer_idx] = coords.detach()
+    _record_vas("head_fork", start_s, flops)
 
 
 # ---------------------------------------------------------------------------
@@ -230,24 +254,30 @@ def run_var_processor(attn_weights: torch.Tensor, layer_idx: int) -> torch.Tenso
 
     Returns the modified attention tensor.
     """
+    start_s = time.perf_counter()
+    flops = 0
     if not LogicEngine.enabled or not MetadataStation.active:
         return attn_weights
 
     if (LogicEngine.except_last_layer
             and layer_idx == MetadataStation.num_hidden_layers - 1):
+        _record_vas("var_processor", start_s, flops)
         return attn_weights
 
     im = MetadataStation.image_start
     pa = MetadataStation.image_end - MetadataStation.image_start
     if pa <= 0:
+        _record_vas("var_processor", start_s, flops)
         return attn_weights
 
     coords = LogicEngine.forked_head.get(layer_idx)
     if coords is None or coords.numel() == 0:
+        _record_vas("var_processor", start_s, flops)
         return attn_weights
 
     sink_inds = LogicEngine.sink_indices.get(layer_idx)
     if sink_inds is None or sink_inds.numel() == 0:
+        _record_vas("var_processor", start_s, flops)
         return attn_weights
 
     sink_inds = sink_inds.to(attn_weights.device)
@@ -255,6 +285,7 @@ def run_var_processor(attn_weights: torch.Tensor, layer_idx: int) -> torch.Tenso
     vis_sink = sink_inds[vis_mask]
     text_sink = sink_inds[~vis_mask]
     if vis_sink.numel() == 0:
+        _record_vas("var_processor", start_s, flops)
         return attn_weights
 
     k_len = attn_weights.size(-1)
@@ -270,6 +301,7 @@ def run_var_processor(attn_weights: torch.Tensor, layer_idx: int) -> torch.Tenso
         q = sub[:, 2]
         if q.numel() == 0:
             continue
+        flops += int(q.numel() * (attn_weights.size(-1) + 4 * pa + 4 * (vis_sink.numel() + text_sink.numel())))
 
         # selected [Q, K]
         sel = attn_weights[b, h, q, :].clone()
@@ -302,4 +334,5 @@ def run_var_processor(attn_weights: torch.Tensor, layer_idx: int) -> torch.Tenso
 
         attn_weights[b, h, q, :] = sel
 
+    _record_vas("var_processor", start_s, flops)
     return attn_weights
