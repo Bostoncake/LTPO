@@ -9,6 +9,7 @@
 #   ROOT_OUTPUT=./output/visattnsink_profile_qwen25vl7b_full
 #   END_DATA_IDX=1              # smoke test only
 #   USE_LLM_VERIFY=0            # rule-based judge
+#   PYTHON_BIN=/path/to/python  # optional override; default uses current python
 
 set -u
 
@@ -31,11 +32,8 @@ N_GPUS=${#GPU_LIST[@]}
 ROOT_OUTPUT="${ROOT_OUTPUT:-./output/visattnsink_profile_qwen25vl7b_full}"
 mkdir -p "${ROOT_OUTPUT}/${MODEL_NAME}"
 
-CONDA_ENV="${CONDA_ENV:-ltpo}"
 if [ -n "${PYTHON_BIN:-}" ]; then
     PY_CMD=("${PYTHON_BIN}")
-elif command -v conda >/dev/null 2>&1; then
-    PY_CMD=(conda run --no-capture-output -n "${CONDA_ENV}" python)
 else
     PY_CMD=(python)
 fi

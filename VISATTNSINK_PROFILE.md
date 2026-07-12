@@ -18,8 +18,10 @@ Default datasets are the full splits, not dev splits:
 mmvp mmstar mm_math math_vista math_vision hallusion scienceqa
 ```
 
-The script defaults to the `ltpo` conda environment through `conda run -n ltpo`
-when `conda` is available. It does not install or modify packages.
+Run the script from an already activated environment, for example after
+`conda activate ltpo`. The script uses the current shell's `python` by default
+and does not activate or modify any conda environment. To override the Python
+binary explicitly, set `PYTHON_BIN=/path/to/python`.
 
 ## LLM Judge
 
